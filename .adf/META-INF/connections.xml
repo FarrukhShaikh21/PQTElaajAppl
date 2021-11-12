@@ -7,7 +7,7 @@
         <Contents>thin</Contents>
       </StringRefAddr>
       <StringRefAddr addrType="hostname">
-        <Contents>172.16.0.192</Contents>
+        <Contents>localhost</Contents>
       </StringRefAddr>
       <SecureRefAddr addrType="password"/>
       <StringRefAddr addrType="subtype">
@@ -16,11 +16,11 @@
       <StringRefAddr addrType="port">
         <Contents>1521</Contents>
       </StringRefAddr>
-      <StringRefAddr addrType="serviceName">
-        <Contents>pqtprod</Contents>
-      </StringRefAddr>
       <StringRefAddr addrType="user">
-        <Contents>timsgh</Contents>
+        <Contents>ORAERP</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="sid">
+        <Contents>xe</Contents>
       </StringRefAddr>
     </RefAddresses>
   </Reference>

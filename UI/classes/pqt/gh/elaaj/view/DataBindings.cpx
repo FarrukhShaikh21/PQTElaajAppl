@@ -12,6 +12,7 @@
     <page path="PageFlow#CreateInsert" usageId="pqt_gh_elaaj_view_adfc_config___CreateInsertPageDef"/>
     <page path="PageFlow#Rollback" usageId="pqt_gh_elaaj_view_adfc_config___RollbackPageDef"/>
     <page path="/pages/ClaimIntimation.jsf" usageId="pqt_gh_elaaj_view_ClaimIntimationPageDef"/>
+    <page path="/pages/ClaimReimbursement.jsf" usageId="pqt_gh_elaaj_view_ClaimReimbursementPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="pqt_gh_elaaj_view_RegisterPGPageDef" path="pqt.gh.elaaj.view.pageDefs.RegisterPGPageDef"/>
@@ -26,6 +27,7 @@
     <page id="pqt_gh_elaaj_view_adfc_config___RollbackPageDef"
           path="pqt.gh.elaaj.view.pageDefs.adfc_config___RollbackPageDef"/>
     <page id="pqt_gh_elaaj_view_ClaimIntimationPageDef" path="pages.ClaimIntimationPageDef"/>
+    <page id="pqt_gh_elaaj_view_ClaimReimbursementPageDef" path="pages.ClaimReimbursementPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="PQTElaajAMDataControl" Package="pqt.gh.elaaj.model.am"

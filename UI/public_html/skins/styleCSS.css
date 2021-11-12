@@ -7,7 +7,7 @@
 .multiLineButton af|button::text {
     white-space: normal;
 }
-
+/*
 table.x14d.x152 {
     width: 100% !important;
 }
@@ -36,7 +36,6 @@ table.x14d.x152 {
     margin: 0px;
     border-radius: 10px 0px 0px 10px;
     border-color: #000;
-    /* border: 1px solid; */
     -webkit-appearance: none;
     -webkit-box-sizing: border-box;
 }
@@ -820,3 +819,58 @@ table.x14d.x152 {
         background-color: #FAFAFA;
     }
 }
+*/
+/*login text box height**/
+.PQLoginPageUser af|inputText::content
+{
+    height:30px;
+    color:Red;
+    font-weight: 800;
+    background-image:url("../icons/imgUser.png");
+    vertical-align: middle;
+    text-align: center;
+    
+    background-repeat: no-repeat;
+}
+
+.PQLoginPagePassword af|inputText::content
+{
+    height:30px;
+    color:Red;
+    font-weight: 800;
+    background-image:url("../icons/imgLock.png");
+    vertical-align: middle;
+    text-align: center;
+    
+    background-repeat: no-repeat;
+}
+
+wide {
+
+    display: inline;
+
+}
+
+
+
+.narrow {
+
+    display: none;
+
+}
+
+@media screen and (max-width:700px) {
+
+            .narrow {
+
+                display: inline;
+
+            }
+
+            .wide {
+
+                display: none;
+
+            }
+
+        }
