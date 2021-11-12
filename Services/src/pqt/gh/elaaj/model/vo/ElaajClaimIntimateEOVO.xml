@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ElaajClaimIntimateEOVO"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  PageIterMode="Full">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="pqt.gh.elaaj.model.vo.ElaajClaimIntimateEOVO_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewAccessor
+    Name="VuGhsElaajCoveredMemberVO1"
+    ViewObjectName="pqt.gh.elaaj.model.vo.VuGhsElaajCoveredMemberVO"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="CoverDescriptionLovVO1"
+    ViewObjectName="pqt.gh.elaaj.model.lov.CoverDescriptionLovVO"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="CoverDescriptionLovVOCriteria"
+      FullName="pqt.gh.elaaj.model.lov.CoverDescriptionLovVO.CoverDescriptionLovVOCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="QVC_CNICNO">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[CnicNo]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="PanelHospitalLovVO1"
+    ViewObjectName="pqt.gh.elaaj.model.lov.PanelHospitalLovVO"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_NameOfPatient"
+    ListVOName="VuGhsElaajCoveredMemberVO1"
+    ListRangeSize="-1"
+    ComboRowCountHint="10"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="NameOfPatient"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="CompanyName"/>
+      <Item Value="NameOfEmployee"/>
+      <Item Value="CnicNo"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="EmpName"/>
+      <Item Value="CompanyName"/>
+      <Item Value="SelfEmpName"/>
+      <Item Value="EmpCnic"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="EmpName"/>
+    </AttrArray>
+    <DisplayCriteria
+      Hint="hide"/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_TypeOfClaimn"
+    ListVOName="CoverDescriptionLovVO1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="TypeOfClaimn"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="BenefitDescription"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="BenefitDescription"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_NameOfPanelHospital"
+    ListVOName="PanelHospitalLovVO1"
+    ListRangeSize="-1"
+    ComboRowCountHint="10"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="NameOfPanelHospital"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="HsName"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="HsName"/>
+      <Item Value="HsRem"/>
+    </AttrArray>
+    <DisplayCriteria
+      Hint="showAndExecute"
+      Name="PanelHospitalLovVOCriteria"/>
+  </ListBinding>
+  <EntityUsage
+    Name="ElaajClaimIntimateEO"
+    Entity="pqt.gh.elaaj.model.eo.ElaajClaimIntimateEO"/>
+  <ViewAttribute
+    Name="AttachFile1"
+    PrecisionRule="true"
+    EntityAttrName="AttachFile1"
+    EntityUsage="ElaajClaimIntimateEO"
+    AliasName="ATTACH_FILE_1"/>
+  <ViewAttribute
+    Name="AttachFile2"
+    PrecisionRule="true"
+    EntityAttrName="AttachFile2"
+    EntityUsage="ElaajClaimIntimateEO"
+    AliasName="ATTACH_FILE_2"/>
+  <ViewAttribute
+    Name="AttachFile3"
+    PrecisionRule="true"
+    EntityAttrName="AttachFile3"
+    EntityUsage="ElaajClaimIntimateEO"
+    AliasName="ATTACH_FILE_3"/>
+  <ViewAttribute
+    Name="CellNo"
+    PrecisionRule="true"
+    EntityAttrName="CellNo"
+    EntityUsage="ElaajClaimIntimateEO"
+    AliasName="CELL_NO"/>
+  <ViewAttribute
+    Name="CertificateNo"
+    PrecisionRule="true"
+    EntityAttrName="CertificateNo"
+    EntityUsage="ElaajClaimIntimateEO"
+    AliasName="CERTIFICATE_NO"/>
+  <ViewAttribute
+    Name="CompanyName"
+    PrecisionRule="true"
+    EntityAttrName="CompanyName"
+    EntityUsage="ElaajClaimIntimateEO"
+    AliasName="COMPANY_NAME"/>
+  <ViewAttribute
+    Name="DoctorDaignosis"
+    PrecisionRule="true"
+    EntityAttrName="DoctorDaignosis"
+    EntityUsage="ElaajClaimIntimateEO"
+    AliasName="DOCTOR_DAIGNOSIS"/>
+  <ViewAttribute
+    Name="DoctorPescription"
+    PrecisionRule="true"
+    EntityAttrName="DoctorPescription"
+    EntityUsage="ElaajClaimIntimateEO"
+    AliasName="DOCTOR_PESCRIPTION"/>
+  <ViewAttribute
+    Name="ElaajClaimIntimateId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ElaajClaimIntimateId"
+    EntityUsage="ElaajClaimIntimateEO"
+    AliasName="ELAAJ_CLAIM_INTIMATE_ID"/>
+  <ViewAttribute
+    Name="Email"
+    PrecisionRule="true"
+    EntityAttrName="Email"
+    EntityUsage="ElaajClaimIntimateEO"
+    AliasName="EMAIL"/>
+  <ViewAttribute
+    Name="EmployeeId"
+    PrecisionRule="true"
+    EntityAttrName="EmployeeId"
+    EntityUsage="ElaajClaimIntimateEO"
+    AliasName="EMPLOYEE_ID"/>
+  <ViewAttribute
+    Name="ExpectedCost"
+    PrecisionRule="true"
+    EntityAttrName="ExpectedCost"
+    EntityUsage="ElaajClaimIntimateEO"
+    AliasName="EXPECTED_COST"/>
+  <ViewAttribute
+    Name="ExpectedDateOfAddminission"
+    PrecisionRule="true"
+    EntityAttrName="ExpectedDateOfAddminission"
+    EntityUsage="ElaajClaimIntimateEO"
+    AliasName="EXPECTED_DATE_OF_ADDMINISSION"/>
+  <ViewAttribute
+    Name="InitamationDate"
+    PrecisionRule="true"
+    EntityAttrName="InitamationDate"
+    EntityUsage="ElaajClaimIntimateEO"
+    AliasName="INITAMATION_DATE"/>
+  <ViewAttribute
+    Name="NameOfDoctor"
+    PrecisionRule="true"
+    EntityAttrName="NameOfDoctor"
+    EntityUsage="ElaajClaimIntimateEO"
+    AliasName="NAME_OF_DOCTOR"/>
+  <ViewAttribute
+    Name="NameOfEmployee"
+    PrecisionRule="true"
+    EntityAttrName="NameOfEmployee"
+    EntityUsage="ElaajClaimIntimateEO"
+    AliasName="NAME_OF_EMPLOYEE"/>
+  <ViewAttribute
+    Name="NameOfPanelHospital"
+    PrecisionRule="true"
+    EntityAttrName="NameOfPanelHospital"
+    EntityUsage="ElaajClaimIntimateEO"
+    AliasName="NAME_OF_PANEL_HOSPITAL"
+    LOVName="LOV_NameOfPanelHospital">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="input_text_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="NameOfPatient"
+    PrecisionRule="true"
+    EntityAttrName="NameOfPatient"
+    EntityUsage="ElaajClaimIntimateEO"
+    AliasName="NAME_OF_PATIENT"
+    LOVName="LOV_NameOfPatient">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="input_text_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="ProcedureRequired"
+    PrecisionRule="true"
+    EntityAttrName="ProcedureRequired"
+    EntityUsage="ElaajClaimIntimateEO"
+    AliasName="PROCEDURE_REQUIRED"/>
+  <ViewAttribute
+    Name="SymptomAtPresent"
+    PrecisionRule="true"
+    EntityAttrName="SymptomAtPresent"
+    EntityUsage="ElaajClaimIntimateEO"
+    AliasName="SYMPTOM_AT_PRESENT"/>
+  <ViewAttribute
+    Name="SymptomFirstAppearedDate"
+    PrecisionRule="true"
+    EntityAttrName="SymptomFirstAppearedDate"
+    EntityUsage="ElaajClaimIntimateEO"
+    AliasName="SYMPTOM_FIRST_APPEARED_DATE"/>
+  <ViewAttribute
+    Name="TypeOfClaimn"
+    PrecisionRule="true"
+    EntityAttrName="TypeOfClaimn"
+    EntityUsage="ElaajClaimIntimateEO"
+    AliasName="TYPE_OF_CLAIMN"
+    LOVName="LOV_TypeOfClaimn">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="30"/>
+        <CONTROLTYPE
+          Value="choice"/>
+        <AUTOSUBMIT
+          Value="true"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CnicNo"
+    PrecisionRule="true"
+    EntityAttrName="CnicNo"
+    EntityUsage="ElaajClaimIntimateEO"
+    AliasName="CNIC_NO">
+    <Properties>
+      <SchemaBasedProperties>
+        <AUTOSUBMIT
+          Value="true"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="pqt.gh.elaaj.model.ServicesBundle"/>
+  </ResourceBundle>
+</ViewObject>
