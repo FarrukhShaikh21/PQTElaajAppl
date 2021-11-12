@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="PanelhospitalPageDef"
+                Package="pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="VuElaajPanelHospitalVO1" RangeSize="25" DataControl="PQTElaajAMDataControl"
+              id="VuElaajPanelHospitalVO1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="VuElaajPanelHospitalVO1Iterator" id="VuElaajPanelHospitalVO1">
+      <nodeDefinition DefName="pqt.gh.elaaj.model.vo.VuElaajPanelHospitalVO" Name="VuElaajPanelHospitalVO10">
+        <AttrNames>
+          <Item Value="Name"/>
+          <Item Value="Id"/>
+          <Item Value="Address"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

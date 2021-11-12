@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="ClaimReimbursementPageDef"
+                Package="pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ElaajClaimReimburstmentEOVO1" RangeSize="25" DataControl="PQTElaajAMDataControl"
+              id="ElaajClaimReimburstmentEOVO1Iterator"/>
+  </executables>
+  <bindings>
+    <methodAction id="Apply" RequiresUpdateModel="true" Action="invokeMethod" MethodName="Apply"
+                  IsViewObjectMethod="false" DataControl="PQTElaajAMDataControl"
+                  InstanceName="data.PQTElaajAMDataControl.dataProvider"/>
+    <listOfValues IterBinding="ElaajClaimReimburstmentEOVO1Iterator" StaticList="false" Uses="LOV_NameOfPatient"
+                  id="NameOfPatient"/>
+    <list IterBinding="ElaajClaimReimburstmentEOVO1Iterator" StaticList="false" Uses="LOV_TypeOfClaimn"
+          id="TypeOfClaimn" DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <listOfValues IterBinding="ElaajClaimReimburstmentEOVO1Iterator" StaticList="false" Uses="LOV_NameOfPanelHospital"
+                  id="NameOfPanelHospital"/>
+    <attributeValues IterBinding="ElaajClaimReimburstmentEOVO1Iterator" id="NameOfDoctor">
+      <AttrNames>
+        <Item Value="NameOfDoctor"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ElaajClaimReimburstmentEOVO1Iterator" id="SymptomAtPresent">
+      <AttrNames>
+        <Item Value="SymptomAtPresent"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ElaajClaimReimburstmentEOVO1Iterator" id="ClaimTotalAmount">
+      <AttrNames>
+        <Item Value="ClaimTotalAmount"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

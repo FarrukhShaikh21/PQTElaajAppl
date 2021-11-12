@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="ClaimIntimationPageDef"
+                Package="pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ElaajClaimIntimateEOVO1" RangeSize="25" DataControl="PQTElaajAMDataControl"
+              id="ElaajClaimIntimateEOVO1Iterator"/>
+  </executables>
+  <bindings>
+    <listOfValues IterBinding="ElaajClaimIntimateEOVO1Iterator" StaticList="false" Uses="LOV_NameOfPatient"
+                  id="NameOfPatient"/>
+    <list IterBinding="ElaajClaimIntimateEOVO1Iterator" StaticList="false" Uses="LOV_TypeOfClaimn" id="TypeOfClaimn"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="ElaajClaimIntimateEOVO1Iterator" id="CnicNo">
+      <AttrNames>
+        <Item Value="CnicNo"/>
+      </AttrNames>
+    </attributeValues>
+    <listOfValues IterBinding="ElaajClaimIntimateEOVO1Iterator" StaticList="false" Uses="LOV_NameOfPanelHospital"
+                  id="NameOfPanelHospital"/>
+    <attributeValues IterBinding="ElaajClaimIntimateEOVO1Iterator" id="NameOfDoctor">
+      <AttrNames>
+        <Item Value="NameOfDoctor"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ElaajClaimIntimateEOVO1Iterator" id="SymptomFirstAppearedDate">
+      <AttrNames>
+        <Item Value="SymptomFirstAppearedDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ElaajClaimIntimateEOVO1Iterator" id="ExpectedDateOfAddminission">
+      <AttrNames>
+        <Item Value="ExpectedDateOfAddminission"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ElaajClaimIntimateEOVO1Iterator" id="DoctorDaignosis">
+      <AttrNames>
+        <Item Value="DoctorDaignosis"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ElaajClaimIntimateEOVO1Iterator" id="ProcedureRequired">
+      <AttrNames>
+        <Item Value="ProcedureRequired"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ElaajClaimIntimateEOVO1Iterator" id="ExpectedCost">
+      <AttrNames>
+        <Item Value="ExpectedCost"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction id="Apply" RequiresUpdateModel="true" Action="invokeMethod" MethodName="Apply"
+                  IsViewObjectMethod="false" DataControl="PQTElaajAMDataControl"
+                  InstanceName="data.PQTElaajAMDataControl.dataProvider"/>
+  </bindings>
+</pageDefinition>
