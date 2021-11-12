@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="ClaimDetaiPG.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:panelStretchLayout id="psl1">
+                <f:facet name="top">
+                    <af:panelGroupLayout id="pgl1" halign="center" valign="middle" layout="vertical"
+                                         inlineStyle="background-color:#8b0037;">
+                        <af:separator id="s1"
+                                      inlineStyle="min-height:5px; background-color:#ba9632; margin: 0px;     border-color: transparent;"/>
+                        <af:outputFormatted value="Claim Detail" id="of1"
+                                            inlineStyle="font-size:x-large; font-weight:bolder; color:white;"/>
+                    </af:panelGroupLayout>
+                </f:facet>
+                <f:facet name="center">
+                    <af:panelGroupLayout id="pgl2" layout="scroll"
+                                         inlineStyle="border-color:Maroon; border-radius:10px 10px 10px 10px;">
+                        <af:panelGridLayout id="pgl3">
+                            <af:gridRow marginTop="5px" height="auto" id="gr1">
+                                <af:gridCell marginStart="5px" width="30%" id="gc1" halign="start" valign="middle">
+                                    <af:outputFormatted value="Name :" id="of2" inlineStyle="color:maroon;"/>
+                                </af:gridCell>
+                                <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="gc2">
+                                    <af:outputFormatted value="#{bindings.EmpName.inputValue}" id="of6"
+                                                        inlineStyle="color:maroon;"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="0px" height="auto" id="gr2">
+                                <af:gridCell marginStart="5px" width="30%" id="gc3" halign="start" valign="middle">
+                                    <af:outputFormatted value="Age :" id="of3" inlineStyle="color:maroon;"/>
+                                </af:gridCell>
+                                <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="gc4">
+                                    <af:outputFormatted value="#{bindings.EmpAge.inputValue}" id="of7"
+                                                        inlineStyle="color:maroon;"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="0px" height="auto" id="gr3">
+                                <af:gridCell marginStart="5px" width="30%" id="gc5" halign="start" valign="middle">
+                                    <af:outputFormatted value="Family Code :" id="of4" inlineStyle="color:maroon;"/>
+                                </af:gridCell>
+                                <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="gc6">
+                                    <af:outputFormatted value="#{bindings.EmpFolioId.inputValue}" id="of8"
+                                                        inlineStyle="color:maroon;"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="0px" height="auto" marginBottom="0px" id="gr4">
+                                <af:gridCell marginStart="5px" width="30%" id="gc7" halign="start" valign="middle">
+                                    <af:outputFormatted value="Policy Period :" id="of5" inlineStyle="color:maroon;"/>
+                                </af:gridCell>
+                                <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="gc8">
+                                    <af:outputFormatted value="#{bindings.PolicyPeriod.inputValue}" id="of9"
+                                                        inlineStyle="color:maroon;"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                        </af:panelGridLayout>
+                        <af:spacer width="10" height="10" id="s2"/>
+                        <af:panelGroupLayout id="pgl4" layout="vertical">
+                            <af:table value="#{bindings.VuGhsElaajCoveredMemberVO1.collectionModel}" var="row"
+                                      rows="#{bindings.VuGhsElaajCoveredMemberVO1.rangeSize}"
+                                      emptyText="#{bindings.VuGhsElaajCoveredMemberVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                      rowBandingInterval="0"
+                                      selectedRowKeys="#{bindings.VuGhsElaajCoveredMemberVO1.collectionModel.selectedRow}"
+                                      selectionListener="#{bindings.VuGhsElaajCoveredMemberVO1.collectionModel.makeCurrent}"
+                                      rowSelection="single" fetchSize="#{bindings.VuGhsElaajCoveredMemberVO1.rangeSize}"
+                                      id="t1" scrollPolicy="scroll">
+                                <af:column
+                                           id="c1" width="150">
+                                    <af:outputFormatted value="#{row.bindings.EmpName.inputValue}" id="of10"/>
+                                    <af:outputFormatted value="#{row.bindings.EmpSrNo.inputValue}" id="of11"/>
+                                </af:column>
+                                <af:column
+                                           id="c2" width="110" align="end">
+                                    <af:outputFormatted value="#{row.bindings.EmpDob.inputValue}" id="of12">
+                                        <af:convertDateTime pattern="#{bindings.VuGhsElaajCoveredMemberVO1.hints.EmpDob.format}"/>
+                                    </af:outputFormatted>
+                                    <af:outputFormatted value="#{row.bindings.Relation.inputValue}" id="of13"/>
+                                </af:column>
+                            </af:table>
+                        </af:panelGroupLayout>
+                        <af:spacer width="10" height="10" id="s3"/>
+                        <af:table value="#{bindings.ClaimsDetailVO1.collectionModel}" var="row"
+                                  rows="#{bindings.ClaimsDetailVO1.rangeSize}"
+                                  emptyText="#{bindings.ClaimsDetailVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                  rowBandingInterval="0"
+                                  selectedRowKeys="#{bindings.ClaimsDetailVO1.collectionModel.selectedRow}"
+                                  selectionListener="#{bindings.ClaimsDetailVO1.collectionModel.makeCurrent}"
+                                  rowSelection="single" fetchSize="#{bindings.ClaimsDetailVO1.rangeSize}" id="t2"
+                                  scrollPolicy="scroll">
+                            <af:column headerText="#{bindings.ClaimsDetailVO1.hints.ClaimNo.label}" id="c3"
+                                       align="center" width="45" inlineStyle="background-color:transparent;">
+                                <af:outputFormatted value="#{row.bindings.ClaimNo.inputValue}" id="of18"/>
+                            </af:column>
+                            <af:column headerText="#{bindings.ClaimsDetailVO1.hints.CoverDesc.label}" id="c4"
+                                       width="84" inlineStyle="background-color:transparent;">
+                                <af:outputFormatted value="#{row.bindings.CoverDesc.inputValue}" id="of17"
+                                                    inlineStyle="margin-left: 5px;"/>
+                            </af:column>
+                            <af:column headerText="Approved Amt" id="c5" width="40"
+                                       inlineStyle="background-color:transparent;">
+                                <af:outputFormatted value="#{row.bindings.ClaimAmount.inputValue}" id="of16">
+                                    <af:convertNumber groupingUsed="false"
+                                                      pattern="#{bindings.ClaimsDetailVO1.hints.ClaimAmount.format}"/>
+                                                      <af:convertNumber type="number" pattern="#,###.##"/>
+                                </af:outputFormatted>
+                            </af:column>
+                            <af:column headerText="#{bindings.ClaimsDetailVO1.hints.ClmIntDt.label}" id="c6" width="40"
+                                       inlineStyle="background-color:transparent;">
+                                <af:outputFormatted value="#{row.bindings.ClmIntDt.inputValue}" id="of15"/>
+                            </af:column>
+                            <af:column headerText="#{bindings.ClaimsDetailVO1.hints.StatusDesc.label}" id="c7"
+                                       width="50" inlineStyle="background-color:transparent;">
+                                <af:outputFormatted value="#{row.bindings.StatusDesc.inputValue}" id="of14"/>
+                            </af:column>
+                        </af:table>
+                    </af:panelGroupLayout>
+                </f:facet>
+            </af:panelStretchLayout>
+        </af:form>
+    </af:document>
+</f:view>
