@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="ClaimIntimation.jsf" id="d1">
+        <af:messages id="m1"/>
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
+        <af:form id="f1">
+            <af:panelStretchLayout id="psl1">
+                <f:facet name="top">
+                    <af:panelGroupLayout id="pgl1" halign="center" valign="middle" layout="vertical"
+                                         inlineStyle="background-color:#8b0037;">
+                        <af:separator id="s1"
+                                      inlineStyle="min-height:5px; background-color:#ba9632; margin: 0px;     border-color: transparent;"/>
+                        <af:outputFormatted value="Panel Hospital" id="of1"
+                                            inlineStyle="font-size:x-large; font-weight:bolder; color:white;"/>
+                    </af:panelGroupLayout>
+                </f:facet>
+                <f:facet name="center">
+                    <af:listView value="#{bindings.VuElaajPanelHospitalVO1.collectionModel}" var="item"
+                                 emptyText="#{bindings.VuElaajPanelHospitalVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                 fetchSize="#{bindings.VuElaajPanelHospitalVO1.rangeSize}" id="lv1" selection="single">
+                        <af:listItem id="li1">
+                            <af:panelGridLayout id="pgl2">
+                                <af:gridRow marginTop="5px" height="auto" id="gr1">
+                                    <af:gridCell marginStart="5px" width="80%" id="gc1">
+                                        <af:outputFormatted value="#{item.bindings.Name.inputValue}" id="of2"/>
+                                    </af:gridCell>
+                                    <af:gridCell marginStart="5px" rowSpan="2" width="20%" marginEnd="5px" id="gc2"
+                                                 halign="end" valign="top">
+                                        <af:outputFormatted value="#{item.bindings.Id.inputValue}" id="of3"/>
+                                    </af:gridCell>
+                                </af:gridRow>
+                                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr2">
+                                    <af:gridCell marginStart="5px" width="80%" marginEnd="5px" id="gc3">
+                                        <af:outputFormatted value="#{item.bindings.Address.inputValue}" id="of4"/>
+                                    </af:gridCell>
+                                </af:gridRow>
+                            </af:panelGridLayout>
+                        </af:listItem>
+                    </af:listView>
+                </f:facet>
+            </af:panelStretchLayout>
+        </af:form>
+    </af:document>
+</f:view>
