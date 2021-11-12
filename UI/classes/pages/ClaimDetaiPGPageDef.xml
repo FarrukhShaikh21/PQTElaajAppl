@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="ClaimDetaiPGPageDef"
+                Package="pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="VuElaajMobileUserVO1" RangeSize="25" DataControl="PQTElaajAMDataControl"
+              id="VuElaajMobileUserVO1Iterator"/>
+    <iterator Binds="VuGhsElaajCoveredMemberVO1" RangeSize="2" DataControl="PQTElaajAMDataControl"
+              id="VuGhsElaajCoveredMemberVO1Iterator"/>
+    <iterator Binds="ClaimsDetailVO1" RangeSize="25" DataControl="PQTElaajAMDataControl" id="ClaimsDetailVO1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="VuElaajMobileUserVO1Iterator" id="EmpName">
+      <AttrNames>
+        <Item Value="EmpName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VuElaajMobileUserVO1Iterator" id="EmpAge">
+      <AttrNames>
+        <Item Value="EmpAge"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VuElaajMobileUserVO1Iterator" id="EmpFolioId">
+      <AttrNames>
+        <Item Value="EmpFolioId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VuElaajMobileUserVO1Iterator" id="PolicyPeriod">
+      <AttrNames>
+        <Item Value="PolicyPeriod"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="VuGhsElaajCoveredMemberVO1Iterator" id="VuGhsElaajCoveredMemberVO1">
+      <nodeDefinition DefName="pqt.gh.elaaj.model.vo.VuGhsElaajCoveredMemberVO" Name="VuGhsElaajCoveredMemberVO10">
+        <AttrNames>
+          <Item Value="EmpName"/>
+          <Item Value="EmpSrNo"/>
+          <Item Value="EmpDob"/>
+          <Item Value="Relation"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="ClaimsDetailVO1Iterator" id="ClaimsDetailVO1">
+      <nodeDefinition DefName="pqt.gh.elaaj.model.vo.ClaimsDetailVO" Name="ClaimsDetailVO10">
+        <AttrNames>
+          <Item Value="ClaimNo"/>
+          <Item Value="CoverDesc"/>
+          <Item Value="ClaimAmount"/>
+          <Item Value="ClmIntDt"/>
+          <Item Value="StatusDesc"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

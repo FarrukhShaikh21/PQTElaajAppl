@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.11.57" id="DataBindings"
+             SeparateXMLFiles="false" Package="pqt.gh.elaaj.view" ClientType="Generic">
+  <pageMap>
+    <page path="/RegisterPG.jsf" usageId="pqt_gh_elaaj_view_RegisterPGPageDef"/>
+    <page path="/Login.jsf" usageId="pqt_gh_elaaj_view_LoginPageDef"/>
+    <page path="/pages/HomePG.jsf" usageId="pqt_gh_elaaj_view_HomePGPageDef"/>
+    <page path="/pages/BenefitDetailPG.jsf" usageId="pqt_gh_elaaj_view_BenefitDetailPGPageDef"/>
+    <page path="/pages/ClaimDetaiPG.jsf" usageId="pqt_gh_elaaj_view_ClaimDetaiPGPageDef"/>
+    <page path="/untitled1.xhtml" usageId="pqt_gh_elaaj_view_untitled1PageDef"/>
+    <page path="/pages/Panelhospital.jsf" usageId="pqt_gh_elaaj_view_PanelhospitalPageDef"/>
+    <page path="PageFlow#CreateInsert" usageId="pqt_gh_elaaj_view_adfc_config___CreateInsertPageDef"/>
+    <page path="PageFlow#Rollback" usageId="pqt_gh_elaaj_view_adfc_config___RollbackPageDef"/>
+    <page path="/pages/ClaimIntimation.jsf" usageId="pqt_gh_elaaj_view_ClaimIntimationPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="pqt_gh_elaaj_view_RegisterPGPageDef" path="pqt.gh.elaaj.view.pageDefs.RegisterPGPageDef"/>
+    <page id="pqt_gh_elaaj_view_LoginPageDef" path="pqt.gh.elaaj.view.pageDefs.LoginPageDef"/>
+    <page id="pqt_gh_elaaj_view_HomePGPageDef" path="pages.HomePGPageDef"/>
+    <page id="pqt_gh_elaaj_view_BenefitDetailPGPageDef" path="pages.BenefitDetailPGPageDef"/>
+    <page id="pqt_gh_elaaj_view_ClaimDetaiPGPageDef" path="pages.ClaimDetaiPGPageDef"/>
+    <page id="pqt_gh_elaaj_view_untitled1PageDef" path="pqt.gh.elaaj.view.pageDefs.untitled1PageDef"/>
+    <page id="pqt_gh_elaaj_view_PanelhospitalPageDef" path="pages.PanelhospitalPageDef"/>
+    <page id="pqt_gh_elaaj_view_adfc_config___CreateInsertPageDef"
+          path="pqt.gh.elaaj.view.pageDefs.adfc_config___CreateInsertPageDef"/>
+    <page id="pqt_gh_elaaj_view_adfc_config___RollbackPageDef"
+          path="pqt.gh.elaaj.view.pageDefs.adfc_config___RollbackPageDef"/>
+    <page id="pqt_gh_elaaj_view_ClaimIntimationPageDef" path="pages.ClaimIntimationPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="PQTElaajAMDataControl" Package="pqt.gh.elaaj.model.am"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="PQTElaajAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

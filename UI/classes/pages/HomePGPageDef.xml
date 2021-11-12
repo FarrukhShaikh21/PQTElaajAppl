@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="HomePGPageDef" Package="pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="VuElaajMobileUserVO1" RangeSize="25" DataControl="PQTElaajAMDataControl"
+              id="VuElaajMobileUserVO1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="VuElaajMobileUserVO1Iterator" id="PolicyNo">
+      <AttrNames>
+        <Item Value="PolicyNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VuElaajMobileUserVO1Iterator" id="EmpName">
+      <AttrNames>
+        <Item Value="EmpName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VuElaajMobileUserVO1Iterator" id="CustFullName">
+      <AttrNames>
+        <Item Value="CustFullName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VuElaajMobileUserVO1Iterator" id="EmpFolioId">
+      <AttrNames>
+        <Item Value="EmpFolioId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VuElaajMobileUserVO1Iterator" id="EmpAge">
+      <AttrNames>
+        <Item Value="EmpAge"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VuElaajMobileUserVO1Iterator" id="EmpStatus">
+      <AttrNames>
+        <Item Value="EmpStatus"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>
