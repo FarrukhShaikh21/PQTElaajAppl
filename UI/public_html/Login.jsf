@@ -5,105 +5,127 @@
     <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
         <af:messages id="m1"/>
         <af:form id="f1">
-            <af:panelGridLayout id="pgl5" dimensionsFrom="children">
-                <af:gridRow marginTop="5px" id="gr2">
-                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3" halign="stretch"
-                                 valign="stretch">
-                        <af:panelGridLayout id="pgl8" inlineStyle="background-color:#8b0037;">
-                            <af:gridRow marginTop="5px" height="50px" marginBottom="5px" id="gr8">
-                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc9" halign="center"
-                                             valign="middle">
-                                    <af:panelGroupLayout id="pgl7" layout="vertical" halign="center">
-                                        <af:outputText value="Welcome" id="ot1"
-                                                       inlineStyle="color:white;font-weight:bolder"/>
-                                    </af:panelGroupLayout>
-                                </af:gridCell>
-                            </af:gridRow>
-                        </af:panelGridLayout>
+            <af:panelGridLayout id="pgl1">
+                <af:gridRow marginTop="5px" height="auto" id="gr1">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
+                        <af:panelGroupLayout id="pgl2" styleClass="wide">
+                            <af:spacer width="10" height="150" id="s1" styleClass="wide"/>
+                        </af:panelGroupLayout>
                     </af:gridCell>
                 </af:gridRow>
-                <af:gridRow marginTop="5px" height="auto" id="gr3">
-                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4" halign="stretch"
-                                 valign="stretch">
-                        <af:panelGridLayout id="pgl6">
-                            <af:gridRow marginTop="20px" height="auto" id="gr5" marginBottom="20px">
-                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6" halign="stretch">
-                                    <af:inputText value="#{bindings.pUserName.inputValue}"
-                                                  required="#{bindings.pUserName.hints.mandatory}"
-                                                  columns="#{bindings.pUserName.hints.displayWidth}"
-                                                  maximumLength="#{bindings.pUserName.hints.precision}"
-                                                  shortDesc="#{bindings.pUserName.hints.tooltip}" id="it1"
-                                                  showRequired="true" simple="true"
-                                                  contentStyle="width:100%" styleClass="PQLoginPageUser">
-                                        <f:validator binding="#{bindings.pUserName.validator}"/>
-                                    </af:inputText>
-                                </af:gridCell>
-                            </af:gridRow>
-                            <af:gridRow marginTop="20px" height="auto" marginBottom="20px" id="gr6">
-                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7" halign="stretch"
-                                             columnSpan="1" rowSpan="1">
-                                    <af:inputText value="#{bindings.pUserPassword.inputValue}"
-                                                  required="#{bindings.pUserPassword.hints.mandatory}"
-                                                  columns="#{bindings.pUserPassword.hints.displayWidth}"
-                                                  maximumLength="#{bindings.pUserPassword.hints.precision}"
-                                                  shortDesc="#{bindings.pUserPassword.hints.tooltip}" id="it2"
-                                                  secret="true" showRequired="true" simple="true"
-                                                  placeholder="Enter Password" contentStyle="width:100%"
-                                                  styleClass="PQLoginPagePassword">
-                                        <f:validator binding="#{bindings.pUserPassword.validator}"/>
-                                    </af:inputText>
-                                </af:gridCell>
-                            </af:gridRow>
-                            <af:gridRow id="gr7" marginTop="5px" marginBottom="5px">
-                                <af:gridCell id="gc8" columnSpan="1" rowSpan="1" halign="stretch" valign="stretch">
-                                    <af:panelGridLayout id="pgl9">
-                                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr9">
-                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc10"
-                                                         halign="center">
-                                                <af:button text="button 2" id="b4"/>
+                <af:gridRow marginTop="5px" height="auto" id="gr13">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc14" valign="stretch"
+                                 halign="stretch">
+                        <af:panelGridLayout id="pgl5">
+                            <af:gridRow marginTop="5px" id="gr2">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3" halign="stretch"
+                                             valign="stretch">
+                                    <af:panelGridLayout id="pgl8" styleClass="PQHeaderColor">
+                                        <af:gridRow marginTop="5px" height="50px" marginBottom="5px" id="gr8">
+                                            <af:gridCell id="gc1" width="10%" valign="middle">
+                                                <af:link id="l1" inlineStyle="color:white;" action="goHome"
+                                                         icon="/icons/left-arrow-white.png" text="Back"/>
+                                            </af:gridCell>
+                                            <af:gridCell marginStart="5px" width="90%" marginEnd="5px" id="gc9"
+                                                         halign="center" valign="middle">
+                                                <af:panelGroupLayout id="pgl7" layout="vertical" halign="center">
+                                                    <af:outputText value="Welcome" id="ot1"
+                                                                   inlineStyle="color:white;font-weight:bolder"/>
+                                                </af:panelGroupLayout>
                                             </af:gridCell>
                                         </af:gridRow>
                                     </af:panelGridLayout>
-                                    <af:button actionListener="#{bindings.VerifyUserAuth.execute}" text="VerifyUserAuth"
-                                               disabled="#{!bindings.VerifyUserAuth.enabled}" id="b2" rendered="false"/>
                                 </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr3">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4" halign="stretch"
+                                             inlineStyle="background:transparent">
+                                    <af:panelGridLayout id="pgl6" inlineStyle="background:transparent">
+                                        <af:gridRow id="gr12">
+                                            <af:gridCell id="gc13" halign="center" styleClass="background:transparent">
+                                                <af:image source="/icons/Family_logo.png" id="i2"/>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="20px" height="auto" id="gr5">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6"
+                                                         halign="stretch">
+                                                <af:inputText value="#{bindings.pUserName.inputValue}"
+                                                              required="#{bindings.pUserName.hints.mandatory}"
+                                                              columns="#{bindings.pUserName.hints.displayWidth}"
+                                                              maximumLength="#{bindings.pUserName.hints.precision}"
+                                                              shortDesc="#{bindings.pUserName.hints.tooltip}" id="it1"
+                                                              showRequired="true" simple="true"
+                                                              contentStyle="width:100%" styleClass="PQLoginPageUser">
+                                                    <f:validator binding="#{bindings.pUserName.validator}"/>
+                                                </af:inputText>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow id="gr11">
+                                            <af:gridCell id="gc12" halign="center">
+                                                <af:outputText value="Example 4210112345678" id="ot2"
+                                                               inlineStyle="color:gray"/>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="20px" height="auto" marginBottom="20px" id="gr6">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7"
+                                                         halign="stretch" columnSpan="1" rowSpan="1">
+                                                <af:inputText value="#{bindings.pUserPassword.inputValue}"
+                                                              required="#{bindings.pUserPassword.hints.mandatory}"
+                                                              columns="#{bindings.pUserPassword.hints.displayWidth}"
+                                                              maximumLength="#{bindings.pUserPassword.hints.precision}"
+                                                              shortDesc="#{bindings.pUserPassword.hints.tooltip}"
+                                                              id="it2" secret="true" showRequired="true" simple="true"
+                                                              placeholder="Enter Password" contentStyle="width:100%"
+                                                              styleClass="PQLoginPagePassword">
+                                                    <f:validator binding="#{bindings.pUserPassword.validator}"/>
+                                                </af:inputText>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow id="gr7" marginTop="100px" marginBottom="5px">
+                                            <af:gridCell id="gc8" columnSpan="1" rowSpan="1" halign="stretch"
+                                                         valign="stretch">
+                                                <af:panelGridLayout id="pgl9">
+                                                    <af:gridRow marginTop="5px" height="auto" marginBottom="5px"
+                                                                id="gr9">
+                                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                                                                     id="gc10" halign="stretch" valign="stretch">
+                                                            <af:panelGridLayout id="pgl10" styleClass="PQHeaderColor">
+                                                                <af:gridRow marginTop="5px" height="auto"
+                                                                            marginBottom="5px" id="gr10">
+                                                                    <af:gridCell marginStart="5px" width="100%"
+                                                                                 marginEnd="5px" id="gc11"
+                                                                                 halign="center">
+                                                                        <af:button text="Login" id="b4"
+                                                                                   action="#{LoginBean.LoginVerification}"
+                                                                                   inlineStyle="font-size:16px; padding: 6px; color:white; background:green; border:0;"/>
+                                                                    </af:gridCell>
+                                                                </af:gridRow>
+                                                            </af:panelGridLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                </af:panelGridLayout>
+                                                <af:button actionListener="#{bindings.VerifyUserAuth.execute}"
+                                                           text="VerifyUserAuth"
+                                                           disabled="#{!bindings.VerifyUserAuth.enabled}" id="b2"
+                                                           rendered="false"/>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                    </af:panelGridLayout>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5" halign="stretch"
+                                             valign="stretch"/>
                             </af:gridRow>
                         </af:panelGridLayout>
                     </af:gridCell>
                 </af:gridRow>
-                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4">
-                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5" halign="stretch"
-                                 valign="stretch"/>
+                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr14">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc15"/>
                 </af:gridRow>
             </af:panelGridLayout>
-            <af:panelStretchLayout id="psl2" styleClass="narrow" rendered="false">
-                <f:facet name="start"/>
-                <f:facet name="end"/>
-                <f:facet name="top"/>
-                <f:facet name="bottom"/>
-                <f:facet name="center">
-                    <af:button text="button 1" id="b3"/>
-                </f:facet>
-            </af:panelStretchLayout>
             <af:panelStretchLayout id="psl1" dimensionsFrom="parent" styleClass="wide" rendered="false">
-                <f:facet name="top">
-                    <af:panelGroupLayout id="pgl1" halign="center" valign="baseline" layout="vertical">
-                        <af:separator id="s1"
-                                      inlineStyle="min-height:5px; background-color:#ba9632; margin: 0px;     border-color: transparent;"/>
-                        <af:panelGridLayout id="pgl2" inlineStyle="border:0px;">
-                            <af:gridRow marginTop="5px" height="30px" marginBottom="5px" id="gr1">
-                                <af:gridCell marginStart="5px" width="20%" id="gc1" halign="center" valign="middle">
-                                    <af:link id="l1" inlineStyle="color:white;" action="goHome"
-                                             icon="/icons/left-arrow-white.png"/>
-                                </af:gridCell>
-                                <af:gridCell marginStart="5px" width="80%" marginEnd="5px" id="gc2" halign="center"
-                                             valign="middle">
-                                    <af:outputFormatted value="Login" id="of1"/>
-                                </af:gridCell>
-                            </af:gridRow>
-                        </af:panelGridLayout>
-                    </af:panelGroupLayout>
-                </f:facet>
+                <f:facet name="top"/>
                 <f:facet name="bottom">
                     <af:panelGroupLayout id="pgl3" halign="center" layout="vertical" valign="middle"
                                          inlineStyle="background-color:#8b0037;">

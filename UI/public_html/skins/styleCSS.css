@@ -824,7 +824,7 @@ table.x14d.x152 {
 .PQLoginPageUser af|inputText::content
 {
     height:30px;
-    color:Red;
+    color:#8b0037;
     font-weight: 800;
     background-image:url("../icons/imgUser.png");
     vertical-align: middle;
@@ -832,11 +832,13 @@ table.x14d.x152 {
     
     background-repeat: no-repeat;
 }
-
+.PQHeaderColor{
+    background-color:#8b0037;
+}
 .PQLoginPagePassword af|inputText::content
 {
     height:30px;
-    color:Red;
+    color:#8b0037;
     font-weight: 800;
     background-image:url("../icons/imgLock.png");
     vertical-align: middle;
@@ -845,6 +847,11 @@ table.x14d.x152 {
     background-repeat: no-repeat;
 }
 
+.PQLoginBackGroundImage{
+    background-image: url("../images/imgLoginBackground.jpg");
+     background-repeat: no-repeat;
+     background-size:100.0%;
+}
 wide {
 
     display: inline;
@@ -859,7 +866,7 @@ wide {
 
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:768px) {
 
             .narrow {
 
