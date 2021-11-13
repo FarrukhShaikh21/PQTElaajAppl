@@ -55,7 +55,8 @@
                                                               maximumLength="#{bindings.pUserName.hints.precision}"
                                                               shortDesc="#{bindings.pUserName.hints.tooltip}" id="it1"
                                                               showRequired="true" simple="true"
-                                                              contentStyle="width:100%" styleClass="PQLoginPageUser">
+                                                              contentStyle="width:100%" styleClass="PQLoginPageUser"
+                                                              placeholder="Enter User Name">
                                                     <f:validator binding="#{bindings.pUserName.validator}"/>
                                                 </af:inputText>
                                             </af:gridCell>
