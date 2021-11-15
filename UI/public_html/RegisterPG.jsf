@@ -2,126 +2,138 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
   <af:document title="RegisterPG.jsf" id="d1">
-  <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
     <af:messages id="m1"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
     <af:form id="f1">
-      <af:panelGridLayout id="pgl5">
-        <af:gridRow id="gr12">
-          <af:gridCell id="gc12">
-            <af:panelGroupLayout id="pgl1" layout="vertical" styleClass="wide">
-              <af:spacer width="10" height="150" id="s2"/>
-            </af:panelGroupLayout>
-          </af:gridCell>
-        </af:gridRow>
-        <af:gridRow marginTop="5px" height="auto" id="gr1">
-          <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1" halign="stretch" valign="stretch">
-            <af:separator id="s1"
+      <af:panelStretchLayout id="psl1" bottomHeight="50px" dimensionsFrom="parent">
+        <f:facet name="top"/>
+        <f:facet name="bottom">
+          <af:panelGroupLayout id="pgl2" halign="center" valign="middle" layout="vertical"
+                               inlineStyle="background-color:#8b0037;">
+            <af:separator id="s5"
                           inlineStyle="min-height:5px; background-color:#ba9632; margin: 0px;     border-color: transparent;"/>
-            <af:panelGridLayout id="pgl6" styleClass="PQHeaderColor">
-              <af:gridRow marginTop="5px" height="50px" marginBottom="5px" id="gr4">
-                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4" halign="stretch" valign="middle">
-                  <af:panelGroupLayout id="pgl7" layout="vertical" halign="center">
-                    <af:outputFormatted value="Policy Details" id="of1"
-                                        inlineStyle="font-size:x-large; font-weight:bolder; color:white;"/>
-                  </af:panelGroupLayout>
-                </af:gridCell>
-              </af:gridRow>
-            </af:panelGridLayout>
-          </af:gridCell>
-        </af:gridRow>
-        <af:gridRow id="gr5" marginTop="20px">
-          <af:gridCell id="gc5" halign="center" marginStart="5px" marginEnd="5px">
-            <af:image source="/icons/Family_logo.png" id="i2"/>
-          </af:gridCell>
-        </af:gridRow>
-        <af:gridRow marginTop="5px" height="auto" id="gr2">
-          <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2" halign="stretch" valign="stretch">
-            <af:panelGridLayout id="pgl8">
-              <af:gridRow marginTop="5px" height="auto" id="gr6">
-                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6" halign="center">
-                  <af:inputText value="#{bindings.CertificateNo.inputValue}"
-                                required="#{bindings.CertificateNo.hints.mandatory}"
-                                columns="#{bindings.CertificateNo.hints.displayWidth}"
-                                maximumLength="#{bindings.CertificateNo.hints.precision}"
-                                shortDesc="#{bindings.CertificateNo.hints.tooltip}" id="it1"
-                                placeholder="Enter Certificate No.">
-                    <f:validator binding="#{bindings.CertificateNo.validator}"/>
-                  </af:inputText>
-                </af:gridCell>
-              </af:gridRow>
-              <af:gridRow marginTop="5px" height="auto" id="gr7">
-                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7" halign="center">
-                  <af:inputText value="#{bindings.CnicNo.inputValue}" required="#{bindings.CnicNo.hints.mandatory}"
-                                columns="#{bindings.CnicNo.hints.displayWidth}"
-                                maximumLength="#{bindings.CnicNo.hints.precision}"
-                                shortDesc="#{bindings.CnicNo.hints.tooltip}" id="it2" placeholder="CNIC No.">
-                    <f:validator binding="#{bindings.CnicNo.validator}"/>
-                    <af:convertNumber groupingUsed="false" pattern="#{bindings.CnicNo.format}"/>
-                  </af:inputText>
-                </af:gridCell>
-              </af:gridRow>
-              <af:gridRow marginTop="5px" height="auto" id="gr8">
-                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc8" halign="center">
-                  <af:panelGroupLayout id="pgl3" halign="center" layout="horizontal">
-                    <af:inputDate value="#{bindings.DateOfBirth.inputValue}"
-                                  required="#{bindings.DateOfBirth.hints.mandatory}"
-                                  columns="#{bindings.DateOfBirth.hints.displayWidth}"
-                                  shortDesc="#{bindings.DateOfBirth.hints.tooltip}" id="id1"
-                                  placeholder="Date Of Birth" inlineStyle="padding-left:17px">
-                      <f:validator binding="#{bindings.DateOfBirth.validator}"/>
-                      <af:convertDateTime pattern="#{bindings.DateOfBirth.format}"/>
-                    </af:inputDate>
-                  </af:panelGroupLayout>
-                </af:gridCell>
-              </af:gridRow>
-              <af:gridRow marginTop="5px" height="auto" id="gr9">
-                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc9" halign="center">
-                  <af:inputText value="#{bindings.MobileNo.inputValue}" required="#{bindings.MobileNo.hints.mandatory}"
-                                columns="#{bindings.MobileNo.hints.displayWidth}"
-                                maximumLength="#{bindings.MobileNo.hints.precision}"
-                                shortDesc="#{bindings.MobileNo.hints.tooltip}" id="it3" placeholder="Mobile No.">
-                    <f:validator binding="#{bindings.MobileNo.validator}"/>
-                    <af:convertNumber groupingUsed="false" pattern="#{bindings.MobileNo.format}"/>
-                  </af:inputText>
-                </af:gridCell>
-              </af:gridRow>
-              <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr10">
-                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc10" halign="center">
-                  <af:inputText value="#{bindings.EmailAddress.inputValue}"
-                                required="#{bindings.EmailAddress.hints.mandatory}"
-                                columns="#{bindings.EmailAddress.hints.displayWidth}"
-                                maximumLength="#{bindings.EmailAddress.hints.precision}"
-                                shortDesc="#{bindings.EmailAddress.hints.tooltip}" id="it4"
-                                placeholder="CNIC No">
-                    <f:validator binding="#{bindings.EmailAddress.validator}"/>
-                  </af:inputText>
-                </af:gridCell>
-              </af:gridRow>
-              <af:gridRow id="gr11" marginTop="5px" marginBottom="5px">
-                <af:gridCell id="gc11">
-                  <af:panelGroupLayout id="pgl4" halign="end" layout="horizontal" valign="baseline">
-                    <af:outputFormatted value="Already.Registered!  " id="of2"/>
-                    <af:spacer width="10" height="10" id="s6"/>
-                    <af:link text="Login" id="l1" inlineStyle="color:black; font-weight:bold;" action="goLogin"/>
-                    <af:spacer width="10" height="10" id="s7"/>
-                  </af:panelGroupLayout>
-                </af:gridCell>
-              </af:gridRow>
-            </af:panelGridLayout>
-          </af:gridCell>
-        </af:gridRow>
-        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr3">
-          <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3" halign="stretch">
-            <af:panelGroupLayout id="pgl2" halign="center" valign="middle" layout="vertical"
-                                 inlineStyle="background-color:#8b0037;">
-              <af:separator id="s5"
-                            inlineStyle="min-height:5px; background-color:#ba9632; margin: 0px;     border-color: transparent;"/>
-              <af:button text="SUBMIT" id="b1"
-                         inlineStyle="font-size:16px; padding: 7px; color:white; background:#8b0037; border:0;"/>
-            </af:panelGroupLayout>
-          </af:gridCell>
-        </af:gridRow>
-      </af:panelGridLayout>
+            <af:button text="SUBMIT" id="b1"
+                       inlineStyle="font-size:16px; padding: 7px; color:white; background:#8b0037; border:0;"/>
+          </af:panelGroupLayout>
+        </f:facet>
+        <f:facet name="center">
+          <af:panelGridLayout id="pgl5">
+            <af:gridRow id="gr12">
+              <af:gridCell id="gc12">
+                <af:panelGroupLayout id="pgl1" layout="vertical" styleClass="wide" rendered="false">
+                  <af:spacer width="10" height="150" id="s2"/>
+                </af:panelGroupLayout>
+              </af:gridCell>
+            </af:gridRow>
+            <af:gridRow marginTop="5px" height="auto" id="gr1">
+              <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1" halign="stretch" valign="stretch">
+                <af:separator id="s1"
+                              inlineStyle="min-height:5px; background-color:#ba9632; margin: 0px;     border-color: transparent;"/>
+                <af:panelGridLayout id="pgl6" styleClass="PQHeaderColor">
+                  <af:gridRow marginTop="5px" height="50px" marginBottom="5px" id="gr4">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4" halign="stretch"
+                                 valign="middle">
+                      <af:panelGroupLayout id="pgl7" layout="vertical" halign="center">
+                        <af:outputFormatted value="Policy Details" id="of1"
+                                            inlineStyle="font-size:x-large; font-weight:bolder; color:white;"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                </af:panelGridLayout>
+              </af:gridCell>
+            </af:gridRow>
+            <af:gridRow id="gr5" marginTop="20px">
+              <af:gridCell id="gc5" halign="center" marginStart="5px" marginEnd="5px">
+                <af:image source="/icons/Family_logo.png" id="i2"/>
+              </af:gridCell>
+            </af:gridRow>
+            <af:gridRow marginTop="5px" height="auto" id="gr2">
+              <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2" halign="stretch" valign="stretch">
+                <af:panelGridLayout id="pgl8">
+                  <af:gridRow marginTop="5px" height="auto" id="gr6">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6" halign="center">
+                      <af:inputText value="#{bindings.CertificateNo.inputValue}"
+                                    required="#{bindings.CertificateNo.hints.mandatory}"
+                                    columns="#{bindings.CertificateNo.hints.displayWidth}"
+                                    maximumLength="#{bindings.CertificateNo.hints.precision}"
+                                    shortDesc="#{bindings.CertificateNo.hints.tooltip}" id="it1"
+                                    placeholder="Enter Certificate No." styleClass="PQTextContentColor"
+                                    contentStyle="width:300px">
+                        <f:validator binding="#{bindings.CertificateNo.validator}"/>
+                      </af:inputText>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" id="gr7">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7" halign="center">
+                      <af:inputText value="#{bindings.CnicNo.inputValue}" required="#{bindings.CnicNo.hints.mandatory}"
+                                    columns="#{bindings.CnicNo.hints.displayWidth}"
+                                    maximumLength="#{bindings.CnicNo.hints.precision}"
+                                    shortDesc="#{bindings.CnicNo.hints.tooltip}" id="it2" placeholder="CNIC No."
+                                    styleClass="PQTextContentColor" contentStyle="width:300px">
+                        <f:validator binding="#{bindings.CnicNo.validator}"/>
+                        <af:convertNumber groupingUsed="false" pattern="#{bindings.CnicNo.format}"/>
+                      </af:inputText>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" id="gr8">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc8" halign="center">
+                      <af:panelGroupLayout id="pgl3" halign="center" layout="horizontal">
+                        <af:inputDate value="#{bindings.DateOfBirth.inputValue}"
+                                      required="#{bindings.DateOfBirth.hints.mandatory}"
+                                      columns="#{bindings.DateOfBirth.hints.displayWidth}"
+                                      shortDesc="#{bindings.DateOfBirth.hints.tooltip}" id="id1"
+                                      placeholder="Date Of Birth"
+                                      contentStyle="width:210px" styleClass="PQDateTextContentColor">
+                          <f:validator binding="#{bindings.DateOfBirth.validator}"/>
+                          <af:convertDateTime pattern="#{bindings.DateOfBirth.format}"/>
+                        </af:inputDate>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" id="gr9">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc9" halign="center">
+                      <af:inputText value="#{bindings.MobileNo.inputValue}"
+                                    required="#{bindings.MobileNo.hints.mandatory}"
+                                    columns="#{bindings.MobileNo.hints.displayWidth}"
+                                    maximumLength="#{bindings.MobileNo.hints.precision}"
+                                    shortDesc="#{bindings.MobileNo.hints.tooltip}" id="it3" placeholder="Mobile No."
+                                    styleClass="PQTextContentColor" contentStyle="width:300px">
+                        <f:validator binding="#{bindings.MobileNo.validator}"/>
+                        <af:convertNumber groupingUsed="false" pattern="#{bindings.MobileNo.format}"/>
+                      </af:inputText>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr10">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc10" halign="center">
+                      <af:inputText value="#{bindings.EmailAddress.inputValue}"
+                                    required="#{bindings.EmailAddress.hints.mandatory}"
+                                    columns="#{bindings.EmailAddress.hints.displayWidth}"
+                                    maximumLength="#{bindings.EmailAddress.hints.precision}"
+                                    shortDesc="#{bindings.EmailAddress.hints.tooltip}" id="it4" placeholder="CNIC No"
+                                    styleClass="PQTextContentColor" contentStyle="width:300px">
+                        <f:validator binding="#{bindings.EmailAddress.validator}"/>
+                      </af:inputText>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr11" marginTop="5px" marginBottom="5px">
+                    <af:gridCell id="gc11">
+                      <af:panelGroupLayout id="pgl4" halign="end" layout="horizontal" valign="baseline">
+                        <af:outputFormatted value="Already.Registered!  " id="of2"/>
+                        <af:spacer width="10" height="10" id="s6"/>
+                        <af:link text="Login" id="l1" inlineStyle="color:black; font-weight:bold;" action="goLogin"/>
+                        <af:spacer width="10" height="10" id="s7"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                </af:panelGridLayout>
+              </af:gridCell>
+            </af:gridRow>
+            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr3">
+              <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3" halign="stretch"/>
+            </af:gridRow>
+          </af:panelGridLayout>
+        </f:facet>
+      </af:panelStretchLayout>
     </af:form>
   </af:document>
 </f:view>
