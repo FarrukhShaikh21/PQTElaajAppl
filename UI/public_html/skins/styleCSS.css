@@ -832,6 +832,34 @@ af|inputDate
     color:red;
 }
  
+  .PQChoiceContentColor af|selectOneChoice::content
+{
+/*border: Silver  inset 2px;*/
+
+    height:25px;
+    border-top-left-radius:10px;     
+border-bottom-left-radius:10px;     
+border-bottom-right-radius:10px;
+border-top-right-radius:10px;
+
+    color:#8b0037;
+    font-weight: bold;
+}
+
+ .PQLovContentColor af|inputListOfValues::content
+{
+/*border: Silver  inset 2px;*/
+
+    height:25px;
+    border-top-left-radius:10px;     
+border-bottom-left-radius:10px;     
+border-bottom-right-radius:10px;
+border-top-right-radius:10px;
+
+    color:#8b0037;
+    font-weight: bold;
+}
+
 .PQTextContentColor af|inputText::content
 {
 /*border: Silver  inset 2px;*/

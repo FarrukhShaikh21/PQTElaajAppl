@@ -20,7 +20,7 @@
                         <af:panelGridLayout id="pgl3">
                             <af:gridRow marginTop="5px" height="auto" id="gr1">
                                 <af:gridCell marginStart="5px" width="30%" id="gc1" halign="start" valign="middle">
-                                    <af:outputLabel value="Name :" id="ol1"/>
+                                    <af:outputLabel value="Name :" id="ol1" inlineStyle="color:maroon;"/>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="gc2">
                                     <af:outputFormatted value="#{bindings.EmpName.inputValue}" id="of6"

@@ -64,7 +64,7 @@
                                                 <af:gridRow id="gr12">
                                                     <af:gridCell id="gc13" halign="center"
                                                                  styleClass="background:transparent">
-                                                        <af:image source="/icons/Family_logo.png" id="i2"/>
+                                                        <af:image id="i2" source="/icons/IMGPQFamilyTakaful.png"/>
                                                     </af:gridCell>
                                                 </af:gridRow>
                                                 <af:gridRow marginTop="20px" height="auto" id="gr5">
