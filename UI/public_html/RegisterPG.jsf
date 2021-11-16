@@ -5,7 +5,8 @@
     <af:messages id="m1"/>
     <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
     <af:form id="f1">
-      <af:panelStretchLayout id="psl1" bottomHeight="50px" dimensionsFrom="parent">
+      <af:panelStretchLayout id="psl1" bottomHeight="50px" dimensionsFrom="parent"
+                             inlineStyle='background-image:url("images/imgLoginBackground.jpg"); background-repeat:no-repeat; background-size:100.0% auto;'>
         <f:facet name="top"/>
         <f:facet name="bottom">
           <af:panelGroupLayout id="pgl2" halign="center" valign="middle" layout="vertical"
@@ -17,7 +18,7 @@
           </af:panelGroupLayout>
         </f:facet>
         <f:facet name="center">
-          <af:panelGridLayout id="pgl5">
+          <af:panelGridLayout id="pgl5" dimensionsFrom="parent">
             <af:gridRow id="gr12">
               <af:gridCell id="gc12">
                 <af:panelGroupLayout id="pgl1" layout="vertical" styleClass="wide" rendered="false">
@@ -83,7 +84,7 @@
                                       columns="#{bindings.DateOfBirth.hints.displayWidth}"
                                       shortDesc="#{bindings.DateOfBirth.hints.tooltip}" id="id1"
                                       placeholder="Date Of Birth"
-                                      contentStyle="width:210px" styleClass="PQDateTextContentColor">
+                                      contentStyle="width:250px" styleClass="PQDateTextContentColor">
                           <f:validator binding="#{bindings.DateOfBirth.validator}"/>
                           <af:convertDateTime pattern="#{bindings.DateOfBirth.format}"/>
                         </af:inputDate>

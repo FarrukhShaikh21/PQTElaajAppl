@@ -827,6 +827,10 @@ table.x14d.x152 {
     color:#8b0037;
 
 }
+af|inputDate
+{
+    color:red;
+}
  
 .PQTextContentColor af|inputText::content
 {
@@ -844,13 +848,13 @@ border-top-right-radius:10px;
 
 .PQDateTextContentColor af|inputDate::content
 {
- height:20px;
-    border-top-left-radius:10px;     
+height:20px;
+border-top-left-radius:10px;     
 border-bottom-left-radius:10px;     
 border-bottom-right-radius:10px;
 border-top-right-radius:10px;
-padding-left: 50px;
-border-color: Blue ;
+/*padding-left: 50px;*/
+/*border-color: Blue ;*/
 
     color:#8b0037;
     font-weight: bold;
@@ -888,7 +892,7 @@ border-color: Blue ;
      background-repeat: no-repeat;
      background-size:100.0%;
 }
-/*
+
 wide {
 
     display: inline;
@@ -917,4 +921,4 @@ wide {
 
             }
 
-        }*/
+        }

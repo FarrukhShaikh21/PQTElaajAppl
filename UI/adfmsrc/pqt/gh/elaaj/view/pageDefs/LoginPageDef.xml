@@ -11,13 +11,6 @@
     </variableIterator>
   </executables>
   <bindings>
-    <methodAction id="VerifyUserAuth" RequiresUpdateModel="true" Action="invokeMethod" MethodName="VerifyUserAuth"
-                  IsViewObjectMethod="false" DataControl="PQTElaajAMDataControl"
-                  InstanceName="data.PQTElaajAMDataControl.dataProvider"
-                  ReturnName="data.PQTElaajAMDataControl.methodResults.VerifyUserAuth_PQTElaajAMDataControl_dataProvider_VerifyUserAuth_result">
-      <NamedData NDName="pUserName" NDType="java.lang.String" NDValue="${bindings.VerifyUserAuth_pUserName}"/>
-      <NamedData NDName="pUserPassword" NDType="java.lang.String" NDValue="${bindings.VerifyUserAuth_pUserPassword}"/>
-    </methodAction>
     <attributeValues IterBinding="variables" id="pUserName">
       <AttrNames>
         <Item Value="VerifyUserAuth_pUserName"/>

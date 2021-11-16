@@ -8,7 +8,7 @@
     <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
         <af:messages id="m1"/>
         <af:form id="f1">
-            <af:panelStretchLayout id="psl1">
+            <af:panelStretchLayout id="psl1" dimensionsFrom="parent">
                 <f:facet name="top">
                     <af:panelGroupLayout id="pgl1" halign="center" valign="middle" layout="vertical"
                                          inlineStyle="background-color:#8b0037;">
@@ -16,11 +16,11 @@
                                       inlineStyle="min-height:5px; background-color:#ba9632; margin: 0px;     border-color: transparent;"/>
                         <af:panelGridLayout id="pgl9">
                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
-                                <af:gridCell width="85%" id="gc1" halign="center" valign="middle">
+                                <af:gridCell width="100%" id="gc1" halign="stretch" valign="middle">
                                     <af:outputFormatted value="Main Panel" id="of1"
                                                         inlineStyle="font-size:x-large; font-weight:bolder; color:white;"/>
                                 </af:gridCell>
-                                <af:gridCell marginStart="5px" width="15%" marginEnd="5px" id="gc2" halign="center"
+                                <af:gridCell marginStart="5px" width="15px" marginEnd="5px" id="gc2" halign="center"
                                              valign="middle">
                                     <af:link id="l1" icon="/images/exit.png" action="#{LoginBean.LogoutAction}"/>
                                 </af:gridCell>
@@ -29,12 +29,12 @@
                     </af:panelGroupLayout>
                 </f:facet>
                 <f:facet name="center">
-                    <af:panelGroupLayout id="pgl3" layout="vertical">
+                    <af:panelGroupLayout id="pgl3" layout="scroll">
                         <af:panelGridLayout id="pgl4">
-                            <af:gridRow height="auto" id="gr5">
+                            <af:gridRow height="auto" id="gr5" marginTop="10px" marginBottom="10px">
                                 <af:gridCell width="35%" id="gc13" valign="middle" halign="end" marginEnd="3px">
                                     <af:outputFormatted value="#{bindings.EmpName.hints.label}" id="of2"
-                                                        inlineStyle="color:Red;"/>
+                                                        inlineStyle="color:#8b0037;"/>
                                 </af:gridCell>
                                 <af:gridCell width="65%" id="gc14" valign="middle"
                                              halign="start">
@@ -43,17 +43,16 @@
                                                   columns="#{bindings.EmpName.hints.displayWidth}"
                                                   maximumLength="#{bindings.EmpName.hints.precision}"
                                                   shortDesc="#{bindings.EmpName.hints.tooltip}" id="it2"
-                                                  disabled="true"
-                                                  contentStyle="font-weight:bold; background-color: white; border: none; font-size: 11px;"
-                                                  inlineStyle="color:Red;">
+                                                  contentStyle="font-weight:bold; background-color: white; border: none; font-size: 11px;color:#8b0037;"
+                                                  inlineStyle="color:Red;" readOnly="true">
                                         <f:validator binding="#{bindings.EmpName.validator}"/>
                                     </af:inputText>
                                 </af:gridCell>
                             </af:gridRow>
-                            <af:gridRow height="auto" id="gr6">
+                            <af:gridRow height="auto" id="gr6" marginTop="10px" marginBottom="10px">
                                 <af:gridCell width="35%" id="gc15" valign="middle" halign="end" marginEnd="3px">
                                     <af:outputFormatted value="#{bindings.PolicyNo.hints.label} :" id="of3"
-                                                        inlineStyle="color:Red;"/>
+                                                        inlineStyle="color:#8b0037"/>
                                 </af:gridCell>
                                 <af:gridCell width="65%" id="gc16" valign="middle"
                                              halign="start">
@@ -62,17 +61,16 @@
                                                   columns="#{bindings.PolicyNo.hints.displayWidth}"
                                                   maximumLength="#{bindings.PolicyNo.hints.precision}"
                                                   shortDesc="#{bindings.PolicyNo.hints.tooltip}" id="it1"
-                                                  disabled="true"
-                                                  contentStyle="font-weight:bold; background-color: white; border: none; font-size: 11px;"
-                                                  inlineStyle="color:Red;">
+                                                  contentStyle="font-weight:bold; background-color: white; border: none; font-size: 11px;color:#8b0037;"
+                                                  inlineStyle="color:Red;" readOnly="true">
                                         <f:validator binding="#{bindings.PolicyNo.validator}"/>
                                     </af:inputText>
                                 </af:gridCell>
                             </af:gridRow>
-                            <af:gridRow height="auto" id="gr7">
+                            <af:gridRow height="auto" id="gr7" marginTop="10px" marginBottom="10px">
                                 <af:gridCell width="35%" id="gc17" valign="middle" halign="end" marginEnd="3px">
                                     <af:outputFormatted value="#{bindings.EmpStatus.hints.label}" id="of4"
-                                                        inlineStyle="color:Red;"/>
+                                                        inlineStyle="color:#8b0037"/>
                                 </af:gridCell>
                                 <af:gridCell width="65%" id="gc18" valign="middle"
                                              halign="start">
@@ -81,17 +79,16 @@
                                                   columns="#{bindings.EmpStatus.hints.displayWidth}"
                                                   maximumLength="#{bindings.EmpStatus.hints.precision}"
                                                   shortDesc="#{bindings.EmpStatus.hints.tooltip}" id="it6"
-                                                  disabled="true"
-                                                  contentStyle="font-weight:bold; background-color: white; border: none; font-size: 11px;"
-                                                  inlineStyle="color:Red;">
+                                                  contentStyle="font-weight:bold; background-color: white; border: none; font-size: 11px;color:#8b0037;"
+                                                  inlineStyle="color:Red;" readOnly="true">
                                         <f:validator binding="#{bindings.EmpStatus.validator}"/>
                                     </af:inputText>
                                 </af:gridCell>
                             </af:gridRow>
-                            <af:gridRow height="auto" id="gr8">
+                            <af:gridRow height="auto" id="gr8" marginTop="10px" marginBottom="10px">
                                 <af:gridCell width="35%" id="gc19" valign="middle" halign="end" marginEnd="3px">
                                     <af:outputFormatted value="#{bindings.EmpFolioId.hints.label}" id="of5"
-                                                        inlineStyle="color:Red;"/>
+                                                        inlineStyle="color:#8b0037"/>
                                 </af:gridCell>
                                 <af:gridCell width="65%" id="gc20" valign="middle"
                                              halign="start">
@@ -100,34 +97,33 @@
                                                   columns="#{bindings.EmpFolioId.hints.displayWidth}"
                                                   maximumLength="#{bindings.EmpFolioId.hints.precision}"
                                                   shortDesc="#{bindings.EmpFolioId.hints.tooltip}" id="it4"
-                                                  disabled="true"
-                                                  contentStyle="font-weight:bold; background-color: white; border: none; font-size: 11px;"
-                                                  inlineStyle="color:Red;">
+                                                  contentStyle="font-weight:bold; background-color: white; border: none; font-size: 11px;color:#8b0037;"
+                                                  inlineStyle="color:Red;" readOnly="true">
                                         <f:validator binding="#{bindings.EmpFolioId.validator}"/>
                                     </af:inputText>
                                 </af:gridCell>
                             </af:gridRow>
-                            <af:gridRow height="auto" id="gr9">
+                            <af:gridRow height="auto" id="gr9" marginTop="10px" marginBottom="10px">
                                 <af:gridCell width="35%" id="gc21" valign="middle" halign="end" marginEnd="3px">
                                     <af:outputFormatted value="#{bindings.EmpAge.hints.label}" id="of6"
-                                                        inlineStyle="color:Red;"/>
+                                                        inlineStyle="color:#8b0037"/>
                                 </af:gridCell>
                                 <af:gridCell width="65%" id="gc22" valign="middle"
                                              halign="start">
-                                    <af:inputText value="#{bindings.EmpAge.inputValue}" simple="true"
+                                    <af:inputText value="#{bindings.EmpAge.inputValue}"
                                                   required="#{bindings.EmpAge.hints.mandatory}"
                                                   columns="#{bindings.EmpAge.hints.displayWidth}"
                                                   maximumLength="#{bindings.EmpAge.hints.precision}"
-                                                  shortDesc="#{bindings.EmpAge.hints.tooltip}" id="it5" disabled="true"
-                                                  contentStyle="font-weight:bold; background-color: white; border: none; font-size: 11px;"
-                                                  inlineStyle="color:Red;">
+                                                  shortDesc="#{bindings.EmpAge.hints.tooltip}" id="it5"
+                                                  contentStyle="font-weight:bold; background-color: white; border: none; font-size: 11px;color:#8b0037;"
+                                                  inlineStyle="color:Red;" readOnly="true">
                                         <f:validator binding="#{bindings.EmpAge.validator}"/>
                                     </af:inputText>
                                 </af:gridCell>
                             </af:gridRow>
-                            <af:gridRow height="auto" marginBottom="5px" id="gr10">
+                            <af:gridRow height="auto" marginBottom="100px" id="gr10" marginTop="10px">
                                 <af:gridCell width="35%" id="gc23" valign="middle" halign="end" marginEnd="3px">
-                                    <af:outputFormatted value="Employer :" id="of7" inlineStyle="color:Red;"/>
+                                    <af:outputFormatted value="Employer :" id="of7" inlineStyle="color:#8b0037"/>
                                 </af:gridCell>
                                 <af:gridCell width="65%" id="gc24" valign="middle"
                                              halign="start">
@@ -136,60 +132,63 @@
                                                   columns="#{bindings.CustFullName.hints.displayWidth}"
                                                   maximumLength="#{bindings.CustFullName.hints.precision}"
                                                   shortDesc="#{bindings.CustFullName.hints.tooltip}" id="it3"
-                                                  disabled="true"
-                                                  contentStyle="font-weight:bold; background-color: white; border: none; font-size: 11px;"
-                                                  inlineStyle="color:Red;">
+                                                  contentStyle="font-weight:bold; background-color: white; border: none; font-size: 11px;color:#8b0037;"
+                                                  inlineStyle="color:Red;" readOnly="true">
                                         <f:validator binding="#{bindings.CustFullName.validator}"/>
                                     </af:inputText>
                                 </af:gridCell>
                             </af:gridRow>
+                            <af:gridRow id="gr2">
+                                <af:gridCell id="gc3" columnSpan="2" width="100%" halign="stretch" valign="stretch">
+                                    <af:panelGroupLayout id="pgl7" layout="vertical" valign="middle" halign="center">
+                                        <af:panelGroupLayout id="pgl2" halign="center">
+                                            <af:button text="Benefit &amp; Limit" id="b1" styleClass="multiLineButton"
+                                                       inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
+                                                       action="goBenefitDetail"/>
+                                            <af:button text="Claim History" id="b2"
+                                                       inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
+                                                       styleClass="multiLineButton" action="goClaimDetail"/>
+                                            <af:button text="Claim Intimation" id="b3"
+                                                       inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
+                                                       styleClass="multiLineButton" action="goClaimIntimationPG"/>
+                                        </af:panelGroupLayout>
+                                        <af:panelGroupLayout id="pgl5" halign="center">
+                                            <af:button text="Claim Reimbursement" id="b4"
+                                                       inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
+                                                       styleClass="multiLineButton"/>
+                                            <af:button text="Record Correction" id="b5"
+                                                       inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
+                                                       styleClass="multiLineButton"/>
+                                            <af:button text="Panel Hospital" id="b6"
+                                                       inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
+                                                       styleClass="multiLineButton" action="goPanelHospital"/>
+                                        </af:panelGroupLayout>
+                                        <af:panelGroupLayout id="pgl6" halign="center">
+                                            <af:button text="Value Added Services" id="b7"
+                                                       inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
+                                                       styleClass="multiLineButton"/>
+                                            <af:button text="Treatment Info" id="b8"
+                                                       inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
+                                                       styleClass="multiLineButton"/>
+                                            <af:button text="Products &amp; Solutions" id="b9"
+                                                       inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
+                                                       styleClass="multiLineButton"/>
+                                        </af:panelGroupLayout>
+                                        <af:panelGroupLayout id="pgl8" halign="center">
+                                            <af:button text="OPD Reimbursement" id="b10"
+                                                       inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
+                                                       styleClass="multiLineButton" action="goToReimbursement"/>
+                                            <af:button text="Launch Complaint" id="b11"
+                                                       inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
+                                                       styleClass="multiLineButton"/>
+                                            <af:button text="Contact Us" id="b12"
+                                                       inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
+                                                       styleClass="multiLineButton"/>
+                                        </af:panelGroupLayout>
+                                    </af:panelGroupLayout>
+                                </af:gridCell>
+                            </af:gridRow>
                         </af:panelGridLayout>
-                        <af:panelGroupLayout id="pgl7" layout="vertical" valign="middle" halign="center">
-                            <af:panelGroupLayout id="pgl2" layout="horizontal">
-                                <af:button text="Benefit &amp; Limit" id="b1" styleClass="multiLineButton"
-                                           inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
-                                           action="goBenefitDetail"/>
-                                <af:button text="Claim History" id="b2"
-                                           inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
-                                           styleClass="multiLineButton" action="goClaimDetail"/>
-                                <af:button text="Claim Intimation" id="b3"
-                                           inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
-                                           styleClass="multiLineButton" action="goClaimIntimationPG"/>
-                            </af:panelGroupLayout>
-                            <af:panelGroupLayout id="pgl5" layout="horizontal">
-                                <af:button text="Claim Reimbursement" id="b4"
-                                           inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
-                                           styleClass="multiLineButton"/>
-                                <af:button text="Record Correction" id="b5"
-                                           inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
-                                           styleClass="multiLineButton"/>
-                                <af:button text="Panel Hospital" id="b6"
-                                           inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
-                                           styleClass="multiLineButton" action="goPanelHospital"/>
-                            </af:panelGroupLayout>
-                            <af:panelGroupLayout id="pgl6" layout="horizontal">
-                                <af:button text="Value Added Services" id="b7"
-                                           inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
-                                           styleClass="multiLineButton"/>
-                                <af:button text="Treatment Info" id="b8"
-                                           inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
-                                           styleClass="multiLineButton"/>
-                                <af:button text="Products &amp; Solutions" id="b9"
-                                           inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
-                                           styleClass="multiLineButton"/>
-                            </af:panelGroupLayout>
-                            <af:panelGroupLayout id="pgl8" layout="horizontal">
-                                <af:button text="OPD Reimbursement" id="b10"
-                                           inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
-                                           styleClass="multiLineButton" action="goToReimbursement"/>
-                                <af:button text="Launch Complaint" id="b11"
-                                           inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
-                                           styleClass="multiLineButton"/>
-                                <af:button text="Contact Us" id="b12"
-                                           inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
-                                           styleClass="multiLineButton"/>
-                            </af:panelGroupLayout>
-                        </af:panelGroupLayout>
                     </af:panelGroupLayout>
                 </f:facet>
             </af:panelStretchLayout>
