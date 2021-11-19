@@ -5,7 +5,7 @@
         <af:messages id="m1"/>
         <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
         <af:form id="f1">
-            <af:panelStretchLayout id="psl1">
+            <af:panelStretchLayout id="psl1" dimensionsFrom="parent">
                 <f:facet name="top">
                     <af:panelGroupLayout id="pgl1" halign="center" valign="middle" layout="vertical"
                                          inlineStyle="background-color:#8b0037;">
@@ -24,105 +24,197 @@
                     </af:panelGroupLayout>
                 </f:facet>
                 <f:facet name="center">
-                    <af:panelGroupLayout id="pgl2" layout="scroll">
-                        <af:panelFormLayout id="pfl1">
-                            <af:outputFormatted value="Member Name" id="of2" inlineStyle="font-size: 12px;"/>
-                            <af:inputListOfValues id="nameOfPatientId"
-                                                  popupTitle="Search and Select: #{bindings.NameOfPatient.hints.label}"
-                                                  value="#{bindings.NameOfPatient.inputValue}"
-                                                  model="#{bindings.NameOfPatient.listOfValuesModel}"
-                                                  required="#{bindings.NameOfPatient.hints.mandatory}"
-                                                  columns="#{bindings.NameOfPatient.hints.displayWidth}"
-                                                  shortDesc="#{bindings.NameOfPatient.hints.tooltip}"
-                                                  placeholder="Select Covered Member">
-                                <f:validator binding="#{bindings.NameOfPatient.validator}"/>
-                            </af:inputListOfValues>
-                            <af:outputFormatted value="Claim Type" id="of3" inlineStyle="font-size: 12px;"/>
-                            <af:selectOneChoice value="#{bindings.TypeOfClaimn.inputValue}"
-                                                required="#{bindings.TypeOfClaimn.hints.mandatory}"
-                                                shortDesc="#{bindings.TypeOfClaimn.hints.tooltip}" id="soc1">
-                                <f:selectItems value="#{bindings.TypeOfClaimn.items}" id="si1"/>
-                                <f:validator binding="#{bindings.TypeOfClaimn.validator}"/>
-                            </af:selectOneChoice>
-                            <af:inputText value="#{bindings.CnicNo.inputValue}" simple="true"
-                                          required="#{bindings.CnicNo.hints.mandatory}"
-                                          columns="#{bindings.CnicNo.hints.displayWidth}"
-                                          maximumLength="#{bindings.CnicNo.hints.precision}"
-                                          shortDesc="#{bindings.CnicNo.hints.tooltip}" id="it1" autoSubmit="true"
-                                          rendered="false">
-                                <f:validator binding="#{bindings.CnicNo.validator}"/>
-                            </af:inputText>
-                            <af:outputFormatted value="Hospital" id="of4" inlineStyle="font-size: 12px;"/>
-                            <af:inputListOfValues id="nameOfPanelHospitalId"
-                                                  popupTitle="Search and Select: #{bindings.NameOfPanelHospital.hints.label}"
-                                                  value="#{bindings.NameOfPanelHospital.inputValue}"
-                                                  model="#{bindings.NameOfPanelHospital.listOfValuesModel}"
-                                                  required="#{bindings.NameOfPanelHospital.hints.mandatory}"
-                                                  columns="#{bindings.NameOfPanelHospital.hints.displayWidth}"
-                                                  shortDesc="#{bindings.NameOfPanelHospital.hints.tooltip}"
-                                                  placeholder="Select Hospital" editMode="select">
-                                <f:validator binding="#{bindings.NameOfPanelHospital.validator}"/>
-                            </af:inputListOfValues>
-                            <af:outputFormatted value="Name of Treating Physician" id="of5" inlineStyle="font-size: 12px;"/>
-                            <af:inputText value="#{bindings.NameOfDoctor.inputValue}" simple="true"
-                                          required="#{bindings.NameOfDoctor.hints.mandatory}"
-                                          columns="#{bindings.NameOfDoctor.hints.displayWidth}"
-                                          maximumLength="#{bindings.NameOfDoctor.hints.precision}"
-                                          shortDesc="#{bindings.NameOfDoctor.hints.tooltip}" id="it2">
-                                <f:validator binding="#{bindings.NameOfDoctor.validator}"/>
-                            </af:inputText>
-                            <af:outputFormatted value="Symtoms at Present" id="of6" inlineStyle="font-size: 12px;"/>
-                            <af:inputText value="#{bindings.NameOfDoctor.inputValue}" simple="true"
-                                          required="#{bindings.NameOfDoctor.hints.mandatory}"
-                                          columns="#{bindings.NameOfDoctor.hints.displayWidth}"
-                                          maximumLength="#{bindings.NameOfDoctor.hints.precision}"
-                                          shortDesc="#{bindings.NameOfDoctor.hints.tooltip}" id="it3">
-                                <f:validator binding="#{bindings.NameOfDoctor.validator}"/>
-                            </af:inputText>
-                            <af:outputFormatted value="On what date Symptoms first occurred ?" id="of7" inlineStyle="font-size: 12px;"/>
-                            <af:inputDate value="#{bindings.SymptomFirstAppearedDate.inputValue}"
-                                          required="#{bindings.SymptomFirstAppearedDate.hints.mandatory}"
-                                          columns="#{bindings.SymptomFirstAppearedDate.hints.displayWidth}"
-                                          shortDesc="#{bindings.SymptomFirstAppearedDate.hints.tooltip}" id="id1">
-                                <f:validator binding="#{bindings.SymptomFirstAppearedDate.validator}"/>
-                                <af:convertDateTime pattern="#{bindings.SymptomFirstAppearedDate.format}"/>
-                            </af:inputDate>
-                            <af:outputFormatted value="Expected Date of Admission" id="of8" inlineStyle="font-size: 12px;"/>
-                            <af:inputDate value="#{bindings.ExpectedDateOfAddminission.inputValue}"
-                                          required="#{bindings.ExpectedDateOfAddminission.hints.mandatory}"
-                                          columns="#{bindings.ExpectedDateOfAddminission.hints.displayWidth}"
-                                          shortDesc="#{bindings.ExpectedDateOfAddminission.hints.tooltip}" id="id2">
-                                <f:validator binding="#{bindings.ExpectedDateOfAddminission.validator}"/>
-                                <af:convertDateTime pattern="#{bindings.ExpectedDateOfAddminission.format}"/>
-                            </af:inputDate>
-                            <af:outputFormatted value="Diagnosis" id="of9" inlineStyle="font-size: 12px;"/>
-                            <af:inputText value="#{bindings.DoctorDaignosis.inputValue}" simple="true"
-                                          required="#{bindings.DoctorDaignosis.hints.mandatory}"
-                                          columns="#{bindings.DoctorDaignosis.hints.displayWidth}"
-                                          maximumLength="#{bindings.DoctorDaignosis.hints.precision}"
-                                          shortDesc="#{bindings.DoctorDaignosis.hints.tooltip}" id="it4">
-                                <f:validator binding="#{bindings.DoctorDaignosis.validator}"/>
-                            </af:inputText>
-                            <af:outputFormatted value="Procedure Required" id="of10" inlineStyle="font-size: 12px;"/>
-                            <af:inputText value="#{bindings.ProcedureRequired.inputValue}" simple="true"
-                                          required="#{bindings.ProcedureRequired.hints.mandatory}"
-                                          columns="#{bindings.ProcedureRequired.hints.displayWidth}"
-                                          maximumLength="#{bindings.ProcedureRequired.hints.precision}"
-                                          shortDesc="#{bindings.ProcedureRequired.hints.tooltip}" id="it5">
-                                <f:validator binding="#{bindings.ProcedureRequired.validator}"/>
-                            </af:inputText>
-                            <af:outputFormatted value="Expected Cost of Treatment" id="of11" inlineStyle="font-size: 12px;"/>
-                            <af:inputText value="#{bindings.ExpectedCost.inputValue}" simple="true"
-                                          required="#{bindings.ExpectedCost.hints.mandatory}"
-                                          columns="#{bindings.ExpectedCost.hints.displayWidth}"
-                                          maximumLength="#{bindings.ExpectedCost.hints.precision}"
-                                          shortDesc="#{bindings.ExpectedCost.hints.tooltip}" id="it6">
-                                <f:validator binding="#{bindings.ExpectedCost.validator}"/>
-                            </af:inputText>
-                            <af:outputFormatted value="Attach Document(s)" id="of12" inlineStyle="font-size: 12px;"/>
-                            <af:button id="b1" icon="/images/camimg.png"/>
-                            <af:spacer width="10" height="10" id="s1"/>
-                        </af:panelFormLayout>
+                    <af:panelGroupLayout id="pgl2" layout="vertical" halign="center">
+                        <af:panelGridLayout id="pgl4">
+                            <af:gridRow marginTop="5px" height="auto" id="gr1">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1" halign="center">
+                                    <af:outputFormatted value="Member Name" id="of2" inlineStyle="font-size: 12px;"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr2">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2" halign="center">
+                                    <af:inputListOfValues id="nameOfPatientId"
+                                                          popupTitle="Search and Select: #{bindings.NameOfPatient.hints.label}"
+                                                          value="#{bindings.NameOfPatient.inputValue}"
+                                                          model="#{bindings.NameOfPatient.listOfValuesModel}"
+                                                          required="#{bindings.NameOfPatient.hints.mandatory}"
+                                                          columns="#{bindings.NameOfPatient.hints.displayWidth}"
+                                                          shortDesc="#{bindings.NameOfPatient.hints.tooltip}"
+                                                          placeholder="Select Covered Member">
+                                        <f:validator binding="#{bindings.NameOfPatient.validator}"/>
+                                    </af:inputListOfValues>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="15px" height="auto" id="gr3" marginBottom="5px">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3" halign="center">
+                                    <af:outputFormatted value="Claim Type" id="of3" inlineStyle="font-size: 12px;"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4" halign="center">
+                                    <af:selectOneChoice value="#{bindings.TypeOfClaimn.inputValue}"
+                                                        required="#{bindings.TypeOfClaimn.hints.mandatory}"
+                                                        shortDesc="#{bindings.TypeOfClaimn.hints.tooltip}" id="soc1">
+                                        <f:selectItems value="#{bindings.TypeOfClaimn.items}" id="si1"/>
+                                        <f:validator binding="#{bindings.TypeOfClaimn.validator}"/>
+                                    </af:selectOneChoice>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr5">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5" halign="center">
+                                    <af:inputText value="#{bindings.CnicNo.inputValue}" simple="true"
+                                                  required="#{bindings.CnicNo.hints.mandatory}"
+                                                  columns="#{bindings.CnicNo.hints.displayWidth}"
+                                                  maximumLength="#{bindings.CnicNo.hints.precision}"
+                                                  shortDesc="#{bindings.CnicNo.hints.tooltip}" id="it1"
+                                                  autoSubmit="true" rendered="false">
+                                        <f:validator binding="#{bindings.CnicNo.validator}"/>
+                                    </af:inputText>
+                                    <af:outputFormatted value="Hospital" id="of4" inlineStyle="font-size: 12px;"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr6">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6" halign="center">
+                                    <af:inputListOfValues id="nameOfPanelHospitalId"
+                                                          popupTitle="Search and Select: #{bindings.NameOfPanelHospital.hints.label}"
+                                                          value="#{bindings.NameOfPanelHospital.inputValue}"
+                                                          model="#{bindings.NameOfPanelHospital.listOfValuesModel}"
+                                                          required="#{bindings.NameOfPanelHospital.hints.mandatory}"
+                                                          columns="#{bindings.NameOfPanelHospital.hints.displayWidth}"
+                                                          shortDesc="#{bindings.NameOfPanelHospital.hints.tooltip}"
+                                                          placeholder="Select Hospital" editMode="select">
+                                        <f:validator binding="#{bindings.NameOfPanelHospital.validator}"/>
+                                    </af:inputListOfValues>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr7">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7" halign="center">
+                                    <af:outputFormatted value="Name of Treating Physician" id="of5"
+                                                        inlineStyle="font-size: 12px;"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr8">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc8" halign="center">
+                                    <af:inputText value="#{bindings.NameOfDoctor.inputValue}" simple="true"
+                                                  required="#{bindings.NameOfDoctor.hints.mandatory}"
+                                                  columns="#{bindings.NameOfDoctor.hints.displayWidth}"
+                                                  maximumLength="#{bindings.NameOfDoctor.hints.precision}"
+                                                  shortDesc="#{bindings.NameOfDoctor.hints.tooltip}" id="it2">
+                                        <f:validator binding="#{bindings.NameOfDoctor.validator}"/>
+                                    </af:inputText>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr9">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc9" halign="center">
+                                    <af:outputFormatted value="Symtoms at Present" id="of6"
+                                                        inlineStyle="font-size: 12px;"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr10">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc10" halign="center">
+                                    <af:inputText value="#{bindings.NameOfDoctor.inputValue}" simple="true"
+                                                  required="#{bindings.NameOfDoctor.hints.mandatory}"
+                                                  columns="#{bindings.NameOfDoctor.hints.displayWidth}"
+                                                  maximumLength="#{bindings.NameOfDoctor.hints.precision}"
+                                                  shortDesc="#{bindings.NameOfDoctor.hints.tooltip}" id="it3">
+                                        <f:validator binding="#{bindings.NameOfDoctor.validator}"/>
+                                    </af:inputText>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr11">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc11" halign="center">
+                                    <af:outputFormatted value="On what date Symptoms first occurred ?" id="of7"
+                                                        inlineStyle="font-size: 12px;"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr12">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc12" halign="center">
+                                    <af:inputDate value="#{bindings.SymptomFirstAppearedDate.inputValue}"
+                                                  required="#{bindings.SymptomFirstAppearedDate.hints.mandatory}"
+                                                  columns="#{bindings.SymptomFirstAppearedDate.hints.displayWidth}"
+                                                  shortDesc="#{bindings.SymptomFirstAppearedDate.hints.tooltip}"
+                                                  id="id1">
+                                        <f:validator binding="#{bindings.SymptomFirstAppearedDate.validator}"/>
+                                        <af:convertDateTime pattern="#{bindings.SymptomFirstAppearedDate.format}"/>
+                                    </af:inputDate>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr13">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc13" halign="center">
+                                    <af:outputFormatted value="Expected Date of Admission" id="of8"
+                                                        inlineStyle="font-size: 12px;"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr14">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc14" halign="center">
+                                    <af:inputDate value="#{bindings.ExpectedDateOfAddminission.inputValue}"
+                                                  required="#{bindings.ExpectedDateOfAddminission.hints.mandatory}"
+                                                  columns="#{bindings.ExpectedDateOfAddminission.hints.displayWidth}"
+                                                  shortDesc="#{bindings.ExpectedDateOfAddminission.hints.tooltip}"
+                                                  id="id2">
+                                        <f:validator binding="#{bindings.ExpectedDateOfAddminission.validator}"/>
+                                        <af:convertDateTime pattern="#{bindings.ExpectedDateOfAddminission.format}"/>
+                                    </af:inputDate>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr15">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc15" halign="center">
+                                    <af:outputFormatted value="Diagnosis" id="of9" inlineStyle="font-size: 12px;"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr16">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc16" halign="center">
+                                    <af:inputText value="#{bindings.DoctorDaignosis.inputValue}" simple="true"
+                                                  required="#{bindings.DoctorDaignosis.hints.mandatory}"
+                                                  columns="#{bindings.DoctorDaignosis.hints.displayWidth}"
+                                                  maximumLength="#{bindings.DoctorDaignosis.hints.precision}"
+                                                  shortDesc="#{bindings.DoctorDaignosis.hints.tooltip}" id="it4">
+                                        <f:validator binding="#{bindings.DoctorDaignosis.validator}"/>
+                                    </af:inputText>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr17">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc17" halign="center">
+                                    <af:outputFormatted value="Procedure Required" id="of10"
+                                                        inlineStyle="font-size: 12px;"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr18">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc18" halign="center">
+                                    <af:inputText value="#{bindings.ProcedureRequired.inputValue}" simple="true"
+                                                  required="#{bindings.ProcedureRequired.hints.mandatory}"
+                                                  columns="#{bindings.ProcedureRequired.hints.displayWidth}"
+                                                  maximumLength="#{bindings.ProcedureRequired.hints.precision}"
+                                                  shortDesc="#{bindings.ProcedureRequired.hints.tooltip}" id="it5">
+                                        <f:validator binding="#{bindings.ProcedureRequired.validator}"/>
+                                    </af:inputText>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr19">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc19" halign="center">
+                                    <af:outputFormatted value="Expected Cost of Treatment" id="of11"
+                                                        inlineStyle="font-size: 12px;"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr20">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc20" halign="center">
+                                    <af:inputText value="#{bindings.ExpectedCost.inputValue}" simple="true"
+                                                  required="#{bindings.ExpectedCost.hints.mandatory}"
+                                                  columns="#{bindings.ExpectedCost.hints.displayWidth}"
+                                                  maximumLength="#{bindings.ExpectedCost.hints.precision}"
+                                                  shortDesc="#{bindings.ExpectedCost.hints.tooltip}" id="it6">
+                                        <f:validator binding="#{bindings.ExpectedCost.validator}"/>
+                                    </af:inputText>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr21">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc21" halign="center">
+                                    <af:outputFormatted value="Attach Document(s)" id="of12"
+                                                        inlineStyle="font-size: 12px;"/>
+                                    <af:button id="b1" icon="/images/camimg.png"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                        </af:panelGridLayout>
                     </af:panelGroupLayout>
                 </f:facet>
             </af:panelStretchLayout>
