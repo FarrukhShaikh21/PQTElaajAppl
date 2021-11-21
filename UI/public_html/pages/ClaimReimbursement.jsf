@@ -25,13 +25,13 @@
                     </af:panelGroupLayout>
                 </f:facet>
                 <f:facet name="center">
-                    <af:panelGroupLayout id="pgl4" layout="vertical" valign="middle" styleClass="AFStretchWidth"
+                    <af:panelGroupLayout id="pgl4" layout="scroll" valign="middle" styleClass="AFStretchWidth"
                                          halign="center">
                         <af:panelGridLayout id="pgl3" dimensionsFrom="parent">
                             <af:gridRow marginTop="50px" height="auto" marginBottom="5px" id="gr1">
-                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1" halign="center"
+                                <af:gridCell width="100%" id="gc1" halign="stretch"
                                              valign="stretch">
-                                    <af:panelGridLayout id="pgl5" dimensionsFrom="parent">
+                                    <af:panelGridLayout id="pgl5">
                                         <af:gridRow id="gr2">
                                             <af:gridCell id="gc2" width="100%" halign="center">
                                                 <af:outputFormatted value="Member Name" id="of2"
@@ -155,12 +155,9 @@
                                             </af:gridCell>
                                         </af:gridRow>
                                         <af:gridRow marginTop="15px" height="auto" id="gr10" marginBottom="15px">
-                                            <af:gridCell marginStart="5px" width="50%" id="gc16" halign="end">
+                                            <af:gridCell marginStart="5px" width="100%" id="gc16" halign="end">
                                                 <af:outputFormatted value="Attach Document(s)" id="of7"
                                                                     inlineStyle="font-size: 12px;" rendered="false"/>
-                                            </af:gridCell>
-                                            <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc17"
-                                                         valign="stretch">
                                                 <af:button id="b2" icon="/images/camimg.png" rendered="false"/>
                                             </af:gridCell>
                                         </af:gridRow>

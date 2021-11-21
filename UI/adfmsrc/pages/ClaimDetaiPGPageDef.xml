@@ -21,11 +21,6 @@
         <Item Value="EmpAge"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="VuElaajMobileUserVO1Iterator" id="EmpFolioId">
-      <AttrNames>
-        <Item Value="EmpFolioId"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="VuElaajMobileUserVO1Iterator" id="PolicyPeriod">
       <AttrNames>
         <Item Value="PolicyPeriod"/>
@@ -48,6 +43,28 @@
           <Item Value="CoverDesc"/>
           <Item Value="ClaimAmount"/>
           <Item Value="ClmIntDt"/>
+          <Item Value="StatusDesc"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="VuGhsElaajCoveredMemberVO1Iterator" id="VuGhsElaajCoveredMemberVO11">
+      <nodeDefinition DefName="pqt.gh.elaaj.model.vo.VuGhsElaajCoveredMemberVO" Name="VuGhsElaajCoveredMemberVO110">
+        <AttrNames>
+          <Item Value="EmpName"/>
+          <Item Value="EmpSrNo"/>
+          <Item Value="EmpDob"/>
+          <Item Value="Relation"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="ClaimsDetailVO1Iterator" id="ClaimsDetailVO11">
+      <nodeDefinition DefName="pqt.gh.elaaj.model.vo.ClaimsDetailVO" Name="ClaimsDetailVO110">
+        <AttrNames>
+          <Item Value="ClmPolNo"/>
+          <Item Value="CoverDesc"/>
+          <Item Value="ClaimAmount"/>
+          <Item Value="ClmIntDt"/>
+          <Item Value="ClaimNo"/>
           <Item Value="StatusDesc"/>
         </AttrNames>
       </nodeDefinition>
