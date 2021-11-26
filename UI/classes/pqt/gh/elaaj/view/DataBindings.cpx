@@ -30,6 +30,7 @@
     <page id="pqt_gh_elaaj_view_ClaimReimbursementPageDef" path="pages.ClaimReimbursementPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
+    <dc id="FileUploadSOAP" path="pqt.gh.elaaj.model.FileUploadSOAP"/>
     <BC4JDataControl id="PQTElaajAMDataControl" Package="pqt.gh.elaaj.model.am"
                      FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
                      SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"

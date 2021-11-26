@@ -32,5 +32,16 @@
         <Item Value="ClaimTotalAmount"/>
       </AttrNames>
     </attributeValues>
+    <methodAction id="UploadFile1" RequiresUpdateModel="true" Action="invokeMethod" MethodName="UploadFile1"
+                  IsViewObjectMethod="false" DataControl="FileUploadSOAP" InstanceName="data.FileUploadSOAP"
+                  ReturnName="data.FileUploadSOAP.methodResults.UploadFile1_FileUploadSOAP_UploadFile1_result">
+      <NamedData NDName="DocumentReference" NDType="java.lang.String"/>
+      <NamedData NDName="SchemaName" NDType="java.lang.String"/>
+      <NamedData NDName="RepoName" NDType="java.lang.String"/>
+      <NamedData NDName="PrimaryKey" NDType="java.lang.String"/>
+      <NamedData NDName="FileLocation" NDType="java.lang.String"/>
+      <NamedData NDName="FileName" NDType="java.lang.String"/>
+      <NamedData NDName="Parameters" NDType="java.lang.String"/>
+    </methodAction>
   </bindings>
 </pageDefinition>

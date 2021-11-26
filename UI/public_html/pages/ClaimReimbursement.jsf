@@ -4,7 +4,7 @@
     <af:document title="ClaimReimbursement.jsf" id="d1">
         <af:messages id="m1"/>
         <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
-        <af:form id="f1">
+        <af:form id="f1" usesUpload="true">
             <af:panelStretchLayout id="psl1" dimensionsFrom="parent"
                                    inlineStyle='background-image:url("images/imgLoginBackground.jpg"); background-size:100%;'>
                 <f:facet name="top">
@@ -155,7 +155,14 @@
                                             </af:gridCell>
                                         </af:gridRow>
                                         <af:gridRow marginTop="15px" height="auto" id="gr10" marginBottom="15px">
-                                            <af:gridCell marginStart="5px" width="100%" id="gc16" halign="end">
+                                            <af:gridCell marginStart="5px" width="100%" id="gc16" halign="center">
+                                                <af:button actionListener="#{bindings.UploadFile1.execute}"
+                                                           text="UploadFile1"
+                                                           disabled="#{!bindings.UploadFile1.enabled}" id="b3"
+                                                           rendered="false"/>
+                                                <af:inputFile label="Attach File" id="if1"
+                                                              valueChangeListener="#{BenefitDetailBean.uploadFileEventClaimReimburse}"
+                                                              autoSubmit="true" partialTriggers="if1"/>
                                                 <af:outputFormatted value="Attach Document(s)" id="of7"
                                                                     inlineStyle="font-size: 12px;" rendered="false"/>
                                                 <af:button id="b2" icon="/images/camimg.png" rendered="false"/>

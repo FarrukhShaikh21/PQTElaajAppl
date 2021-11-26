@@ -4,9 +4,10 @@
     <af:document title="ClaimIntimation.jsf" id="d1">
         <af:messages id="m1"/>
         <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
-        <af:form id="f1">
-            <af:panelStretchLayout id="psl1" dimensionsFrom="parent"
-                                   inlineStyle='background-image:url("images/imgLoginBackground.jpg"); background-size:100%;'>
+        <af:form id="f1" usesUpload="true">
+            <af:panelStretchLayout id="psl1"
+                                   inlineStyle='background-image:url("images/imgLoginBackground.jpg"); background-size:100%;'
+                                   dimensionsFrom="parent">
                 <f:facet name="top">
                     <af:panelGroupLayout id="pgl1" halign="center" valign="middle" layout="vertical"
                                          inlineStyle="background-color:#8b0037;">
@@ -25,8 +26,8 @@
                     </af:panelGroupLayout>
                 </f:facet>
                 <f:facet name="center">
-                    <af:panelGroupLayout id="pgl2" layout="vertical" halign="center">
-                        <af:panelGridLayout id="pgl5">
+                    <af:panelGroupLayout id="pgl2" layout="scroll" halign="center">
+                        <af:panelGridLayout id="pgl5" dimensionsFrom="parent">
                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr22">
                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc22" halign="stretch"
                                              valign="stretch">
@@ -91,7 +92,7 @@
                                             </af:gridCell>
                                         </af:gridRow>
                                         <af:gridRow marginTop="5px" height="auto" id="gr6">
-                                            <af:gridCell marginStart="15px" width="100%" marginEnd="5px" id="gc6"
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6"
                                                          halign="stretch">
                                                 <af:inputListOfValues id="nameOfPanelHospitalId"
                                                                       popupTitle="Search and Select: #{bindings.NameOfPanelHospital.hints.label}"
@@ -100,9 +101,8 @@
                                                                       required="#{bindings.NameOfPanelHospital.hints.mandatory}"
                                                                       columns="#{bindings.NameOfPanelHospital.hints.displayWidth}"
                                                                       shortDesc="#{bindings.NameOfPanelHospital.hints.tooltip}"
-                                                                      placeholder="Select Hospital" editMode="select"
                                                                       styleClass="PQLovContentColor"
-                                                                      contentStyle="width:100%">
+                                                                      contentStyle="width:90%" simple="true">
                                                     <f:validator binding="#{bindings.NameOfPanelHospital.validator}"/>
                                                 </af:inputListOfValues>
                                             </af:gridCell>
@@ -165,7 +165,7 @@
                                                               columns="#{bindings.SymptomFirstAppearedDate.hints.displayWidth}"
                                                               shortDesc="#{bindings.SymptomFirstAppearedDate.hints.tooltip}"
                                                               id="id1" styleClass="PQDateTextContentColor"
-                                                              contentStyle="width:80%">
+                                                              contentStyle="width:90%" simple="true">
                                                     <f:validator binding="#{bindings.SymptomFirstAppearedDate.validator}"/>
                                                     <af:convertDateTime pattern="#{bindings.SymptomFirstAppearedDate.format}"/>
                                                 </af:inputDate>
@@ -185,7 +185,8 @@
                                                               required="#{bindings.ExpectedDateOfAddminission.hints.mandatory}"
                                                               columns="#{bindings.ExpectedDateOfAddminission.hints.displayWidth}"
                                                               shortDesc="#{bindings.ExpectedDateOfAddminission.hints.tooltip}"
-                                                              id="id2" styleClass="PQDateTextContentColor">
+                                                              id="id2" styleClass="PQDateTextContentColor"
+                                                              contentStyle="width:90%" simple="true">
                                                     <f:validator binding="#{bindings.ExpectedDateOfAddminission.validator}"/>
                                                     <af:convertDateTime pattern="#{bindings.ExpectedDateOfAddminission.format}"/>
                                                 </af:inputDate>
@@ -215,7 +216,7 @@
                                         </af:gridRow>
                                         <af:gridRow marginTop="15px" height="auto" id="gr17">
                                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc17"
-                                                         halign="center">
+                                                         halign="stretch">
                                                 <af:outputFormatted value="Procedure Required" id="of10"
                                                                     inlineStyle="font-size: 12px;color:#8b0037"/>
                                             </af:gridCell>
@@ -259,9 +260,17 @@
                                         <af:gridRow marginTop="5px" height="auto" id="gr21">
                                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc21"
                                                          halign="stretch">
+                                                <af:button actionListener="#{bindings.UploadFile1.execute}"
+                                                           text="UploadFile1"
+                                                           disabled="#{!bindings.UploadFile1.enabled}" id="b3"
+                                                           rendered="false"/>
                                                 <af:outputFormatted value="Attach Document(s)" id="of12"
-                                                                    inlineStyle="font-size: 12px;color:#8b0037"/>
-                                                <af:button id="b1" icon="/images/camimg.png"/>
+                                                                    inlineStyle="font-size: 12px;color:#8b0037"
+                                                                    rendered="false"/>
+                                                <af:inputFile label="Attach File" id="if1" autoSubmit="true"
+                                                              valueChangeListener="#{BenefitDetailBean.uploadFileEventClaimIntimation}"
+                                                              binding="#{BenefitDetailBean.rif}" partialTriggers="if1"/>
+                                                <af:button id="b1" icon="/images/camimg.png" rendered="false"/>
                                             </af:gridCell>
                                         </af:gridRow>
                                     </af:panelGridLayout>
