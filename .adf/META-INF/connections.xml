@@ -7,7 +7,7 @@
         <Contents>thin</Contents>
       </StringRefAddr>
       <StringRefAddr addrType="hostname">
-        <Contents>localhost</Contents>
+        <Contents>172.16.0.192</Contents>
       </StringRefAddr>
       <SecureRefAddr addrType="password"/>
       <StringRefAddr addrType="subtype">
@@ -16,12 +16,59 @@
       <StringRefAddr addrType="port">
         <Contents>1521</Contents>
       </StringRefAddr>
+      <StringRefAddr addrType="serviceName">
+        <Contents>pqtprod</Contents>
+      </StringRefAddr>
       <StringRefAddr addrType="user">
-        <Contents>ORAERP</Contents>
+        <Contents>timsgh</Contents>
       </StringRefAddr>
-      <StringRefAddr addrType="sid">
-        <Contents>XE</Contents>
-      </StringRefAddr>
+    </RefAddresses>
+  </Reference>
+  <Reference name="FileUploadSOAP" className="oracle.adf.model.connection.webservice.impl.WebServiceConnectionImpl"
+             xmlns="">
+    <Factory className="oracle.adf.model.connection.webservice.api.WebServiceConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="WebServiceConnection">
+        <Contents>
+          <wsconnection description="http://172.16.0.91:7001/DMSWebService/DMSIntegration?wsdl"
+                        service="{http://webservice.dms.netbeans.pqt/}DMSIntegration">
+            <model name="{http://webservice.dms.netbeans.pqt/}DMSIntegration" xmlns="http://oracle.com/ws/model">
+              <service name="{http://webservice.dms.netbeans.pqt/}DMSIntegration">
+                <port name="DMSWebServicePort" binding="{http://webservice.dms.netbeans.pqt/}DMSWebServicePortBinding"
+                      portType="{http://webservice.dms.netbeans.pqt/}DMSWebService">
+                  <soap addressUrl="http://172.16.0.91:7001/DMSWebService/DMSIntegration"
+                        xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                  <operation name="UploadFile">
+                    <soap soapAction="" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="DownloadFile">
+                    <soap soapAction="" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="DeleteBlobFile">
+                    <soap soapAction="" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="UpdateBlobFile">
+                    <soap soapAction="" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="UploadFile1">
+                    <soap soapAction="" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                </port>
+              </service>
+            </model>
+          </wsconnection>
+        </Contents>
+      </XmlRefAddr>
     </RefAddresses>
   </Reference>
 </References>
