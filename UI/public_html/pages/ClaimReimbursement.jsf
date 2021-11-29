@@ -162,7 +162,8 @@
                                                            rendered="false"/>
                                                 <af:inputFile label="Attach File" id="if1"
                                                               valueChangeListener="#{BenefitDetailBean.uploadFileEventClaimReimburse}"
-                                                              autoSubmit="true" partialTriggers="if1"/>
+                                                              autoSubmit="true" partialTriggers="if1"
+                                                              binding="#{BenefitDetailBean.rif}"/>
                                                 <af:outputFormatted value="Attach Document(s)" id="of7"
                                                                     inlineStyle="font-size: 12px;" rendered="false"/>
                                                 <af:button id="b2" icon="/images/camimg.png" rendered="false"/>
