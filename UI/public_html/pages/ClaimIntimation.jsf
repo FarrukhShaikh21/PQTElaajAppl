@@ -27,7 +27,7 @@
                 </f:facet>
                 <f:facet name="center">
                     <af:panelGroupLayout id="pgl2" layout="scroll" halign="center">
-                        <af:panelGridLayout id="pgl5" dimensionsFrom="parent">
+                        <af:panelGridLayout id="pgl5">
                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr22">
                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc22" halign="stretch"
                                              valign="stretch">
@@ -164,8 +164,9 @@
                                                               required="#{bindings.SymptomFirstAppearedDate.hints.mandatory}"
                                                               columns="#{bindings.SymptomFirstAppearedDate.hints.displayWidth}"
                                                               shortDesc="#{bindings.SymptomFirstAppearedDate.hints.tooltip}"
-                                                              id="id1" styleClass="PQDateTextContentColor"
-                                                              contentStyle="width:90%" simple="true">
+                                                              id="id1" simple="true"
+                                                              styleClass="PQDateTextContentColor"
+                                                              contentStyle="width:150px">
                                                     <f:validator binding="#{bindings.SymptomFirstAppearedDate.validator}"/>
                                                     <af:convertDateTime pattern="#{bindings.SymptomFirstAppearedDate.format}"/>
                                                 </af:inputDate>
@@ -185,8 +186,8 @@
                                                               required="#{bindings.ExpectedDateOfAddminission.hints.mandatory}"
                                                               columns="#{bindings.ExpectedDateOfAddminission.hints.displayWidth}"
                                                               shortDesc="#{bindings.ExpectedDateOfAddminission.hints.tooltip}"
-                                                              id="id2" styleClass="PQDateTextContentColor"
-                                                              contentStyle="width:90%" simple="true">
+                                                              id="id2" styleClass="PQDateTextContentColor" simple="true"
+                                                              contentStyle="width:150px">
                                                     <f:validator binding="#{bindings.ExpectedDateOfAddminission.validator}"/>
                                                     <af:convertDateTime pattern="#{bindings.ExpectedDateOfAddminission.format}"/>
                                                 </af:inputDate>
