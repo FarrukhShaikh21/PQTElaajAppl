@@ -24,6 +24,11 @@
         <Item Value="NameOfDoctor"/>
       </AttrNames>
     </attributeValues>
+    <attributeValues IterBinding="ElaajClaimIntimateEOVO1Iterator" id="SymptomFirstAppearedDate">
+      <AttrNames>
+        <Item Value="SymptomFirstAppearedDate"/>
+      </AttrNames>
+    </attributeValues>
     <attributeValues IterBinding="ElaajClaimIntimateEOVO1Iterator" id="ExpectedDateOfAddminission">
       <AttrNames>
         <Item Value="ExpectedDateOfAddminission"/>
@@ -58,10 +63,5 @@
       <NamedData NDName="FileName" NDType="java.lang.String"/>
       <NamedData NDName="Parameters" NDType="java.lang.String"/>
     </methodAction>
-    <attributeValues IterBinding="ElaajClaimIntimateEOVO1Iterator" id="SymptomFirstAppearedDate">
-      <AttrNames>
-        <Item Value="SymptomFirstAppearedDate"/>
-      </AttrNames>
-    </attributeValues>
   </bindings>
 </pageDefinition>

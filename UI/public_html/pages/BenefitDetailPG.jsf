@@ -5,9 +5,8 @@
     <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
         <af:messages id="m1"/>
         <af:form id="f1">
-            <af:panelStretchLayout id="psl1"
-                                   inlineStyle='background-image:url("images/imgLoginBackground.jpg"); background-size:100%;'
-                                   dimensionsFrom="parent">
+            <af:panelStretchLayout id="psl1" dimensionsFrom="parent"
+                                   inlineStyle='background-image:url("images/imgLoginBackground.jpg"); background-size:100%;'>
                 <f:facet name="start"/>
                 <f:facet name="end"/>
                 <f:facet name="top">
@@ -89,6 +88,40 @@
                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr7">
                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc11" valign="stretch"
                                              halign="stretch">
+                                    <af:panelGroupLayout id="pgl6" layout="scroll">
+                                        <af:listView value="#{bindings.VuGhsElaajCoveredMemberVO11.collectionModel}"
+                                                     var="item"
+                                                     emptyText="#{bindings.VuGhsElaajCoveredMemberVO11.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                     fetchSize="#{bindings.VuGhsElaajCoveredMemberVO11.rangeSize}"
+                                                     id="lv1" selection="single"
+                                                     selectionListener="#{bindings.VuGhsElaajCoveredMemberVO11.treeModel.makeCurrent}">
+                                            <af:listItem id="li1">
+                                                <af:panelGridLayout id="pgl3">
+                                                    <af:gridRow height="auto" id="gr15">
+                                                        <af:gridCell marginStart="5px" width="25%" id="gc6">
+                                                            <af:outputFormatted value="#{item.bindings.EmpSrNo.inputValue}"
+                                                                                id="of3"/>
+                                                        </af:gridCell>
+                                                        <af:gridCell marginStart="5px" width="25%" id="gc8">
+                                                            <af:outputFormatted value="#{item.bindings.EmpName.inputValue}"
+                                                                                id="of4"/>
+                                                        </af:gridCell>
+                                                        <af:gridCell marginStart="5px" width="25%" id="gc12">
+                                                            <af:outputFormatted value="#{item.bindings.EmpDob.inputValue}"
+                                                                                id="of5">
+                                                                <af:convertDateTime pattern="#{bindings.VuGhsElaajCoveredMemberVO11.hints.EmpDob.format}"/>
+                                                            </af:outputFormatted>
+                                                        </af:gridCell>
+                                                        <af:gridCell marginStart="5px" width="25%" marginEnd="5px"
+                                                                     id="gc14">
+                                                            <af:outputFormatted value="#{item.bindings.Relation.inputValue}"
+                                                                                id="of6"/>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                </af:panelGridLayout>
+                                            </af:listItem>
+                                        </af:listView>
+                                    </af:panelGroupLayout>
                                     <af:table value="#{bindings.VuGhsElaajCoveredMemberVO1.collectionModel}" var="row"
                                               rows="#{bindings.VuGhsElaajCoveredMemberVO1.rangeSize}"
                                               emptyText="#{bindings.VuGhsElaajCoveredMemberVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -118,40 +151,6 @@
                                                                 inlineStyle="margin-top: 10px;"/>
                                         </af:column>
                                     </af:table>
-                                    <af:listView value="#{bindings.VuGhsElaajCoveredMemberVO11.collectionModel}"
-                                                 var="item"
-                                                 emptyText="#{bindings.VuGhsElaajCoveredMemberVO11.viewable ? 'No data to display.' : 'Access Denied.'}"
-                                                 fetchSize="#{bindings.VuGhsElaajCoveredMemberVO11.rangeSize}" id="lv1">
-                                        <af:listItem id="li1">
-                                            <af:panelGridLayout id="pgl3">
-                                                <af:gridRow marginTop="5px" height="auto" id="gr15">
-                                                    <af:gridCell marginStart="5px" width="50%" id="gc6" halign="center">
-                                                        <af:outputFormatted value="#{item.bindings.EmpSrNo.inputValue}"
-                                                                            id="of3"/>
-                                                    </af:gridCell>
-                                                    <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc8"
-                                                                 halign="center">
-                                                        <af:outputFormatted value="#{item.bindings.EmpName.inputValue}"
-                                                                            id="of4"/>
-                                                    </af:gridCell>
-                                                </af:gridRow>
-                                                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr17">
-                                                    <af:gridCell marginStart="5px" width="50%" id="gc12"
-                                                                 halign="center">
-                                                        <af:outputFormatted value="#{item.bindings.EmpDob.inputValue}"
-                                                                            id="of5">
-                                                            <af:convertDateTime pattern="#{bindings.VuGhsElaajCoveredMemberVO11.hints.EmpDob.format}"/>
-                                                        </af:outputFormatted>
-                                                    </af:gridCell>
-                                                    <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc14"
-                                                                 halign="center">
-                                                        <af:outputFormatted value="#{item.bindings.Relation.inputValue}"
-                                                                            id="of6"/>
-                                                    </af:gridCell>
-                                                </af:gridRow>
-                                            </af:panelGridLayout>
-                                        </af:listItem>
-                                    </af:listView>
                                 </af:gridCell>
                             </af:gridRow>
                             <af:gridRow id="gr3">

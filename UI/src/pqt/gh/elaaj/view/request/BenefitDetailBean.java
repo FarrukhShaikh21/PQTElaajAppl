@@ -23,6 +23,8 @@ import oracle.adf.view.rich.component.rich.data.RichListView;
 
 import oracle.adf.view.rich.component.rich.input.RichInputFile;
 
+import oracle.adf.view.rich.component.rich.output.RichOutputFormatted;
+
 import oracle.binding.BindingContainer;
 import oracle.binding.OperationBinding;
 
@@ -36,8 +38,10 @@ public class BenefitDetailBean {
     private RichListView selectMaster;
     private RichInputFile rif;
     private String FileDownloadPath = "/u01/ADF_DMS/BTCS_CMS_FILE/DOWNLOAD/";
-//    private String FileUploadPath = "/u01/ADF_DMS/BTCS_CMS_FILE/UPLOAD/";
-    private String FileUploadPath = "C:\\hello\\";
+    private String FileUploadPath = "/u01/ADF_DMS/BTCS_CMS_FILE/UPLOAD/";
+    private RichOutputFormatted rif1;
+    private RichInputFile rif2;
+    //private String FileUploadPath = "C:\\hello\\";
     public BenefitDetailBean() {
     }
     
@@ -189,5 +193,21 @@ public class BenefitDetailBean {
 
     public RichInputFile getRif() {
         return rif;
+    }
+
+    public void setRif1(RichOutputFormatted rif1) {
+        this.rif1 = rif1;
+    }
+
+    public RichOutputFormatted getRif1() {
+        return rif1;
+    }
+
+    public void setRif2(RichInputFile rif2) {
+        this.rif2 = rif2;
+    }
+
+    public RichInputFile getRif2() {
+        return rif2;
     }
 }

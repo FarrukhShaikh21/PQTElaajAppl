@@ -10,8 +10,9 @@
                 <f:facet name="top">
                     <af:panelGroupLayout id="pgl1" layout="vertical" inlineStyle="background-color:#8b0037;"
                                          halign="center" valign="middle">
-                        <af:outputFormatted value="Claim Reimbursement" id="of1"
-                                            inlineStyle="font-size:x-large; font-weight:bolder; color:white;"/>
+                        <af:outputFormatted value="Claim Intimation" id="of1"
+                                            inlineStyle="font-size:x-large; font-weight:bolder; color:white;"
+                                            binding="#{BenefitDetailBean.rif1}"/>
                     </af:panelGroupLayout>
                 </f:facet>
                 <f:facet name="bottom">
@@ -25,10 +26,10 @@
                     </af:panelGroupLayout>
                 </f:facet>
                 <f:facet name="center">
-                    <af:panelGroupLayout id="pgl4" layout="scroll" valign="middle" styleClass="AFStretchWidth"
+                    <af:panelGroupLayout id="pgl4" layout="scroll"
                                          halign="center">
-                        <af:panelGridLayout id="pgl3" dimensionsFrom="parent">
-                            <af:gridRow marginTop="50px" height="auto" marginBottom="5px" id="gr1">
+                        <af:panelGridLayout id="pgl3" dimensionsFrom="auto">
+                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
                                 <af:gridCell width="100%" id="gc1" halign="stretch"
                                              valign="stretch">
                                     <af:panelGridLayout id="pgl5">
@@ -48,7 +49,7 @@
                                                                       required="#{bindings.NameOfPatient.hints.mandatory}"
                                                                       columns="#{bindings.NameOfPatient.hints.displayWidth}"
                                                                       shortDesc="#{bindings.NameOfPatient.hints.tooltip}"
-                                                                      contentStyle="width:95%"
+                                                                      contentStyle="width:90%"
                                                                       styleClass="PQLovContentColor">
                                                     <f:validator binding="#{bindings.NameOfPatient.validator}"/>
                                                 </af:inputListOfValues>
@@ -87,7 +88,7 @@
                                                                       required="#{bindings.NameOfPanelHospital.hints.mandatory}"
                                                                       columns="#{bindings.NameOfPanelHospital.hints.displayWidth}"
                                                                       shortDesc="#{bindings.NameOfPanelHospital.hints.tooltip}"
-                                                                      contentStyle="width:95%"
+                                                                      contentStyle="width:90%"
                                                                       styleClass="PQLovContentColor"
                                                                       value="#{bindings.NameOfPanelHospital.inputValue}">
                                                     <f:validator binding="#{bindings.NameOfPanelHospital.validator}"/>
@@ -163,7 +164,7 @@
                                                 <af:inputFile label="Attach File" id="if1"
                                                               valueChangeListener="#{BenefitDetailBean.uploadFileEventClaimReimburse}"
                                                               autoSubmit="true" partialTriggers="if1"
-                                                              binding="#{BenefitDetailBean.rif}"/>
+                                                              binding="#{BenefitDetailBean.rif2}"/>
                                                 <af:outputFormatted value="Attach Document(s)" id="of7"
                                                                     inlineStyle="font-size: 12px;" rendered="false"/>
                                                 <af:button id="b2" icon="/images/camimg.png" rendered="false"/>

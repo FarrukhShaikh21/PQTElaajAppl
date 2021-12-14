@@ -11,7 +11,7 @@
                 <f:facet name="top">
                     <af:panelGroupLayout id="pgl1" halign="center" valign="middle" layout="vertical"
                                          inlineStyle="background-color:#8b0037;">
-                        <af:outputFormatted value="Claim Intimation" id="of1"
+                        <af:outputFormatted value="Claim Reimbursement" id="of1"
                                             inlineStyle="font-size:x-large; font-weight:bolder; color:white;"/>
                     </af:panelGroupLayout>
                 </f:facet>
@@ -27,7 +27,7 @@
                 </f:facet>
                 <f:facet name="center">
                     <af:panelGroupLayout id="pgl2" layout="scroll" halign="center">
-                        <af:panelGridLayout id="pgl5">
+                        <af:panelGridLayout id="pgl5" dimensionsFrom="auto">
                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr22">
                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc22" halign="stretch"
                                              valign="stretch">
@@ -164,9 +164,8 @@
                                                               required="#{bindings.SymptomFirstAppearedDate.hints.mandatory}"
                                                               columns="#{bindings.SymptomFirstAppearedDate.hints.displayWidth}"
                                                               shortDesc="#{bindings.SymptomFirstAppearedDate.hints.tooltip}"
-                                                              id="id1" simple="true"
-                                                              styleClass="PQDateTextContentColor"
-                                                              contentStyle="width:150px">
+                                                              id="id1" styleClass="PQDateTextContentColor"
+                                                              contentStyle="width:90%" simple="true">
                                                     <f:validator binding="#{bindings.SymptomFirstAppearedDate.validator}"/>
                                                     <af:convertDateTime pattern="#{bindings.SymptomFirstAppearedDate.format}"/>
                                                 </af:inputDate>
@@ -175,7 +174,7 @@
                                         <af:gridRow marginTop="15px" height="auto" id="gr13">
                                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc13"
                                                          halign="stretch">
-                                                <af:outputFormatted value="Expected Date of Admission" id="of8"
+                                                <af:outputFormatted value="Date" id="of8"
                                                                     inlineStyle="font-size: 12px;color:#8b0037"/>
                                             </af:gridCell>
                                         </af:gridRow>
@@ -186,8 +185,8 @@
                                                               required="#{bindings.ExpectedDateOfAddminission.hints.mandatory}"
                                                               columns="#{bindings.ExpectedDateOfAddminission.hints.displayWidth}"
                                                               shortDesc="#{bindings.ExpectedDateOfAddminission.hints.tooltip}"
-                                                              id="id2" styleClass="PQDateTextContentColor" simple="true"
-                                                              contentStyle="width:150px">
+                                                              id="id2" styleClass="PQDateTextContentColor"
+                                                              contentStyle="width:90%" simple="true">
                                                     <f:validator binding="#{bindings.ExpectedDateOfAddminission.validator}"/>
                                                     <af:convertDateTime pattern="#{bindings.ExpectedDateOfAddminission.format}"/>
                                                 </af:inputDate>
@@ -218,7 +217,7 @@
                                         <af:gridRow marginTop="15px" height="auto" id="gr17">
                                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc17"
                                                          halign="stretch">
-                                                <af:outputFormatted value="Procedure Required" id="of10"
+                                                <af:outputFormatted value="Detail of Procedure Taken" id="of10"
                                                                     inlineStyle="font-size: 12px;color:#8b0037"/>
                                             </af:gridCell>
                                         </af:gridRow>
@@ -240,7 +239,7 @@
                                         <af:gridRow marginTop="15px" height="auto" id="gr19">
                                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc19"
                                                          halign="stretch">
-                                                <af:outputFormatted value="Expected Cost of Treatment" id="of11"
+                                                <af:outputFormatted value="Total Amount of Reimbursement" id="of11"
                                                                     inlineStyle="font-size: 12px;color:#8b0037"/>
                                             </af:gridCell>
                                         </af:gridRow>
