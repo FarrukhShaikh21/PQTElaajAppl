@@ -85,7 +85,7 @@
                                                    inlineStyle="font-weight:bolder; color:white;"/>
                                 </af:gridCell>
                             </af:gridRow>
-                            <af:gridRow marginTop="5px" height="100px" marginBottom="5px" id="gr7">
+                            <af:gridRow marginTop="5px" height="110px" marginBottom="5px" id="gr7">
                                 <af:gridCell marginStart="5px" marginEnd="5px" id="gc11"
                                              halign="stretch" valign="stretch">
                                     <af:panelSplitter id="ps2" orientation="vertical" styleClass="AFStretchWidth" splitterPosition="0"
