@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="ValueAddedServicesPGPageDef"
+                Package="pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ValueAddedServicesVO1" RangeSize="25" DataControl="PQTElaajAMDataControl"
+              id="ValueAddedServicesVO1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="ValueAddedServicesVO1Iterator" id="ValueAddedServicesVO1">
+      <nodeDefinition DefName="pqt.gh.elaaj.model.vo.ValueAddedServicesVO" Name="ValueAddedServicesVO10">
+        <AttrNames>
+          <Item Value="Valueservicename"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>
