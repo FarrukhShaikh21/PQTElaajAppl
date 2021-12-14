@@ -36,6 +36,9 @@
   <view id="ClaimReimbursement">
     <page>/pages/ClaimReimbursement.jsf</page>
   </view>
+  <view id="ValueAddedServicesPG">
+    <page>/pages/ValueAddedServicesPG.jsf</page>
+  </view>
   <control-flow-rule id="__1">
     <from-activity-id>RegisterPG</from-activity-id>
     <control-flow-case id="__2">
@@ -79,6 +82,10 @@
     <control-flow-case id="__26">
       <from-outcome>goToReimbursement</from-outcome>
       <to-activity-id>ClaimReimbursement</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__29">
+      <from-outcome>gotoValueAddedServices</from-outcome>
+      <to-activity-id>ValueAddedServicesPG</to-activity-id>
     </control-flow-case>
   </control-flow-rule>
   <control-flow-rule id="__10">

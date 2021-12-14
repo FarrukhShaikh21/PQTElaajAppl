@@ -125,7 +125,7 @@
   </context-param>
   <context-param>
     <param-name>org.apache.myfaces.trinidad.UPLOAD_MAX_DISK_SPACE</param-name>
-    <param-value>20971520</param-value>
+    <param-value>200971520</param-value>
   </context-param>
   <mime-mapping>
     <extension>swf</extension>

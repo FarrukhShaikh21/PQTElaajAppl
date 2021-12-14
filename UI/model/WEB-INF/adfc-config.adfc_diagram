@@ -308,4 +308,29 @@
       <property
          name="sdm:polyPoints">L46,612.6826,571.94824,463.0,424.44824,B56</property>
    </ControlFlowCase>
+   <View
+      id="View28">
+      <property
+         name="activityId">ValueAddedServicesPG</property>
+      <property
+         name="x">252.3711</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>ValueAddedServicesPG&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">399.09766</property>
+      <property
+         name="page">/pages/ValueAddedServicesPG.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase29"
+      from="View6"
+      to="View28">
+      <property
+         name="fromOutcome">gotoValueAddedServices</property>
+      <property
+         name="sdm:polyPoints">L50,418.5,370.44824,293.3711,398.74707,R50</property>
+   </ControlFlowCase>
 </SDM>

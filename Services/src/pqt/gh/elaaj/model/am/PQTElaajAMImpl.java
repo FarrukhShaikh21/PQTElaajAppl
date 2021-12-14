@@ -196,5 +196,13 @@ public class PQTElaajAMImpl extends ApplicationModuleImpl implements PQTElaajAM 
     public ViewObjectImpl getElaajClaimReimburstmentEOVO1() {
         return (ViewObjectImpl) findViewObject("ElaajClaimReimburstmentEOVO1");
     }
+
+    /**
+     * Container's getter for ValueAddedServicesVO1.
+     * @return ValueAddedServicesVO1
+     */
+    public ViewObjectImpl getValueAddedServicesVO1() {
+        return (ViewObjectImpl) findViewObject("ValueAddedServicesVO1");
+    }
 }
 

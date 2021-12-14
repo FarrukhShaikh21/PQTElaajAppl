@@ -42,6 +42,9 @@
   <ViewUsage
     Name="ElaajClaimReimburstmentEOVO1"
     ViewObjectName="pqt.gh.elaaj.model.vo.ElaajClaimReimburstmentEOVO"/>
+  <ViewUsage
+    Name="ValueAddedServicesVO1"
+    ViewObjectName="pqt.gh.elaaj.model.vo.ValueAddedServicesVO"/>
   <ViewLinkUsage
     Name="DependentVL1"
     ViewLinkObjectName="pqt.gh.elaaj.model.vl.DependentVL"

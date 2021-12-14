@@ -13,6 +13,7 @@
     <page path="PageFlow#Rollback" usageId="pqt_gh_elaaj_view_adfc_config___RollbackPageDef"/>
     <page path="/pages/ClaimIntimation.jsf" usageId="pqt_gh_elaaj_view_ClaimIntimationPageDef"/>
     <page path="/pages/ClaimReimbursement.jsf" usageId="pqt_gh_elaaj_view_ClaimReimbursementPageDef"/>
+    <page path="/pages/ValueAddedServicesPG.jsf" usageId="pqt_gh_elaaj_view_ValueAddedServicesPGPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="pqt_gh_elaaj_view_RegisterPGPageDef" path="pqt.gh.elaaj.view.pageDefs.RegisterPGPageDef"/>
@@ -28,6 +29,7 @@
           path="pqt.gh.elaaj.view.pageDefs.adfc_config___RollbackPageDef"/>
     <page id="pqt_gh_elaaj_view_ClaimIntimationPageDef" path="pages.ClaimIntimationPageDef"/>
     <page id="pqt_gh_elaaj_view_ClaimReimbursementPageDef" path="pages.ClaimReimbursementPageDef"/>
+    <page id="pqt_gh_elaaj_view_ValueAddedServicesPGPageDef" path="pages.ValueAddedServicesPGPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <dc id="FileUploadSOAP" path="pqt.gh.elaaj.model.FileUploadSOAP"/>

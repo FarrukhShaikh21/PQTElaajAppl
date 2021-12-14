@@ -151,12 +151,12 @@
                                                        styleClass="multiLineButton" action="goClaimDetail"/>
                                             <af:button text="Claim Intimation" id="b3"
                                                        inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
-                                                       styleClass="multiLineButton" action="goClaimIntimationPG"/>
+                                                       styleClass="multiLineButton" action="goToReimbursement"/>
                                         </af:panelGroupLayout>
                                         <af:panelGroupLayout id="pgl5" halign="center">
                                             <af:button text="Claim Reimbursement" id="b4"
                                                        inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
-                                                       styleClass="multiLineButton"/>
+                                                       styleClass="multiLineButton" action="goClaimIntimationPG"/>
                                             <af:button text="Record Correction" id="b5"
                                                        inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
                                                        styleClass="multiLineButton"/>
@@ -167,7 +167,7 @@
                                         <af:panelGroupLayout id="pgl6" halign="center">
                                             <af:button text="Value Added Services" id="b7"
                                                        inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
-                                                       styleClass="multiLineButton"/>
+                                                       styleClass="multiLineButton" action="gotoValueAddedServices"/>
                                             <af:button text="Treatment Info" id="b8"
                                                        inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
                                                        styleClass="multiLineButton"/>
