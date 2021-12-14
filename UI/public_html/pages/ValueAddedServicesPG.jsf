@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="ValueAddedServicesPG.jsf" id="d1">
+<af:messages id="m1"/>
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>        
+        <af:form id="f1"></af:form>
+        <af:form id="f2">
+            <af:panelStretchLayout id="psl1">
+                <f:facet name="top">
+                    <af:panelGroupLayout id="pgl1" inlineStyle="background-color:#8b0037;" layout="vertical"
+                                         halign="center">
+                        <af:separator id="s1"
+                                      inlineStyle="min-height:5px; background-color:#ba9632; margin: 0px;     border-color: transparent;"/>
+                        <af:outputFormatted value="Value Added Services" id="of1"
+                                            inlineStyle="font-size:x-large; font-weight:bolder; color:white;"/>
+                    </af:panelGroupLayout>
+                </f:facet>
+                <f:facet name="center">
+                    <af:panelGroupLayout id="pgl2" layout="vertical">
+                        <af:table value="#{bindings.ValueAddedServicesVO1.collectionModel}" var="row"
+                                  rows="#{bindings.ValueAddedServicesVO1.rangeSize}"
+                                  emptyText="#{bindings.ValueAddedServicesVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                  rowBandingInterval="0"
+                                  selectedRowKeys="#{bindings.ValueAddedServicesVO1.collectionModel.selectedRow}"
+                                  selectionListener="#{bindings.ValueAddedServicesVO1.collectionModel.makeCurrent}"
+                                  rowSelection="single" fetchSize="#{bindings.ValueAddedServicesVO1.rangeSize}" id="t1">
+                            <af:column
+                                       id="c1">
+                                <af:inputText value="#{row.bindings.Valueservicename.inputValue}"
+                                              label="#{bindings.ValueAddedServicesVO1.hints.Valueservicename.label}"
+                                              required="#{bindings.ValueAddedServicesVO1.hints.Valueservicename.mandatory}"
+                                              columns="#{bindings.ValueAddedServicesVO1.hints.Valueservicename.displayWidth}"
+                                              maximumLength="#{bindings.ValueAddedServicesVO1.hints.Valueservicename.precision}"
+                                              shortDesc="#{bindings.ValueAddedServicesVO1.hints.Valueservicename.tooltip}"
+                                              id="it1">
+                                    <f:validator binding="#{row.bindings.Valueservicename.validator}"/>
+                                </af:inputText>
+                            </af:column>
+                            <af:column id="c2">
+                                <af:link text="View" id="l1" targetFrame="_blank"
+                                         destination="#{row.bindings.Valueserviceurl.inputValue}" useWindow="true"/>
+                            </af:column>
+                        </af:table>
+                    </af:panelGroupLayout>
+                </f:facet>
+            </af:panelStretchLayout>
+        </af:form>
+    </af:document>
+</f:view>
