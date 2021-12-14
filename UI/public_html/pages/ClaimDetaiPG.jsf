@@ -81,47 +81,56 @@
                                     </af:panelGridLayout>
                                 </af:gridCell>
                             </af:gridRow>
-                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr11">
-                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc13" halign="stretch">
-                                    <af:panelGroupLayout id="pgl11" layout="scroll">
-                                        <af:listView value="#{bindings.VuGhsElaajCoveredMemberVO11.collectionModel}"
-                                                     var="item"
-                                                     emptyText="#{bindings.VuGhsElaajCoveredMemberVO11.viewable ? 'No data to display.' : 'Access Denied.'}"
-                                                     fetchSize="#{bindings.VuGhsElaajCoveredMemberVO11.rangeSize}"
-                                                     id="lv1" selection="single"
-                                                     selectionListener="#{bindings.VuGhsElaajCoveredMemberVO11.treeModel.makeCurrent}">
-                                            <af:listItem id="li1">
-                                                <af:panelGridLayout id="pgl5">
-                                                    <af:gridRow height="auto" id="gr9">
-                                                        <af:gridCell marginStart="5px" width="50%" id="gc6"
-                                                                     halign="stretch">
-                                                            <af:outputFormatted value="#{item.bindings.EmpName.inputValue}"
-                                                                                id="of2" inlineStyle="color:green;"/>
-                                                        </af:gridCell>
-                                                        <af:gridCell marginStart="5px" width="50%" marginEnd="5px"
-                                                                     id="gc8" halign="stretch">
-                                                            <af:outputFormatted value="#{item.bindings.EmpSrNo.inputValue}"
-                                                                                id="of19" inlineStyle="color:green;"/>
-                                                        </af:gridCell>
-                                                    </af:gridRow>
-                                                    <af:gridRow height="auto" id="gr10">
-                                                        <af:gridCell marginStart="5px" width="50%" id="gc11"
-                                                                     halign="stretch">
-                                                            <af:outputFormatted value="#{item.bindings.EmpDob.inputValue}"
-                                                                                id="of20" inlineStyle="color:green;">
-                                                                <af:convertDateTime pattern="#{bindings.VuGhsElaajCoveredMemberVO11.hints.EmpDob.format}"/>
-                                                            </af:outputFormatted>
-                                                        </af:gridCell>
-                                                        <af:gridCell marginStart="5px" width="50%" marginEnd="5px"
-                                                                     id="gc12" halign="stretch">
-                                                            <af:outputFormatted value="#{item.bindings.Relation.inputValue}"
-                                                                                id="of21" inlineStyle="color:green;"/>
-                                                        </af:gridCell>
-                                                    </af:gridRow>
-                                                </af:panelGridLayout>
-                                            </af:listItem>
-                                        </af:listView>
-                                    </af:panelGroupLayout>
+                            <af:gridRow marginTop="5px" height="100px" marginBottom="5px" id="gr11">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc13" halign="stretch"
+                                             valign="stretch">
+                                    <af:panelSplitter id="ps1" orientation="vertical" splitterPosition="0"
+                                                      styleClass="AFStretchWidth" dimensionsFrom="parent">
+                                        <f:facet name="first"/>
+                                        <f:facet name="second">
+                                            <af:listView value="#{bindings.VuGhsElaajCoveredMemberVO11.collectionModel}"
+                                                         var="item"
+                                                         emptyText="#{bindings.VuGhsElaajCoveredMemberVO11.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                         fetchSize="#{bindings.VuGhsElaajCoveredMemberVO11.rangeSize}"
+                                                         id="lv1" selection="single"
+                                                         selectionListener="#{bindings.VuGhsElaajCoveredMemberVO11.treeModel.makeCurrent}">
+                                                <af:listItem id="li1">
+                                                    <af:panelGridLayout id="pgl5">
+                                                        <af:gridRow height="auto" id="gr9">
+                                                            <af:gridCell marginStart="5px" width="50%" id="gc6"
+                                                                         halign="stretch">
+                                                                <af:outputFormatted value="#{item.bindings.EmpName.inputValue}"
+                                                                                    id="of2"
+                                                                                    inlineStyle="color:green;"/>
+                                                            </af:gridCell>
+                                                            <af:gridCell marginStart="5px" width="50%" marginEnd="5px"
+                                                                         id="gc8" halign="stretch">
+                                                                <af:outputFormatted value="#{item.bindings.EmpSrNo.inputValue}"
+                                                                                    id="of19"
+                                                                                    inlineStyle="color:green;"/>
+                                                            </af:gridCell>
+                                                        </af:gridRow>
+                                                        <af:gridRow height="auto" id="gr10">
+                                                            <af:gridCell marginStart="5px" width="50%" id="gc11"
+                                                                         halign="stretch">
+                                                                <af:outputFormatted value="#{item.bindings.EmpDob.inputValue}"
+                                                                                    id="of20"
+                                                                                    inlineStyle="color:green;">
+                                                                    <af:convertDateTime pattern="#{bindings.VuGhsElaajCoveredMemberVO11.hints.EmpDob.format}"/>
+                                                                </af:outputFormatted>
+                                                            </af:gridCell>
+                                                            <af:gridCell marginStart="5px" width="50%" marginEnd="5px"
+                                                                         id="gc12" halign="stretch">
+                                                                <af:outputFormatted value="#{item.bindings.Relation.inputValue}"
+                                                                                    id="of21"
+                                                                                    inlineStyle="color:green;"/>
+                                                            </af:gridCell>
+                                                        </af:gridRow>
+                                                    </af:panelGridLayout>
+                                                </af:listItem>
+                                            </af:listView>
+                                        </f:facet>
+                                    </af:panelSplitter>
                                 </af:gridCell>
                             </af:gridRow>
                         </af:panelGridLayout>
@@ -141,55 +150,66 @@
                             </af:gridRow>
                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr12">
                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc14" halign="stretch">
-                                    <af:panelGroupLayout id="pgl12" layout="scroll">
-                                        <af:listView value="#{bindings.ClaimsDetailVO11.collectionModel}" var="item"
-                                                     emptyText="#{bindings.ClaimsDetailVO11.viewable ? 'No data to display.' : 'Access Denied.'}"
-                                                     fetchSize="#{bindings.ClaimsDetailVO11.rangeSize}" id="lv2"
-                                                     selectionListener="#{bindings.ClaimsDetailVO11.treeModel.makeCurrent}">
-                                            <af:listItem id="li2">
-                                                <af:panelGridLayout id="pgl8">
-                                                    <af:gridRow marginTop="5px" height="auto" id="gr13">
-                                                        <af:gridCell marginStart="5px" width="34%" id="gc15"
-                                                                     halign="stretch">
-                                                            <af:outputFormatted value="#{item.bindings.ClmPolNo.inputValue}"
-                                                                                id="of22" inlineStyle="color:green;"/>
-                                                        </af:gridCell>
-                                                        <af:gridCell marginStart="5px" width="33%" id="gc16"
-                                                                     halign="stretch">
-                                                            <af:outputFormatted value="#{item.bindings.CoverDesc.inputValue}"
-                                                                                id="of23" inlineStyle="color:green;"/>
-                                                        </af:gridCell>
-                                                        <af:gridCell marginStart="5px" width="33%" marginEnd="5px"
-                                                                     id="gc17" halign="stretch">
-                                                            <af:outputFormatted value="#{item.bindings.ClaimAmount.inputValue}"
-                                                                                id="of24" inlineStyle="color:green;">
-                                                                <af:convertNumber groupingUsed="false"
-                                                                                  pattern="#{bindings.ClaimsDetailVO11.hints.ClaimAmount.format}"/>
-                                                            </af:outputFormatted>
-                                                        </af:gridCell>
-                                                    </af:gridRow>
-                                                    <af:gridRow marginTop="5px" height="auto" marginBottom="5px"
-                                                                id="gr14">
-                                                        <af:gridCell marginStart="5px" width="34%" id="gc18"
-                                                                     halign="stretch">
-                                                            <af:outputFormatted value="#{item.bindings.ClmIntDt.inputValue}"
-                                                                                id="of25" inlineStyle="color:green;"/>
-                                                        </af:gridCell>
-                                                        <af:gridCell marginStart="5px" width="33%" id="gc19"
-                                                                     halign="stretch">
-                                                            <af:outputFormatted value="#{item.bindings.ClaimNo.inputValue}"
-                                                                                id="of26" inlineStyle="color:green;"/>
-                                                        </af:gridCell>
-                                                        <af:gridCell marginStart="5px" width="33%" marginEnd="5px"
-                                                                     id="gc20" halign="stretch">
-                                                            <af:outputFormatted value="#{item.bindings.StatusDesc.inputValue}"
-                                                                                id="of27" inlineStyle="color:green;"/>
-                                                        </af:gridCell>
-                                                    </af:gridRow>
-                                                </af:panelGridLayout>
-                                            </af:listItem>
-                                        </af:listView>
-                                    </af:panelGroupLayout>
+                                    <af:panelSplitter id="ps2" styleClass="AFStretchWidth" dimensionsFrom="parent"
+                                                      splitterPosition="0" orientation="vertical">
+                                        <f:facet name="first"/>
+                                        <f:facet name="second">
+                                            <af:listView value="#{bindings.ClaimsDetailVO11.collectionModel}" var="item"
+                                                         emptyText="#{bindings.ClaimsDetailVO11.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                         fetchSize="#{bindings.ClaimsDetailVO11.rangeSize}" id="lv2"
+                                                         selectionListener="#{bindings.ClaimsDetailVO11.treeModel.makeCurrent}"
+                                                         partialTriggers="::lv1">
+                                                <af:listItem id="li2">
+                                                    <af:panelGridLayout id="pgl8">
+                                                        <af:gridRow marginTop="5px" height="auto" id="gr13">
+                                                            <af:gridCell marginStart="5px" width="34%" id="gc15"
+                                                                         halign="stretch">
+                                                                <af:outputFormatted value="#{item.bindings.ClmPolNo.inputValue}"
+                                                                                    id="of22"
+                                                                                    inlineStyle="color:green;"/>
+                                                            </af:gridCell>
+                                                            <af:gridCell marginStart="5px" width="33%" id="gc16"
+                                                                         halign="stretch">
+                                                                <af:outputFormatted value="#{item.bindings.CoverDesc.inputValue}"
+                                                                                    id="of23"
+                                                                                    inlineStyle="color:green;"/>
+                                                            </af:gridCell>
+                                                            <af:gridCell marginStart="5px" width="33%" marginEnd="5px"
+                                                                         id="gc17" halign="stretch">
+                                                                <af:outputFormatted value="#{item.bindings.ClaimAmount.inputValue}"
+                                                                                    id="of24"
+                                                                                    inlineStyle="color:green;">
+                                                                    <af:convertNumber groupingUsed="false"
+                                                                                      pattern="#{bindings.ClaimsDetailVO11.hints.ClaimAmount.format}"/>
+                                                                </af:outputFormatted>
+                                                            </af:gridCell>
+                                                        </af:gridRow>
+                                                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px"
+                                                                    id="gr14">
+                                                            <af:gridCell marginStart="5px" width="34%" id="gc18"
+                                                                         halign="stretch">
+                                                                <af:outputFormatted value="#{item.bindings.ClmIntDt.inputValue}"
+                                                                                    id="of25"
+                                                                                    inlineStyle="color:green;"/>
+                                                            </af:gridCell>
+                                                            <af:gridCell marginStart="5px" width="33%" id="gc19"
+                                                                         halign="stretch">
+                                                                <af:outputFormatted value="#{item.bindings.ClaimNo.inputValue}"
+                                                                                    id="of26"
+                                                                                    inlineStyle="color:green;"/>
+                                                            </af:gridCell>
+                                                            <af:gridCell marginStart="5px" width="33%" marginEnd="5px"
+                                                                         id="gc20" halign="stretch">
+                                                                <af:outputFormatted value="#{item.bindings.StatusDesc.inputValue}"
+                                                                                    id="of27"
+                                                                                    inlineStyle="color:green;"/>
+                                                            </af:gridCell>
+                                                        </af:gridRow>
+                                                    </af:panelGridLayout>
+                                                </af:listItem>
+                                            </af:listView>
+                                        </f:facet>
+                                    </af:panelSplitter>
                                 </af:gridCell>
                             </af:gridRow>
                         </af:panelGridLayout>
@@ -217,40 +237,6 @@
                             </af:table>
                         </af:panelGroupLayout>
                         <af:spacer width="10" height="10" id="s3"/>
-                        <af:table value="#{bindings.ClaimsDetailVO1.collectionModel}" var="row"
-                                  rows="#{bindings.ClaimsDetailVO1.rangeSize}"
-                                  emptyText="#{bindings.ClaimsDetailVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
-                                  rowBandingInterval="0"
-                                  selectedRowKeys="#{bindings.ClaimsDetailVO1.collectionModel.selectedRow}"
-                                  selectionListener="#{bindings.ClaimsDetailVO1.collectionModel.makeCurrent}"
-                                  rowSelection="single" fetchSize="#{bindings.ClaimsDetailVO1.rangeSize}" id="t2"
-                                  scrollPolicy="scroll" rendered="false">
-                            <af:column headerText="#{bindings.ClaimsDetailVO1.hints.ClaimNo.label}" id="c3"
-                                       align="center" width="45" inlineStyle="background-color:transparent;">
-                                <af:outputFormatted value="#{row.bindings.ClaimNo.inputValue}" id="of18"/>
-                            </af:column>
-                            <af:column headerText="#{bindings.ClaimsDetailVO1.hints.CoverDesc.label}" id="c4"
-                                       width="84" inlineStyle="background-color:transparent;">
-                                <af:outputFormatted value="#{row.bindings.CoverDesc.inputValue}" id="of17"
-                                                    inlineStyle="margin-left: 5px;"/>
-                            </af:column>
-                            <af:column headerText="Approved Amt" id="c5" width="40"
-                                       inlineStyle="background-color:transparent;">
-                                <af:outputFormatted value="#{row.bindings.ClaimAmount.inputValue}" id="of16">
-                                    <af:convertNumber groupingUsed="false"
-                                                      pattern="#{bindings.ClaimsDetailVO1.hints.ClaimAmount.format}"/>
-                                                      <af:convertNumber type="number" pattern="#,###.##"/>
-                                </af:outputFormatted>
-                            </af:column>
-                            <af:column headerText="#{bindings.ClaimsDetailVO1.hints.ClmIntDt.label}" id="c6" width="40"
-                                       inlineStyle="background-color:transparent;">
-                                <af:outputFormatted value="#{row.bindings.ClmIntDt.inputValue}" id="of15"/>
-                            </af:column>
-                            <af:column headerText="#{bindings.ClaimsDetailVO1.hints.StatusDesc.label}" id="c7"
-                                       width="50" inlineStyle="background-color:transparent;">
-                                <af:outputFormatted value="#{row.bindings.StatusDesc.inputValue}" id="of14"/>
-                            </af:column>
-                        </af:table>
                     </af:panelGroupLayout>
                 </f:facet>
             </af:panelStretchLayout>

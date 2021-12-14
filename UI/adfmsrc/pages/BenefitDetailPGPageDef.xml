@@ -35,26 +35,6 @@
     <methodAction id="executeBenefitDetail" RequiresUpdateModel="true" Action="invokeMethod"
                   MethodName="executeBenefitDetail" IsViewObjectMethod="false" DataControl="PQTElaajAMDataControl"
                   InstanceName="data.PQTElaajAMDataControl.dataProvider"/>
-    <tree IterBinding="VuGhsElaajCoveredMemberVO1Iterator" id="VuGhsElaajCoveredMemberVO1">
-      <nodeDefinition DefName="pqt.gh.elaaj.model.vo.VuGhsElaajCoveredMemberVO" Name="VuGhsElaajCoveredMemberVO10">
-        <AttrNames>
-          <Item Value="EmpSrNo"/>
-          <Item Value="EmpName"/>
-          <Item Value="EmpDob"/>
-          <Item Value="Relation"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
-    <tree IterBinding="VuEmployeeCoverDtlVO1Iterator" id="VuEmployeeCoverDtlVO1">
-      <nodeDefinition DefName="pqt.gh.elaaj.model.vo.VuEmployeeCoverDtlVO" Name="VuEmployeeCoverDtlVO10">
-        <AttrNames>
-          <Item Value="CoverDesc"/>
-          <Item Value="RoomLimit"/>
-          <Item Value="TotalAmount"/>
-          <Item Value="ClaimAmount"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
     <tree IterBinding="VuGhsElaajCoveredMemberVO1Iterator" id="VuGhsElaajCoveredMemberVO11">
       <nodeDefinition DefName="pqt.gh.elaaj.model.vo.VuGhsElaajCoveredMemberVO" Name="VuGhsElaajCoveredMemberVO110">
         <AttrNames>

@@ -79,6 +79,7 @@
       <list n="technologyScope">
          <string v="ADFbc"/>
          <string v="ADFm"/>
+         <string v="Database"/>
          <string v="JSF"/>
          <string v="JSP"/>
          <string v="Java"/>
