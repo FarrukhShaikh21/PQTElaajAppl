@@ -32,5 +32,8 @@
         <Item Value="EmailAddress"/>
       </AttrNames>
     </attributeValues>
+    <methodAction id="Apply" RequiresUpdateModel="true" Action="invokeMethod" MethodName="Apply"
+                  IsViewObjectMethod="false" DataControl="PQTElaajAMDataControl"
+                  InstanceName="data.PQTElaajAMDataControl.dataProvider"/>
   </bindings>
 </pageDefinition>

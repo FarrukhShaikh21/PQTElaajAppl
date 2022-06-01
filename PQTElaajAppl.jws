@@ -3,9 +3,6 @@
    <hash n="adrs-workspace-properties">
       <value n="adrs-instance-binding" v="DefaultServer"/>
    </hash>
-   <hash n="adrs-workspace-weblogic-properties">
-      <value n="hot-class-reload" v="ide-default"/>
-   </hash>
    <value n="application-package-prefix" v="pqt.gh.elaaj"/>
    <value n="appTemplateId" v="adfWebappApplicationTemplate"/>
    <hash n="component-versions">

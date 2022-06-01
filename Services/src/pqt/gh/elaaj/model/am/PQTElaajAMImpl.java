@@ -11,6 +11,7 @@ import javax.faces.context.FacesContext;
 
 import javax.servlet.http.HttpSession;
 
+import oracle.jbo.ValidationException;
 import oracle.jbo.ViewObject;
 import oracle.jbo.server.ApplicationModuleImpl;
 import oracle.jbo.server.DBTransaction;
@@ -38,24 +39,25 @@ public class PQTElaajAMImpl extends ApplicationModuleImpl implements PQTElaajAM 
     public ViewObjectImpl getRegisterVO1() {
         return (ViewObjectImpl) findViewObject("RegisterVO1");
     }
-    
-    
-    public void Apply() {
-            if (getDBTransaction().isDirty()) {
-                getDBTransaction().commit();
 
-                FacesMessage Message = new FacesMessage("Record Saved Successfully!");
-                Message.setSeverity(FacesMessage.SEVERITY_INFO);
-                FacesContext fc = FacesContext.getCurrentInstance();
-                fc.addMessage(null, Message);
-            }
+
+    public void Apply() {
+        if (getDBTransaction().isDirty()) {
+            getDBTransaction().commit();
+
+            FacesMessage Message = new FacesMessage("Record Saved Successfully!");
+            Message.setSeverity(FacesMessage.SEVERITY_INFO);
+            FacesContext fc = FacesContext.getCurrentInstance();
+            fc.addMessage(null, Message);
         }
+    }
 
     public String VerifyUserAuth(String pUserName, String pUserPassword) {
         String Message = null, vOutput = "Success";
         DBTransaction txn = getDBTransaction();
         CallableStatement callableStatement =
-            txn.createCallableStatement("begin SP_VERIFY_ELAAJ_USER(:1,:2,:3,:4,:5,:6,:7); end;", DBTransaction.DEFAULT);
+            txn.createCallableStatement("begin SP_VERIFY_ELAAJ_USER(:1,:2,:3,:4,:5,:6,:7); end;",
+                                        DBTransaction.DEFAULT);
         try {
             callableStatement.setString(1, pUserName);
             callableStatement.setString(2, pUserPassword);
@@ -81,7 +83,7 @@ public class PQTElaajAMImpl extends ApplicationModuleImpl implements PQTElaajAM 
                 userSession.setAttribute("pCertNo", vCertNo);
                 userSession.setAttribute("pPolNo", vPolNo);
                 userSession.setAttribute("pEmpCode", vEmpCode);
-                
+
             } else if ("F".equals(vStatus)) {
                 Message = vMsg;
                 vOutput = "Failure";
@@ -138,23 +140,23 @@ public class PQTElaajAMImpl extends ApplicationModuleImpl implements PQTElaajAM 
     public ViewLinkImpl getDependentVL1() {
         return (ViewLinkImpl) findViewLink("DependentVL1");
     }
-    
-    public void executeBenefitDetail(){
+
+    public void executeBenefitDetail() {
         ViewObject HVO = getVuGhsElaajCoveredMemberVO1();
         ViewObject DVO = getVuEmployeeCoverDtlVO1();
         String pCertNo = null;
-        
-        try{
+
+        try {
             pCertNo = HVO.getCurrentRow().getAttribute("EmpSrNo").toString();
-        }catch(Exception e){
-            pCertNo = null; 
+        } catch (Exception e) {
+            pCertNo = null;
         }
-        System.out.println("pCertNo ==>> "+ pCertNo);
-        
+        System.out.println("pCertNo ==>> " + pCertNo);
+
         DVO.setWhereClause(null);
-        DVO.setWhereClause("EmpSrNo = "+pCertNo);
+        DVO.setWhereClause("EmpSrNo = " + pCertNo);
         DVO.executeQuery();
-        
+
     }
 
     /**
@@ -203,6 +205,297 @@ public class PQTElaajAMImpl extends ApplicationModuleImpl implements PQTElaajAM 
      */
     public ViewObjectImpl getValueAddedServicesVO1() {
         return (ViewObjectImpl) findViewObject("ValueAddedServicesVO1");
+    }
+
+    /**
+     * Container's getter for ProductMasterVO1.
+     * @return ProductMasterVO1
+     */
+    public ViewObjectImpl getProductMasterVO1() {
+        return (ViewObjectImpl) findViewObject("ProductMasterVO1");
+    }
+
+    /**
+     * Container's getter for ProductDetailVO1.
+     * @return ProductDetailVO1
+     */
+    public ViewObjectImpl getProductDetailVO1() {
+        return (ViewObjectImpl) findViewObject("ProductDetailVO1");
+    }
+
+    /**
+     * Container's getter for ProductMasterDetailVL1.
+     * @return ProductMasterDetailVL1
+     */
+    public ViewLinkImpl getProductMasterDetailVL1() {
+        return (ViewLinkImpl) findViewLink("ProductMasterDetailVL1");
+    }
+
+    /**
+     * Container's getter for ElaajClaimDmsDocEOVO1.
+     * @return ElaajClaimDmsDocEOVO1
+     */
+    public ViewObjectImpl getElaajClaimDmsDocEOVO1() {
+        return (ViewObjectImpl) findViewObject("ElaajClaimDmsDocEOVO1");
+    }
+
+    /**
+     * Container's getter for MasterDocVL1.
+     * @return MasterDocVL1
+     */
+    public ViewLinkImpl getMasterDocVL1() {
+        return (ViewLinkImpl) findViewLink("MasterDocVL1");
+    }
+
+    public void submitToBpm() {
+        if (getDBTransaction().isDirty()) {
+            getDBTransaction().commit();
+
+            FacesMessage Message = new FacesMessage("Transaction completed. Records applied and Saved.");
+            Message.setSeverity(FacesMessage.SEVERITY_INFO);
+            FacesContext fc = FacesContext.getCurrentInstance();
+            fc.addMessage(null, Message);
+
+        }
+    }
+
+    public void submitToBpmOPD() {
+        if (getDBTransaction().isDirty()) {
+            ViewObject HVO = getElaajClaimReimburstmentEOVO1();
+            ViewObject DVO = getElaajClaimReimDmsDocEOVO1();
+            String vCertNO, vEmpNo, vTypeOfClaim, vCost = null;
+
+            try {
+                vCertNO = HVO.getCurrentRow().getAttribute("CertificateNo").toString();
+            } catch (Exception e) {
+                vCertNO = "XX";
+            }
+
+            try {
+                vEmpNo = HVO.getCurrentRow().getAttribute("EmployeeId").toString();
+            } catch (Exception e) {
+                vEmpNo = "XX";
+            }
+
+            try {
+                vTypeOfClaim = HVO.getCurrentRow().getAttribute("TypeOfClaimn").toString();
+            } catch (Exception e) {
+                vTypeOfClaim = "XX";
+            }
+
+            try {
+                vCost = HVO.getCurrentRow().getAttribute("ClaimTotalAmount").toString();
+            } catch (Exception e) {
+                vCost = "XX";
+            }
+
+            if (vCertNO == "XX") {
+                throw new ValidationException("Please fill all fields to process");
+            } else if (vEmpNo == "XX") {
+                throw new ValidationException("Please fill all fields to process");
+            } else if (DVO.getRowCount() == 0) {
+                throw new ValidationException("kindly attach images");
+            } else {
+                getDBTransaction().commit();
+
+                sendOPDEmail();
+
+                FacesMessage Message = new FacesMessage("Transaction completed. Records applied and Saved.");
+                Message.setSeverity(FacesMessage.SEVERITY_INFO);
+                FacesContext fc = FacesContext.getCurrentInstance();
+                fc.addMessage(null, Message);
+            }
+
+
+        }
+    }
+
+    public void submitToBpmIPD() {
+        if (getDBTransaction().isDirty()) {
+            ViewObject HVO = getElaajClaimIntimateEOVO1();
+            ViewObject DVO = getElaajClaimDmsDocEOVO1();
+            String vCertNO, vEmpNo, vTypeOfClaim, vHospital, vCost, vDateAdm = null;
+
+            try {
+                vCertNO = HVO.getCurrentRow().getAttribute("CertificateNo").toString();
+            } catch (Exception e) {
+                vCertNO = "XX";
+            }
+
+            try {
+                vEmpNo = HVO.getCurrentRow().getAttribute("EmployeeId").toString();
+            } catch (Exception e) {
+                vEmpNo = "XX";
+            }
+
+            try {
+                vTypeOfClaim = HVO.getCurrentRow().getAttribute("TypeOfClaimn").toString();
+            } catch (Exception e) {
+                vTypeOfClaim = "XX";
+            }
+
+            try {
+                vHospital = HVO.getCurrentRow().getAttribute("NameOfPanelHospital").toString();
+            } catch (Exception e) {
+                vHospital = "XX";
+            }
+
+            try {
+                vCost = HVO.getCurrentRow().getAttribute("ExpectedCost").toString();
+            } catch (Exception e) {
+                vCost = "XX";
+            }
+
+            try {
+                vDateAdm = HVO.getCurrentRow().getAttribute("ExpectedDateOfAddminission").toString();
+            } catch (Exception e) {
+                vDateAdm = "XX";
+            }
+
+            if (vCertNO == "XX") {
+                throw new ValidationException("Please fill all fields to process");
+            } else if (vEmpNo == "XX") {
+                throw new ValidationException("Please fill all fields to process");
+            } else if (DVO.getRowCount() == 0) {
+                throw new ValidationException("kindly attach images");
+            } else {
+                getDBTransaction().commit();
+
+                sendIPDEmail();
+
+                FacesMessage Message = new FacesMessage("Transaction completed. Records applied and Saved.");
+                Message.setSeverity(FacesMessage.SEVERITY_INFO);
+                FacesContext fc = FacesContext.getCurrentInstance();
+                fc.addMessage(null, Message);
+            }
+        }
+    }
+
+    /**
+     * Container's getter for ElaajClaimReimDmsDocEOVO1.
+     * @return ElaajClaimReimDmsDocEOVO1
+     */
+    public ViewObjectImpl getElaajClaimReimDmsDocEOVO1() {
+        return (ViewObjectImpl) findViewObject("ElaajClaimReimDmsDocEOVO1");
+    }
+
+    /**
+     * Container's getter for ReimMasterDetailVL1.
+     * @return ReimMasterDetailVL1
+     */
+    public ViewLinkImpl getReimMasterDetailVL1() {
+        return (ViewLinkImpl) findViewLink("ReimMasterDetailVL1");
+    }
+
+    /**
+     * Container's getter for ElaajComplaintDetailEOVO1.
+     * @return ElaajComplaintDetailEOVO1
+     */
+    public ViewObjectImpl getElaajComplaintDetailEOVO1() {
+        return (ViewObjectImpl) findViewObject("ElaajComplaintDetailEOVO1");
+    }
+
+    public void sendOPDEmail() {
+        ViewObject HVO = getElaajClaimReimburstmentEOVO1();
+        int vDocID = 0;
+        DBTransaction txn = getDBTransaction();
+        CallableStatement callableStatement = null;
+
+        System.out.println("vDocID == >> " + vDocID);
+
+        try {
+            vDocID = Integer.parseInt(HVO.getCurrentRow().getAttribute("ElaajClaimReimburstmentId").toString());
+        } catch (Exception e) {
+            vDocID = 0;
+        }
+
+        System.out.println("vDocID == >> " + vDocID);
+
+        try {
+            callableStatement = txn.createCallableStatement("begin PROC_SND_ELAAJ_OPD(?); end;", 0);
+            callableStatement.setInt(1, vDocID);
+            callableStatement.execute();
+            callableStatement.close();
+        } catch (SQLException sqle) {
+            try {
+                callableStatement.close();
+            } catch (SQLException e) {
+                ;
+            }
+        }
+    }
+
+    public void sendIPDEmail() {
+        ViewObject HVO = getElaajClaimIntimateEOVO1();
+        int vDocID = 0;
+        DBTransaction txn = getDBTransaction();
+        CallableStatement callableStatement = null;
+
+        try {
+            vDocID = Integer.parseInt(HVO.getCurrentRow().getAttribute("ElaajClaimIntimateId").toString());
+        } catch (Exception e) {
+            vDocID = 0;
+        }
+
+        try {
+            callableStatement = txn.createCallableStatement("begin PROC_SND_ELAAJ_IPD(?); end;", 0);
+            callableStatement.setInt(1, vDocID);
+            callableStatement.execute();
+            callableStatement.close();
+        } catch (SQLException sqle) {
+            try {
+                callableStatement.close();
+            } catch (SQLException e) {
+                ;
+            }
+        }
+    }
+    
+    public String getForgotPassword(String pCnic) {
+        String vMessage = null, vOutput = "Done";
+        int vError = 0;
+        DBTransaction txn = getDBTransaction();
+        CallableStatement callableStatement = null;
+
+        try {
+            callableStatement = txn.createCallableStatement("begin SP_ELAAJ_FORGET_PASSWORD(?,?,?); end;", 0);
+            callableStatement.setString(1, pCnic);
+            callableStatement.registerOutParameter(2, Types.VARCHAR);
+            callableStatement.registerOutParameter(3, Types.NUMERIC);
+            callableStatement.execute();
+            vMessage = callableStatement.getString(2);
+            vError = callableStatement.getInt(3);
+            callableStatement.close();
+        } catch (SQLException sqle) {
+            try {
+                callableStatement.close();
+            } catch (SQLException e) {
+                ;
+            }
+        }
+        if (vError == 0) {
+            vOutput = "Done";
+            FacesMessage Message = new FacesMessage(vMessage);
+            Message.setSeverity(FacesMessage.SEVERITY_INFO);
+            FacesContext fc = FacesContext.getCurrentInstance();
+            fc.addMessage(null, Message);
+        } else if (vError != 0) {
+            vOutput = "Not Done";
+            FacesMessage Message = new FacesMessage(vMessage);
+            Message.setSeverity(FacesMessage.SEVERITY_INFO);
+            FacesContext fc = FacesContext.getCurrentInstance();
+            fc.addMessage(null, Message);
+        }
+
+        return vOutput;
+    }
+
+    /**
+     * Container's getter for ElaajRecordCorrectionEOVO1.
+     * @return ElaajRecordCorrectionEOVO1
+     */
+    public ViewObjectImpl getElaajRecordCorrectionEOVO1() {
+        return (ViewObjectImpl) findViewObject("ElaajRecordCorrectionEOVO1");
     }
 }
 

@@ -888,6 +888,9 @@ border-top-right-radius:10px;
     font-weight: bold;
 }
 
+
+
+
 .PQLoginPageUser af|inputText::content
 {
     height:30px;
@@ -921,6 +924,7 @@ border-top-right-radius:10px;
      background-size:100.0%;
 }
 
+
 wide {
 
     display: inline;
@@ -950,3 +954,8 @@ wide {
             }
 
         }
+
+.PQimages af|image {
+    background-image: url("../images/MS-Logo.jpeg"); 
+    border: 10px; 
+}

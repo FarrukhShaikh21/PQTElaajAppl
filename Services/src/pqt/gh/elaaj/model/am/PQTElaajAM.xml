@@ -45,6 +45,24 @@
   <ViewUsage
     Name="ValueAddedServicesVO1"
     ViewObjectName="pqt.gh.elaaj.model.vo.ValueAddedServicesVO"/>
+  <ViewUsage
+    Name="ProductMasterVO1"
+    ViewObjectName="pqt.gh.elaaj.model.vo.ProductMasterVO"/>
+  <ViewUsage
+    Name="ProductDetailVO1"
+    ViewObjectName="pqt.gh.elaaj.model.vo.ProductDetailVO"/>
+  <ViewUsage
+    Name="ElaajClaimDmsDocEOVO1"
+    ViewObjectName="pqt.gh.elaaj.model.vo.ElaajClaimDmsDocEOVO"/>
+  <ViewUsage
+    Name="ElaajClaimReimDmsDocEOVO1"
+    ViewObjectName="pqt.gh.elaaj.model.vo.ElaajClaimReimDmsDocEOVO"/>
+  <ViewUsage
+    Name="ElaajComplaintDetailEOVO1"
+    ViewObjectName="pqt.gh.elaaj.model.vo.ElaajComplaintDetailEOVO"/>
+  <ViewUsage
+    Name="ElaajRecordCorrectionEOVO1"
+    ViewObjectName="pqt.gh.elaaj.model.vo.ElaajRecordCorrectionEOVO"/>
   <ViewLinkUsage
     Name="DependentVL1"
     ViewLinkObjectName="pqt.gh.elaaj.model.vl.DependentVL"
@@ -56,6 +74,24 @@
     ViewLinkObjectName="pqt.gh.elaaj.model.vl.EmployeeClaimVL"
     SrcViewUsageName="pqt.gh.elaaj.model.am.PQTElaajAM.VuGhsElaajCoveredMemberVO1"
     DstViewUsageName="pqt.gh.elaaj.model.am.PQTElaajAM.ClaimsDetailVO1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="ProductMasterDetailVL1"
+    ViewLinkObjectName="pqt.gh.elaaj.model.vl.ProductMasterDetailVL"
+    SrcViewUsageName="pqt.gh.elaaj.model.am.PQTElaajAM.ProductMasterVO1"
+    DstViewUsageName="pqt.gh.elaaj.model.am.PQTElaajAM.ProductDetailVO1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="MasterDocVL1"
+    ViewLinkObjectName="pqt.gh.elaaj.model.vl.MasterDocVL"
+    SrcViewUsageName="pqt.gh.elaaj.model.am.PQTElaajAM.ElaajClaimIntimateEOVO1"
+    DstViewUsageName="pqt.gh.elaaj.model.am.PQTElaajAM.ElaajClaimDmsDocEOVO1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="ReimMasterDetailVL1"
+    ViewLinkObjectName="pqt.gh.elaaj.model.vl.ReimMasterDetailVL"
+    SrcViewUsageName="pqt.gh.elaaj.model.am.PQTElaajAM.ElaajClaimReimburstmentEOVO1"
+    DstViewUsageName="pqt.gh.elaaj.model.am.PQTElaajAM.ElaajClaimReimDmsDocEOVO1"
     Reversed="false"/>
   <ClientInterface
     Name="__clientInterface">
@@ -85,6 +121,51 @@
       <Return
         Name="_return_type_"
         Type="void"/>
+    </Method>
+    <Method
+      Name="submitToBpm"
+      MethodName="submitToBpm">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+    </Method>
+    <Method
+      Name="sendIPDEmail"
+      MethodName="sendIPDEmail">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+    </Method>
+    <Method
+      Name="sendOPDEmail"
+      MethodName="sendOPDEmail">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+    </Method>
+    <Method
+      Name="submitToBpmIPD"
+      MethodName="submitToBpmIPD">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+    </Method>
+    <Method
+      Name="submitToBpmOPD"
+      MethodName="submitToBpmOPD">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+    </Method>
+    <Method
+      Name="getForgotPassword"
+      MethodName="getForgotPassword">
+      <Return
+        Name="_return_type_"
+        Type="java.lang.String"/>
+      <Parameter
+        Name="pCnic"
+        Type="java.lang.String"/>
     </Method>
   </ClientInterface>
   <ResourceBundle>

@@ -14,6 +14,13 @@
     <page path="/pages/ClaimIntimation.jsf" usageId="pqt_gh_elaaj_view_ClaimIntimationPageDef"/>
     <page path="/pages/ClaimReimbursement.jsf" usageId="pqt_gh_elaaj_view_ClaimReimbursementPageDef"/>
     <page path="/pages/ValueAddedServicesPG.jsf" usageId="pqt_gh_elaaj_view_ValueAddedServicesPGPageDef"/>
+    <page path="/pages/TakafulProductsPG.jsf" usageId="pqt_gh_elaaj_view_TakafulProductsPGPageDef"/>
+    <page path="PageFlow#CreateInsert1" usageId="pqt_gh_elaaj_view_adfc_config___CreateInsert1PageDef"/>
+    <page path="PageFlow#Rollback1" usageId="pqt_gh_elaaj_view_adfc_config___Rollback1PageDef"/>
+    <page path="/pages/LaunchComplaintPG.jsf" usageId="pqt_gh_elaaj_view_LaunchComplaintPGPageDef"/>
+    <page path="PageFlow#CreateInsert2" usageId="pqt_gh_elaaj_view_adfc_config___CreateInsert2PageDef"/>
+    <page path="/pages/recordCorrectionPG.jsf" usageId="pqt_gh_elaaj_view_recordCorrectionPGPageDef"/>
+    <page path="PageFlow#CreateInsert3" usageId="pqt_gh_elaaj_view_adfc_config___CreateInsert3PageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="pqt_gh_elaaj_view_RegisterPGPageDef" path="pqt.gh.elaaj.view.pageDefs.RegisterPGPageDef"/>
@@ -30,6 +37,17 @@
     <page id="pqt_gh_elaaj_view_ClaimIntimationPageDef" path="pages.ClaimIntimationPageDef"/>
     <page id="pqt_gh_elaaj_view_ClaimReimbursementPageDef" path="pages.ClaimReimbursementPageDef"/>
     <page id="pqt_gh_elaaj_view_ValueAddedServicesPGPageDef" path="pages.ValueAddedServicesPGPageDef"/>
+    <page id="pqt_gh_elaaj_view_TakafulProductsPGPageDef" path="pages.TakafulProductsPGPageDef"/>
+    <page id="pqt_gh_elaaj_view_adfc_config___CreateInsert1PageDef"
+          path="pqt.gh.elaaj.view.pageDefs.adfc_config___CreateInsert1PageDef"/>
+    <page id="pqt_gh_elaaj_view_adfc_config___Rollback1PageDef"
+          path="pqt.gh.elaaj.view.pageDefs.adfc_config___Rollback1PageDef"/>
+    <page id="pqt_gh_elaaj_view_LaunchComplaintPGPageDef" path="pages.LaunchComplaintPGPageDef"/>
+    <page id="pqt_gh_elaaj_view_adfc_config___CreateInsert2PageDef"
+          path="pqt.gh.elaaj.view.pageDefs.adfc_config___CreateInsert2PageDef"/>
+    <page id="pqt_gh_elaaj_view_recordCorrectionPGPageDef" path="pages.recordCorrectionPGPageDef"/>
+    <page id="pqt_gh_elaaj_view_adfc_config___CreateInsert3PageDef"
+          path="pqt.gh.elaaj.view.pageDefs.adfc_config___CreateInsert3PageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <dc id="FileUploadSOAP" path="pqt.gh.elaaj.model.FileUploadSOAP"/>

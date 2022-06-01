@@ -23,6 +23,14 @@
     </DesignTime>
   </Containee>
   <Containee
+    Name="assoc"
+    PackageName="pqt.gh.elaaj.model.assoc"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AS" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
     Name="eo"
     PackageName="pqt.gh.elaaj.model.eo"
     ObjectType="JboPackage">
@@ -33,6 +41,14 @@
   <Containee
     Name="lov"
     PackageName="pqt.gh.elaaj.model.lov"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="poplist"
+    PackageName="pqt.gh.elaaj.model.poplist"
     ObjectType="JboPackage">
     <DesignTime>
       <Attr Name="_VO" Value="true"/>

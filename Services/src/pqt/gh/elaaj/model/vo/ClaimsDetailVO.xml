@@ -18,14 +18,16 @@
         ResId="pqt.gh.elaaj.model.vo.ClaimsDetailVO_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[SELECT T.CLM_POL_NO, 
-       T.CLM_EMP_CODE, 
-       T.CLAIM_NO, 
-       T.COVER_DESC, 
-       T.CLAIM_AMOUNT, 
-       T.STATUS_DESC, 
-       T.CLM_INT_DT, 
-       T.CLM_CNIC 
+  <SQLQuery><![CDATA[SELECT T.CLM_POL_NO,   
+       T.CLM_EMP_CODE,   
+       T.CLAIM_NO,   
+       T.COVER_DESC,   
+       T.CLAIM_AMOUNT,   
+       T.STATUS_DESC,   
+       T.CLM_INT_DT,   
+       T.CLM_CNIC,  
+       T.DEDUCATION_REASON, 
+       T.DEDUCTION_AMOUNT  
   FROM VU_ELAJ_CLAIM_DTL T]]></SQLQuery>
   <ViewAttribute
     Name="ClmPolNo"
@@ -99,7 +101,7 @@
     Name="ClaimAmount"
     IsPersistent="false"
     PrecisionRule="true"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     AliasName="CLAIM_AMOUNT"
     Expression="CLAIM_AMOUNT"
@@ -164,6 +166,44 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="125"/>
     </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="DeducationReason"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="1500"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="DEDUCATION_REASON"
+    Expression="DEDUCATION_REASON"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1500"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="pqt.gh.elaaj.model.vo.ClaimsDetailVO.DeducationReason_LABEL"/>
+        <DISPLAYWIDTH
+          Value="150"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="DeductionAmount"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    AliasName="DEDUCTION_AMOUNT"
+    Expression="DEDUCTION_AMOUNT"
+    SQLType="NUMERIC">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="pqt.gh.elaaj.model.vo.ClaimsDetailVO.DeductionAmount_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
   </ViewAttribute>
   <AttrArray Name="KeyAttributes">
     <Item Value="ClaimNo"/>

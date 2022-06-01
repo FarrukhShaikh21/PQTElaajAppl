@@ -13,8 +13,8 @@
                                inlineStyle="background-color:#8b0037;">
             <af:separator id="s5"
                           inlineStyle="min-height:5px; background-color:#ba9632; margin: 0px;     border-color: transparent;"/>
-            <af:button text="SUBMIT" id="b1"
-                       inlineStyle="font-size:16px; padding: 7px; color:white; background:#8b0037; border:0;"/>
+            <af:button actionListener="#{bindings.Apply.execute}" text="Submit" disabled="#{!bindings.Apply.enabled}"
+                       id="b1" inlineStyle="font-size:16px; padding: 7px; color:white; background:#8b0037; border:0;"/>
           </af:panelGroupLayout>
         </f:facet>
         <f:facet name="center">
@@ -110,7 +110,8 @@
                                     required="#{bindings.EmailAddress.hints.mandatory}"
                                     columns="#{bindings.EmailAddress.hints.displayWidth}"
                                     maximumLength="#{bindings.EmailAddress.hints.precision}"
-                                    shortDesc="#{bindings.EmailAddress.hints.tooltip}" id="it4" placeholder="CNIC No"
+                                    shortDesc="#{bindings.EmailAddress.hints.tooltip}" id="it4"
+                                    placeholder="Email Address"
                                     styleClass="PQTextContentColor" contentStyle="width:300px">
                         <f:validator binding="#{bindings.EmailAddress.validator}"/>
                       </af:inputText>
@@ -124,6 +125,22 @@
                         <af:link text="Login" id="l1" inlineStyle="color:black; font-weight:bold;" action="goLogin"/>
                         <af:spacer width="10" height="10" id="s7"/>
                       </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr13">
+                    <af:gridCell id="gc13" halign="center" valign="middle">
+                      <af:image source="/images/app_icon-02.png" id="i1"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr15">
+                    <af:gridCell id="gc15" halign="center" valign="middle">
+                      <af:spacer width="10" height="10" id="s3"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr14">
+                    <af:gridCell id="gc14" halign="center" valign="middle">
+                      <af:outputFormatted value="&quot; REWARD YOUR EMPLOYEES, PROTECT THEIR FAMILIES &quot;" id="of3"
+                                          inlineStyle="font-size:13px; font-weight:600; color:Navy; font-family:'' Times New Roman ''; text-justify:auto; text-indent:5pt; text-align:center; font-variant:normal;"/>
                     </af:gridCell>
                   </af:gridRow>
                 </af:panelGridLayout>

@@ -239,6 +239,85 @@
     TableName="ELAAJ_CLAIM_REIMBURSTMENT"
     IsUpdateable="while_insert"
     HistoryColumn="DateHistory"/>
+  <Attribute
+    Name="AppMod"
+    Precision="10"
+    ColumnName="APP_MOD"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ELAAJ_CLAIM_REIMBURSTMENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="DmsDocumentReference"
+    Precision="1000"
+    ColumnName="DMS_DOCUMENT_REFERENCE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ELAAJ_CLAIM_REIMBURSTMENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1000"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="DocumentIdPk"
+    ColumnName="DOCUMENT_ID_PK"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="ELAAJ_CLAIM_REIMBURSTMENT">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="pqt.gh.elaaj.model.eo.ElaajClaimReimburstmentEO.DocumentIdPk_LABEL"/>
+        <DISPLAYWIDTH
+          Value="30"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="Cnic"
+    Precision="100"
+    ColumnName="CNIC"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ELAAJ_CLAIM_REIMBURSTMENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="pqt.gh.elaaj.model.eo.ElaajClaimReimburstmentEO.Cnic_LABEL"/>
+        <DISPLAYWIDTH
+          Value="30"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="OtherHospital"
+    Precision="100"
+    ColumnName="OTHER_HOSPITAL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ELAAJ_CLAIM_REIMBURSTMENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="ElaajClaimReimDmsDocEO"
+    Association="pqt.gh.elaaj.model.assoc.ReimMasterDetailAssoc"
+    AssociationEnd="pqt.gh.elaaj.model.assoc.ReimMasterDetailAssoc.ElaajClaimReimDmsDocEO"
+    AssociationOtherEnd="pqt.gh.elaaj.model.assoc.ReimMasterDetailAssoc.ElaajClaimReimburstmentEO"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="ElaajclaimreimburstmenteoPrimaryKey"
     PrimaryKey="true">
@@ -249,4 +328,8 @@
       <Item Value="pqt.gh.elaaj.model.eo.ElaajClaimReimburstmentEO.ElaajClaimReimburstmentId"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="pqt.gh.elaaj.model.ServicesBundle"/>
+  </ResourceBundle>
 </Entity>

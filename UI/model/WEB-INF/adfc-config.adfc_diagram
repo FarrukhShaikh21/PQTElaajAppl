@@ -110,7 +110,7 @@
       <property
          name="fromOutcome">goBenefitDetail</property>
       <property
-         name="sdm:polyPoints">R58,500.52945,377.44824,678.6885,378.94824,L46</property>
+         name="sdm:polyPoints">R54,500.97705,373.94824,678.6885,378.94824,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -120,7 +120,7 @@
       <property
          name="fromOutcome">BenefitToHome</property>
       <property
-         name="sdm:polyPoints">L54,678.659,385.94824,500.5,384.44824,R66</property>
+         name="sdm:polyPoints">L54,678.59,385.94824,500.87885,380.94824,R62</property>
    </ControlFlowCase>
    <View
       id="View12">
@@ -180,7 +180,7 @@
       <property
          name="fromOutcome">goPanelHospital</property>
       <property
-         name="sdm:polyPoints">R50,502.81067,370.44824,886.52637,276.90942,B56</property>
+         name="sdm:polyPoints">R46,502.74466,366.94824,886.52637,276.9586,B56</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -190,7 +190,7 @@
       <property
          name="fromOutcome">PanelHospitalToHome</property>
       <property
-         name="sdm:polyPoints">B44,879.52637,271.44824,501.95032,363.44824,R42</property>
+         name="sdm:polyPoints">B44,879.52637,271.44824,501.91498,359.94824,R38</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall18">
@@ -271,43 +271,23 @@
       <property
          name="fromOutcome">Rollback</property>
       <property
-         name="sdm:polyPoints">L50,738.5,202.79883,500.5,356.44824,R34</property>
+         name="sdm:polyPoints">L50,738.5,202.79883,500.5,352.94824,R30</property>
    </ControlFlowCase>
    <View
       id="View25">
       <property
          name="activityId">ClaimReimbursement</property>
       <property
-         name="x">653.6826</property>
+         name="x">767.6826</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>ClaimReimbursement&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">575.7988</property>
+         name="y">565.09766</property>
       <property
          name="page">/pages/ClaimReimbursement.jsf</property>
       <property
          name="exceptionHandler">false</property>
    </View>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase26"
-      from="View6"
-      to="View25">
-      <property
-         name="fromOutcome">goToReimbursement</property>
-      <property
-         name="sdm:polyPoints">B44,456.0,427.37723,609.83203,578.94824,L54</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase27"
-      from="View25"
-      to="View6">
-      <property
-         name="fromOutcome">reimbursementToHome</property>
-      <property
-         name="sdm:polyPoints">L46,612.6826,571.94824,463.0,424.44824,B56</property>
-   </ControlFlowCase>
    <View
       id="View28">
       <property
@@ -331,6 +311,303 @@
       <property
          name="fromOutcome">gotoValueAddedServices</property>
       <property
-         name="sdm:polyPoints">L50,418.5,370.44824,293.3711,398.74707,R50</property>
+         name="sdm:polyPoints">L62,418.10135,380.94824,293.3711,395.24707,R46</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase30"
+      from="View28"
+      to="View6">
+      <property
+         name="fromOutcome">VAStoHomePG</property>
+      <property
+         name="sdm:polyPoints">R54,293.86743,402.24707,418.5,384.44824,L66</property>
+   </ControlFlowCase>
+   <View
+      id="View31">
+      <property
+         name="activityId">TreatInfoPG</property>
+      <property
+         name="x">108.680664</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>TreatInfoPG&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">288.09766</property>
+      <property
+         name="page">/pages/TreatInfoPG.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase32"
+      from="View6"
+      to="View31">
+      <property
+         name="fromOutcome">gotoTreatInfoPG</property>
+      <property
+         name="sdm:polyPoints">L46,415.7196,366.94824,150.7456,284.24707,R46</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase33"
+      from="View31"
+      to="View6">
+      <property
+         name="fromOutcome">TreatInfotoHomePG</property>
+      <property
+         name="sdm:polyPoints">R54,149.68066,291.24707,416.16742,370.44824,L50</property>
+   </ControlFlowCase>
+   <View
+      id="View34">
+      <property
+         name="activityId">TakafulProductsPG</property>
+      <property
+         name="x">339.02246</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>TakafulProductsPG&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">619.7988</property>
+      <property
+         name="page">/pages/TakafulProductsPG.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase35"
+      from="View6"
+      to="View34">
+      <property
+         name="fromOutcome">goToTakafulProdPG</property>
+      <property
+         name="sdm:polyPoints">B16,438.5,424.44824,335.52246,563.1491,T44</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase36"
+      from="View34"
+      to="View6">
+      <property
+         name="fromOutcome">TakafulProdToHome</property>
+      <property
+         name="sdm:polyPoints">T56,342.52246,565.44824,445.5,426.73227,B27</property>
+   </ControlFlowCase>
+   <MethodCall
+      id="MethodCall37">
+      <property
+         name="activityId">CreateInsert1</property>
+      <property
+         name="x">647.35156</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>CreateInsert1&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">571.44824</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase38"
+      from="View6"
+      to="MethodCall37">
+      <property
+         name="fromOutcome">goToReimbursement</property>
+      <property
+         name="sdm:polyPoints">B84,480.5,424.44824,606.35156,571.09766,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase39"
+      from="MethodCall37"
+      to="View25">
+      <property
+         name="fromOutcome">CreateInsert</property>
+      <property
+         name="sdm:polyPoints">R50,688.35156,571.09766,726.6826,564.7471,L50</property>
+   </ControlFlowCase>
+   <MethodCall
+      id="MethodCall40">
+      <property
+         name="activityId">Rollback1</property>
+      <property
+         name="x">860.5</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Rollback1&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">452.44824</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase41"
+      from="View25"
+      to="MethodCall40">
+      <property
+         name="fromOutcome">reimbursementToHome</property>
+      <property
+         name="sdm:polyPoints">T50,767.6826,510.74707,819.5,455.59766,L54</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase42"
+      from="MethodCall40"
+      to="View6">
+      <property
+         name="fromOutcome">Rollback</property>
+      <property
+         name="sdm:polyPoints">L46,819.5,448.59766,500.5,387.94824,R70</property>
+   </ControlFlowCase>
+   <View
+      id="View43">
+      <property
+         name="activityId">LaunchComplaintPG</property>
+      <property
+         name="x">489.36523</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>LaunchComplaintPG&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">775.3965</property>
+      <property
+         name="page">/pages/LaunchComplaintPG.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <MethodCall
+      id="MethodCall44">
+      <property
+         name="activityId">CreateInsert2</property>
+      <property
+         name="x">556.35156</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>CreateInsert2&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">658.1494</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase45"
+      from="View6"
+      to="MethodCall44">
+      <property
+         name="fromOutcome">goToComplaint</property>
+      <property
+         name="sdm:polyPoints">B73,473.5,426.51352,556.35156,603.7988,T50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase46"
+      from="MethodCall44"
+      to="View43">
+      <property
+         name="fromOutcome">CreateInsert</property>
+      <property
+         name="sdm:polyPoints">B50,556.35156,711.7988,492.86523,721.0459,T56</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase47"
+      from="View43"
+      to="View6">
+      <property
+         name="fromOutcome">ComplaintToHome</property>
+      <property
+         name="sdm:polyPoints">T44,485.86523,721.0459,466.5,427.397,B61</property>
+   </ControlFlowCase>
+   <View
+      id="View48">
+      <property
+         name="activityId">ContactUsPG</property>
+      <property
+         name="x">375.6797</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>ContactUsPG&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">807.7988</property>
+      <property
+         name="page">/pages/ContactUsPG.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase49"
+      from="View6"
+      to="View48">
+      <property
+         name="fromOutcome">goToContactUs</property>
+      <property
+         name="sdm:polyPoints">B50,459.5,429.13745,379.1797,753.44824,T56</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase50"
+      from="View48"
+      to="View6">
+      <property
+         name="fromOutcome">ContactUsToHome</property>
+      <property
+         name="sdm:polyPoints">T44,372.1797,752.5954,452.5,428.29535,B39</property>
+   </ControlFlowCase>
+   <View
+      id="View51">
+      <property
+         name="activityId">recordCorrectionPG</property>
+      <property
+         name="x">-11.647461</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>recordCorrectionPG&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">164.39648</property>
+      <property
+         name="page">/pages/recordCorrectionPG.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase53"
+      from="View51"
+      to="View6">
+      <property
+         name="fromOutcome">recordCorrectiontoHome</property>
+      <property
+         name="sdm:polyPoints">R50,29.35254,164.0459,418.5,356.44824,L34</property>
+   </ControlFlowCase>
+   <MethodCall
+      id="MethodCall54">
+      <property
+         name="activityId">CreateInsert3</property>
+      <property
+         name="x">157.35156</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>CreateInsert3&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">192.14941</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase55"
+      from="View6"
+      to="MethodCall54">
+      <property
+         name="fromOutcome">gotoRecordCorrection</property>
+      <property
+         name="sdm:polyPoints">L38,416.97733,359.94824,157.35156,245.79883,B50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase56"
+      from="MethodCall54"
+      to="View51">
+      <property
+         name="fromOutcome">CreateInsert</property>
+      <property
+         name="sdm:polyPoints">L50,116.35156,191.79883,30.75328,160.5459,R46</property>
    </ControlFlowCase>
 </SDM>

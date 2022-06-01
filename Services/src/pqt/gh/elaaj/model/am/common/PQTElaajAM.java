@@ -11,5 +11,17 @@ public interface PQTElaajAM extends ApplicationModule {
     void executeBenefitDetail();
 
     void Apply();
+
+    void submitToBpm();
+
+    void sendIPDEmail();
+
+    void sendOPDEmail();
+
+    void submitToBpmIPD();
+
+    void submitToBpmOPD();
+
+    String getForgotPassword(String pCnic);
 }
 

@@ -31,7 +31,7 @@
                                          valign="middle">
                                 <af:panelGroupLayout id="pgl7" layout="vertical" halign="center">
                                     <af:outputText value="Welcome" id="ot1"
-                                                   inlineStyle="color:white;font-weight:bolder"/>
+                                                   inlineStyle="font-size:x-large; font-weight:bolder; color:white;"/>
                                 </af:panelGroupLayout>
                             </af:gridCell>
                         </af:gridRow>
@@ -41,7 +41,7 @@
                     <af:panelGroupLayout id="pgl11" valign="bottom"
                                          styleClass="PQHeaderColor AFStretchWidth" layout="vertical" halign="center">
                         <af:button text="Login" id="b4" action="#{LoginBean.LoginVerification}"
-                                   inlineStyle="font-size:16px; padding: 6px; color:white; background:green; border:0;"/>
+                                   inlineStyle="font-size:16px; padding: 7px; color:white; background:#8b0037; border:0;"/>
                     </af:panelGroupLayout>
                 </f:facet>
                 <f:facet name="center">
@@ -103,6 +103,30 @@
                                                                       styleClass="PQLoginPagePassword">
                                                             <f:validator binding="#{bindings.pUserPassword.validator}"/>
                                                         </af:inputText>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow id="gr4">
+                                                    <af:gridCell id="gc5" halign="center" valign="middle" width="auto">
+                                                        <af:image source="/images/IMG-20220308-WA0001.jpg" shortDesc="mslogo"
+                                                                  id="i3" inlineStyle="WIDTH:227PX"/>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow id="gr10">
+                                                    <af:gridCell id="gc11" halign="center">
+                                                        <af:button text="Forgot Password" id="b2"
+                                                                   inlineStyle="font-size:16px; padding: 7px; color:white; background:#8b0037; border:0;"
+                                                                   action="#{LoginBean.getpassword}"/>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow id="gr9">
+                                                    <af:gridCell id="gc10" halign="center" valign="middle">
+                                                        <af:spacer width="10" height="10" id="s1"/>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow id="gr7">
+                                                    <af:gridCell id="gc8" halign="center" valign="middle">
+                                                        <af:outputFormatted value="&quot; REWARD YOUR EMPLOYEES, PROTECT THEIR FAMILIES &quot;" id="of1"
+                                                                            inlineStyle="font-size:13px; font-weight:600; color:Navy; font-family:'' Times New Roman ''; text-justify:auto; text-indent:5pt; text-align:center; font-variant:normal;"/>
                                                     </af:gridCell>
                                                 </af:gridRow>
                                             </af:panelGridLayout>

@@ -12,8 +12,19 @@
                                          inlineStyle="background-color:#8b0037;">
                         <af:separator id="s1"
                                       inlineStyle="min-height:5px; background-color:#ba9632; margin: 0px;     border-color: transparent;"/>
-                        <af:outputFormatted value="Panel Hospital" id="of1"
-                                            inlineStyle="font-size:x-large; font-weight:bolder; color:white;"/>
+                        <af:panelGridLayout id="pgl5">
+                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5">
+                                <af:gridCell width="10%" id="gc2" halign="center" valign="middle">
+                                    <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
+                                             inlineStyle="color:white;" action="PanelHospitalToHome"/>
+                                </af:gridCell>
+                                <af:gridCell width="90%" id="gc6" halign="center"
+                                             valign="middle">
+                                    <af:outputFormatted value="Panel Hospital" id="of1"
+                                                        inlineStyle="font-size:x-large; font-weight:bolder; color:white;"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                        </af:panelGridLayout>
                     </af:panelGroupLayout>
                 </f:facet>
                 <f:facet name="center">

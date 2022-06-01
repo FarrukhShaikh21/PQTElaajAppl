@@ -6,13 +6,12 @@
   Name="ElaajClaimReimburstmentEOVO"
   Version="12.2.1.11.57"
   InheritPersonalization="merge"
-  SelectListFlags="1"
-  FromListFlags="1"
-  WhereFlags="1"
   BindingStyle="OracleName"
-  CustomQuery="false"
-  SelectAllAttributes="false"
+  CustomQuery="true"
   PageIterMode="Full">
+  <DesignTime>
+    <Attr Name="_isExpertMode" Value="true"/>
+  </DesignTime>
   <Properties>
     <SchemaBasedProperties>
       <LABEL
@@ -44,10 +43,20 @@
     <AttrArray Name="AttrExpressions"/>
     <AttrArray Name="DerivedAttrNames">
       <Item Value="CompanyName"/>
+      <Item Value="NameOfEmployee"/>
+      <Item Value="EmployeeId"/>
+      <Item Value="CertificateNo"/>
+      <Item Value="DocumentIdPk"/>
+      <Item Value="Cnic"/>
     </AttrArray>
     <AttrArray Name="ListAttrNames">
       <Item Value="EmpName"/>
       <Item Value="CompanyName"/>
+      <Item Value="SelfEmpName"/>
+      <Item Value="EmpFolioId"/>
+      <Item Value="EmpSrNo"/>
+      <Item Value="PolSysId"/>
+      <Item Value="EmpCnic"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="EmpName"/>
@@ -96,6 +105,31 @@
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
+  <SQLQuery><![CDATA[SELECT ElaajClaimReimburstmentEO.ATTACH_FILE_1,      
+       ElaajClaimReimburstmentEO.ATTACH_FILE_2,      
+       ElaajClaimReimburstmentEO.ATTACH_FILE_3,      
+       ElaajClaimReimburstmentEO.CELL_NO,      
+       ElaajClaimReimburstmentEO.CERTIFICATE_NO,      
+       ElaajClaimReimburstmentEO.CLAIM_TOTAL_AMOUNT,      
+       ElaajClaimReimburstmentEO.COMPANY_NAME,      
+       ElaajClaimReimburstmentEO.DOCTOR_PESCRIPTION,      
+       ElaajClaimReimburstmentEO.ELAAJ_CLAIM_REIMBURSTMENT_ID,      
+       ElaajClaimReimburstmentEO.EMAIL,      
+       ElaajClaimReimburstmentEO.EMPLOYEE_ID,      
+       ElaajClaimReimburstmentEO.EXPECTED_COST,      
+       ElaajClaimReimburstmentEO.NAME_OF_DOCTOR,      
+       ElaajClaimReimburstmentEO.NAME_OF_EMPLOYEE,      
+       ElaajClaimReimburstmentEO.NAME_OF_PANEL_HOSPITAL,      
+       ElaajClaimReimburstmentEO.NAME_OF_PATIENT,      
+       ElaajClaimReimburstmentEO.REIMBURSTMENT_DATE,      
+       ElaajClaimReimburstmentEO.SYMPTOM_AT_PRESENT,      
+       ElaajClaimReimburstmentEO.TYPE_OF_CLAIMN,    
+       ElaajClaimReimburstmentEO.App_Mod,   
+       ElaajClaimReimburstmentEO.Dms_Document_Reference,  
+       ElaajClaimReimburstmentEO.Document_Id_Pk,  
+       ElaajClaimReimburstmentEO.Cnic, 
+       ElaajClaimReimburstmentEO.Other_Hospital     
+FROM  ELAAJ_CLAIM_REIMBURSTMENT ElaajClaimReimburstmentEO]]></SQLQuery>
   <EntityUsage
     Name="ElaajClaimReimburstmentEO"
     Entity="pqt.gh.elaaj.model.eo.ElaajClaimReimburstmentEO"/>
@@ -122,31 +156,66 @@
     PrecisionRule="true"
     EntityAttrName="CellNo"
     EntityUsage="ElaajClaimReimburstmentEO"
-    AliasName="CELL_NO"/>
+    AliasName="CELL_NO">
+    <Properties>
+      <SchemaBasedProperties>
+        <AUTOSUBMIT
+          Value="true"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="CertificateNo"
     PrecisionRule="true"
     EntityAttrName="CertificateNo"
     EntityUsage="ElaajClaimReimburstmentEO"
-    AliasName="CERTIFICATE_NO"/>
+    AliasName="CERTIFICATE_NO">
+    <Properties>
+      <SchemaBasedProperties>
+        <AUTOSUBMIT
+          Value="true"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ClaimTotalAmount"
     PrecisionRule="true"
     EntityAttrName="ClaimTotalAmount"
     EntityUsage="ElaajClaimReimburstmentEO"
-    AliasName="CLAIM_TOTAL_AMOUNT"/>
+    AliasName="CLAIM_TOTAL_AMOUNT">
+    <Properties>
+      <SchemaBasedProperties>
+        <AUTOSUBMIT
+          Value="true"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="CompanyName"
     PrecisionRule="true"
     EntityAttrName="CompanyName"
     EntityUsage="ElaajClaimReimburstmentEO"
-    AliasName="COMPANY_NAME"/>
+    AliasName="COMPANY_NAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <AUTOSUBMIT
+          Value="true"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="DoctorPescription"
     PrecisionRule="true"
     EntityAttrName="DoctorPescription"
     EntityUsage="ElaajClaimReimburstmentEO"
-    AliasName="DOCTOR_PESCRIPTION"/>
+    AliasName="DOCTOR_PESCRIPTION">
+    <Properties>
+      <SchemaBasedProperties>
+        <AUTOSUBMIT
+          Value="true"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ElaajClaimReimburstmentId"
     IsNotNull="true"
@@ -159,31 +228,66 @@
     PrecisionRule="true"
     EntityAttrName="Email"
     EntityUsage="ElaajClaimReimburstmentEO"
-    AliasName="EMAIL"/>
+    AliasName="EMAIL">
+    <Properties>
+      <SchemaBasedProperties>
+        <AUTOSUBMIT
+          Value="true"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="EmployeeId"
     PrecisionRule="true"
     EntityAttrName="EmployeeId"
     EntityUsage="ElaajClaimReimburstmentEO"
-    AliasName="EMPLOYEE_ID"/>
+    AliasName="EMPLOYEE_ID">
+    <Properties>
+      <SchemaBasedProperties>
+        <AUTOSUBMIT
+          Value="true"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ExpectedCost"
     PrecisionRule="true"
     EntityAttrName="ExpectedCost"
     EntityUsage="ElaajClaimReimburstmentEO"
-    AliasName="EXPECTED_COST"/>
+    AliasName="EXPECTED_COST">
+    <Properties>
+      <SchemaBasedProperties>
+        <AUTOSUBMIT
+          Value="true"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="NameOfDoctor"
     PrecisionRule="true"
     EntityAttrName="NameOfDoctor"
     EntityUsage="ElaajClaimReimburstmentEO"
-    AliasName="NAME_OF_DOCTOR"/>
+    AliasName="NAME_OF_DOCTOR">
+    <Properties>
+      <SchemaBasedProperties>
+        <AUTOSUBMIT
+          Value="true"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="NameOfEmployee"
     PrecisionRule="true"
     EntityAttrName="NameOfEmployee"
     EntityUsage="ElaajClaimReimburstmentEO"
-    AliasName="NAME_OF_EMPLOYEE"/>
+    AliasName="NAME_OF_EMPLOYEE">
+    <Properties>
+      <SchemaBasedProperties>
+        <AUTOSUBMIT
+          Value="true"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="NameOfPanelHospital"
     PrecisionRule="true"
@@ -195,6 +299,8 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="input_text_lov"/>
+        <AUTOSUBMIT
+          Value="true"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -209,6 +315,8 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="input_text_lov"/>
+        <AUTOSUBMIT
+          Value="true"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -218,13 +326,27 @@
     PrecisionRule="true"
     EntityAttrName="ReimburstmentDate"
     EntityUsage="ElaajClaimReimburstmentEO"
-    AliasName="REIMBURSTMENT_DATE"/>
+    AliasName="REIMBURSTMENT_DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <AUTOSUBMIT
+          Value="true"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="SymptomAtPresent"
     PrecisionRule="true"
     EntityAttrName="SymptomAtPresent"
     EntityUsage="ElaajClaimReimburstmentEO"
-    AliasName="SYMPTOM_AT_PRESENT"/>
+    AliasName="SYMPTOM_AT_PRESENT">
+    <Properties>
+      <SchemaBasedProperties>
+        <AUTOSUBMIT
+          Value="true"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="TypeOfClaimn"
     PrecisionRule="true"
@@ -241,6 +363,71 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="AppMod"
+    PrecisionRule="true"
+    AliasName="APP_MOD"
+    EntityAttrName="AppMod"
+    EntityUsage="ElaajClaimReimburstmentEO">
+    <Properties>
+      <SchemaBasedProperties>
+        <AUTOSUBMIT
+          Value="true"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="DmsDocumentReference"
+    PrecisionRule="true"
+    AliasName="DMS_DOCUMENT_REFERENCE"
+    EntityAttrName="DmsDocumentReference"
+    EntityUsage="ElaajClaimReimburstmentEO"/>
+  <ViewAttribute
+    Name="DocumentIdPk"
+    PrecisionRule="true"
+    AliasName="DOCUMENT_ID_PK"
+    EntityAttrName="DocumentIdPk"
+    EntityUsage="ElaajClaimReimburstmentEO">
+    <Properties>
+      <SchemaBasedProperties>
+        <AUTOSUBMIT
+          Value="true"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Cnic"
+    PrecisionRule="true"
+    AliasName="CNIC"
+    EntityAttrName="Cnic"
+    EntityUsage="ElaajClaimReimburstmentEO">
+    <Properties>
+      <SchemaBasedProperties>
+        <AUTOSUBMIT
+          Value="true"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="OtherHospital"
+    PrecisionRule="true"
+    AliasName="OTHER_HOSPITAL"
+    EntityAttrName="OtherHospital"
+    EntityUsage="ElaajClaimReimburstmentEO">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="pqt.gh.elaaj.model.vo.ElaajClaimReimburstmentEOVO.OtherHospital_LABEL"/>
+        <DISPLAYWIDTH
+          Value="30"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewLinkAccessor
+    Name="ElaajClaimReimDmsDocEOVO"
+    ViewLink="pqt.gh.elaaj.model.vl.ReimMasterDetailVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="pqt.gh.elaaj.model.ServicesBundle"/>

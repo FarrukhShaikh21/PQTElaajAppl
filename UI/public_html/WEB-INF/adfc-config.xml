@@ -39,6 +39,45 @@
   <view id="ValueAddedServicesPG">
     <page>/pages/ValueAddedServicesPG.jsf</page>
   </view>
+  <view id="TreatInfoPG">
+    <page>/pages/TreatInfoPG.jsf</page>
+  </view>
+  <view id="TakafulProductsPG">
+    <page>/pages/TakafulProductsPG.jsf</page>
+  </view>
+  <method-call id="CreateInsert1">
+    <method>#{bindings.CreateInsert.execute}</method>
+    <outcome>
+      <fixed-outcome>CreateInsert</fixed-outcome>
+    </outcome>
+  </method-call>
+  <method-call id="Rollback1">
+    <method>#{bindings.Rollback.execute}</method>
+    <outcome>
+      <fixed-outcome>Rollback</fixed-outcome>
+    </outcome>
+  </method-call>
+  <view id="LaunchComplaintPG">
+    <page>/pages/LaunchComplaintPG.jsf</page>
+  </view>
+  <method-call id="CreateInsert2">
+    <method>#{bindings.CreateInsert.execute}</method>
+    <outcome>
+      <fixed-outcome>CreateInsert</fixed-outcome>
+    </outcome>
+  </method-call>
+  <view id="ContactUsPG">
+    <page>/pages/ContactUsPG.jsf</page>
+  </view>
+  <view id="recordCorrectionPG">
+    <page>/pages/recordCorrectionPG.jsf</page>
+  </view>
+  <method-call id="CreateInsert3">
+    <method>#{bindings.CreateInsert.execute}</method>
+    <outcome>
+      <fixed-outcome>CreateInsert</fixed-outcome>
+    </outcome>
+  </method-call>
   <control-flow-rule id="__1">
     <from-activity-id>RegisterPG</from-activity-id>
     <control-flow-case id="__2">
@@ -79,13 +118,33 @@
       <from-outcome>goClaimIntimationPG</from-outcome>
       <to-activity-id>CreateInsert</to-activity-id>
     </control-flow-case>
-    <control-flow-case id="__26">
-      <from-outcome>goToReimbursement</from-outcome>
-      <to-activity-id>ClaimReimbursement</to-activity-id>
-    </control-flow-case>
     <control-flow-case id="__29">
       <from-outcome>gotoValueAddedServices</from-outcome>
       <to-activity-id>ValueAddedServicesPG</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__32">
+      <from-outcome>gotoTreatInfoPG</from-outcome>
+      <to-activity-id>TreatInfoPG</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__35">
+      <from-outcome>goToTakafulProdPG</from-outcome>
+      <to-activity-id>TakafulProductsPG</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__39">
+      <from-outcome>goToReimbursement</from-outcome>
+      <to-activity-id>CreateInsert1</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__26">
+      <from-outcome>goToComplaint</from-outcome>
+      <to-activity-id>CreateInsert2</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__48">
+      <from-outcome>goToContactUs</from-outcome>
+      <to-activity-id>ContactUsPG</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__51">
+      <from-outcome>gotoRecordCorrection</from-outcome>
+      <to-activity-id>CreateInsert3</to-activity-id>
     </control-flow-case>
   </control-flow-rule>
   <control-flow-rule id="__10">
@@ -130,11 +189,81 @@
       <to-activity-id>HomePG</to-activity-id>
     </control-flow-case>
   </control-flow-rule>
-  <control-flow-rule id="__27">
-    <from-activity-id>ClaimReimbursement</from-activity-id>
-    <control-flow-case id="__28">
-      <from-outcome>reimbursementToHome</from-outcome>
+  <control-flow-rule id="__30">
+    <from-activity-id>ValueAddedServicesPG</from-activity-id>
+    <control-flow-case id="__31">
+      <from-outcome>VAStoHomePG</from-outcome>
       <to-activity-id>HomePG</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__33">
+    <from-activity-id>TreatInfoPG</from-activity-id>
+    <control-flow-case id="__34">
+      <from-outcome>TreatInfotoHomePG</from-outcome>
+      <to-activity-id>HomePG</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__36">
+    <from-activity-id>TakafulProductsPG</from-activity-id>
+    <control-flow-case id="__37">
+      <from-outcome>TakafulProdToHome</from-outcome>
+      <to-activity-id>HomePG</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__40">
+    <from-activity-id>CreateInsert1</from-activity-id>
+    <control-flow-case id="__41">
+      <from-outcome>CreateInsert</from-outcome>
+      <to-activity-id>ClaimReimbursement</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__42">
+    <from-activity-id>ClaimReimbursement</from-activity-id>
+    <control-flow-case id="__43">
+      <from-outcome>reimbursementToHome</from-outcome>
+      <to-activity-id>Rollback1</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__44">
+    <from-activity-id>Rollback1</from-activity-id>
+    <control-flow-case id="__45">
+      <from-outcome>Rollback</from-outcome>
+      <to-activity-id>HomePG</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__27">
+    <from-activity-id>CreateInsert2</from-activity-id>
+    <control-flow-case id="__28">
+      <from-outcome>CreateInsert</from-outcome>
+      <to-activity-id>LaunchComplaintPG</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__46">
+    <from-activity-id>LaunchComplaintPG</from-activity-id>
+    <control-flow-case id="__47">
+      <from-outcome>ComplaintToHome</from-outcome>
+      <to-activity-id>HomePG</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__49">
+    <from-activity-id>ContactUsPG</from-activity-id>
+    <control-flow-case id="__50">
+      <from-outcome>ContactUsToHome</from-outcome>
+      <to-activity-id>HomePG</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__52">
+    <from-activity-id>recordCorrectionPG</from-activity-id>
+    <control-flow-case id="__53">
+      <from-outcome>recordCorrectiontoHome</from-outcome>
+      <to-activity-id>HomePG</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__54">
+    <from-activity-id>CreateInsert3</from-activity-id>
+    <control-flow-case id="__55">
+      <from-outcome>CreateInsert</from-outcome>
+      <to-activity-id>recordCorrectionPG</to-activity-id>
     </control-flow-case>
   </control-flow-rule>
   <managed-bean id="__5">
@@ -145,6 +274,11 @@
   <managed-bean id="__12">
     <managed-bean-name>BenefitDetailBean</managed-bean-name>
     <managed-bean-class>pqt.gh.elaaj.view.request.BenefitDetailBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__38">
+    <managed-bean-name>ClaimReimBean</managed-bean-name>
+    <managed-bean-class>pqt.gh.elaaj.view.ClaimReimBean</managed-bean-class>
     <managed-bean-scope>request</managed-bean-scope>
   </managed-bean>
 </adfc-config>

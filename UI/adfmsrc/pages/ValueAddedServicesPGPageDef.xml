@@ -12,6 +12,7 @@
       <nodeDefinition DefName="pqt.gh.elaaj.model.vo.ValueAddedServicesVO" Name="ValueAddedServicesVO10">
         <AttrNames>
           <Item Value="Valueservicename"/>
+          <Item Value="Valueserviceurl"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

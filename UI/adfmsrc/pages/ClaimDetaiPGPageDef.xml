@@ -36,6 +36,17 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <tree IterBinding="ClaimsDetailVO1Iterator" id="ClaimsDetailVO1">
+      <nodeDefinition DefName="pqt.gh.elaaj.model.vo.ClaimsDetailVO" Name="ClaimsDetailVO10">
+        <AttrNames>
+          <Item Value="ClaimNo"/>
+          <Item Value="CoverDesc"/>
+          <Item Value="ClaimAmount"/>
+          <Item Value="ClmIntDt"/>
+          <Item Value="StatusDesc"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
     <tree IterBinding="VuGhsElaajCoveredMemberVO1Iterator" id="VuGhsElaajCoveredMemberVO11">
       <nodeDefinition DefName="pqt.gh.elaaj.model.vo.VuGhsElaajCoveredMemberVO" Name="VuGhsElaajCoveredMemberVO110">
         <AttrNames>
@@ -58,5 +69,10 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <attributeValues IterBinding="ClaimsDetailVO1Iterator" id="DeductionAmount">
+      <AttrNames>
+        <Item Value="DeductionAmount"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

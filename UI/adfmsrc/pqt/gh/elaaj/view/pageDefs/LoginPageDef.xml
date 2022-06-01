@@ -28,5 +28,11 @@
       <NamedData NDName="pUserName" NDValue="#{bindings.pUserName.inputValue}" NDType="java.lang.String"/>
       <NamedData NDName="pUserPassword" NDValue="#{bindings.pUserPassword.inputValue}" NDType="java.lang.String"/>
     </methodAction>
+    <methodAction id="getForgotPassword" RequiresUpdateModel="true" Action="invokeMethod" MethodName="getForgotPassword"
+                  IsViewObjectMethod="false" DataControl="PQTElaajAMDataControl"
+                  InstanceName="data.PQTElaajAMDataControl.dataProvider"
+                  ReturnName="data.PQTElaajAMDataControl.methodResults.getForgotPassword_PQTElaajAMDataControl_dataProvider_getForgotPassword_result">
+      <NamedData NDName="pCnic" NDValue="#{bindings.pUserName.inputValue}" NDType="java.lang.String"/>
+    </methodAction>
   </bindings>
 </pageDefinition>

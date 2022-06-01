@@ -1,7 +1,10 @@
 package pqt.gh.elaaj.model.eo;
 
+import java.math.BigDecimal;
+
 import oracle.jbo.AttributeList;
 import oracle.jbo.Key;
+import oracle.jbo.RowIterator;
 import oracle.jbo.domain.Date;
 import oracle.jbo.domain.Number;
 import oracle.jbo.server.EntityDefImpl;
@@ -40,7 +43,13 @@ public class ElaajClaimIntimateEOImpl extends EntityImpl {
         AttachFile2,
         AttachFile3,
         InitamationDate,
-        CnicNo;
+        CnicNo,
+        DmsDocumentReference,
+        AppMod,
+        Cnic,
+        DocumentIdFk,
+        OtherHospital,
+        ElaajClaimDmsDocEO;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -63,6 +72,8 @@ public class ElaajClaimIntimateEOImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int ELAAJCLAIMINTIMATEID = AttributesEnum.ElaajClaimIntimateId.index();
     public static final int COMPANYNAME = AttributesEnum.CompanyName.index();
     public static final int NAMEOFEMPLOYEE = AttributesEnum.NameOfEmployee.index();
@@ -86,12 +97,26 @@ public class ElaajClaimIntimateEOImpl extends EntityImpl {
     public static final int ATTACHFILE3 = AttributesEnum.AttachFile3.index();
     public static final int INITAMATIONDATE = AttributesEnum.InitamationDate.index();
     public static final int CNICNO = AttributesEnum.CnicNo.index();
+    public static final int DMSDOCUMENTREFERENCE = AttributesEnum.DmsDocumentReference.index();
+    public static final int APPMOD = AttributesEnum.AppMod.index();
+    public static final int CNIC = AttributesEnum.Cnic.index();
+    public static final int DOCUMENTIDFK = AttributesEnum.DocumentIdFk.index();
+    public static final int OTHERHOSPITAL = AttributesEnum.OtherHospital.index();
+    public static final int ELAAJCLAIMDMSDOCEO = AttributesEnum.ElaajClaimDmsDocEO.index();
 
     /**
      * This is the default constructor (do not remove).
      */
     public ElaajClaimIntimateEOImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("pqt.gh.elaaj.model.eo.ElaajClaimIntimateEO");
+    }
+
 
     /**
      * Gets the attribute value for ElaajClaimIntimateId, using the alias name ElaajClaimIntimateId.
@@ -461,6 +486,96 @@ public class ElaajClaimIntimateEOImpl extends EntityImpl {
         setAttributeInternal(CNICNO, value);
     }
 
+
+    /**
+     * Gets the attribute value for DmsDocumentReference, using the alias name DmsDocumentReference.
+     * @return the value of DmsDocumentReference
+     */
+    public String getDmsDocumentReference() {
+        return (String) getAttributeInternal(DMSDOCUMENTREFERENCE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for DmsDocumentReference.
+     * @param value value to set the DmsDocumentReference
+     */
+    public void setDmsDocumentReference(String value) {
+        setAttributeInternal(DMSDOCUMENTREFERENCE, value);
+    }
+
+
+    /**
+     * Gets the attribute value for AppMod, using the alias name AppMod.
+     * @return the value of AppMod
+     */
+    public String getAppMod() {
+        return (String) getAttributeInternal(APPMOD);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for AppMod.
+     * @param value value to set the AppMod
+     */
+    public void setAppMod(String value) {
+        setAttributeInternal(APPMOD, value);
+    }
+
+    /**
+     * Gets the attribute value for Cnic, using the alias name Cnic.
+     * @return the value of Cnic
+     */
+    public String getCnic() {
+        return (String) getAttributeInternal(CNIC);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Cnic.
+     * @param value value to set the Cnic
+     */
+    public void setCnic(String value) {
+        setAttributeInternal(CNIC, value);
+    }
+
+    /**
+     * Gets the attribute value for DocumentIdFk, using the alias name DocumentIdFk.
+     * @return the value of DocumentIdFk
+     */
+    public Number getDocumentIdFk() {
+        return (Number) getAttributeInternal(DOCUMENTIDFK);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for DocumentIdFk.
+     * @param value value to set the DocumentIdFk
+     */
+    public void setDocumentIdFk(Number value) {
+        setAttributeInternal(DOCUMENTIDFK, value);
+    }
+
+    /**
+     * Gets the attribute value for OtherHospital, using the alias name OtherHospital.
+     * @return the value of OtherHospital
+     */
+    public String getOtherHospital() {
+        return (String) getAttributeInternal(OTHERHOSPITAL);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for OtherHospital.
+     * @param value value to set the OtherHospital
+     */
+    public void setOtherHospital(String value) {
+        setAttributeInternal(OTHERHOSPITAL, value);
+    }
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getElaajClaimDmsDocEO() {
+        return (RowIterator) getAttributeInternal(ELAAJCLAIMDMSDOCEO);
+    }
+
+
     /**
      * @param elaajClaimIntimateId key constituent
 
@@ -468,13 +583,6 @@ public class ElaajClaimIntimateEOImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(Number elaajClaimIntimateId) {
         return new Key(new Object[] { elaajClaimIntimateId });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("pqt.gh.elaaj.model.eo.ElaajClaimIntimateEO");
     }
 
     /**
@@ -486,6 +594,7 @@ public class ElaajClaimIntimateEOImpl extends EntityImpl {
         oracle.jbo.server.SequenceImpl seq =
                     new oracle.jbo.server.SequenceImpl("ELAAJ_CLAIM_INTIMATE_SEQ", getDBTransaction());
                 setElaajClaimIntimateId(seq.getSequenceNumber());
+                setAppMod("ADF");
     }
 
     /**

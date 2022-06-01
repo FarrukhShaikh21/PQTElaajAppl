@@ -43,6 +43,15 @@ public class LoginBean {
         return Output;
     }
     
+    public String getpassword() {
+
+        BindingContainer bindings = getBindings();
+        OperationBinding operationBinding = bindings.getOperationBinding("getForgotPassword");
+        Object result = operationBinding.execute();
+        String Output = result.toString();
+        return Output;
+    }
+    
     
 //    public String LogoutAction(ActionEvent actionEvent) {
 //        ExternalContext ectx = FacesContext.getCurrentInstance().getExternalContext();

@@ -1,7 +1,10 @@
 package pqt.gh.elaaj.model.eo;
 
+import java.math.BigDecimal;
+
 import oracle.jbo.AttributeList;
 import oracle.jbo.Key;
+import oracle.jbo.RowIterator;
 import oracle.jbo.domain.Date;
 import oracle.jbo.domain.Number;
 import oracle.jbo.server.EntityDefImpl;
@@ -36,7 +39,13 @@ public class ElaajClaimReimburstmentEOImpl extends EntityImpl {
         AttachFile1,
         AttachFile2,
         AttachFile3,
-        ReimburstmentDate;
+        ReimburstmentDate,
+        AppMod,
+        DmsDocumentReference,
+        DocumentIdPk,
+        Cnic,
+        OtherHospital,
+        ElaajClaimReimDmsDocEO;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -59,6 +68,8 @@ public class ElaajClaimReimburstmentEOImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int ELAAJCLAIMREIMBURSTMENTID = AttributesEnum.ElaajClaimReimburstmentId.index();
     public static final int COMPANYNAME = AttributesEnum.CompanyName.index();
     public static final int NAMEOFEMPLOYEE = AttributesEnum.NameOfEmployee.index();
@@ -78,12 +89,26 @@ public class ElaajClaimReimburstmentEOImpl extends EntityImpl {
     public static final int ATTACHFILE2 = AttributesEnum.AttachFile2.index();
     public static final int ATTACHFILE3 = AttributesEnum.AttachFile3.index();
     public static final int REIMBURSTMENTDATE = AttributesEnum.ReimburstmentDate.index();
+    public static final int APPMOD = AttributesEnum.AppMod.index();
+    public static final int DMSDOCUMENTREFERENCE = AttributesEnum.DmsDocumentReference.index();
+    public static final int DOCUMENTIDPK = AttributesEnum.DocumentIdPk.index();
+    public static final int CNIC = AttributesEnum.Cnic.index();
+    public static final int OTHERHOSPITAL = AttributesEnum.OtherHospital.index();
+    public static final int ELAAJCLAIMREIMDMSDOCEO = AttributesEnum.ElaajClaimReimDmsDocEO.index();
 
     /**
      * This is the default constructor (do not remove).
      */
     public ElaajClaimReimburstmentEOImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("pqt.gh.elaaj.model.eo.ElaajClaimReimburstmentEO");
+    }
+
 
     /**
      * Gets the attribute value for ElaajClaimReimburstmentId, using the alias name ElaajClaimReimburstmentId.
@@ -382,19 +407,101 @@ public class ElaajClaimReimburstmentEOImpl extends EntityImpl {
     }
 
     /**
+     * Gets the attribute value for AppMod, using the alias name AppMod.
+     * @return the value of AppMod
+     */
+    public String getAppMod() {
+        return (String) getAttributeInternal(APPMOD);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for AppMod.
+     * @param value value to set the AppMod
+     */
+    public void setAppMod(String value) {
+        setAttributeInternal(APPMOD, value);
+    }
+
+
+    /**
+     * Gets the attribute value for DmsDocumentReference, using the alias name DmsDocumentReference.
+     * @return the value of DmsDocumentReference
+     */
+    public String getDmsDocumentReference() {
+        return (String) getAttributeInternal(DMSDOCUMENTREFERENCE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for DmsDocumentReference.
+     * @param value value to set the DmsDocumentReference
+     */
+    public void setDmsDocumentReference(String value) {
+        setAttributeInternal(DMSDOCUMENTREFERENCE, value);
+    }
+
+    /**
+     * Gets the attribute value for DocumentIdPk, using the alias name DocumentIdPk.
+     * @return the value of DocumentIdPk
+     */
+    public Number getDocumentIdPk() {
+        return (Number) getAttributeInternal(DOCUMENTIDPK);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for DocumentIdPk.
+     * @param value value to set the DocumentIdPk
+     */
+    public void setDocumentIdPk(Number value) {
+        setAttributeInternal(DOCUMENTIDPK, value);
+    }
+
+    /**
+     * Gets the attribute value for Cnic, using the alias name Cnic.
+     * @return the value of Cnic
+     */
+    public String getCnic() {
+        return (String) getAttributeInternal(CNIC);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Cnic.
+     * @param value value to set the Cnic
+     */
+    public void setCnic(String value) {
+        setAttributeInternal(CNIC, value);
+    }
+
+    /**
+     * Gets the attribute value for OtherHospital, using the alias name OtherHospital.
+     * @return the value of OtherHospital
+     */
+    public String getOtherHospital() {
+        return (String) getAttributeInternal(OTHERHOSPITAL);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for OtherHospital.
+     * @param value value to set the OtherHospital
+     */
+    public void setOtherHospital(String value) {
+        setAttributeInternal(OTHERHOSPITAL, value);
+    }
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getElaajClaimReimDmsDocEO() {
+        return (RowIterator) getAttributeInternal(ELAAJCLAIMREIMDMSDOCEO);
+    }
+
+
+    /**
      * @param elaajClaimReimburstmentId key constituent
 
      * @return a Key object based on given key constituents.
      */
     public static Key createPrimaryKey(Number elaajClaimReimburstmentId) {
         return new Key(new Object[] { elaajClaimReimburstmentId });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("pqt.gh.elaaj.model.eo.ElaajClaimReimburstmentEO");
     }
 
     /**
@@ -406,6 +513,7 @@ public class ElaajClaimReimburstmentEOImpl extends EntityImpl {
         oracle.jbo.server.SequenceImpl seq =
                     new oracle.jbo.server.SequenceImpl("elaaj_claim_reimburstment_squ", getDBTransaction());
                 setElaajClaimReimburstmentId(seq.getSequenceNumber());
+                setAppMod("ADF");
     }
 
     /**

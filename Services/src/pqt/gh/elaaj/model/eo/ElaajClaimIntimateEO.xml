@@ -301,6 +301,68 @@
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="DmsDocumentReference"
+    Precision="1000"
+    ColumnName="DMS_DOCUMENT_REFERENCE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ELAAJ_CLAIM_INTIMATE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1000"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="AppMod"
+    Precision="10"
+    ColumnName="APP_MOD"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ELAAJ_CLAIM_INTIMATE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Cnic"
+    Precision="100"
+    ColumnName="CNIC"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ELAAJ_CLAIM_INTIMATE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="DocumentIdFk"
+    ColumnName="DOCUMENT_ID_FK"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="ELAAJ_CLAIM_INTIMATE"/>
+  <Attribute
+    Name="OtherHospital"
+    Precision="100"
+    ColumnName="OTHER_HOSPITAL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ELAAJ_CLAIM_INTIMATE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="ElaajClaimDmsDocEO"
+    Association="pqt.gh.elaaj.model.assoc.MasterDocAssoc"
+    AssociationEnd="pqt.gh.elaaj.model.assoc.MasterDocAssoc.ElaajClaimDmsDocEO"
+    AssociationOtherEnd="pqt.gh.elaaj.model.assoc.MasterDocAssoc.ElaajClaimIntimateEO"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="ElaajClaimIntimateIdPk"
     PrimaryKey="true">
