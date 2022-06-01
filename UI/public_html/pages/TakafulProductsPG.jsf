@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="TakafulProductsPG.jsf" id="d1">
+        <af:messages id="m1"/>
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
+        <af:form id="f1"></af:form>
+        <af:form id="f2">
+            <af:panelStretchLayout id="psl1">
+                <f:facet name="top">
+                    <af:panelGridLayout id="pgl1" styleClass="PQHeaderColor">
+                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
+                            <af:gridCell marginStart="5px" width="10%" id="gc1" halign="center" valign="middle">
+                                <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
+                                         inlineStyle="color:white;" action="TakafulProdToHome"/>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="90%" marginEnd="5px" id="gc2" halign="center"
+                                         valign="middle">
+                                <af:panelGroupLayout id="pgl2" halign="center" layout="vertical">
+                                    <af:outputFormatted value="Takaful Products" id="of1"
+                                                        inlineStyle="font-size:x-large; font-weight:bolder; color:white;"/>
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
+                </f:facet>
+                <f:facet name="bottom"/>
+                <f:facet name="center">
+                    <af:panelGroupLayout id="pgl3" halign="center" layout="scroll">
+                        <af:panelSplitter id="ps1" styleClass="AFStretchWidth" dimensionsFrom="parent"
+                                          splitterPosition="0" orientation="vertical">
+                            <f:facet name="second">
+                                <af:listView value="#{bindings.ProductMasterVO1.collectionModel}" var="item"
+                                             emptyText="#{bindings.ProductMasterVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                             fetchSize="#{bindings.ProductMasterVO1.rangeSize}" id="lv1"
+                                             selection="single"
+                                             selectionListener="#{bindings.ProductMasterVO1.treeModel.makeCurrent}"
+                                             selectedRowKeys="#{bindings.ProductMasterVO1.treeModel.selectedRow}">
+                                    <af:listItem id="li1">
+                                        <af:panelGridLayout id="pgl4">
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr2">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3">
+                                                    <af:outputFormatted value="#{item.bindings.BussinessLine.inputValue}"
+                                                                        id="of2"/>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                        </af:panelGridLayout>
+                                    </af:listItem>
+                                </af:listView>
+                            </f:facet>
+                        </af:panelSplitter>
+                        <af:panelSplitter id="ps2" styleClass="AFStretchWidth" splitterPosition="0"
+                                          orientation="vertical" dimensionsFrom="parent">
+                            <f:facet name="second">
+                                <af:listView value="#{bindings.ProductDetailVO11.collectionModel}" var="item"
+                                             emptyText="#{bindings.ProductDetailVO11.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                             fetchSize="#{bindings.ProductDetailVO11.rangeSize}" id="lv2"
+                                             partialTriggers="::lv1" selection="single"
+                                             selectionListener="#{bindings.ProductDetailVO11.treeModel.makeCurrent}"
+                                             selectedRowKeys="#{bindings.ProductDetailVO11.treeModel.selectedRow}">
+                                    <af:listItem id="li2">
+                                        <af:panelGridLayout id="pgl5">
+                                            <af:gridRow marginTop="0px" height="auto" marginBottom="0px" id="gr3">
+                                                <af:gridCell marginStart="0px" width="80%" id="gc4">
+                                                    <af:outputFormatted value="#{item.bindings.Name.inputValue}"
+                                                                        id="of3"/>
+                                                </af:gridCell>
+                                                <af:gridCell marginStart="0px" width="20%" marginEnd="0px" id="gc5">
+                                                    <af:outputFormatted value="#{item.bindings.Url.inputValue}"
+                                                                        id="of4" rendered="false"/>
+                                                    <af:link id="l2" destination="#{item.bindings.Url.inputValue}"
+                                                             targetFrame="_blank" inlineStyle="font-size:12px;"
+                                                             text="View"/>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                        </af:panelGridLayout>
+                                    </af:listItem>
+                                </af:listView>
+                            </f:facet>
+                        </af:panelSplitter>
+                    </af:panelGroupLayout>
+                </f:facet>
+            </af:panelStretchLayout>
+        </af:form>
+    </af:document>
+</f:view>

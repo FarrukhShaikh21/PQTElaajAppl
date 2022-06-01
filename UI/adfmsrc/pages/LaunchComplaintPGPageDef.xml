@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="LaunchComplaintPGPageDef"
+                Package="pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ElaajComplaintDetailEOVO1" RangeSize="25" DataControl="PQTElaajAMDataControl"
+              id="ElaajComplaintDetailEOVO1Iterator"/>
+  </executables>
+  <bindings>
+    <list IterBinding="ElaajComplaintDetailEOVO1Iterator" StaticList="false" Uses="LOV_ComplaintTo" id="ComplaintTo"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="ElaajComplaintDetailEOVO1Iterator" id="Subject">
+      <AttrNames>
+        <Item Value="Subject"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ElaajComplaintDetailEOVO1Iterator" id="Message">
+      <AttrNames>
+        <Item Value="Message"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction id="Apply" RequiresUpdateModel="true" Action="invokeMethod" MethodName="Apply"
+                  IsViewObjectMethod="false" DataControl="PQTElaajAMDataControl"
+                  InstanceName="data.PQTElaajAMDataControl.dataProvider"/>
+  </bindings>
+</pageDefinition>
