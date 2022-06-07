@@ -97,13 +97,17 @@
                                                                    styleClass="PQLoginButton"/>
                                                     </af:gridCell>
                                                 </af:gridRow>
-                                                <af:gridRow id="gr10" height="100pc" marginTop="50px">
+                                                <af:gridRow id="gr10" marginTop="50px">
                                                     <af:gridCell id="gc11" halign="stretch" valign="stretch">
                                                         <af:panelGroupLayout id="pgl2" layout="vertical"
                                                                              halign="center">
                                                             <af:outputText value="EMERGENCY HOTLINE" id="ot2"
                                                                            inlineStyle="font-weight:bolder; color:#8b0037; font-size:large"/>
+                                                            <af:spacer width="10" height="10" id="s4"/>
                                                             <af:outputText value="0300-1234567" id="ot3"
+                                                                           inlineStyle="font-weight:bolder; color:#8b0037; font-size:large"/>
+                                                            <af:spacer width="10" height="10" id="s3"/>
+                                                            <af:outputText value="0300-1234567" id="ot4"
                                                                            inlineStyle="font-weight:bolder; color:#8b0037; font-size:large"/>
                                                         </af:panelGroupLayout>
                                                         <af:button text="Forgot Password" id="b2"
@@ -112,11 +116,11 @@
                                                         <af:spacer width="10" height="10" id="s2"/>
                                                     </af:gridCell>
                                                 </af:gridRow>
-                                                <af:gridRow id="gr9" height="100%">
-                                                    <af:gridCell id="gc10" halign="center" valign="stretch">
-                                                        <af:image source="/images/imgLogoBottom.png" id="i1"
-                                                                  styleClass="PQImageTrnsparency" rendered="false"/>
-                                                        <af:spacer width="10" height="10" id="s1"/>
+                                                <af:gridRow id="gr9" marginTop="170px">
+                                                    <af:gridCell id="gc10" halign="stretch" valign="bottom">
+                                                        <af:image id="i1"
+                                                                  styleClass="AFStretchWidth"
+                                                                  source="#{resource['images:imgBottomElaajApp.png']}"/>
                                                     </af:gridCell>
                                                 </af:gridRow>
                                             </af:panelGridLayout>
