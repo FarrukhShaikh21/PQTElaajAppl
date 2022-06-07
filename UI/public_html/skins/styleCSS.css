@@ -889,32 +889,53 @@ border-top-right-radius:10px;
 }
 
 
+.PQLoginPageUser af|inputText::content::-webkit-input-placeholder
+{
+  color:#8b0037;   
+}
 
+.PQLoginPagePassword af|inputText::content::-webkit-input-placeholder
+{
+   color:#8b0037;   
+}
 
 .PQLoginPageUser af|inputText::content
 {
     height:30px;
     color:#8b0037;
     font-weight: 800;
-    background-image:url("../icons/imgUser.png");
+     background-color:transparent;
+     display: flexbox;
+    /*background-image:url("../icons/imgUser.png");*/
     vertical-align: middle;
     text-align: center;
-    
+    border-top: none ;
+    border-left: none ;
+    border-right: none ;  
+    border-bottom: #8b0037 solid thin;
     background-repeat: no-repeat;
 }
 .PQHeaderColor{
-    background-color:#8b0037;
-    color:White;
+    /*background-color:#8b0037;*/
+    background-image: url("../imgAppBG.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 .PQLoginPagePassword af|inputText::content
 {
-    height:30px;
+height:30px;
     color:#8b0037;
     font-weight: 800;
-    background-image:url("../icons/imgLock.png");
+     background-color:transparent;
+     display: flexbox;
+    /*background-image:url("../icons/imgUser.png");*/
     vertical-align: middle;
     text-align: center;
-    
+    border-top: none ;
+    border-left: none ;
+    border-right: none ;  
+    border-bottom: #8b0037 solid thin;
     background-repeat: no-repeat;
 }
 
@@ -959,3 +980,30 @@ wide {
     background-image: url("../images/MS-Logo.jpeg"); 
     border: 10px; 
 }
+
+af|button.PQLoginButton  {
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    vertical-align: bottom;
+    color: #8b0037;
+    font-weight: bold;
+    border: #8b0037 1.0px solid;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-image: none;
+    background-color: White;
+    /*box-shadow: #8b0037 1.0px 1.0px 1.0px 1.0px;*/
+}
+
+af|button.PQLoginButton::text {
+    padding-top: 5px;
+}
+
+/*af|button.PQLoginButton::link {
+    border: #8b0037 1.0px solid;
+    background-color: transparent;
+    height: 30px;
+}*/
