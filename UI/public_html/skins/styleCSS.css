@@ -1097,3 +1097,13 @@ af|button.PQLoginButton::text {
 
     
 }
+
+
+af|inputText:read-only
+{
+    color:Fuchsia;
+    width:500px;
+    border-bottom: #8b0037 solid thin;
+
+    
+}

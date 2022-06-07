@@ -40,12 +40,10 @@
                                     <af:gridRow id="gr13" marginTop="5px" marginBottom="15px">
                                         <af:gridCell id="gc9" width="100%" halign="stretch" valign="stretch">
                                             <af:panelGroupLayout id="pgl2" layout="vertical" halign="center">
-                                                <af:inputText label="Label 1" id="it1" value="erwer" simple="true"
-                                                              styleClass="PQAppInputText" readOnly="true"
+                                                <af:inputText label="Label 1" id="it1"
+                                                              value="hello" simple="true" readOnly="true"
                                                               contentStyle="width:500px"/>
-                                                <af:separator id="s1" inlineStyle="width:500px;color:green"/>
-                                                <af:outputFormatted value="#{bindings.EmpName.inputValue}" id="of7"
-                                                                    inlineStyle="color:maroon;" rendered="false"/>
+                                                <af:outputFormatted value="#{bindings.EmpName.inputValue}" id="of7"/>
                                             </af:panelGroupLayout>
                                         </af:gridCell>
                                     </af:gridRow>
