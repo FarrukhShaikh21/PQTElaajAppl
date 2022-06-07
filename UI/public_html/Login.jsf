@@ -5,7 +5,7 @@
     <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
         <af:messages id="m1"/>
         <af:form id="f1">
-            <af:panelStretchLayout id="psl1" startWidth="50px" styleClass="PQHeaderColor" dimensionsFrom="parent">
+            <af:panelStretchLayout id="psl1" startWidth="50px" dimensionsFrom="parent">
                 <f:facet name="top">
                     <af:panelGridLayout id="pgl8" styleClass="PQHeaderColor">
                         <af:gridRow marginTop="5px" height="50px" marginBottom="5px" id="gr8">
