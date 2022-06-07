@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ProductMasterDetailVL"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="pqt.gh.elaaj.model.vl.ProductMasterDetailVL_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewLinkDefEnd
+    Name="ProductMasterVO"
+    Cardinality="1"
+    Source="true"
+    Owner="pqt.gh.elaaj.model.vo.ProductMasterVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="ProductMasterVO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="pqt.gh.elaaj.model.vo.ProductMasterVO.BussinessLine"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="ProductDetailVO"
+    Cardinality="-1"
+    Owner="pqt.gh.elaaj.model.vo.ProductDetailVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="ProductDetailVO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="pqt.gh.elaaj.model.vo.ProductDetailVO.BussinessLine"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="pqt.gh.elaaj.model.ServicesBundle"/>
+  </ResourceBundle>
+</ViewLink>
