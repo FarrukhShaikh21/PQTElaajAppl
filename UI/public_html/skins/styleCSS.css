@@ -1072,3 +1072,28 @@ af|button.PQLoginButton::text {
     border-bottom: #8b0037 solid thin;
     background-repeat: no-repeat;
 }
+
+
+.PQAppInputLOV af|inputListOfValues::content
+{
+    height:30px;
+    color:#8b0037;
+    font-weight: 800;
+     background-color:transparent;
+     display: flexbox;
+    /*background-image:url("../icons/imgUser.png");*/
+    vertical-align: middle;
+    text-align: center;
+    border-top: none ;
+    border-left: none ;
+    border-right: none ;  
+    border-bottom: #8b0037 solid thin;
+    background-repeat: no-repeat;
+}
+
+.PQAppLabelFont af|inputText::label
+{
+    color:#8b0037;
+
+    
+}

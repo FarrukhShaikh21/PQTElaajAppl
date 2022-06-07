@@ -24,11 +24,6 @@
                   id="NameOfPatient"/>
     <list IterBinding="ElaajClaimIntimateEOVO1Iterator" StaticList="false" Uses="LOV_TypeOfClaimn" id="TypeOfClaimn"
           DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
-    <attributeValues IterBinding="ElaajClaimIntimateEOVO1Iterator" id="CnicNo">
-      <AttrNames>
-        <Item Value="CnicNo"/>
-      </AttrNames>
-    </attributeValues>
     <listOfValues IterBinding="ElaajClaimIntimateEOVO1Iterator" StaticList="false" Uses="LOV_NameOfPanelHospital"
                   id="NameOfPanelHospital"/>
     <attributeValues IterBinding="ElaajClaimIntimateEOVO1Iterator" id="NameOfDoctor">
