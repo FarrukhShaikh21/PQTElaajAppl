@@ -7,12 +7,9 @@
         <af:form id="f1" usesUpload="true">
             <af:panelStretchLayout id="psl1" dimensionsFrom="parent">
                 <f:facet name="top">
-                    <af:panelGridLayout id="pgl1" styleClass="PQHeaderColor">
+                    <af:panelGridLayout id="pgl1" styleClass="PQHeaderColor" rendered="false">
                         <af:gridRow marginTop="5px" height="50px" marginBottom="5px" id="gr15">
-                            <af:gridCell width="10%" id="gc13" valign="middle" halign="center">
-                                <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
-                                         inlineStyle="color:white;" action="reimbursementToHome"/>
-                            </af:gridCell>
+                            <af:gridCell width="10%" id="gc13" valign="middle" halign="center"/>
                             <af:gridCell marginStart="5px" width="90%" marginEnd="5px" id="gc15" valign="middle"
                                          halign="center"/>
                         </af:gridRow>
@@ -27,7 +24,7 @@
                 </f:facet>
                 <f:facet name="center">
                     <af:panelGridLayout id="pgl3" styleClass="PQHeaderColor" dimensionsFrom="parent">
-                        <af:gridRow id="gr2">
+                        <af:gridRow id="gr2" height="80px">
                             <af:gridCell id="gc2" valign="stretch" halign="stretch">
                                 <af:image source="#{resource['images:imgTopElaajApp.png']}" id="i1"
                                           styleClass="AFStretchWidth"/>
@@ -113,6 +110,8 @@
                                     <af:gridRow id="gr3">
                                         <af:gridCell id="gc4" halign="stretch" valign="stretch">
                                             <af:panelGroupLayout id="pgl10" layout="vertical" halign="center">
+                                                <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
+                                                         inlineStyle="color:black;" action="reimbursementToHome"/>
                                                 <af:outputFormatted value="Claim Reimbursement" id="of1"
                                                                     inlineStyle="font-weight:bolder; color:#8b0037; font-size:30px;"
                                                                     binding="#{BenefitDetailBean.rif1}"/>
