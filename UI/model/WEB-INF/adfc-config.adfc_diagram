@@ -321,7 +321,7 @@
       <property
          name="fromOutcome">VAStoHomePG</property>
       <property
-         name="sdm:polyPoints">R54,293.86743,402.24707,418.5,384.44824,L66</property>
+         name="sdm:polyPoints">R54,293.7704,402.24707,418.5,387.94824,L70</property>
    </ControlFlowCase>
    <View
       id="View31">
@@ -356,7 +356,7 @@
       <property
          name="fromOutcome">TreatInfotoHomePG</property>
       <property
-         name="sdm:polyPoints">R54,149.68066,291.24707,416.16742,370.44824,L50</property>
+         name="sdm:polyPoints">R54,149.68066,291.24707,414.66718,373.94824,L54</property>
    </ControlFlowCase>
    <View
       id="View34">
@@ -575,7 +575,7 @@
       <property
          name="fromOutcome">recordCorrectiontoHome</property>
       <property
-         name="sdm:polyPoints">R50,29.35254,164.0459,418.5,356.44824,L34</property>
+         name="sdm:polyPoints">R54,29.35254,167.5459,418.5,352.94824,L30</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall54">

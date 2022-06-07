@@ -899,8 +899,15 @@ border-top-right-radius:10px;
    color:#8b0037;   
 }
 
-.PQAppInputDate af|inputDate::content::-webkit-input-placeholder
+.PQLoginPagePassword af|inputText::content::-webkit-input-placeholder
 {
+   color:#8b0037;   
+}
+
+
+.PQAppInpuBoxtText af|inputText::content::-webkit-input-placeholder
+{   
+    padding-top: 10px;
    color:#8b0037;   
 }
 
@@ -1034,6 +1041,24 @@ af|button.PQLoginButton::text {
 .PQAppInputDate af|inputDate::content
 {
     height:30px;
+    color:#8b0037;
+    font-weight: 800;
+     background-color:transparent;
+     display: flexbox;
+    /*background-image:url("../icons/imgUser.png");*/
+    vertical-align: middle;
+    text-align: center;
+    border-top: none ;
+    border-left: none ;
+    border-right: none ;  
+    border-bottom: #8b0037 solid thin;
+    background-repeat: no-repeat;
+}
+
+
+.PQAppInpuBoxtText af|inputText::content
+{
+     padding-top: 50px;
     color:#8b0037;
     font-weight: 800;
      background-color:transparent;

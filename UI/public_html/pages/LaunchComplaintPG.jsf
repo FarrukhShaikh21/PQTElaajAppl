@@ -1,32 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-    <af:document title="LaunchComplaintPG.jsf" id="d1">
+    <af:document title="LaunchComplaintPG.jsf" id="d1" initialFocusId="it1">
         <af:messages id="m1"/>
         <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
         <af:form id="f1">
-            <af:panelStretchLayout id="psl1">
-                <f:facet name="start">
-                    <af:spacer width="10" height="10" id="s1"/>
-                </f:facet>
-                <f:facet name="end">
-                    <af:spacer width="10" height="10" id="s2"/>
-                </f:facet>
+            <af:panelStretchLayout id="psl1" dimensionsFrom="parent">
+                <f:facet name="start"/>
+                <f:facet name="end"/>
                 <f:facet name="top">
-                    <af:panelGroupLayout id="pgl1" layout="vertical" inlineStyle="background-color:#8b0037;">
+                    <af:panelGroupLayout id="pgl1" layout="vertical" inlineStyle="background-color:#8b0037;"
+                                         rendered="false">
                         <af:separator id="s3"
                                       inlineStyle="min-height:5px; background-color:#ba9632; margin: 0px;     border-color: transparent;"/>
                         <af:panelGridLayout id="pgl2">
                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
-                                <af:gridCell marginStart="5px" width="10%" id="gc1" halign="center" valign="middle">
-                                    <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
-                                             inlineStyle="color:white;" action="ComplaintToHome"/>
-                                </af:gridCell>
+                                <af:gridCell marginStart="5px" width="10%" id="gc1" halign="center" valign="middle"/>
                                 <af:gridCell marginStart="5px" width="90%" marginEnd="5px" id="gc2" valign="middle"
-                                             halign="center">
-                                    <af:outputFormatted value="Add Complaint" id="of1"
-                                                        inlineStyle="font-size:x-large; font-weight:bolder; color:white;"/>
-                                </af:gridCell>
+                                             halign="center"/>
                             </af:gridRow>
                         </af:panelGridLayout>
                     </af:panelGroupLayout>
@@ -36,64 +27,82 @@
                                          halign="center">
                         <af:separator id="s4"
                                       inlineStyle="min-height:5px; background-color:#ba9632; margin: 0px;     border-color: transparent;"/>
-                        <af:button actionListener="#{bindings.Apply.execute}" text="Apply"
-                                   disabled="#{!bindings.Apply.enabled}" id="b1"
-                                   inlineStyle="font-size:16px; padding: 6px; color:white; background:#8b0037; border:0;"/>
                     </af:panelGroupLayout>
                 </f:facet>
                 <f:facet name="center">
-                    <af:panelGroupLayout id="pgl4" layout="vertical">
-                        <af:panelGridLayout id="pgl5">
-                            <af:gridRow marginTop="5px" height="auto" id="gr2">
-                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3">
-                                    <af:outputFormatted value="Subject :" id="of2" inlineStyle="font-size:16px;"/>
-                                </af:gridCell>
-                            </af:gridRow>
-                            <af:gridRow marginTop="5px" height="auto" id="gr3">
-                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
+                    <af:panelGridLayout id="pgl5" styleClass="PQHeaderColor" dimensionsFrom="parent">
+                        <af:gridRow marginTop="5px" height="auto" id="gr2">
+                            <af:gridCell id="gc3" halign="stretch" valign="stretch">
+                                <af:image source="#{resource['images:imgTopElaajApp.png']}" id="i1"
+                                          styleClass="AFStretchWidth"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr4" marginTop="40px">
+                            <af:gridCell id="gc5" valign="stretch" halign="stretch">
+                                <af:panelGroupLayout id="pgl4" layout="vertical" halign="center">
+                                    <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
+                                             inlineStyle="color:black; font-weight:bold;" action="ComplaintToHome"/>
+                                    <af:outputFormatted value="Add Complaint" id="of1"
+                                                        inlineStyle="font-weight:bolder; color:#8b0037; font-size:40px;"/>
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow marginTop="40px" height="auto" id="gr3">
+                            <af:gridCell width="100%" id="gc4" valign="stretch"
+                                         halign="stretch">
+                                <af:panelGroupLayout id="pgl6" layout="vertical" halign="center">
                                     <af:inputText value="#{bindings.Subject.inputValue}" simple="true"
                                                   required="#{bindings.Subject.hints.mandatory}"
                                                   columns="#{bindings.Subject.hints.displayWidth}"
                                                   maximumLength="#{bindings.Subject.hints.precision}"
-                                                  shortDesc="#{bindings.Subject.hints.tooltip}" id="it1">
+                                                  shortDesc="#{bindings.Subject.hints.tooltip}" id="it1"
+                                                  styleClass="PQAppInputText" contentStyle="width:500px"
+                                                  placeholder="Enter Subject" clientComponent="true">
                                         <f:validator binding="#{bindings.Subject.validator}"/>
                                     </af:inputText>
-                                </af:gridCell>
-                            </af:gridRow>
-                            <af:gridRow marginTop="5px" height="auto" id="gr4">
-                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
-                                    <af:outputFormatted value="To :" id="of3" inlineStyle="font-size:16px;"/>
-                                </af:gridCell>
-                            </af:gridRow>
-                            <af:gridRow marginTop="5px" height="auto" id="gr5">
-                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow marginTop="20px" height="auto" id="gr5">
+                            <af:gridCell width="100%" id="gc6" valign="stretch"
+                                         halign="stretch">
+                                <af:panelGroupLayout id="pgl7" layout="vertical" halign="center">
                                     <af:selectOneChoice value="#{bindings.ComplaintTo.inputValue}"
                                                         required="#{bindings.ComplaintTo.hints.mandatory}"
                                                         shortDesc="#{bindings.ComplaintTo.hints.tooltip}" id="soc1"
-                                                        autoSubmit="true">
+                                                        autoSubmit="true" contentStyle="width:500px">
                                         <f:selectItems value="#{bindings.ComplaintTo.items}" id="si1"/>
                                         <f:validator binding="#{bindings.ComplaintTo.validator}"/>
                                     </af:selectOneChoice>
-                                </af:gridCell>
-                            </af:gridRow>
-                            <af:gridRow marginTop="5px" height="auto" id="gr6">
-                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7">
-                                    <af:outputFormatted value="Message :" id="of4" inlineStyle="font-size:16px;"/>
-                                </af:gridCell>
-                            </af:gridRow>
-                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr7">
-                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc8">
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" marginBottom="5px" id="gr7">
+                            <af:gridCell width="100%" id="gc8" halign="stretch"
+                                         valign="stretch">
+                                <af:panelGroupLayout id="pgl8" layout="vertical" halign="center">
                                     <af:inputText value="#{bindings.Message.inputValue}" simple="true"
                                                   required="#{bindings.Message.hints.mandatory}"
                                                   columns="#{bindings.Message.hints.displayWidth}"
                                                   maximumLength="#{bindings.Message.hints.precision}"
-                                                  shortDesc="#{bindings.Message.hints.tooltip}" id="it2" rows="10">
+                                                  shortDesc="#{bindings.Message.hints.tooltip}" id="it2" rows="10"
+                                                  contentStyle="width:500px"
+                                                  placeholder="Enter Message" styleClass="PQAppInpuBoxtText">
                                         <f:validator binding="#{bindings.Message.validator}"/>
                                     </af:inputText>
-                                </af:gridCell>
-                            </af:gridRow>
-                        </af:panelGridLayout>
-                    </af:panelGroupLayout>
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr6" marginTop="100px">
+                            <af:gridCell id="gc7" valign="stretch" halign="stretch">
+                                <af:panelGroupLayout id="pgl9" layout="vertical" halign="center">
+                                    <af:button actionListener="#{bindings.Apply.execute}" text="Apply"
+                                               disabled="#{!bindings.Apply.enabled}" id="b1"
+                                               styleClass="PQLoginButton"/>
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
                 </f:facet>
             </af:panelStretchLayout>
         </af:form>
