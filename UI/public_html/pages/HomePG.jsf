@@ -8,11 +8,11 @@
     <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
         <af:messages id="m1"/>
         <af:form id="f1" inlineStyle="color:Aqua;">
-            <af:panelStretchLayout id="psl1" dimensionsFrom="parent"
-                                   inlineStyle='background-image:url("images/imgLoginBackground.jpg"); background-size:100%;'>
+            <af:panelStretchLayout id="psl1"
+                                   dimensionsFrom="parent">
                 <f:facet name="top">
                     <af:panelGroupLayout id="pgl1" halign="center" valign="middle" layout="vertical"
-                                         inlineStyle="background-color:#8b0037;">
+                                         inlineStyle="background-color:#8b0037;" rendered="false">
                         <af:separator id="s1"
                                       inlineStyle="min-height:5px; background-color:#ba9632; margin: 0px;     border-color: transparent;"/>
                         <af:panelGridLayout id="pgl9">
@@ -30,15 +30,367 @@
                     </af:panelGroupLayout>
                 </f:facet>
                 <f:facet name="center">
-                    <af:panelGroupLayout id="pgl3" layout="scroll">
-                        <af:panelGridLayout id="pgl4">
+                    <af:panelGridLayout id="pgl17" styleClass="PQHeaderColor">
+                        <af:gridRow id="gr12">
+                            <af:gridCell id="gc29" columnSpan="6" halign="stretch" valign="stretch">
+                                <af:image source="#{resource['images:imgTopElaajApp.png']}" id="i15"
+                                          styleClass="AFStretchWidth"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr14" height="300px">
+                            <af:gridCell id="gc30" columnSpan="6" halign="stretch" valign="stretch">
+                                <af:panelGridLayout id="pgl16">
+                                    <af:gridRow marginTop="30px" height="auto" marginBottom="5px" id="gr15">
+                                        <af:gridCell marginStart="5px" width="30%" id="gc31" halign="stretch">
+                                            <af:spacer width="10" height="10" id="s5"/>
+                                        </af:gridCell>
+                                        <af:gridCell width="37%" id="gc32" halign="stretch" valign="stretch">
+                                            <af:panelGridLayout id="pgl29" dimensionsFrom="parent">
+                                                <af:gridRow marginTop="5px" height="auto" id="gr16">
+                                                    <af:gridCell marginStart="5px" width="100%" id="gc34"
+                                                                 halign="stretch" valign="stretch" columnSpan="5"
+                                                                 rowSpan="1">
+                                                        <af:image source="#{resource['images:imgEngHealthCardTop.png']}"
+                                                                  id="i16"
+                                                                  inlineStyle="width:100%"/>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr17">
+                                                    <af:gridCell marginStart="5px" width="100%" id="gc38" columnSpan="5"
+                                                                 rowSpan="1" valign="stretch">
+                                                        <af:panelGroupLayout id="pgl30" layout="horizontal">
+                                                            <af:outputText value="Casualty and Medical Emergency Room Services covered for acute medical conditions only."
+                                                                           id="ot9"
+                                                                           inlineStyle="color:#8b0037;font-size:xx-small"/>
+                                                        </af:panelGroupLayout>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr18">
+                                                    <af:gridCell marginStart="5px" width="20%" id="gc41">
+                                                        <af:outputLabel value="Participant’s Name:" id="ol1"
+                                                                        inlineStyle="color:#8b0037;"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="80%" id="gc42"
+                                                                 columnSpan="4" rowSpan="1">
+                                                        <af:outputText value="Pak-Qatar Takaful" id="ot13"
+                                                                       inlineStyle="color:black"/>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr19">
+                                                    <af:gridCell marginStart="5px" width="20%" id="gc44">
+                                                        <af:outputLabel value="Employee Name:" id="ol2"
+                                                                        inlineStyle="color:#8b0037;"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="80%" id="gc45"
+                                                                 halign="stretch" columnSpan="4" rowSpan="1">
+                                                        <af:outputText value="M. Babar Ali Siddiqui" id="ot14"
+                                                                       inlineStyle="color:black"/>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr20">
+                                                    <af:gridCell marginStart="5px" width="20%" id="gc47">
+                                                        <af:outputText value="CNIC No:" id="ot15"
+                                                                       inlineStyle="color:#8b0037;"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell width="20%" id="gc48" columnSpan="1" rowSpan="1">
+                                                        <af:outputText value="4550-6998898-9" id="ot16"
+                                                                       inlineStyle="color:black"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell id="gc36" width="20%" halign="center">
+                                                        <af:outputText value="Family Member" id="ot17"
+                                                                       inlineStyle="color:#8b0037;"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell id="gc37" width="20%" halign="center">
+                                                        <af:outputText value="Age" id="ot18" truncateAt="0"
+                                                                       inlineStyle="color:#8b0037;"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell id="gc39" width="20%" halign="center">
+                                                        <af:outputText value="Cert" id="ot19" truncateAt="0"
+                                                                       inlineStyle="color:#8b0037;"/>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr21">
+                                                    <af:gridCell marginStart="5px" width="20%" id="gc40">
+                                                        <af:outputText value="DOB :" id="ot20"
+                                                                       inlineStyle="color:#8b0037;"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell width="20%" id="gc43" columnSpan="1" rowSpan="1">
+                                                        <af:outputText value="05-May-77" id="ot21"
+                                                                       inlineStyle="color:black"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell id="gc46" width="20%" halign="center">
+                                                        <af:outputText value="Babar Alee" id="ot22"
+                                                                       inlineStyle="color:black;"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell id="gc49" width="20%" halign="center">
+                                                        <af:outputText value="01" id="ot23" truncateAt="0"
+                                                                       inlineStyle="color:black;"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell id="gc50" width="20%" halign="center">
+                                                        <af:outputText value="236" id="ot24" truncateAt="0"
+                                                                       inlineStyle="color:black;"/>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr22">
+                                                    <af:gridCell marginStart="5px" width="20%" id="gc51">
+                                                        <af:outputText value="Cert No:" id="ot25"
+                                                                       inlineStyle="color:#8b0037;"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell width="20%" id="gc52" columnSpan="1" rowSpan="1">
+                                                        <af:outputText value="03000032B-54" id="ot26"
+                                                                       inlineStyle="color:black"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell id="gc53" width="20%" halign="center">
+                                                        <af:outputText value="Babar Alee" id="ot27"
+                                                                       inlineStyle="color:black;"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell id="gc54" width="20%" halign="center">
+                                                        <af:outputText value="02" id="ot28" truncateAt="0"
+                                                                       inlineStyle="color:black;"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell id="gc55" width="20%" halign="center">
+                                                        <af:outputText value="237" id="ot29" truncateAt="0"
+                                                                       inlineStyle="color:black;"/>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr23">
+                                                    <af:gridCell marginStart="5px" width="20%" id="gc56">
+                                                        <af:outputText value="Emp No:" id="ot30"
+                                                                       inlineStyle="color:#8b0037;"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell width="20%" id="gc57" columnSpan="1" rowSpan="1">
+                                                        <af:outputText value="AAL 103" id="ot31"
+                                                                       inlineStyle="color:black"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell id="gc58" width="20%" halign="center">
+                                                        <af:outputText value="Babar Alee" id="ot32"
+                                                                       inlineStyle="color:black;"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell id="gc59" width="20%" halign="center">
+                                                        <af:outputText value="03" id="ot33" truncateAt="0"
+                                                                       inlineStyle="color:black;"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell id="gc60" width="20%" halign="center">
+                                                        <af:outputText value="238" id="ot34" truncateAt="0"
+                                                                       inlineStyle="color:black;"/>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr24">
+                                                    <af:gridCell marginStart="5px" width="20%" id="gc61">
+                                                        <af:outputLabel value="Branch:" id="ol3"
+                                                                        inlineStyle="color:#8b0037;"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="80%" id="gc62" columnSpan="4"
+                                                                 rowSpan="1">
+                                                        <af:outputText value="No - Branch" id="ot35"
+                                                                       inlineStyle="color:black"/>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr25">
+                                                    <af:gridCell marginStart="5px" width="20%" id="gc63">
+                                                        <af:outputLabel value="Room Limit:" id="ol4"
+                                                                        inlineStyle="color:#8b0037;"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="80%" id="gc64" columnSpan="4"
+                                                                 rowSpan="1">
+                                                        <af:outputText value="4,000" id="ot36"
+                                                                       inlineStyle="color:black"/>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr26">
+                                                    <af:gridCell marginStart="5px" width="20%" id="gc65">
+                                                        <af:outputLabel value="Valid up to:" id="ol5"
+                                                                        inlineStyle="color:#8b0037;"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="80%" id="gc66" columnSpan="4"
+                                                                 rowSpan="1">
+                                                        <af:outputText value="31-Dec-23" id="ot37"
+                                                                       inlineStyle="color:black"/>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr27">
+                                                    <af:gridCell marginStart="5px" width="100%" id="gc67" columnSpan="5"
+                                                                 rowSpan="1" valign="stretch">
+                                                        <af:panelGroupLayout id="pgl31" layout="horizontal">
+                                                            <af:outputText value="The Aga Khan University Hospital :- Member Is not entitled for"
+                                                                           id="ot38"
+                                                                           inlineStyle="color:#8b0037;font-size:xx-small"/>
+                                                        </af:panelGroupLayout>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow height="auto" id="gr28">
+                                                    <af:gridCell marginStart="5px" width="100%" id="gc68" columnSpan="5"
+                                                                 rowSpan="1" valign="stretch">
+                                                        <af:panelGroupLayout id="pgl32" layout="horizontal">
+                                                            <af:outputText value="treatmnent below Room rent Rs. 4900/- only on credit"
+                                                                           id="ot39"
+                                                                           inlineStyle="color:#8b0037;font-size:xx-small"/>
+                                                        </af:panelGroupLayout>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                            </af:panelGridLayout>
+                                        </af:gridCell>
+                                        <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc33"
+                                                     halign="stretch"/>
+                                    </af:gridRow>
+                                </af:panelGridLayout>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow marginTop="30px" height="auto" id="gr4">
+                            <af:gridCell marginStart="5px" width="17%" id="gc5">
+                                <af:panelGroupLayout id="pgl18" layout="vertical" halign="center">
+                                    <h:link id="l3" outcome="goBenefitDetail">
+                                        <af:image source="#{resource['images:imgBenefits.png']}" id="i3"
+                                                  inlineStyle="width:100px;height:100px"/>
+                                    </h:link>
+                                    <af:outputText value="Benefits &amp; Limits" id="ot1" inlineStyle="color:#8b0037"/>
+                                    <af:button text="Benefit &amp; Limit" id="b1" styleClass="multiLineButton"
+                                               inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
+                                               action="goBenefitDetail" rendered="false"/>
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="17%" id="gc6">
+                                <af:panelGroupLayout id="pgl19" layout="vertical" halign="center">
+                                    <h:link value="" id="l2" outcome="goClaimDetail">
+                                        <af:image id="i4" source="#{resource['images:imgClaimHistory.png']}"
+                                                  inlineStyle="width:100px;height:100px"/>
+                                    </h:link>
+                                    <af:outputText value="Claim History" id="ot2" inlineStyle="color:#8b0037"/>
+                                    <af:button text="Claim History" id="b2"
+                                               inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
+                                               styleClass="multiLineButton" action="goClaimDetail" rendered="false"/>
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="17%" id="gc7">
+                                <af:panelGroupLayout id="pgl5" halign="center" layout="vertical">
+                                    <h:commandLink value="" id="cl1" action="goClaimIntimationPG">
+                                        <af:image source="#{resource['images:imgClaimIntimation.png']}" id="i5"
+                                                  inlineStyle="width:100px;height:100px"/>
+                                    </h:commandLink>
+                                    <af:outputText value="Claim Intimation" id="ot3" inlineStyle="color:#8b0037"/>
+                                    <af:button text="Pre-Authorization" id="b4"
+                                               inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
+                                               styleClass="multiLineButton" action="goClaimIntimationPG"
+                                               rendered="false"/>
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="17%" id="gc8">
+                                <af:panelGroupLayout id="pgl20" layout="vertical" halign="center">
+                                    <h:commandLink value="" id="cl2" action="goToReimbursement">
+                                        <af:image source="#{resource['images:imgClaimReimburse.png']}" id="i6"
+                                                  inlineStyle="width:100px;height:100px"/>
+                                    </h:commandLink>
+                                    <af:outputText value="Claim Reimbursement" id="ot4" truncateAt="0"
+                                                   inlineStyle="color:#8b0037"/>
+                                    <af:button text="Claim Reimbursement" id="b3"
+                                               inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
+                                               styleClass="multiLineButton" action="goToReimbursement"
+                                               rendered="false"/>
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="17%" id="gc9">
+                                <af:panelGroupLayout id="pgl21" layout="vertical" halign="center">
+                                    <h:commandLink value="" id="cl3" action="gotoRecordCorrection">
+                                        <af:image id="i7" inlineStyle="width:100px;height:100px"
+                                                  source="#{resource['images:imgRecordCorrection.png']}"/>
+                                    </h:commandLink>
+                                    <af:outputText value="Record Correction" id="ot5" inlineStyle="color:#8b0037"/>
+                                </af:panelGroupLayout>
+                                <af:button text="Record Correction" id="b5"
+                                           inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
+                                           styleClass="multiLineButton" action="gotoRecordCorrection" rendered="false"/>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="15%" marginEnd="5px" id="gc10">
+                                <af:panelGroupLayout id="pgl22" layout="vertical" halign="center">
+                                    <h:commandLink value="" id="cl4" action="goPanelHospital">
+                                        <af:image source="#{resource['images:imgPanelHospital.png']}" id="i8"
+                                                  inlineStyle="width:100px;height:100px"/>
+                                    </h:commandLink>
+                                    <af:outputText value="Panel Hospital" id="ot6" inlineStyle="color:#8b0037"/>
+                                </af:panelGroupLayout>
+                                <af:button text="Panel Hospital" id="b6"
+                                           inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
+                                           styleClass="multiLineButton" action="goPanelHospital" rendered="false"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr11" marginTop="30px">
+                            <af:gridCell id="gc11" width="17%">
+                                <af:panelGroupLayout id="pgl23" layout="vertical" halign="center">
+                                    <h:commandLink value="" id="cl5" action="gotoValueAddedServices">
+                                        <af:image source="#{resource['images:imgValueAddedService.png']}" id="i9"
+                                                  inlineStyle="width:100px;height:100px"/>
+                                    </h:commandLink>
+                                    <af:outputText value="Value Added Services" id="ot7" inlineStyle="color:#8b0037"/>
+                                </af:panelGroupLayout>
+                                <af:button text="Value Added Services" id="b7"
+                                           inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
+                                           styleClass="multiLineButton" action="gotoValueAddedServices"
+                                           rendered="false"/>
+                            </af:gridCell>
+                            <af:gridCell id="gc12" width="17%">
+                                <af:panelGroupLayout id="pgl24" layout="vertical" halign="center">
+                                    <h:commandLink value="" id="cl6" action="gotoTreatInfoPG">
+                                        <af:image id="i10" inlineStyle="width:100px;height:100px"
+                                                  source="#{resource['images:imgTreatementInfo.png']}"/>
+                                    </h:commandLink>
+                                    <af:outputText value="Treatment Info" id="ot8" inlineStyle="color:#8b0037"/>
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                            <af:gridCell id="gc25" width="17%">
+                                <af:panelGroupLayout id="pgl25" layout="vertical" halign="center">
+                                    <h:commandLink value="" id="cl7" action="goToTakafulProdPG">
+                                        <af:image id="i11" inlineStyle="width:100px;height:100px"
+                                                  source="#{resource['images:imgTakafulProducts.png']}"/>
+                                    </h:commandLink>
+                                    <af:outputFormatted value="Takaful Product &lt;br> &amp; Solutions" id="of11"
+                                                        inlineStyle="color:#8b0037"/>
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                            <af:gridCell id="gc26" width="17%">
+                                <af:panelGroupLayout id="pgl26" layout="vertical" halign="center">
+                                    <h:commandLink value="" id="cl8" action="goToReimbursement">
+                                        <af:image id="i12" inlineStyle="width:100px;height:100px"
+                                                  source="#{resource['images:imgOPDReimbursement.png']}"/>
+                                    </h:commandLink>
+                                    <af:outputText value="OPD Reimbursement" id="ot10" inlineStyle="color:#8b0037"/>
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                            <af:gridCell id="gc27" width="17%">
+                                <af:panelGroupLayout id="pgl27" layout="vertical" halign="center">
+                                    <h:commandLink value="" id="cl9" action="goToComplaint">
+                                        <af:image id="i13" inlineStyle="width:100px;height:100px"
+                                                  source="#{resource['images:imgLaunchComplaint.png']}"/>
+                                    </h:commandLink>
+                                    <af:outputText value="Launch Complaint" id="ot11" inlineStyle="color:#8b0037"/>
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                            <af:gridCell id="gc28" width="15%">
+                                <af:panelGroupLayout id="pgl28" layout="vertical" halign="center">
+                                    <h:commandLink value="" id="cl10" action="goToContactUs">
+                                        <af:image id="i14" inlineStyle="width:100px;height:100px"
+                                                  source="#{resource['images:imgContactUs.png']}"/>
+                                    </h:commandLink>
+                                    <af:outputText value="24 /7 Helpline" id="ot12" inlineStyle="color:#8b0037"/>
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr13" height="100%">
+                            <af:gridCell id="gc35" columnSpan="6" valign="bottom" halign="stretch">
+                                <af:activeImage source="#{resource['images:imgBottomElaajApp.png']}" id="ai1"
+                                                styleClass="AFStretchWidth"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
+                </f:facet>
+                <f:facet name="bottom">
+                    <af:panelGroupLayout id="pgl3" layout="scroll" rendered="false">
+                        <af:panelGridLayout id="pgl4" dimensionsFrom="parent" rendered="false">
                             <af:gridRow height="auto" id="gr5" marginTop="10px" marginBottom="10px">
                                 <af:gridCell width="35%" id="gc13" valign="middle" halign="end" marginEnd="3px">
                                     <af:outputFormatted value="#{bindings.EmpName.hints.label}" id="of2"
                                                         inlineStyle="color:#8b0037;"/>
                                 </af:gridCell>
-                                <af:gridCell width="65%" id="gc14" valign="middle"
-                                             halign="start">
+                                <af:gridCell width="65%" id="gc14" valign="middle" halign="start">
                                     <af:panelGroupLayout id="pgl10" layout="horizontal">
                                         <af:inputText value="#{bindings.EmpName.inputValue}"
                                                       required="#{bindings.EmpName.hints.mandatory}"
@@ -57,8 +409,7 @@
                                     <af:outputFormatted value="#{bindings.PolicyNo.hints.label} :" id="of3"
                                                         inlineStyle="color:#8b0037"/>
                                 </af:gridCell>
-                                <af:gridCell width="65%" id="gc16" valign="middle"
-                                             halign="start">
+                                <af:gridCell width="65%" id="gc16" valign="middle" halign="start">
                                     <af:inputText value="#{bindings.PolicyNo.inputValue}"
                                                   required="#{bindings.PolicyNo.hints.mandatory}"
                                                   columns="#{bindings.PolicyNo.hints.displayWidth}"
@@ -75,8 +426,7 @@
                                     <af:outputFormatted value="#{bindings.EmpStatus.hints.label}" id="of4"
                                                         inlineStyle="color:#8b0037"/>
                                 </af:gridCell>
-                                <af:gridCell width="65%" id="gc18" valign="middle"
-                                             halign="start">
+                                <af:gridCell width="65%" id="gc18" valign="middle" halign="start">
                                     <af:inputText value="#{bindings.EmpStatus.inputValue}"
                                                   required="#{bindings.EmpStatus.hints.mandatory}"
                                                   columns="#{bindings.EmpStatus.hints.displayWidth}"
@@ -93,8 +443,7 @@
                                     <af:outputFormatted value="#{bindings.EmpFolioId.hints.label}" id="of5"
                                                         inlineStyle="color:#8b0037"/>
                                 </af:gridCell>
-                                <af:gridCell width="65%" id="gc20" valign="middle"
-                                             halign="start">
+                                <af:gridCell width="65%" id="gc20" valign="middle" halign="start">
                                     <af:inputText value="#{bindings.EmpFolioId.inputValue}"
                                                   required="#{bindings.EmpFolioId.hints.mandatory}"
                                                   columns="#{bindings.EmpFolioId.hints.displayWidth}"
@@ -111,8 +460,7 @@
                                     <af:outputFormatted value="#{bindings.EmpAge.hints.label}" id="of6"
                                                         inlineStyle="color:#8b0037"/>
                                 </af:gridCell>
-                                <af:gridCell width="65%" id="gc22" valign="middle"
-                                             halign="start">
+                                <af:gridCell width="65%" id="gc22" valign="middle" halign="start">
                                     <af:inputText value="#{bindings.EmpAge.inputValue}"
                                                   required="#{bindings.EmpAge.hints.mandatory}"
                                                   columns="#{bindings.EmpAge.hints.displayWidth}"
@@ -128,8 +476,7 @@
                                 <af:gridCell width="35%" id="gc23" valign="middle" halign="end" marginEnd="3px">
                                     <af:outputFormatted value="Employer :" id="of7" inlineStyle="color:#8b0037"/>
                                 </af:gridCell>
-                                <af:gridCell width="65%" id="gc24" valign="middle"
-                                             halign="start">
+                                <af:gridCell width="65%" id="gc24" valign="middle" halign="start">
                                     <af:inputText value="#{bindings.CustFullName.inputValue}"
                                                   required="#{bindings.CustFullName.hints.mandatory}"
                                                   columns="#{bindings.CustFullName.hints.displayWidth}"
@@ -149,8 +496,8 @@
                                             <af:image source="/images/Main Logo.png" id="i1"
                                                       inlineStyle="width:180px;"/>
                                             <af:panelGroupLayout id="pgl13" layout="vertical"
-                                                                 inlineStyle="background-color:#8b0037;"
-                                                                 halign="center" valign="middle">
+                                                                 inlineStyle="background-color:#8b0037;" halign="center"
+                                                                 valign="middle">
                                                 <af:separator id="s2"
                                                               inlineStyle="min-height:5px; background-color:#ba9632; margin: 0px;     border-color: transparent;"/>
                                                 <af:outputFormatted value="Group Health Identification Crad" id="of8"
@@ -158,7 +505,8 @@
                                                 <af:spacer width="10" height="10" id="s3"/>
                                             </af:panelGroupLayout>
                                         </af:panelGroupLayout>
-                                        <af:outputFormatted value="Casually and Medical Emergency Room Services covered for acute medical conditions only" id="of9"
+                                        <af:outputFormatted value="Casually and Medical Emergency Room Services covered for acute medical conditions only"
+                                                            id="of9"
                                                             inlineStyle="font-size:10px;color:#c90909;text-align:center;"/>
                                         <af:panelGroupLayout id="pgl14" layout="vertical" halign="center"
                                                              valign="middle">
@@ -175,32 +523,8 @@
                             <af:gridRow id="gr2">
                                 <af:gridCell id="gc3" columnSpan="2" width="100%" halign="stretch" valign="stretch">
                                     <af:panelGroupLayout id="pgl7" layout="vertical" valign="middle" halign="center">
-                                        <af:panelGroupLayout id="pgl2" halign="center">
-                                            <af:button text="Benefit &amp; Limit" id="b1" styleClass="multiLineButton"
-                                                       inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
-                                                       action="goBenefitDetail"/>
-                                            <af:button text="Claim History" id="b2"
-                                                       inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
-                                                       styleClass="multiLineButton" action="goClaimDetail"/>
-                                            <af:button text="Claim Reimbursement" id="b3"
-                                                       inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
-                                                       styleClass="multiLineButton" action="goToReimbursement"/>
-                                        </af:panelGroupLayout>
-                                        <af:panelGroupLayout id="pgl5" halign="center">
-                                            <af:button text="Pre-Authorization" id="b4"
-                                                       inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
-                                                       styleClass="multiLineButton" action="goClaimIntimationPG"/>
-                                            <af:button text="Record Correction" id="b5"
-                                                       inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
-                                                       styleClass="multiLineButton" action="gotoRecordCorrection"/>
-                                            <af:button text="Panel Hospital" id="b6"
-                                                       inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
-                                                       styleClass="multiLineButton" action="goPanelHospital"/>
-                                        </af:panelGroupLayout>
+                                        <af:panelGroupLayout id="pgl2" halign="center"/>
                                         <af:panelGroupLayout id="pgl6" halign="center">
-                                            <af:button text="Value Added Services" id="b7"
-                                                       inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
-                                                       styleClass="multiLineButton" action="gotoValueAddedServices"/>
                                             <af:button text="Treatment Info" id="b8"
                                                        inlineStyle="font-size: 11px; width:100px; height: 50px; padding: 0px; margin-top: 5px; margin-left: 1px; text-align:center; color:white; background: darkgreen; border-radius: 5px 5px 5px 5px;"
                                                        styleClass="multiLineButton" action="gotoTreatInfoPG"
