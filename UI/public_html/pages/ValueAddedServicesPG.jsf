@@ -4,17 +4,13 @@
         xmlns:h="http://java.sun.com/jsf/html">
     <af:document title="ValueAddedServicesPG.jsf" id="d1">
 <af:messages id="m1"/>
-        <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>        
-        <af:form id="f1"></af:form>
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
         <af:form id="f2">
-            <af:panelStretchLayout id="psl1">
+            <af:panelStretchLayout id="psl1" dimensionsFrom="parent">
                 <f:facet name="top">
-                    <af:panelGridLayout id="pgl1" styleClass="PQHeaderColor">
+                    <af:panelGridLayout id="pgl1" styleClass="PQHeaderColor" rendered="false">
                         <af:gridRow marginTop="5px" height="50px" marginBottom="5px" id="gr1">
-                            <af:gridCell marginStart="5px" width="10%" id="gc1" valign="middle" halign="center">
-                                <af:link text="Bank" id="l2" icon="/icons/left-arrow-white.png"
-                                         inlineStyle="color:white;" action="VAStoHomePG"/>
-                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="10%" id="gc1" valign="middle" halign="center"/>
                             <af:gridCell marginStart="5px" width="90%" marginEnd="5px" id="gc2" valign="middle"
                                          halign="center">
                                 <af:outputFormatted value="Value Added Services" id="of1"
@@ -24,45 +20,83 @@
                     </af:panelGridLayout>
                 </f:facet>
                 <f:facet name="center">
-                    <af:panelGroupLayout id="pgl2" layout="vertical">
-                        <af:table value="#{bindings.ValueAddedServicesVO1.collectionModel}" var="row"
-                                  rows="#{bindings.ValueAddedServicesVO1.rangeSize}"
-                                  emptyText="#{bindings.ValueAddedServicesVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
-                                  rowBandingInterval="0"
-                                  selectedRowKeys="#{bindings.ValueAddedServicesVO1.collectionModel.selectedRow}"
-                                  selectionListener="#{bindings.ValueAddedServicesVO1.collectionModel.makeCurrent}"
-                                  rowSelection="single" fetchSize="#{bindings.ValueAddedServicesVO1.rangeSize}" id="t1"
-                                  inlineStyle="color: #ffffff;">
-                            <af:column
-                                       id="c1" width="200">
-                                <af:inputText value="#{row.bindings.Valueservicename.inputValue}"
-                                              label="#{bindings.ValueAddedServicesVO1.hints.Valueservicename.label}"
-                                              required="#{bindings.ValueAddedServicesVO1.hints.Valueservicename.mandatory}"
-                                              columns="#{bindings.ValueAddedServicesVO1.hints.Valueservicename.displayWidth}"
-                                              maximumLength="#{bindings.ValueAddedServicesVO1.hints.Valueservicename.precision}"
-                                              shortDesc="#{bindings.ValueAddedServicesVO1.hints.Valueservicename.tooltip}"
-                                              id="it2" inlineStyle="font-size:20px;">
-                                    <f:validator binding="#{row.bindings.Valueservicename.validator}"/>
-                                </af:inputText>
-                            </af:column>
-                            <af:column
-                                       id="c2">
-                                <af:link text="View" id="l1"
-                                         partialSubmit="true" targetFrame="_blank"
-                                         destination="#{row.bindings.Valueserviceurl.inputValue}"
-                                         inlineStyle="font-size:12px;"/>
-                                <af:inputText value="#{row.bindings.Valueserviceurl.inputValue}"
-                                              label="#{bindings.ValueAddedServicesVO1.hints.Valueserviceurl.label}"
-                                              required="#{bindings.ValueAddedServicesVO1.hints.Valueserviceurl.mandatory}"
-                                              columns="#{bindings.ValueAddedServicesVO1.hints.Valueserviceurl.displayWidth}"
-                                              maximumLength="#{bindings.ValueAddedServicesVO1.hints.Valueserviceurl.precision}"
-                                              shortDesc="#{bindings.ValueAddedServicesVO1.hints.Valueserviceurl.tooltip}"
-                                              id="it1" rendered="false">
-                                    <f:validator binding="#{row.bindings.Valueserviceurl.validator}"/>
-                                </af:inputText>
-                            </af:column>
-                        </af:table>
-                    </af:panelGroupLayout>
+                    <af:panelGridLayout id="pgl3" styleClass="PQHeaderColor">
+                        <af:gridRow marginTop="5px" height="auto" id="gr2">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3" halign="stretch"
+                                         valign="stretch">
+                                <af:image source="#{resource['images:imgTopElaajApp.png']}" id="i1"
+                                          styleClass="AFStretchWidth"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr5" marginTop="30px">
+                            <af:gridCell id="gc6" halign="center">
+                                <af:image source="#{resource['images:imgValueAddedService.png']}" id="i2"
+                                          inlineStyle="width:100px;height:100px"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr6">
+                            <af:gridCell id="gc7" halign="center">
+                                <af:panelGroupLayout id="pgl2" layout="vertical" halign="center">
+                                    <af:outputText value="Value Added Services" id="ot1"
+                                                   inlineStyle="font-weight:bolder; color:#8b0037; font-size:40px;"/>
+                                    <af:link text="Back" id="l2" icon="/icons/left-arrow-white.png"
+                                             inlineStyle="color:black;" action="VAStoHomePG"/>
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow marginTop="30px" height="auto" id="gr3">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4" halign="center"
+                                         valign="stretch">
+                                <af:panelCollection id="pc1">
+                                    <f:facet name="menus"/>
+                                    <f:facet name="toolbar"/>
+                                    <f:facet name="statusbar"/>
+                                    <af:table value="#{bindings.ValueAddedServicesVO1.collectionModel}" var="row"
+                                              rows="#{bindings.ValueAddedServicesVO1.rangeSize}"
+                                              emptyText="#{bindings.ValueAddedServicesVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                              rowBandingInterval="0"
+                                              selectedRowKeys="#{bindings.ValueAddedServicesVO1.collectionModel.selectedRow}"
+                                              selectionListener="#{bindings.ValueAddedServicesVO1.collectionModel.makeCurrent}"
+                                              rowSelection="single"
+                                              fetchSize="#{bindings.ValueAddedServicesVO1.rangeSize}" id="t1"
+                                              inlineStyle="color: #ffffff;">
+                                        <af:column id="c1" width="200">
+                                            <af:inputText value="#{row.bindings.Valueservicename.inputValue}"
+                                                          label="#{bindings.ValueAddedServicesVO1.hints.Valueservicename.label}"
+                                                          required="#{bindings.ValueAddedServicesVO1.hints.Valueservicename.mandatory}"
+                                                          columns="#{bindings.ValueAddedServicesVO1.hints.Valueservicename.displayWidth}"
+                                                          maximumLength="#{bindings.ValueAddedServicesVO1.hints.Valueservicename.precision}"
+                                                          shortDesc="#{bindings.ValueAddedServicesVO1.hints.Valueservicename.tooltip}"
+                                                          id="it2" inlineStyle="font-size:20px;">
+                                                <f:validator binding="#{row.bindings.Valueservicename.validator}"/>
+                                            </af:inputText>
+                                        </af:column>
+                                        <af:column id="c2">
+                                            <af:link text="View" id="l1" partialSubmit="true" targetFrame="_blank"
+                                                     destination="#{row.bindings.Valueserviceurl.inputValue}"
+                                                     inlineStyle="font-size:12px;"/>
+                                            <af:inputText value="#{row.bindings.Valueserviceurl.inputValue}"
+                                                          label="#{bindings.ValueAddedServicesVO1.hints.Valueserviceurl.label}"
+                                                          required="#{bindings.ValueAddedServicesVO1.hints.Valueserviceurl.mandatory}"
+                                                          columns="#{bindings.ValueAddedServicesVO1.hints.Valueserviceurl.displayWidth}"
+                                                          maximumLength="#{bindings.ValueAddedServicesVO1.hints.Valueserviceurl.precision}"
+                                                          shortDesc="#{bindings.ValueAddedServicesVO1.hints.Valueserviceurl.tooltip}"
+                                                          id="it1" rendered="false">
+                                                <f:validator binding="#{row.bindings.Valueserviceurl.validator}"/>
+                                            </af:inputText>
+                                        </af:column>
+                                    </af:table>
+                                </af:panelCollection>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="100%" marginBottom="5px" id="gr4">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5" valign="bottom"
+                                         halign="stretch">
+                                <af:image source="#{resource['images:imgBottomElaajApp.png']}" id="i3"
+                                          styleClass="AFStretchWidth"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
                 </f:facet>
             </af:panelStretchLayout>
         </af:form>
