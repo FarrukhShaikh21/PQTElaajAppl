@@ -4,57 +4,97 @@
     <af:document title="ContactUsPG.jsf" id="d1">
         <af:form id="f1">
         <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
-            <af:panelStretchLayout id="psl1">
-                <f:facet name="start">
-                    <af:spacer width="10" height="10" id="s1"/>
-                </f:facet>
-                <f:facet name="end">
-                    <af:spacer width="10" height="10" id="s2"/>
-                </f:facet>
+            <af:panelStretchLayout id="psl1" dimensionsFrom="parent">
+                <f:facet name="start"/>
+                <f:facet name="end"/>
                 <f:facet name="top">
-                    <af:panelGroupLayout id="pgl1" layout="vertical" inlineStyle="background-color:#8b0037;">
+                    <af:panelGroupLayout id="pgl1" layout="vertical" inlineStyle="background-color:#8b0037;"
+                                         rendered="false">
                         <af:separator id="s3"
                                       inlineStyle="min-height:5px; background-color:#ba9632; margin: 0px;     border-color: transparent;"/>
                         <af:panelGridLayout id="pgl2">
                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
-                                <af:gridCell marginStart="5px" width="10%" id="gc1" halign="center" valign="middle">
-                                    <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
-                                             inlineStyle="color:white;" action="ContactUsToHome"/>
-                                </af:gridCell>
+                                <af:gridCell marginStart="5px" width="10%" id="gc1" halign="center" valign="middle"/>
                                 <af:gridCell marginStart="5px" width="90%" marginEnd="5px" id="gc2" halign="center"
-                                             valign="middle">
-                                    <af:outputFormatted value="Contact Us" id="of1"
-                                                        inlineStyle="font-size:x-large; font-weight:bolder; color:white;"/>
-                                </af:gridCell>
+                                             valign="middle"/>
                             </af:gridRow>
                         </af:panelGridLayout>
                     </af:panelGroupLayout>
                 </f:facet>
                 <f:facet name="bottom"/>
                 <f:facet name="center">
-                    <af:panelGroupLayout id="pgl3" layout="vertical">
-                        <af:spacer width="50" height="50" id="s4"/>
-                        <af:outputFormatted value="PAK-QATAR TAKAFUL" id="of2"
-                                            inlineStyle="font-size:20px; font-weight:bolder;"/>
-                        <af:spacer width="10" height="10" id="s5"/>
-                        <af:outputFormatted value="Pre-Authorization &amp; Claim Payment Contact Details" id="of3"
-                                            inlineStyle="font-size:18px; font-weight:bold;"/>
-                        <af:spacer width="10" height="20" id="s6"/>
-                        <af:outputFormatted value="Customer Services UAN #: 021-111-825-238  " id="of4"
-                                            inlineStyle="font-size:16px; font-weight:bold;"/>
-                        <af:spacer width="10" height="30" id="s7"/>
-                        <af:outputFormatted value="Islamabad: 051-2894800, Lahore: 042-3591258, Karachi: Fax No: 02134386451" id="of5"
-                                            inlineStyle="font-size:12px;"/>
-                        <af:spacer width="10" height="30" id="s8"/>
-                        <af:outputFormatted value="Please send emails to the following addresses" id="of6"
-                                            inlineStyle="font-size:12px;"/>
-                        <af:spacer width="10" height="20" id="s9"/>
-                        <af:outputFormatted value="Queries/Approvals regarding Pre-Authorization requests: approvals@pakqatar.com.pk" id="of7"
-                                            inlineStyle="font-size:14px; font-weight:bold;"/>
-                        <af:spacer width="10" height="40" id="s10"/>
-                        <af:outputFormatted value="Queries regarding Claim Reimbursement: claim.pqft@pakqatar.com.pk" id="of8"
-                                            inlineStyle="font-size:14px; font-weight:bold;"/>
-                    </af:panelGroupLayout>
+                    <af:panelGridLayout id="pgl4" styleClass="PQHeaderColor">
+                        <af:gridRow id="gr12">
+                            <af:gridCell id="gc13" halign="stretch" valign="stretch">
+                                <af:image source="#{resource['images:imgTopElaajApp.png']}" id="i1"
+                                          styleClass="AFStretchWidth"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr13" marginTop="50px">
+                            <af:gridCell id="gc14" halign="center">
+                                <af:image source="#{resource['images:imgContactUs.png']}" id="i2"
+                                          inlineStyle="width:100px;height:100px"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr10" marginTop="20px">
+                            <af:gridCell id="gc11" halign="center">
+                                <af:panelGroupLayout id="pgl3" layout="vertical" halign="center">
+                                    <af:outputFormatted value="Contact Us" id="of1"
+                                                        inlineStyle="font-weight:bolder; color:#8b0037; font-size:30px;"/>
+                                    <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
+                                             inlineStyle="color:black;" action="ContactUsToHome"/>
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow marginTop="30px" height="auto" id="gr3">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4" halign="center">
+                                <af:outputFormatted value="PAK-QATAR TAKAFUL" id="of2"
+                                                    inlineStyle="font-size:20px; font-weight:bolder;"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow marginTop="30px" height="auto" id="gr4">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5" halign="center">
+                                <af:outputFormatted value="Pre-Authorization &amp; Claim Payment Contact Details"
+                                                    id="of3" inlineStyle="font-size:18px; font-weight:bold;"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow marginTop="30px" height="auto" id="gr5">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6" halign="center">
+                                <af:outputFormatted value="Customer Services UAN #: 021-111-825-238  " id="of4"
+                                                    inlineStyle="font-size:16px; font-weight:bold;"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow marginTop="30px" height="auto" marginBottom="5px" id="gr6">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7" halign="center">
+                                <af:outputFormatted value="Islamabad: 051-2894800, Lahore: 042-3591258, Karachi: Fax No: 02134386451"
+                                                    id="of5" inlineStyle="font-size:12px;"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr7" marginTop="30px">
+                            <af:gridCell id="gc8" halign="center">
+                                <af:outputFormatted value="Please send emails to the following addresses" id="of6"
+                                                    inlineStyle="font-size:12px;"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr8" marginTop="30px">
+                            <af:gridCell id="gc9" halign="center">
+                                <af:outputFormatted value="Queries/Approvals regarding Pre-Authorization requests: approvals@pakqatar.com.pk"
+                                                    id="of7" inlineStyle="font-size:14px; font-weight:bold;"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr9" marginTop="30px" marginBottom="30px">
+                            <af:gridCell id="gc10" halign="center">
+                                <af:outputFormatted value="Queries regarding Claim Reimbursement: claim.pqft@pakqatar.com.pk"
+                                                    id="of8" inlineStyle="font-size:14px; font-weight:bold;"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr14" height="100%">
+                            <af:gridCell id="gc15" valign="bottom" halign="stretch">
+                                <af:image source="#{resource['images:imgBottomElaajApp.png']}" id="i3"
+                                          styleClass="AFStretchWidth"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
                 </f:facet>
             </af:panelStretchLayout>
         </af:form>
