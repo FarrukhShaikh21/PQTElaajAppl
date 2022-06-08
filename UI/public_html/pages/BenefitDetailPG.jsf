@@ -9,11 +9,7 @@
                 <f:facet name="top">
                     <af:panelGridLayout id="pgl6" styleClass="PQHeaderColor" rendered="false">
                         <af:gridRow marginTop="5px" height="50px" marginBottom="5px" id="gr18">
-                            <af:gridCell width="10%" id="gc23" halign="center" valign="middle">
-                                <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
-                                         inlineStyle="color:white;"
-                                         action="BenefitToHome"/>
-                            </af:gridCell>
+                            <af:gridCell width="10%" id="gc23" halign="center" valign="middle"/>
                             <af:gridCell width="90%" id="gc24" halign="center"
                                          valign="middle">
                                 <af:panelGroupLayout id="pgl1" inlineStyle="background-color:#8b0037;" halign="center" layout="vertical">
@@ -26,11 +22,27 @@
                 </f:facet>
                 <f:facet name="bottom"/>
                 <f:facet name="center">
-                    <af:panelGridLayout id="pgl5" styleClass="PQHeaderColor" dimensionsFrom="parent">
+                    <af:panelGridLayout id="pgl5" styleClass="PQHeaderColor">
                         <af:gridRow id="gr20" height="100px">
-                            <af:gridCell id="gc29">
+                            <af:gridCell id="gc29" valign="stretch" halign="stretch">
                                 <af:image source="#{resource['images:imgTopElaajApp.png']}" id="i1"
                                           styleClass="AFStretchWidth"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr8">
+                            <af:gridCell id="gc7" valign="stretch" halign="center">
+                                <af:image source="#{resource['images:imgBenefits.png']}" id="i2"
+                                          inlineStyle="width:100px;height:100px"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr9">
+                            <af:gridCell id="gc13" halign="center">
+                                <af:panelGroupLayout id="pgl15" layout="vertical" halign="center">
+                                    <af:outputText value="Benefits &amp; Limits" id="ot3"
+                                                   inlineStyle="font-weight:bolder; color:#8b0037; font-size:30px;"/>
+                                    <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
+                                             inlineStyle="color:black;" action="BenefitToHome"/>
+                                </af:panelGroupLayout>
                             </af:gridCell>
                         </af:gridRow>
                         <af:gridRow marginTop="30px" height="auto" id="gr6">
@@ -40,49 +52,39 @@
                                     <af:gridRow id="gr13" marginTop="5px" marginBottom="15px">
                                         <af:gridCell id="gc9" width="100%" halign="stretch" valign="stretch">
                                             <af:panelGroupLayout id="pgl2" layout="vertical" halign="center">
-                                                <af:inputText label="Label 1" id="it1"
-                                                              value="hello" simple="true" readOnly="true"
-                                                              contentStyle="width:500px"/>
-                                                <af:outputFormatted value="#{bindings.EmpName.inputValue}" id="of7"/>
+                                                <af:outputFormatted value="#{bindings.EmpName.inputValue}" id="of7"
+                                                                    inlineStyle="color:#8b0037"/>
+                                                <af:separator id="s1" inlineStyle="width:500px;"/>
                                             </af:panelGroupLayout>
                                         </af:gridCell>
                                     </af:gridRow>
-                                    <af:gridRow id="gr8" marginTop="5px">
-                                        <af:gridCell id="gc7" width="100%" halign="stretch">
-                                            <af:outputLabel value="Age" id="ol2" inlineStyle="color:maroon;"/>
-                                        </af:gridCell>
-                                    </af:gridRow>
-                                    <af:gridRow id="gr5" marginTop="5px" marginBottom="15px">
+                                    <af:gridRow id="gr5" marginTop="30px">
                                         <af:gridCell id="gc5" width="100%" halign="stretch">
-                                            <af:outputFormatted value="#{bindings.EmpAge.inputValue}" id="of8"
-                                                                inlineStyle="color:maroon;"/>
+                                            <af:panelGroupLayout id="pgl12" layout="vertical" halign="center">
+                                                <af:outputFormatted value="#{bindings.EmpAge.inputValue}" id="of8"
+                                                                    inlineStyle="color:maroon;"/>
+                                                <af:separator id="s2" inlineStyle="width:500px"/>
+                                            </af:panelGroupLayout>
                                         </af:gridCell>
                                     </af:gridRow>
-                                    <af:gridRow marginTop="5px" id="gr9" marginBottom="5px">
-                                        <af:gridCell marginStart="5px" width="100%" id="gc13" valign="middle"
-                                                     halign="stretch">
-                                            <af:outputLabel value="Family Code" id="ol3" inlineStyle="color:maroon;"
-                                                            styleClass="AFStretchWidth"/>
-                                        </af:gridCell>
-                                    </af:gridRow>
-                                    <af:gridRow marginTop="5px" id="gr10" marginBottom="15px">
+                                    <af:gridRow marginTop="30px" id="gr10">
                                         <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc16"
                                                      valign="middle" halign="stretch">
-                                            <af:outputFormatted value="#{bindings.EmpFolioId.inputValue}" id="of9"
-                                                                inlineStyle="color:maroon;"/>
+                                            <af:panelGroupLayout id="pgl13" layout="vertical" halign="center">
+                                                <af:outputFormatted value="#{bindings.EmpFolioId.inputValue}" id="of9"
+                                                                    inlineStyle="color:maroon;"/>
+                                                <af:separator id="s3" inlineStyle="width:500px"/>
+                                            </af:panelGroupLayout>
                                         </af:gridCell>
                                     </af:gridRow>
-                                    <af:gridRow marginTop="5px" id="gr11" marginBottom="5px">
-                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc18"
-                                                     valign="middle" halign="stretch">
-                                            <af:outputLabel value="Policy Period" id="ol4" inlineStyle="color:maroon;"/>
-                                        </af:gridCell>
-                                    </af:gridRow>
-                                    <af:gridRow marginTop="5px" marginBottom="30px" id="gr12">
+                                    <af:gridRow marginTop="30px" id="gr12">
                                         <af:gridCell marginStart="5px" width="100%" id="gc19" valign="middle"
                                                      halign="stretch">
-                                            <af:outputFormatted value="#{bindings.PolicyPeriod.inputValue}" id="of10"
-                                                                inlineStyle="color:maroon;"/>
+                                            <af:panelGroupLayout id="pgl14" layout="vertical" halign="center">
+                                                <af:outputFormatted value="#{bindings.PolicyPeriod.inputValue}"
+                                                                    id="of10" inlineStyle="color:maroon;"/>
+                                                <af:separator id="s4" inlineStyle="width:500px"/>
+                                            </af:panelGroupLayout>
                                         </af:gridCell>
                                     </af:gridRow>
                                     <af:gridRow id="gr2">
@@ -112,11 +114,13 @@
                                                                             marginBottom="5px">
                                                                     <af:gridCell marginStart="5px" width="50%" id="gc6">
                                                                         <af:outputFormatted value="#{item.bindings.EmpSrNo.inputValue}"
-                                                                                            id="of3"/>
+                                                                                            id="of3"
+                                                                                            inlineStyle="color:#8b0037"/>
                                                                     </af:gridCell>
                                                                     <af:gridCell marginStart="5px" width="50%" id="gc8">
                                                                         <af:outputFormatted value="#{item.bindings.EmpDob.inputValue}"
-                                                                                            id="of5">
+                                                                                            id="of5"
+                                                                                            inlineStyle="color:#8b0037">
                                                                             <af:convertDateTime pattern="#{bindings.VuGhsElaajCoveredMemberVO11.hints.EmpDob.format}"/>
                                                                         </af:outputFormatted>
                                                                     </af:gridCell>
@@ -126,12 +130,14 @@
                                                                     <af:gridCell marginStart="5px" width="50%"
                                                                                  id="gc12">
                                                                         <af:outputFormatted value="#{item.bindings.EmpName.inputValue}"
-                                                                                            id="of4"/>
+                                                                                            id="of4"
+                                                                                            inlineStyle="color:#8b0037"/>
                                                                     </af:gridCell>
                                                                     <af:gridCell marginStart="5px" width="50%"
                                                                                  marginEnd="5px" id="gc14">
                                                                         <af:outputFormatted value="#{item.bindings.Relation.inputValue}"
-                                                                                            id="of6"/>
+                                                                                            id="of6"
+                                                                                            inlineStyle="color:#8b0037"/>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
                                                             </af:panelGridLayout>
@@ -199,12 +205,14 @@
                                                                             <af:gridCell marginStart="5px" width="25%"
                                                                                          id="gc15">
                                                                                 <af:outputFormatted value="#{item.bindings.CoverDesc.inputValue}"
-                                                                                                    id="of19"/>
+                                                                                                    id="of19"
+                                                                                                    inlineStyle="color:#8b0037"/>
                                                                             </af:gridCell>
                                                                             <af:gridCell marginStart="5px" width="25%"
                                                                                          id="gc17" halign="end">
                                                                                 <af:outputFormatted value="#{item.bindings.RoomLimit.inputValue}"
-                                                                                                    id="of20">
+                                                                                                    id="of20"
+                                                                                                    inlineStyle="color:#8b0037">
                                                                                     <af:convertNumber groupingUsed="false"
                                                                                                       pattern="#{bindings.VuEmployeeCoverDtlVO11.hints.RoomLimit.format}"/>
                                                                                     <af:convertNumber type="number"
@@ -214,7 +222,8 @@
                                                                             <af:gridCell marginStart="5px" width="25%"
                                                                                          id="gc20" halign="end">
                                                                                 <af:outputFormatted value="#{item.bindings.TotalAmount.inputValue}"
-                                                                                                    id="of21">
+                                                                                                    id="of21"
+                                                                                                    inlineStyle="color:#8b0037">
                                                                                     <af:convertNumber groupingUsed="false"
                                                                                                       pattern="#{bindings.VuEmployeeCoverDtlVO11.hints.TotalAmount.format}"/>
                                                                                     <af:convertNumber type="number"
@@ -225,7 +234,8 @@
                                                                                          marginEnd="5px" id="gc22"
                                                                                          halign="end">
                                                                                 <af:outputFormatted value="#{item.bindings.ClaimAmount.inputValue}"
-                                                                                                    id="of22">
+                                                                                                    id="of22"
+                                                                                                    inlineStyle="color:#8b0037">
                                                                                     <af:convertNumber groupingUsed="false"
                                                                                                       pattern="#{bindings.VuEmployeeCoverDtlVO11.hints.ClaimAmount.format}"/>
                                                                                     <af:convertNumber type="number"
@@ -249,6 +259,12 @@
                                         </af:gridCell>
                                     </af:gridRow>
                                 </af:panelGridLayout>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr11" height="100%">
+                            <af:gridCell id="gc18" halign="stretch" valign="bottom">
+                                <af:image source="#{resource['images:imgBottomElaajApp.png']}" id="i3"
+                                          styleClass="AFStretchWidth"/>
                             </af:gridCell>
                         </af:gridRow>
                     </af:panelGridLayout>
