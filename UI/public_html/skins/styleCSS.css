@@ -1107,3 +1107,7 @@ af|inputText:read-only
 
     
 }
+
+af|separator {
+    border: solid thin #8b0037 !important; 
+    }
