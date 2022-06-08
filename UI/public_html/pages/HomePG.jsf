@@ -114,7 +114,8 @@
                                             </af:panelGridLayout>
                                         </af:gridCell>
                                         <af:gridCell width="37%" id="gc32" halign="stretch" valign="stretch">
-                                            <af:panelGridLayout id="pgl29" dimensionsFrom="parent">
+                                            <af:panelGridLayout id="pgl29" dimensionsFrom="parent"
+                                                                inlineStyle="border-style:inset; border-color:Black; border-top-left-radius:0px 0px; border-width:thin;">
                                                 <af:gridRow height="auto" id="gr16">
                                                     <af:gridCell marginStart="5px" width="100%" id="gc34"
                                                                  halign="stretch" valign="stretch" columnSpan="5"
