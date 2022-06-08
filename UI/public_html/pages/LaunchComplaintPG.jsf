@@ -31,19 +31,25 @@
                 </f:facet>
                 <f:facet name="center">
                     <af:panelGridLayout id="pgl5" styleClass="PQHeaderColor" dimensionsFrom="parent">
-                        <af:gridRow marginTop="5px" height="auto" id="gr2">
+                        <af:gridRow marginTop="5px" height="100px" id="gr2">
                             <af:gridCell id="gc3" halign="stretch" valign="stretch">
                                 <af:image source="#{resource['images:imgTopElaajApp.png']}" id="i1"
                                           styleClass="AFStretchWidth"/>
                             </af:gridCell>
                         </af:gridRow>
-                        <af:gridRow id="gr4" marginTop="40px">
+                        <af:gridRow id="gr8">
+                            <af:gridCell id="gc9" width="100%" halign="center" valign="stretch">
+                                <af:image source="#{resource['images:imgLaunchComplaint.png']}" id="i2"
+                                          styleClass="AFStretchWidth" inlineStyle="width:100px;height:100px"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr4" marginTop="20px">
                             <af:gridCell id="gc5" valign="stretch" halign="stretch">
                                 <af:panelGroupLayout id="pgl4" layout="vertical" halign="center">
-                                    <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
-                                             inlineStyle="color:black; font-weight:bold;" action="ComplaintToHome"/>
                                     <af:outputFormatted value="Add Complaint" id="of1"
                                                         inlineStyle="font-weight:bolder; color:#8b0037; font-size:40px;"/>
+                                    <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
+                                             inlineStyle="color:black; font-weight:bold;" action="ComplaintToHome"/>
                                 </af:panelGroupLayout>
                             </af:gridCell>
                         </af:gridRow>
