@@ -34,7 +34,7 @@
                                     <af:outputText value="Record Correction" id="ot1"
                                                    inlineStyle="font-weight:bolder; color:#8b0037; font-size:40px;"/>
                                     <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
-                                             inlineStyle="color:back;"
+                                             inlineStyle="color:black;"
                                              action="recordCorrectiontoHome"/>
                                 </af:panelGroupLayout>
                             </af:gridCell>
