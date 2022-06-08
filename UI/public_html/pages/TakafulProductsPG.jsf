@@ -4,16 +4,12 @@
     <af:document title="TakafulProductsPG.jsf" id="d1">
         <af:messages id="m1"/>
         <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
-        <af:form id="f1"></af:form>
         <af:form id="f2">
-            <af:panelStretchLayout id="psl1">
+            <af:panelStretchLayout id="psl1" dimensionsFrom="parent">
                 <f:facet name="top">
                     <af:panelGridLayout id="pgl1" styleClass="PQHeaderColor">
                         <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
-                            <af:gridCell marginStart="5px" width="10%" id="gc1" halign="center" valign="middle">
-                                <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
-                                         inlineStyle="color:white;" action="TakafulProdToHome"/>
-                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="10%" id="gc1" halign="center" valign="middle"/>
                             <af:gridCell marginStart="5px" width="90%" marginEnd="5px" id="gc2" halign="center"
                                          valign="middle">
                                 <af:panelGroupLayout id="pgl2" halign="center" layout="vertical">
@@ -26,10 +22,32 @@
                 </f:facet>
                 <f:facet name="bottom"/>
                 <f:facet name="center">
-                    <af:panelGroupLayout id="pgl3" halign="center" layout="scroll">
-                        <af:panelSplitter id="ps1" styleClass="AFStretchWidth" dimensionsFrom="parent"
-                                          splitterPosition="0" orientation="vertical">
-                            <f:facet name="second">
+                    <af:panelGridLayout id="pgl6" styleClass="PQHeaderColor">
+                        <af:gridRow id="gr7" height="100px">
+                            <af:gridCell id="gc9" valign="stretch" halign="stretch">
+                                <af:image source="#{resource['images:imgTopElaajApp.png']}" id="i1"
+                                          styleClass="AFStretchWidth"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr8" marginTop="50px">
+                            <af:gridCell id="gc10" halign="center">
+                                <af:image source="#{resource['images:imgTakafulProducts.png']}" id="i2"
+                                          inlineStyle="width:100px;height:100px"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr6" marginTop="20px">
+                            <af:gridCell id="gc8" halign="center">
+                                <af:panelGroupLayout id="pgl3" layout="vertical" halign="center">
+                                    <af:outputText value="Takaful Product &amp; Solutions" id="ot1" truncateAt="0"
+                                                   inlineStyle="font-weight:bolder; color:#8b0037; font-size:30px;"/>
+                                    <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
+                                             inlineStyle="color:black;" action="TakafulProdToHome"/>
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="auto" id="gr4">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6" valign="stretch"
+                                         halign="stretch">
                                 <af:listView value="#{bindings.ProductMasterVO1.collectionModel}" var="item"
                                              emptyText="#{bindings.ProductMasterVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
                                              fetchSize="#{bindings.ProductMasterVO1.rangeSize}" id="lv1"
@@ -47,11 +65,11 @@
                                         </af:panelGridLayout>
                                     </af:listItem>
                                 </af:listView>
-                            </f:facet>
-                        </af:panelSplitter>
-                        <af:panelSplitter id="ps2" styleClass="AFStretchWidth" splitterPosition="0"
-                                          orientation="vertical" dimensionsFrom="parent">
-                            <f:facet name="second">
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7" valign="stretch"
+                                         halign="stretch">
                                 <af:listView value="#{bindings.ProductDetailVO11.collectionModel}" var="item"
                                              emptyText="#{bindings.ProductDetailVO11.viewable ? 'No data to display.' : 'Access Denied.'}"
                                              fetchSize="#{bindings.ProductDetailVO11.rangeSize}" id="lv2"
@@ -66,8 +84,8 @@
                                                                         id="of3"/>
                                                 </af:gridCell>
                                                 <af:gridCell marginStart="0px" width="20%" marginEnd="0px" id="gc5">
-                                                    <af:outputFormatted value="#{item.bindings.Url.inputValue}"
-                                                                        id="of4" rendered="false"/>
+                                                    <af:outputFormatted value="#{item.bindings.Url.inputValue}" id="of4"
+                                                                        rendered="false"/>
                                                     <af:link id="l2" destination="#{item.bindings.Url.inputValue}"
                                                              targetFrame="_blank" inlineStyle="font-size:12px;"
                                                              text="View"/>
@@ -76,9 +94,15 @@
                                         </af:panelGridLayout>
                                     </af:listItem>
                                 </af:listView>
-                            </f:facet>
-                        </af:panelSplitter>
-                    </af:panelGroupLayout>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr9" height="100%">
+                            <af:gridCell id="gc11" valign="bottom" halign="stretch">
+                                <af:image source="#{resource['images:imgBottomElaajApp.png']}" id="i3"
+                                          styleClass="AFStretchWidth"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
                 </f:facet>
             </af:panelStretchLayout>
         </af:form>
