@@ -934,6 +934,15 @@ border-top-right-radius:10px;
     background-size: cover;
     
 }
+
+.PQHeaderColorMobile{
+    /*background-color:#8b0037;*/
+    background-image:url("../imgMobileAppBackGround.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
 .PQLoginPagePassword af|inputText::content
 {
 height:30px;
