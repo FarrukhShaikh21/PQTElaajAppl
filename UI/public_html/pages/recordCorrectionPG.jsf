@@ -5,7 +5,7 @@
         <af:messages id="m1"/>
         <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
         <af:form id="f1">
-            <af:panelStretchLayout id="psl1" dimensionsFrom="parent">
+            <af:panelStretchLayout id="psl1">
                 <f:facet name="top"/>
                 <f:facet name="bottom">
                     <af:panelGroupLayout id="pgl4" inlineStyle="background-color:#8b0037;" layout="vertical"
@@ -15,149 +15,315 @@
                     </af:panelGroupLayout>
                 </f:facet>
                 <f:facet name="center">
-                    <af:panelGridLayout id="pgl3" styleClass="PQHeaderColor">
-                        <af:gridRow id="gr8">
-                            <af:gridCell id="gc9" valign="stretch" halign="stretch">
-                                <af:image source="#{resource['images:imgTopElaajApp.png']}" id="i2"
-                                          styleClass="AFStretchWidth"/>
-                            </af:gridCell>
-                        </af:gridRow>
-                        <af:gridRow id="gr4" marginTop="15px">
-                            <af:gridCell id="gc5" halign="center">
-                                <af:image source="#{resource['images:imgLaunchComplaint.png']}" id="i1"
-                                          inlineStyle="width:100px;height:100px"/>
-                            </af:gridCell>
-                        </af:gridRow>
-                        <af:gridRow id="gr6">
-                            <af:gridCell id="gc7" halign="center">
-                                <af:panelGroupLayout id="pgl12" layout="vertical" halign="center">
-                                    <af:outputText value="Record Correction" id="ot1"
-                                                   inlineStyle="font-weight:bolder; color:#8b0037; font-size:40px;"/>
-                                    <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
-                                             inlineStyle="color:black;"
-                                             action="recordCorrectiontoHome"/>
+                    <af:panelGridLayout id="pgl1">
+                        <af:gridRow marginTop="5px" height="100%" id="gr10">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2" valign="stretch"
+                                         halign="stretch">
+                                <af:panelGroupLayout id="pgl13" layout="scroll" styleClass="wide">
+                                    <af:panelGridLayout id="pgl3" styleClass="PQHeaderColor">
+                                        <af:gridRow id="gr8">
+                                            <af:gridCell id="gc9" valign="stretch" halign="stretch">
+                                                <af:image source="#{resource['images:imgTopElaajApp.png']}" id="i2"
+                                                          styleClass="AFStretchWidth"/>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow id="gr4" marginTop="50px">
+                                            <af:gridCell id="gc5" halign="center">
+                                                <af:image source="#{resource['images:imgLaunchComplaint.png']}" id="i1"
+                                                          inlineStyle="width:100px;height:100px"/>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow id="gr6">
+                                            <af:gridCell id="gc7" halign="center">
+                                                <af:panelGroupLayout id="pgl12" layout="vertical" halign="center">
+                                                    <af:outputText value="Record Correction" id="ot1"
+                                                                   inlineStyle="font-weight:bolder; color:#8b0037; font-size:40px;"/>
+                                                    <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
+                                                             inlineStyle="color:black;"
+                                                             action="recordCorrectiontoHome"/>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="20px" height="auto" id="gr3">
+                                            <af:gridCell marginStart="5px" width="100%" id="gc4" halign="stretch"
+                                                         valign="stretch">
+                                                <af:panelGroupLayout id="pgl2" halign="center" layout="vertical">
+                                                    <af:inputListOfValues id="nameOfEmployeeId"
+                                                                          popupTitle="Select : Member Name"
+                                                                          value="#{bindings.NameOfEmployee.inputValue}"
+                                                                          model="#{bindings.NameOfEmployee.listOfValuesModel}"
+                                                                          required="#{bindings.NameOfEmployee.hints.mandatory}"
+                                                                          columns="#{bindings.NameOfEmployee.hints.displayWidth}"
+                                                                          shortDesc="#{bindings.NameOfEmployee.hints.tooltip}"
+                                                                          styleClass="PQAppInputLOV"
+                                                                          contentStyle="WIDTH:500PX"
+                                                                          placeholder="Select Member Name"
+                                                                          simple="true">
+                                                        <f:validator binding="#{bindings.NameOfEmployee.validator}"/>
+                                                    </af:inputListOfValues>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="20px" id="gr5">
+                                            <af:gridCell marginStart="5px" width="100%" id="gc6" halign="stretch"
+                                                         valign="stretch">
+                                                <af:panelGroupLayout id="pgl5" halign="center" layout="vertical">
+                                                    <af:inputText value="#{bindings.CnicNo.inputValue}" simple="true"
+                                                                  required="#{bindings.CnicNo.hints.mandatory}"
+                                                                  columns="#{bindings.CnicNo.hints.displayWidth}"
+                                                                  maximumLength="#{bindings.CnicNo.hints.precision}"
+                                                                  shortDesc="#{bindings.CnicNo.hints.tooltip}" id="it1"
+                                                                  styleClass="PQAppInputText" contentStyle="width:500px"
+                                                                  autoSubmit="true" placeholder="CNIC No">
+                                                        <f:validator binding="#{bindings.CnicNo.validator}"/>
+                                                    </af:inputText>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="20px" height="auto" id="gr7">
+                                            <af:gridCell marginStart="5px" width="100%" id="gc8" halign="stretch"
+                                                         valign="stretch">
+                                                <af:panelGroupLayout id="pgl6" layout="vertical" halign="center">
+                                                    <af:inputDate value="#{bindings.Dob.inputValue}"
+                                                                  required="#{bindings.Dob.hints.mandatory}"
+                                                                  columns="#{bindings.Dob.hints.displayWidth}"
+                                                                  shortDesc="#{bindings.Dob.hints.tooltip}" id="id1"
+                                                                  styleClass="PQAppInputDate" contentStyle="width:500px"
+                                                                  autoSubmit="true" placeholder="Date of Birth">
+                                                        <f:validator binding="#{bindings.Dob.validator}"/>
+                                                        <af:convertDateTime pattern="#{bindings.Dob.format}"/>
+                                                    </af:inputDate>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="20px" id="gr9">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc10"
+                                                         halign="stretch" valign="stretch">
+                                                <af:panelGroupLayout id="pgl7" layout="vertical" halign="center">
+                                                    <af:inputText value="#{bindings.CellNumber.inputValue}"
+                                                                  simple="true"
+                                                                  required="#{bindings.CellNumber.hints.mandatory}"
+                                                                  columns="#{bindings.CellNumber.hints.displayWidth}"
+                                                                  maximumLength="#{bindings.CellNumber.hints.precision}"
+                                                                  shortDesc="#{bindings.CellNumber.hints.tooltip}"
+                                                                  id="it3" styleClass="PQAppInputText"
+                                                                  contentStyle="width:500px;" autoSubmit="true"
+                                                                  placeholder="Contact No">
+                                                        <f:validator binding="#{bindings.CellNumber.validator}"/>
+                                                    </af:inputText>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="20px" height="auto" id="gr11">
+                                            <af:gridCell marginStart="5px" width="100%" id="gc12" halign="stretch">
+                                                <af:panelGroupLayout id="pgl8" layout="vertical" halign="center">
+                                                    <af:inputText value="#{bindings.Email.inputValue}" simple="true"
+                                                                  required="#{bindings.Email.hints.mandatory}"
+                                                                  columns="#{bindings.Email.hints.displayWidth}"
+                                                                  maximumLength="#{bindings.Email.hints.precision}"
+                                                                  shortDesc="#{bindings.Email.hints.tooltip}" id="it4"
+                                                                  styleClass="PQAppInputText" contentStyle="width:500px"
+                                                                  autoSubmit="true" placeholder="Email Address">
+                                                        <f:validator binding="#{bindings.Email.validator}"/>
+                                                    </af:inputText>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="20px" height="auto" id="gr13">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc14"
+                                                         halign="center">
+                                                <af:panelGroupLayout id="pgl9" layout="vertical" halign="center">
+                                                    <af:selectOneChoice value="#{bindings.RelationshipWithEmployee.inputValue}"
+                                                                        required="#{bindings.RelationshipWithEmployee.hints.mandatory}"
+                                                                        shortDesc="#{bindings.RelationshipWithEmployee.hints.tooltip}"
+                                                                        id="soc1" autoSubmit="true"
+                                                                        styleClass="PQChoiceContentColor"
+                                                                        contentStyle="width:500px;">
+                                                        <f:selectItems value="#{bindings.RelationshipWithEmployee.items}"
+                                                                       id="si1"/>
+                                                        <f:validator binding="#{bindings.RelationshipWithEmployee.validator}"/>
+                                                    </af:selectOneChoice>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow id="gr15" marginTop="20px">
+                                            <af:gridCell id="gc16" width="100%" marginStart="5px" halign="stretch">
+                                                <af:panelGroupLayout id="pgl10" layout="vertical" halign="center">
+                                                    <af:inputText value="#{bindings.IbanNo.inputValue}" simple="true"
+                                                                  required="#{bindings.IbanNo.hints.mandatory}"
+                                                                  columns="#{bindings.IbanNo.hints.displayWidth}"
+                                                                  maximumLength="#{bindings.IbanNo.hints.precision}"
+                                                                  shortDesc="#{bindings.IbanNo.hints.tooltip}" id="it2"
+                                                                  styleClass="PQAppInputText"
+                                                                  contentStyle="width:500px;" placeholder="IBAN No">
+                                                        <f:validator binding="#{bindings.IbanNo.validator}"/>
+                                                    </af:inputText>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow id="gr2" marginTop="40px">
+                                            <af:gridCell id="gc3" halign="stretch" valign="stretch">
+                                                <af:panelGroupLayout id="pgl11" layout="vertical" halign="center">
+                                                    <af:button actionListener="#{bindings.Apply.execute}" text="Apply"
+                                                               disabled="#{!bindings.Apply.enabled}" id="b1"
+                                                               styleClass="PQLoginButton"/>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="300px" height="100%" id="gr1">
+                                            <af:gridCell marginStart="0px" width="100%" id="gc1" halign="stretch"
+                                                         valign="bottom">
+                                                <af:image source="#{resource['images:imgBottomElaajApp.png']}" id="i3"
+                                                          styleClass="AFStretchWidth"/>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                    </af:panelGridLayout>
                                 </af:panelGroupLayout>
                             </af:gridCell>
                         </af:gridRow>
-                        <af:gridRow marginTop="20px" height="auto" id="gr3">
-                            <af:gridCell marginStart="5px" width="100%" id="gc4" halign="stretch" valign="stretch">
-                                <af:panelGroupLayout id="pgl2" halign="center" layout="vertical">
-                                    <af:inputListOfValues id="nameOfEmployeeId" popupTitle="Select : Member Name"
-                                                          value="#{bindings.NameOfEmployee.inputValue}"
-                                                          model="#{bindings.NameOfEmployee.listOfValuesModel}"
-                                                          required="#{bindings.NameOfEmployee.hints.mandatory}"
-                                                          columns="#{bindings.NameOfEmployee.hints.displayWidth}"
-                                                          shortDesc="#{bindings.NameOfEmployee.hints.tooltip}"
-                                                          styleClass="PQAppInputLOV" contentStyle="WIDTH:500PX"
-                                                          placeholder="Select Member Name" simple="true">
-                                        <f:validator binding="#{bindings.NameOfEmployee.validator}"/>
-                                    </af:inputListOfValues>
+                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr12">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc11" valign="stretch"
+                                         halign="stretch">
+                                <af:panelGroupLayout id="pgl14" layout="scroll" styleClass="narrow">
+                                    <af:panelGridLayout id="pgl15" styleClass="PQHeaderColorMobile">
+                                        <af:gridRow id="gr17">
+                                            <af:gridCell id="gc17" halign="center">
+                                                <af:panelGroupLayout id="pgl16" layout="vertical" halign="center">
+                                                    <af:outputText value="Record Correction" id="ot2"
+                                                                   inlineStyle="font-weight:bolder; color:#8b0037; font-size:40px;"/>
+                                                    <af:link text="Back" id="l2" icon="/icons/left-arrow-white.png"
+                                                             inlineStyle="color:black;"
+                                                             action="recordCorrectiontoHome"/>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="20px" height="auto" id="gr18">
+                                            <af:gridCell marginStart="5px" width="100%" id="gc18" halign="stretch"
+                                                         valign="stretch">
+                                                <af:panelGroupLayout id="pgl17" halign="center" layout="vertical">
+                                                    <af:inputListOfValues id="ilov1" popupTitle="Select : Member Name"
+                                                                          value="#{bindings.NameOfEmployee.inputValue}"
+                                                                          model="#{bindings.NameOfEmployee.listOfValuesModel}"
+                                                                          required="#{bindings.NameOfEmployee.hints.mandatory}"
+                                                                          columns="#{bindings.NameOfEmployee.hints.displayWidth}"
+                                                                          shortDesc="#{bindings.NameOfEmployee.hints.tooltip}"
+                                                                          styleClass="PQAppInputLOV"
+                                                                          contentStyle="width:90%"
+                                                                          placeholder="Select Member Name"
+                                                                          simple="true">
+                                                        <f:validator binding="#{bindings.NameOfEmployee.validator}"/>
+                                                    </af:inputListOfValues>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="20px" id="gr19">
+                                            <af:gridCell marginStart="5px" width="100%" id="gc19" halign="stretch"
+                                                         valign="stretch">
+                                                <af:panelGroupLayout id="pgl18" halign="center" layout="vertical">
+                                                    <af:inputText value="#{bindings.CnicNo.inputValue}" simple="true"
+                                                                  required="#{bindings.CnicNo.hints.mandatory}"
+                                                                  columns="#{bindings.CnicNo.hints.displayWidth}"
+                                                                  maximumLength="#{bindings.CnicNo.hints.precision}"
+                                                                  shortDesc="#{bindings.CnicNo.hints.tooltip}" id="it5"
+                                                                  styleClass="PQAppInputText" contentStyle="width:100%"
+                                                                  autoSubmit="true" placeholder="CNIC No">
+                                                        <f:validator binding="#{bindings.CnicNo.validator}"/>
+                                                    </af:inputText>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="20px" height="auto" id="gr20">
+                                            <af:gridCell marginStart="5px" width="100%" id="gc20" halign="stretch"
+                                                         valign="stretch">
+                                                <af:panelGroupLayout id="pgl19" layout="vertical" halign="center">
+                                                    <af:inputDate value="#{bindings.Dob.inputValue}"
+                                                                  required="#{bindings.Dob.hints.mandatory}"
+                                                                  columns="#{bindings.Dob.hints.displayWidth}"
+                                                                  shortDesc="#{bindings.Dob.hints.tooltip}" id="id2"
+                                                                  styleClass="PQAppInputDate" contentStyle="width:90%"
+                                                                  autoSubmit="true" placeholder="Date of Birth">
+                                                        <f:validator binding="#{bindings.Dob.validator}"/>
+                                                        <af:convertDateTime pattern="#{bindings.Dob.format}"/>
+                                                    </af:inputDate>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="20px" id="gr21">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc21"
+                                                         halign="stretch" valign="stretch">
+                                                <af:panelGroupLayout id="pgl20" layout="vertical" halign="center">
+                                                    <af:inputText value="#{bindings.CellNumber.inputValue}"
+                                                                  simple="true"
+                                                                  required="#{bindings.CellNumber.hints.mandatory}"
+                                                                  columns="#{bindings.CellNumber.hints.displayWidth}"
+                                                                  maximumLength="#{bindings.CellNumber.hints.precision}"
+                                                                  shortDesc="#{bindings.CellNumber.hints.tooltip}"
+                                                                  id="it6" styleClass="PQAppInputText"
+                                                                  contentStyle="width:100%" autoSubmit="true"
+                                                                  placeholder="Contact No">
+                                                        <f:validator binding="#{bindings.CellNumber.validator}"/>
+                                                    </af:inputText>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="20px" height="auto" id="gr22">
+                                            <af:gridCell marginStart="5px" width="100%" id="gc22" halign="stretch">
+                                                <af:panelGroupLayout id="pgl21" layout="vertical" halign="center">
+                                                    <af:inputText value="#{bindings.Email.inputValue}" simple="true"
+                                                                  required="#{bindings.Email.hints.mandatory}"
+                                                                  columns="#{bindings.Email.hints.displayWidth}"
+                                                                  maximumLength="#{bindings.Email.hints.precision}"
+                                                                  shortDesc="#{bindings.Email.hints.tooltip}" id="it7"
+                                                                  styleClass="PQAppInputText" contentStyle="width:100%"
+                                                                  autoSubmit="true" placeholder="Email Address">
+                                                        <f:validator binding="#{bindings.Email.validator}"/>
+                                                    </af:inputText>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="20px" height="auto" id="gr23">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc23"
+                                                         halign="center">
+                                                <af:panelGroupLayout id="pgl22" layout="vertical" halign="center">
+                                                    <af:selectOneChoice value="#{bindings.RelationshipWithEmployee.inputValue}"
+                                                                        required="#{bindings.RelationshipWithEmployee.hints.mandatory}"
+                                                                        shortDesc="#{bindings.RelationshipWithEmployee.hints.tooltip}"
+                                                                        id="soc2" autoSubmit="true"
+                                                                        styleClass="PQChoiceContentColor"
+                                                                        contentStyle="width:300px">
+                                                        <f:selectItems value="#{bindings.RelationshipWithEmployee.items}"
+                                                                       id="si2"/>
+                                                        <f:validator binding="#{bindings.RelationshipWithEmployee.validator}"/>
+                                                    </af:selectOneChoice>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow id="gr24" marginTop="20px">
+                                            <af:gridCell id="gc24" width="100%" marginStart="5px" halign="stretch">
+                                                <af:panelGroupLayout id="pgl23" layout="vertical" halign="center">
+                                                    <af:inputText value="#{bindings.IbanNo.inputValue}" simple="true"
+                                                                  required="#{bindings.IbanNo.hints.mandatory}"
+                                                                  columns="#{bindings.IbanNo.hints.displayWidth}"
+                                                                  maximumLength="#{bindings.IbanNo.hints.precision}"
+                                                                  shortDesc="#{bindings.IbanNo.hints.tooltip}" id="it8"
+                                                                  styleClass="PQAppInputText"
+                                                                  contentStyle="width:100%" placeholder="IBAN No">
+                                                        <f:validator binding="#{bindings.IbanNo.validator}"/>
+                                                    </af:inputText>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow id="gr25" marginTop="50px" height="200px">
+                                            <af:gridCell id="gc25" halign="stretch" valign="stretch">
+                                                <af:panelGroupLayout id="pgl24" layout="vertical" halign="center">
+                                                    <af:button actionListener="#{bindings.Apply.execute}" text="Apply"
+                                                               disabled="#{!bindings.Apply.enabled}" id="b2"
+                                                               styleClass="PQLoginButton"/>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                    </af:panelGridLayout>
                                 </af:panelGroupLayout>
-                            </af:gridCell>
-                        </af:gridRow>
-                        <af:gridRow marginTop="20px" id="gr5">
-                            <af:gridCell marginStart="5px" width="100%" id="gc6" halign="stretch" valign="stretch">
-                                <af:panelGroupLayout id="pgl5" halign="center" layout="vertical">
-                                    <af:inputText value="#{bindings.CnicNo.inputValue}" simple="true"
-                                                  required="#{bindings.CnicNo.hints.mandatory}"
-                                                  columns="#{bindings.CnicNo.hints.displayWidth}"
-                                                  maximumLength="#{bindings.CnicNo.hints.precision}"
-                                                  shortDesc="#{bindings.CnicNo.hints.tooltip}" id="it1"
-                                                  styleClass="PQAppInputText" contentStyle="width:500px"
-                                                  autoSubmit="true" placeholder="CNIC No">
-                                        <f:validator binding="#{bindings.CnicNo.validator}"/>
-                                    </af:inputText>
-                                </af:panelGroupLayout>
-                            </af:gridCell>
-                        </af:gridRow>
-                        <af:gridRow marginTop="20px" height="auto" id="gr7">
-                            <af:gridCell marginStart="5px" width="100%" id="gc8" halign="stretch" valign="stretch">
-                                <af:panelGroupLayout id="pgl6" layout="vertical" halign="center">
-                                    <af:inputDate value="#{bindings.Dob.inputValue}"
-                                                  required="#{bindings.Dob.hints.mandatory}"
-                                                  columns="#{bindings.Dob.hints.displayWidth}"
-                                                  shortDesc="#{bindings.Dob.hints.tooltip}" id="id1"
-                                                  styleClass="PQAppInputDate" contentStyle="width:500px"
-                                                  autoSubmit="true" placeholder="Date of Birth">
-                                        <f:validator binding="#{bindings.Dob.validator}"/>
-                                        <af:convertDateTime pattern="#{bindings.Dob.format}"/>
-                                    </af:inputDate>
-                                </af:panelGroupLayout>
-                            </af:gridCell>
-                        </af:gridRow>
-                        <af:gridRow marginTop="20px" id="gr9">
-                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc10" halign="stretch"
-                                         valign="stretch">
-                                <af:panelGroupLayout id="pgl7" layout="vertical" halign="center">
-                                    <af:inputText value="#{bindings.CellNumber.inputValue}" simple="true"
-                                                  required="#{bindings.CellNumber.hints.mandatory}"
-                                                  columns="#{bindings.CellNumber.hints.displayWidth}"
-                                                  maximumLength="#{bindings.CellNumber.hints.precision}"
-                                                  shortDesc="#{bindings.CellNumber.hints.tooltip}" id="it3"
-                                                  styleClass="PQAppInputText" contentStyle="width:500px;"
-                                                  autoSubmit="true" placeholder="Contact No">
-                                        <f:validator binding="#{bindings.CellNumber.validator}"/>
-                                    </af:inputText>
-                                </af:panelGroupLayout>
-                            </af:gridCell>
-                        </af:gridRow>
-                        <af:gridRow marginTop="20px" height="auto" id="gr11">
-                            <af:gridCell marginStart="5px" width="100%" id="gc12" halign="stretch">
-                                <af:panelGroupLayout id="pgl8" layout="vertical" halign="center">
-                                    <af:inputText value="#{bindings.Email.inputValue}" simple="true"
-                                                  required="#{bindings.Email.hints.mandatory}"
-                                                  columns="#{bindings.Email.hints.displayWidth}"
-                                                  maximumLength="#{bindings.Email.hints.precision}"
-                                                  shortDesc="#{bindings.Email.hints.tooltip}" id="it4"
-                                                  styleClass="PQAppInputText" contentStyle="width:500px"
-                                                  autoSubmit="true" placeholder="Email Address">
-                                        <f:validator binding="#{bindings.Email.validator}"/>
-                                    </af:inputText>
-                                </af:panelGroupLayout>
-                            </af:gridCell>
-                        </af:gridRow>
-                        <af:gridRow marginTop="20px" height="auto" id="gr13">
-                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc14" halign="center">
-                                <af:panelGroupLayout id="pgl9" layout="vertical" halign="center">
-                                    <af:selectOneChoice value="#{bindings.RelationshipWithEmployee.inputValue}"
-                                                        required="#{bindings.RelationshipWithEmployee.hints.mandatory}"
-                                                        shortDesc="#{bindings.RelationshipWithEmployee.hints.tooltip}"
-                                                        id="soc1" autoSubmit="true" styleClass="PQChoiceContentColor"
-                                                        contentStyle="width:500px;">
-                                        <f:selectItems value="#{bindings.RelationshipWithEmployee.items}" id="si1"/>
-                                        <f:validator binding="#{bindings.RelationshipWithEmployee.validator}"/>
-                                    </af:selectOneChoice>
-                                </af:panelGroupLayout>
-                            </af:gridCell>
-                        </af:gridRow>
-                        <af:gridRow id="gr15" marginTop="20px">
-                            <af:gridCell id="gc16" width="100%" marginStart="5px" halign="stretch">
-                                <af:panelGroupLayout id="pgl10" layout="vertical" halign="center">
-                                    <af:inputText value="#{bindings.IbanNo.inputValue}" simple="true"
-                                                  required="#{bindings.IbanNo.hints.mandatory}"
-                                                  columns="#{bindings.IbanNo.hints.displayWidth}"
-                                                  maximumLength="#{bindings.IbanNo.hints.precision}"
-                                                  shortDesc="#{bindings.IbanNo.hints.tooltip}" id="it2"
-                                                  styleClass="PQAppInputText" contentStyle="width:500px;"
-                                                  placeholder="IBAN No">
-                                        <f:validator binding="#{bindings.IbanNo.validator}"/>
-                                    </af:inputText>
-                                </af:panelGroupLayout>
-                            </af:gridCell>
-                        </af:gridRow>
-                        <af:gridRow id="gr2" marginTop="40px">
-                            <af:gridCell id="gc3" halign="stretch" valign="stretch">
-                                <af:panelGroupLayout id="pgl11" layout="vertical" halign="center">
-                                    <af:button actionListener="#{bindings.Apply.execute}" text="Apply"
-                                               disabled="#{!bindings.Apply.enabled}" id="b1"
-                                               styleClass="PQLoginButton"/>
-                                </af:panelGroupLayout>
-                            </af:gridCell>
-                        </af:gridRow>
-                        <af:gridRow marginTop="5px" height="100%" id="gr1">
-                            <af:gridCell marginStart="0px" width="100%" id="gc1" halign="stretch" valign="bottom">
-                                <af:image source="#{resource['images:imgBottomElaajApp.png']}" id="i3"
-                                          styleClass="AFStretchWidth"/>
                             </af:gridCell>
                         </af:gridRow>
                     </af:panelGridLayout>
