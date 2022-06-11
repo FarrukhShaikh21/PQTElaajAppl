@@ -75,5 +75,15 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <attributeValues IterBinding="VuElaajMobileUserVO1Iterator" id="PolicyEndDate">
+      <AttrNames>
+        <Item Value="PolicyEndDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VuElaajMobileUserVO1Iterator" id="Dob">
+      <AttrNames>
+        <Item Value="Dob"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>
