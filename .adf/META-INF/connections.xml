@@ -54,7 +54,7 @@
         <Contents>thin</Contents>
       </StringRefAddr>
       <StringRefAddr addrType="hostname">
-        <Contents>LOCALHOST</Contents>
+        <Contents>oda1-scan.pakqatar.com.pk</Contents>
       </StringRefAddr>
       <SecureRefAddr addrType="password"/>
       <StringRefAddr addrType="subtype">
@@ -63,11 +63,11 @@
       <StringRefAddr addrType="port">
         <Contents>1521</Contents>
       </StringRefAddr>
-      <StringRefAddr addrType="user">
-        <Contents>ORAERP</Contents>
+      <StringRefAddr addrType="serviceName">
+        <Contents>pqtprod</Contents>
       </StringRefAddr>
-      <StringRefAddr addrType="sid">
-        <Contents>XE</Contents>
+      <StringRefAddr addrType="user">
+        <Contents>timsgh</Contents>
       </StringRefAddr>
     </RefAddresses>
   </Reference>

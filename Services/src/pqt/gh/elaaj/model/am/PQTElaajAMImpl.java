@@ -16,6 +16,7 @@ import oracle.jbo.ViewObject;
 import oracle.jbo.server.ApplicationModuleImpl;
 import oracle.jbo.server.DBTransaction;
 import oracle.jbo.server.ViewLinkImpl;
+
 import oracle.jbo.server.ViewObjectImpl;
 
 import pqt.gh.elaaj.model.am.common.PQTElaajAM;
@@ -496,6 +497,22 @@ public class PQTElaajAMImpl extends ApplicationModuleImpl implements PQTElaajAM 
      */
     public ViewObjectImpl getElaajRecordCorrectionEOVO1() {
         return (ViewObjectImpl) findViewObject("ElaajRecordCorrectionEOVO1");
+    }
+
+    /**
+     * Container's getter for MasterHealthCardVO1.
+     * @return MasterHealthCardVO1
+     */
+    public ViewObjectImpl getMasterHealthCardVO1() {
+        return (ViewObjectImpl) findViewObject("MasterHealthCardVO1");
+    }
+
+    /**
+     * Container's getter for DetailHealthCardVO1.
+     * @return DetailHealthCardVO1
+     */
+    public ViewObjectImpl getDetailHealthCardVO1() {
+        return (ViewObjectImpl) findViewObject("DetailHealthCardVO1");
     }
 }
 

@@ -63,6 +63,12 @@
   <ViewUsage
     Name="ElaajRecordCorrectionEOVO1"
     ViewObjectName="pqt.gh.elaaj.model.vo.ElaajRecordCorrectionEOVO"/>
+  <ViewUsage
+    Name="MasterHealthCardVO1"
+    ViewObjectName="pqt.gh.elaaj.model.vo.MasterHealthCardVO"/>
+  <ViewUsage
+    Name="DetailHealthCardVO1"
+    ViewObjectName="pqt.gh.elaaj.model.vo.DetailHealthCardVO"/>
   <ViewLinkUsage
     Name="DependentVL1"
     ViewLinkObjectName="pqt.gh.elaaj.model.vl.DependentVL"
