@@ -32,7 +32,15 @@
                     </af:panelGridLayout>
                 </f:facet>
                 <f:facet name="bottom">
-                    <af:image id="i2" styleClass="AFStretchWidth" source="#{resource['images:imgBottomElaajApp.png']}"/>
+                    <af:panelGridLayout id="pgl52" styleClass="wide">
+                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1" valign="stretch"
+                                         halign="stretch">
+                                <af:activeImage source="#{resource['images:imgBottomElaajApp.png']}" id="ai1"
+                                                styleClass="AFStretchWidth"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
                 </f:facet>
                 <f:facet name="center">
                     <af:panelGridLayout id="pgl1">
