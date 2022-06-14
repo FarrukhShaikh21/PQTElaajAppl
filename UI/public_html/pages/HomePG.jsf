@@ -101,7 +101,7 @@
                                                                                         inlineStyle="color:#8b0037;font-size:medium"/>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
-                                                                <af:gridRow marginTop="10px" id="gr34" height="140px">
+                                                                <af:gridRow marginTop="10px" id="gr34" height="145px">
                                                                     <af:gridCell marginStart="5px" width="100%"
                                                                                  marginEnd="5px" id="gc74"
                                                                                  halign="stretch" rowSpan="1"
