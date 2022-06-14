@@ -52,7 +52,7 @@
                                                                 <af:outputText value="Claim History" id="ot3"
                                                                                inlineStyle="font-size:30px; font-weight:bolder; color:#8b0037;"/>
                                                                 <af:link text="Back" id="l1"
-                                                                         icon="/icons/left-arrow-white.png"
+                                                                         icon="/icons/left-arrow-blue.png"
                                                                          inlineStyle="color:black;"
                                                                          action="ClaimToHome"/>
                                                             </af:panelGroupLayout>
@@ -376,7 +376,7 @@
                                                                 <af:outputText value="Claim History" id="ot4"
                                                                                inlineStyle="font-size:30px; font-weight:bolder; color:#8b0037;"/>
                                                                 <af:link text="Back" id="l2"
-                                                                         icon="/icons/left-arrow-white.png"
+                                                                         icon="/icons/left-arrow-blue.png"
                                                                          inlineStyle="color:black;"
                                                                          action="ClaimToHome"/>
                                                             </af:panelGroupLayout>

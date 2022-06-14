@@ -135,7 +135,7 @@
                                                                 <af:outputFormatted value="Claim Reimbursement" id="of1"
                                                                                     inlineStyle="font-weight:bolder; color:#8b0037; font-size:30px;"/>
                                                                 <af:link text="Back" id="l1"
-                                                                         icon="/icons/left-arrow-white.png"
+                                                                         icon="/icons/left-arrow-blue.png"
                                                                          inlineStyle="color:black;"
                                                                          action="reimbursementToHome"/>
                                                             </af:panelGroupLayout>
@@ -477,7 +477,7 @@
                                                                                     inlineStyle="font-weight:bolder; color:#8b0037; font-size:30px;"
                                                                                     binding="#{BenefitDetailBean.rif1}"/>
                                                                 <af:link text="Back" id="l3"
-                                                                         icon="/icons/left-arrow-white.png"
+                                                                         icon="/icons/left-arrow-blue.png"
                                                                          inlineStyle="color:black;"
                                                                          action="reimbursementToHome"/>
                                                             </af:panelGroupLayout>

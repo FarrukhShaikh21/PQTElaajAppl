@@ -55,8 +55,8 @@
                                                 <af:panelGroupLayout id="pgl15" layout="vertical" halign="center">
                                                     <af:outputText value="Benefits &amp; Limits" id="ot3"
                                                                    inlineStyle="font-weight:bolder; color:#8b0037; font-size:30px;"/>
-                                                    <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
-                                                             inlineStyle="color:black;" action="BenefitToHome"/>
+                                                    <af:link text="Back" id="l1" icon="/icons/left-arrow-blue.png"
+                                                             inlineStyle="color:black;font-size:15px;font-weight:bold" action="BenefitToHome"/>
                                                 </af:panelGroupLayout>
                                             </af:gridCell>
                                         </af:gridRow>
@@ -202,7 +202,6 @@
                                                                                             id="gr19">
                                                                                     <af:gridCell marginStart="5px"
                                                                                                  width="25%" id="gc25"
-                                                                                                 halign="center"
                                                                                                  valign="middle">
                                                                                         <af:outputFormatted value="Rider"
                                                                                                             id="of11"
@@ -263,7 +262,7 @@
                                                                                             <af:gridCell marginStart="5px"
                                                                                                          width="25%"
                                                                                                          id="gc17"
-                                                                                                         halign="end">
+                                                                                                         halign="center">
                                                                                                 <af:outputFormatted value="#{item.bindings.RoomLimit.inputValue}"
                                                                                                                     id="of20"
                                                                                                                     inlineStyle="color:#8b0037">
@@ -276,7 +275,7 @@
                                                                                             <af:gridCell marginStart="5px"
                                                                                                          width="25%"
                                                                                                          id="gc20"
-                                                                                                         halign="end">
+                                                                                                         halign="center">
                                                                                                 <af:outputFormatted value="#{item.bindings.TotalAmount.inputValue}"
                                                                                                                     id="of21"
                                                                                                                     inlineStyle="color:#8b0037">
@@ -290,7 +289,7 @@
                                                                                                          width="25%"
                                                                                                          marginEnd="5px"
                                                                                                          id="gc22"
-                                                                                                         halign="end">
+                                                                                                         halign="center">
                                                                                                 <af:outputFormatted value="#{item.bindings.ClaimAmount.inputValue}"
                                                                                                                     id="of22"
                                                                                                                     inlineStyle="color:#8b0037">

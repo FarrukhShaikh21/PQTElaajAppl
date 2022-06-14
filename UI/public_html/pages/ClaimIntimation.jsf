@@ -328,7 +328,7 @@
                                                     <af:outputFormatted value="Claim Intimation" id="of2"
                                                                         inlineStyle="font-weight:bolder; color:#8b0037; font-size:30px;"/>
                                                     <af:link text="Back" id="l4" partialSubmit="true"
-                                                             icon="/icons/left-arrow-white.png"
+                                                             icon="/icons/left-arrow-blue.png"
                                                              action="ClaimIntimationToHomePG"
                                                              inlineStyle="color:black; font-weight:bold;"/>
                                                 </af:panelGroupLayout>
@@ -627,7 +627,7 @@
                         <af:panelGridLayout id="pgl6" styleClass="PQHeaderColor" rendered="false">
                             <af:gridRow marginTop="5px" height="50px" marginBottom="5px" id="gr23">
                                 <af:gridCell marginStart="5px" width="10%" id="gc23" halign="center" valign="middle">
-                                    <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
+                                    <af:link text="Back" id="l1" icon="/icons/left-arrow-blue.png"
                                              inlineStyle="color:white;" action="ClaimIntimationToHomePG"/>
                                 </af:gridCell>
                                 <af:gridCell marginStart="5px" width="90%" marginEnd="5px" id="gc24" halign="center"
