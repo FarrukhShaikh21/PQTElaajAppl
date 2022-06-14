@@ -8,25 +8,27 @@
     <!--<meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>-->
         <af:messages id="m1"/>
         <af:form id="f1" inlineStyle="color:Aqua;">
-            <af:panelStretchLayout id="psl1">
+            <af:panelStretchLayout id="psl1" topHeight="115px" startWidth="50px">
                 <f:facet name="top">
-                    <af:panelGroupLayout id="pgl1" halign="center" valign="middle" layout="vertical"
-                                         inlineStyle="background-color:#8b0037;" rendered="false">
-                        <af:separator id="s1"
-                                      inlineStyle="min-height:5px; background-color:#ba9632; margin: 0px;     border-color: transparent;"/>
-                        <af:panelGridLayout id="pgl9">
-                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
-                                <af:gridCell width="100%" id="gc1" halign="stretch" valign="middle">
-                                    <af:outputFormatted value="Main Panel" id="of1"
-                                                        inlineStyle="font-size:x-large; font-weight:bolder; color:white;"/>
-                                </af:gridCell>
-                                <af:gridCell marginStart="5px" width="15px" marginEnd="5px" id="gc2" halign="center"
-                                             valign="middle">
-                                    <af:link id="l1" icon="/images/exit.png" action="#{LoginBean.LogoutAction}"/>
-                                </af:gridCell>
-                            </af:gridRow>
-                        </af:panelGridLayout>
-                    </af:panelGroupLayout>
+                    <af:panelGridLayout id="pgl9" styleClass="wide">
+                        <af:gridRow height="100px" id="gr1" marginTop="5px">
+                            <af:gridCell width="200px" id="gc1" valign="stretch" halign="start">
+                                <af:spacer width="100" height="10" id="s1"/>
+                                <af:image id="i15" source="/images/imgMainLogo.png"/>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="100%" id="gc2"/>
+                            <af:gridCell marginStart="5px" width="200px" id="gc75" valign="middle">
+                                <af:image source="/images/app_icon-01.png" id="i30"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="100px" marginBottom="5px" id="gr35">
+                            <af:gridCell width="100%" id="gc76" columnSpan="3" halign="stretch"
+                                         valign="stretch">
+                                <af:image source="#{resource['images:imgLine.png']}" id="i31"
+                                          styleClass="AFStretchWidth"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
                 </f:facet>
                 <f:facet name="center">
                     <af:panelGridLayout id="pgl32">
@@ -35,14 +37,7 @@
                                          valign="stretch">
                                 <af:panelGroupLayout id="pgl35" styleClass="wide" layout="scroll">
                                     <af:panelGridLayout id="pgl17" styleClass="PQHeaderColor">
-                                        <af:gridRow id="gr12">
-                                            <af:gridCell id="gc29" columnSpan="6" halign="stretch" valign="stretch"
-                                                         rowSpan="1" width="100%">
-                                                <af:image source="#{resource['images:imgTopElaajApp.png']}" id="i15"
-                                                          styleClass="AFStretchWidth"/>
-                                            </af:gridCell>
-                                        </af:gridRow>
-                                        <af:gridRow id="gr37" marginTop="30px" height="30px">
+                                        <af:gridRow id="gr37" marginTop="10px" height="30px">
                                             <af:gridCell id="gc77" columnSpan="6" halign="stretch" valign="middle"
                                                          rowSpan="1">
                                                 <af:panelGroupLayout id="pgl34" layout="vertical"
@@ -61,7 +56,7 @@
                                                 <af:panelGridLayout id="pgl16">
                                                     <af:gridRow marginTop="30px" height="300px" marginBottom="5px"
                                                                 id="gr15">
-                                                        <af:gridCell marginStart="5px" width="500px" id="gc31"
+                                                        <af:gridCell marginStart="5px" width="300px" id="gc31"
                                                                      halign="stretch" valign="stretch" marginEnd="5px">
                                                             <af:panelGridLayout id="pgl33"
                                                                                 inlineStyle="border-style:inset; border-color:Black; border-top-left-radius:0px 0px; border-width:thin;">
@@ -145,7 +140,7 @@
                                                             </af:panelGridLayout>
                                                         </af:gridCell>
                                                         <af:gridCell width="500px" id="gc32" halign="stretch"
-                                                                     valign="stretch" marginStart="40px">
+                                                                     valign="stretch" marginStart="30px">
                                                             <af:panelGridLayout id="pgl29"
                                                                                 inlineStyle="border-style:inset; border-color:Black; border-top-left-radius:0px 0px; border-width:thin;">
                                                                 <af:gridRow height="60px" id="gr16">
@@ -340,7 +335,7 @@
                                                                                        inlineStyle="color:black"/>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
-                                                                <af:gridRow height="auto" id="gr27" marginTop="4px">
+                                                                <af:gridRow height="25px" id="gr27" marginTop="4px">
                                                                     <af:gridCell marginStart="5px" width="100%"
                                                                                  id="gc67" columnSpan="5" rowSpan="1"
                                                                                  valign="stretch">
@@ -355,7 +350,7 @@
                                                             </af:panelGridLayout>
                                                         </af:gridCell>
                                                         <af:gridCell id="gc33" width="500px" halign="stretch"
-                                                                     valign="stretch" marginStart="30px">
+                                                                     valign="stretch" marginStart="10px">
                                                             <af:image source="#{resource['images:imgEngHealthCardBack.png']}"
                                                                       id="i17" styleClass="PQImageWidth"/>
                                                         </af:gridCell>
@@ -363,12 +358,12 @@
                                                 </af:panelGridLayout>
                                             </af:gridCell>
                                         </af:gridRow>
-                                        <af:gridRow marginTop="50px" height="auto" id="gr4">
+                                        <af:gridRow marginTop="50px" id="gr4">
                                             <af:gridCell width="17%" id="gc5">
                                                 <af:panelGroupLayout id="pgl18" layout="vertical" halign="center">
                                                     <h:link id="l3" outcome="goBenefitDetail">
                                                         <af:image source="#{resource['images:imgBenefits.png']}" id="i3"
-                                                                  inlineStyle="width:100px;height:100px"/>
+                                                                  inlineStyle="width:60px;height:60px"/>
                                                     </h:link>
                                                     <af:outputText value="Benefits &amp; Limits" id="ot1"
                                                                    inlineStyle="color:#8b0037"/>
@@ -383,7 +378,7 @@
                                                     <h:link value="" id="l2" outcome="goClaimDetail">
                                                         <af:image id="i4"
                                                                   source="#{resource['images:imgClaimHistory.png']}"
-                                                                  inlineStyle="width:100px;height:100px"/>
+                                                                  inlineStyle="width:60px;height:60px"/>
                                                     </h:link>
                                                     <af:outputText value="Claim History" id="ot2"
                                                                    inlineStyle="color:#8b0037"/>
@@ -397,7 +392,7 @@
                                                 <af:panelGroupLayout id="pgl5" halign="center" layout="vertical">
                                                     <h:commandLink value="" id="cl1" action="goClaimIntimationPG">
                                                         <af:image source="#{resource['images:imgClaimIntimation.png']}"
-                                                                  id="i5" inlineStyle="width:100px;height:100px"/>
+                                                                  id="i5" inlineStyle="width:60px;height:60px"/>
                                                     </h:commandLink>
                                                     <af:outputText value="Claim Intimation" id="ot3"
                                                                    inlineStyle="color:#8b0037"/>
@@ -411,7 +406,7 @@
                                                 <af:panelGroupLayout id="pgl20" layout="vertical" halign="center">
                                                     <h:commandLink value="" id="cl2" action="goToReimbursement">
                                                         <af:image source="#{resource['images:imgClaimReimburse.png']}"
-                                                                  id="i6" inlineStyle="width:100px;height:100px"/>
+                                                                  id="i6" inlineStyle="width:60px;height:60px"/>
                                                     </h:commandLink>
                                                     <af:outputText value="Claim Reimbursement" id="ot4" truncateAt="0"
                                                                    inlineStyle="color:#8b0037"/>
@@ -424,7 +419,7 @@
                                             <af:gridCell marginStart="5px" width="17%" id="gc9">
                                                 <af:panelGroupLayout id="pgl21" layout="vertical" halign="center">
                                                     <h:commandLink value="" id="cl3" action="gotoRecordCorrection">
-                                                        <af:image id="i7" inlineStyle="width:100px;height:100px"
+                                                        <af:image id="i7" inlineStyle="width:60px;height:60px"
                                                                   source="#{resource['images:imgRecordCorrection.png']}"/>
                                                     </h:commandLink>
                                                     <af:outputText value="Record Correction" id="ot5"
@@ -439,7 +434,7 @@
                                                 <af:panelGroupLayout id="pgl22" layout="vertical" halign="center">
                                                     <h:commandLink value="" id="cl4" action="goPanelHospital">
                                                         <af:image source="#{resource['images:imgPanelHospital.png']}"
-                                                                  id="i8" inlineStyle="width:100px;height:100px"/>
+                                                                  id="i8" inlineStyle="width:60px;height:60px"/>
                                                     </h:commandLink>
                                                     <af:outputText value="Panel Hospital" id="ot6"
                                                                    inlineStyle="color:#8b0037"/>
@@ -450,12 +445,12 @@
                                                            rendered="false"/>
                                             </af:gridCell>
                                         </af:gridRow>
-                                        <af:gridRow id="gr11" marginTop="30px">
+                                        <af:gridRow id="gr11" marginTop="20px">
                                             <af:gridCell id="gc11" width="17%">
                                                 <af:panelGroupLayout id="pgl23" layout="vertical" halign="center">
                                                     <h:commandLink value="" id="cl5" action="gotoValueAddedServices">
                                                         <af:image source="#{resource['images:imgValueAddedService.png']}"
-                                                                  id="i9" inlineStyle="width:100px;height:100px"/>
+                                                                  id="i9" inlineStyle="width:60px;height:60px"/>
                                                     </h:commandLink>
                                                     <af:outputText value="Value Added Services" id="ot7"
                                                                    inlineStyle="color:#8b0037"/>
@@ -468,7 +463,7 @@
                                             <af:gridCell id="gc12" width="17%">
                                                 <af:panelGroupLayout id="pgl24" layout="vertical" halign="center">
                                                     <h:commandLink value="" id="cl6" action="gotoTreatInfoPG">
-                                                        <af:image id="i10" inlineStyle="width:100px;height:100px"
+                                                        <af:image id="i10" inlineStyle="width:60px;height:60px"
                                                                   source="#{resource['images:imgTreatementInfo.png']}"/>
                                                     </h:commandLink>
                                                     <af:outputText value="Treatment Info" id="ot8"
@@ -478,7 +473,7 @@
                                             <af:gridCell id="gc25" width="17%">
                                                 <af:panelGroupLayout id="pgl25" layout="vertical" halign="center">
                                                     <h:commandLink value="" id="cl7" action="goToTakafulProdPG">
-                                                        <af:image id="i11" inlineStyle="width:100px;height:100px"
+                                                        <af:image id="i11" inlineStyle="width:60px;height:60px"
                                                                   source="#{resource['images:imgTakafulProducts.png']}"/>
                                                     </h:commandLink>
                                                     <af:outputFormatted value="Takaful Product &lt;br> &amp; Solutions"
@@ -488,7 +483,7 @@
                                             <af:gridCell id="gc26" width="17%">
                                                 <af:panelGroupLayout id="pgl26" layout="vertical" halign="center">
                                                     <h:commandLink value="" id="cl8" action="goToReimbursement">
-                                                        <af:image id="i12" inlineStyle="width:100px;height:100px"
+                                                        <af:image id="i12" inlineStyle="width:60px;height:60px"
                                                                   source="#{resource['images:imgOPDReimbursement.png']}"/>
                                                     </h:commandLink>
                                                     <af:outputText value="OPD Reimbursement" id="ot10"
@@ -498,7 +493,7 @@
                                             <af:gridCell id="gc27" width="17%">
                                                 <af:panelGroupLayout id="pgl27" layout="vertical" halign="center">
                                                     <h:commandLink value="" id="cl9" action="goToComplaint">
-                                                        <af:image id="i13" inlineStyle="width:100px;height:100px"
+                                                        <af:image id="i13" inlineStyle="width:60px;height:60px"
                                                                   source="#{resource['images:imgLaunchComplaint.png']}"/>
                                                     </h:commandLink>
                                                     <af:outputText value="Launch Complaint" id="ot11"
@@ -508,18 +503,12 @@
                                             <af:gridCell id="gc28" width="15%">
                                                 <af:panelGroupLayout id="pgl28" layout="vertical" halign="center">
                                                     <h:commandLink value="" id="cl10" action="goToContactUs">
-                                                        <af:image id="i14" inlineStyle="width:100px;height:100px"
+                                                        <af:image id="i14" inlineStyle="width:60px;height:60px"
                                                                   source="#{resource['images:imgContactUs.png']}"/>
                                                     </h:commandLink>
                                                     <af:outputText value="24 /7 Helpline" id="ot12"
                                                                    inlineStyle="color:#8b0037"/>
                                                 </af:panelGroupLayout>
-                                            </af:gridCell>
-                                        </af:gridRow>
-                                        <af:gridRow id="gr13" height="100%" marginTop="50px">
-                                            <af:gridCell id="gc35" columnSpan="6" valign="bottom" halign="stretch">
-                                                <af:activeImage source="#{resource['images:imgBottomElaajApp.png']}"
-                                                                id="ai1" styleClass="AFStretchWidth"/>
                                             </af:gridCell>
                                         </af:gridRow>
                                     </af:panelGridLayout>
@@ -965,6 +954,20 @@
                     </af:panelGridLayout>
                 </f:facet>
                 <f:facet name="bottom">
+                    <af:panelGridLayout id="pgl52">
+                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr12">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc29" valign="stretch"
+                                         halign="stretch">
+                                <af:activeImage source="#{resource['images:imgBottomElaajApp.png']}" id="ai1"
+                                                styleClass="AFStretchWidth"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
+                </f:facet>
+                <f:facet name="end">
+                    <af:panelGridLayout id="pgl36" rendered="false"/>
+                </f:facet>
+                <f:facet name="start">
                     <af:panelGroupLayout id="pgl3" layout="scroll" rendered="false">
                         <af:panelGridLayout id="pgl4" dimensionsFrom="parent" rendered="false">
                             <af:gridRow height="auto" id="gr5" marginTop="10px" marginBottom="10px">
@@ -1132,9 +1135,6 @@
                             </af:gridRow>
                         </af:panelGridLayout>
                     </af:panelGroupLayout>
-                </f:facet>
-                <f:facet name="end">
-                    <af:panelGridLayout id="pgl36" rendered="false"/>
                 </f:facet>
             </af:panelStretchLayout>
         </af:form>

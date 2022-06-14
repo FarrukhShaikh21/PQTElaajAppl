@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
     <af:document title="TestPage.jsf" id="d1">
-    <!--<meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>-->
+        <af:messages id="m1"/>
+        <!--<meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>-->
         <af:form id="f1">
             <af:panelStretchLayout id="psl1">
                 <f:facet name="start"/>
@@ -10,13 +11,28 @@
                 <f:facet name="top"/>
                 <f:facet name="bottom"/>
                 <f:facet name="center">
-                    <af:panelStretchLayout id="psl2" inlineStyle="Background:#870136;">
-                        <f:facet name="center">
-                            <af:panelHeader text=" " id="ph1">
-                                <af:image source="/images/app_icon-01.png" id="i1"/>
-                            </af:panelHeader>
-                        </f:facet>
-                    </af:panelStretchLayout>
+                    <af:listView value="#{bindings.DetailHealthCardVO1.collectionModel}" var="item"
+                                 emptyText="#{bindings.DetailHealthCardVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                 fetchSize="#{bindings.DetailHealthCardVO1.rangeSize}" id="lv1">
+                        <af:listItem id="li1">
+                            <af:panelGridLayout id="pgl1">
+                                <af:gridRow marginTop="0px" height="auto" marginBottom="0px" id="gr1">
+                                    <af:gridCell marginStart="0px" width="34%" id="gc1">
+                                        <af:outputFormatted value="#{item.bindings.EmpName.inputValue}" id="of1"/>
+                                    </af:gridCell>
+                                    <af:gridCell marginStart="0px" width="33%" id="gc2">
+                                        <af:outputFormatted value="#{item.bindings.Age.inputValue}" id="of2">
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.DetailHealthCardVO1.hints.Age.format}"/>
+                                        </af:outputFormatted>
+                                    </af:gridCell>
+                                    <af:gridCell marginStart="0px" width="33%" marginEnd="0px" id="gc3">
+                                        <af:outputFormatted value="#{item.bindings.EmpSrNo.inputValue}" id="of3"/>
+                                    </af:gridCell>
+                                </af:gridRow>
+                            </af:panelGridLayout>
+                        </af:listItem>
+                    </af:listView>
                 </f:facet>
             </af:panelStretchLayout>
         </af:form>

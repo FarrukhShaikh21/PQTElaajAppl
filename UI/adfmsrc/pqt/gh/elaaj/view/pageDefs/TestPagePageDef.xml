@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="TestPagePageDef"
+                Package="pqt.gh.elaaj.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="DetailHealthCardVO1" RangeSize="25" DataControl="PQTElaajAMDataControl"
+              id="DetailHealthCardVO1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="DetailHealthCardVO1Iterator" id="DetailHealthCardVO1">
+      <nodeDefinition DefName="pqt.gh.elaaj.model.vo.DetailHealthCardVO" Name="DetailHealthCardVO10">
+        <AttrNames>
+          <Item Value="EmpName"/>
+          <Item Value="Age"/>
+          <Item Value="EmpSrNo"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>
