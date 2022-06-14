@@ -49,10 +49,23 @@
                                                 </af:panelGroupLayout>
                                             </af:gridCell>
                                         </af:gridRow>
+                                        <af:gridRow id="gr8">
+                                            <af:gridCell id="gc7" halign="center">
+                                                <af:quickQuery label="Search" searchDesc="Search" id="qryId1"
+                                                               value="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}"
+                                                               model="#{bindings.ImplicitViewCriteriaQuery.queryModel}"
+                                                               queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}">
+                                                    <f:facet name="end">
+                                                        <af:commandLink text="Advanced" rendered="false" id="cl1"/>
+                                                    </f:facet>
+                                                </af:quickQuery>
+                                            </af:gridCell>
+                                        </af:gridRow>
                                         <af:gridRow marginTop="5px" marginBottom="5px" id="gr3">
                                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4"
                                                          halign="stretch">
-                                                <af:panelSplitter id="ps2" orientation="vertical" splitterPosition="0">
+                                                <af:panelSplitter id="ps2" orientation="vertical" splitterPosition="0"
+                                                                  partialTriggers="qryId1">
                                                     <f:facet name="second">
                                                         <af:listView value="#{bindings.VuElaajPanelHospitalVO1.collectionModel}"
                                                                      var="item"
