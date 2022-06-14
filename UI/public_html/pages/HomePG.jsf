@@ -176,7 +176,7 @@
                                                                                  columnSpan="4" rowSpan="1">
                                                                         <af:outputText value="#{bindings.CompanyName.inputValue}"
                                                                                        id="ot13"
-                                                                                       inlineStyle="color:black"/>
+                                                                                       inlineStyle="color:black;font-size:xx-small"/>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
                                                                 <af:gridRow height="auto" id="gr19" marginTop="8px">
@@ -190,7 +190,7 @@
                                                                                  rowSpan="1">
                                                                         <af:outputText
                                                                                        id="ot14"
-                                                                                       inlineStyle="color:black"
+                                                                                       inlineStyle="color:black;font-size:xx-small"
                                                                                        value="#{bindings.EmpName.inputValue}"/>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
@@ -203,7 +203,7 @@
                                                                     <af:gridCell width="20%" id="gc48" columnSpan="1"
                                                                                  rowSpan="1">
                                                                         <af:outputText value="#{bindings.EmpCnic.inputValue}" id="ot16"
-                                                                                       inlineStyle="color:black"/>
+                                                                                       inlineStyle="color:black;font-size:xx-small"/>
                                                                     </af:gridCell>
                                                                     <af:gridCell id="gc36" width="20%" halign="center">
                                                                         <af:outputText value="Family Member" id="ot17"
@@ -229,21 +229,54 @@
                                                                     <af:gridCell width="20%" id="gc43" columnSpan="1"
                                                                                  rowSpan="1">
                                                                         <af:outputText value="#{bindings.EmpDob.inputValue}" id="ot21"
-                                                                                       inlineStyle="color:black"/>
+                                                                                       inlineStyle="color:black;font-size:xx-small"/>
                                                                     </af:gridCell>
-                                                                    <af:gridCell id="gc46" width="20%" halign="center">
-                                                                        <af:outputText value="Babar Alee" id="ot22"
-                                                                                       inlineStyle="color:black;"/>
-                                                                    </af:gridCell>
-                                                                    <af:gridCell id="gc49" width="20%" halign="center">
-                                                                        <af:outputText value="01" id="ot23"
-                                                                                       truncateAt="0"
-                                                                                       inlineStyle="color:black;"/>
-                                                                    </af:gridCell>
-                                                                    <af:gridCell id="gc50" width="20%" halign="center">
-                                                                        <af:outputText value="236" id="ot24"
-                                                                                       truncateAt="0"
-                                                                                       inlineStyle="color:black;"/>
+                                                                    <af:gridCell id="gc46" width="60%" halign="stretch"
+                                                                                 columnSpan="3" valign="stretch"
+                                                                                 rowSpan="3">
+                                                                        <af:listView value="#{bindings.DetailHealthCardVO11.collectionModel}"
+                                                                                     var="item"
+                                                                                     emptyText="#{bindings.DetailHealthCardVO11.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                                     fetchSize="#{bindings.DetailHealthCardVO11.rangeSize}"
+                                                                                     id="lv2" inlineStyle="border:none">
+                                                                            <af:listItem id="li2"
+                                                                                         inlineStyle="border:none">
+                                                                                <af:panelGridLayout id="pgl1">
+                                                                                    <af:gridRow
+                                                                                                height="7px"
+                                                                                                id="gr13">
+                                                                                        <af:gridCell marginStart="5px"
+                                                                                                     width="34%"
+                                                                                                     id="gc35"
+                                                                                                     halign="center">
+                                                                                            <af:outputFormatted value="#{item.bindings.EmpName.inputValue}"
+                                                                                                                id="of1"
+                                                                                                                inlineStyle="color:black;font-size:7px"/>
+                                                                                        </af:gridCell>
+                                                                                        <af:gridCell marginStart="0px"
+                                                                                                     width="33%"
+                                                                                                     id="gc49"
+                                                                                                     halign="center">
+                                                                                            <af:outputFormatted value="#{item.bindings.Age.inputValue}"
+                                                                                                                id="of14"
+                                                                                                                inlineStyle="color:black;font-size:7px">
+                                                                                                <af:convertNumber groupingUsed="false"
+                                                                                                                  pattern="#{bindings.DetailHealthCardVO11.hints.Age.format}"/>
+                                                                                            </af:outputFormatted>
+                                                                                        </af:gridCell>
+                                                                                        <af:gridCell marginStart="0px"
+                                                                                                     width="33%"
+                                                                                                     marginEnd="5px"
+                                                                                                     id="gc50"
+                                                                                                     halign="center">
+                                                                                            <af:outputFormatted value="#{item.bindings.EmpSrNo.inputValue}"
+                                                                                                                id="of15"
+                                                                                                                inlineStyle="color:black;font-size:7px"/>
+                                                                                        </af:gridCell>
+                                                                                    </af:gridRow>
+                                                                                </af:panelGridLayout>
+                                                                            </af:listItem>
+                                                                        </af:listView>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
                                                                 <af:gridRow height="auto" id="gr22" marginTop="8px">
@@ -255,22 +288,10 @@
                                                                     <af:gridCell width="20%" id="gc52" columnSpan="1"
                                                                                  rowSpan="1">
                                                                         <af:outputText value="#{bindings.EmpSrNo.inputValue}" id="ot26"
-                                                                                       inlineStyle="color:black"/>
+                                                                                       inlineStyle="color:black;font-size:xx-small"/>
                                                                     </af:gridCell>
-                                                                    <af:gridCell id="gc53" width="20%" halign="center">
-                                                                        <af:outputText value="Babar Alee" id="ot27"
-                                                                                       inlineStyle="color:black;"/>
-                                                                    </af:gridCell>
-                                                                    <af:gridCell id="gc54" width="20%" halign="center">
-                                                                        <af:outputText value="02" id="ot28"
-                                                                                       truncateAt="0"
-                                                                                       inlineStyle="color:black;"/>
-                                                                    </af:gridCell>
-                                                                    <af:gridCell id="gc55" width="20%" halign="center">
-                                                                        <af:outputText value="237" id="ot29"
-                                                                                       truncateAt="0"
-                                                                                       inlineStyle="color:black;"/>
-                                                                    </af:gridCell>
+                                                                    <af:gridCell id="gc53" width="60%" halign="center"
+                                                                                 columnSpan="3" rowSpan="1"/>
                                                                 </af:gridRow>
                                                                 <af:gridRow height="auto" id="gr23" marginTop="8px">
                                                                     <af:gridCell marginStart="5px" width="20%"
@@ -281,23 +302,11 @@
                                                                     <af:gridCell width="20%" id="gc57" columnSpan="1"
                                                                                  rowSpan="1">
                                                                         <af:outputText value="#{bindings.EmpFolioId.inputValue}" id="ot31"
-                                                                                       inlineStyle="color:black"
+                                                                                       inlineStyle="color:black;font-size:xx-small"
                                                                                        truncateAt="0"/>
                                                                     </af:gridCell>
-                                                                    <af:gridCell id="gc58" width="20%" halign="center">
-                                                                        <af:outputText value="Babar Alee" id="ot32"
-                                                                                       inlineStyle="color:black;"/>
-                                                                    </af:gridCell>
-                                                                    <af:gridCell id="gc59" width="20%" halign="center">
-                                                                        <af:outputText value="03" id="ot33"
-                                                                                       truncateAt="0"
-                                                                                       inlineStyle="color:black;"/>
-                                                                    </af:gridCell>
-                                                                    <af:gridCell id="gc60" width="20%" halign="center">
-                                                                        <af:outputText value="238" id="ot34"
-                                                                                       truncateAt="0"
-                                                                                       inlineStyle="color:black;"/>
-                                                                    </af:gridCell>
+                                                                    <af:gridCell id="gc58" width="60%" halign="center"
+                                                                                 columnSpan="3" rowSpan="1"/>
                                                                 </af:gridRow>
                                                                 <af:gridRow height="auto" id="gr24" marginTop="8px">
                                                                     <af:gridCell marginStart="5px" width="20%"
@@ -308,7 +317,7 @@
                                                                     <af:gridCell marginStart="5px" width="80%" id="gc62"
                                                                                  columnSpan="4" rowSpan="1">
                                                                         <af:outputText value="No - Branch" id="ot35"
-                                                                                       inlineStyle="color:black"/>
+                                                                                       inlineStyle="color:black;font-size:xx-small"/>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
                                                                 <af:gridRow height="auto" id="gr25" marginTop="8px">
@@ -320,7 +329,7 @@
                                                                     <af:gridCell marginStart="5px" width="80%" id="gc64"
                                                                                  columnSpan="4" rowSpan="1">
                                                                         <af:outputText value="4,000" id="ot36"
-                                                                                       inlineStyle="color:black"/>
+                                                                                       inlineStyle="color:black;font-size:xx-small"/>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
                                                                 <af:gridRow height="auto" id="gr26" marginTop="8px">
@@ -332,7 +341,7 @@
                                                                     <af:gridCell marginStart="5px" width="80%" id="gc66"
                                                                                  columnSpan="4" rowSpan="1">
                                                                         <af:outputText value="#{bindings.PolEndDt.inputValue}" id="ot37"
-                                                                                       inlineStyle="color:black"/>
+                                                                                       inlineStyle="color:black;font-size:xx-small"/>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
                                                                 <af:gridRow height="25px" id="gr27" marginTop="4px">
@@ -359,7 +368,7 @@
                                             </af:gridCell>
                                         </af:gridRow>
                                         <af:gridRow marginTop="50px" id="gr4">
-                                            <af:gridCell width="17%" id="gc5">
+                                            <af:gridCell width="17%" id="gc5" halign="center">
                                                 <af:panelGroupLayout id="pgl18" layout="vertical" halign="center">
                                                     <h:link id="l3" outcome="goBenefitDetail">
                                                         <af:image source="#{resource['images:imgBenefits.png']}" id="i3"
@@ -373,7 +382,7 @@
                                                                action="goBenefitDetail" rendered="false"/>
                                                 </af:panelGroupLayout>
                                             </af:gridCell>
-                                            <af:gridCell marginStart="5px" width="17%" id="gc6">
+                                            <af:gridCell marginStart="5px" width="17%" id="gc6" halign="center">
                                                 <af:panelGroupLayout id="pgl19" layout="vertical" halign="center">
                                                     <h:link value="" id="l2" outcome="goClaimDetail">
                                                         <af:image id="i4"
@@ -388,7 +397,7 @@
                                                                rendered="false"/>
                                                 </af:panelGroupLayout>
                                             </af:gridCell>
-                                            <af:gridCell marginStart="5px" width="17%" id="gc7">
+                                            <af:gridCell marginStart="5px" width="17%" id="gc7" halign="center">
                                                 <af:panelGroupLayout id="pgl5" halign="center" layout="vertical">
                                                     <h:commandLink value="" id="cl1" action="goClaimIntimationPG">
                                                         <af:image source="#{resource['images:imgClaimIntimation.png']}"
@@ -402,7 +411,7 @@
                                                                rendered="false"/>
                                                 </af:panelGroupLayout>
                                             </af:gridCell>
-                                            <af:gridCell marginStart="5px" width="17%" id="gc8">
+                                            <af:gridCell marginStart="5px" width="17%" id="gc8" halign="center">
                                                 <af:panelGroupLayout id="pgl20" layout="vertical" halign="center">
                                                     <h:commandLink value="" id="cl2" action="goToReimbursement">
                                                         <af:image source="#{resource['images:imgClaimReimburse.png']}"
@@ -416,7 +425,7 @@
                                                                rendered="false"/>
                                                 </af:panelGroupLayout>
                                             </af:gridCell>
-                                            <af:gridCell marginStart="5px" width="17%" id="gc9">
+                                            <af:gridCell marginStart="5px" width="17%" id="gc9" halign="center">
                                                 <af:panelGroupLayout id="pgl21" layout="vertical" halign="center">
                                                     <h:commandLink value="" id="cl3" action="gotoRecordCorrection">
                                                         <af:image id="i7" inlineStyle="width:60px;height:60px"
@@ -430,7 +439,8 @@
                                                            styleClass="multiLineButton" action="gotoRecordCorrection"
                                                            rendered="false"/>
                                             </af:gridCell>
-                                            <af:gridCell marginStart="5px" width="15%" marginEnd="5px" id="gc10">
+                                            <af:gridCell marginStart="5px" width="15%" marginEnd="5px" id="gc10"
+                                                         halign="center">
                                                 <af:panelGroupLayout id="pgl22" layout="vertical" halign="center">
                                                     <h:commandLink value="" id="cl4" action="goPanelHospital">
                                                         <af:image source="#{resource['images:imgPanelHospital.png']}"
@@ -446,7 +456,7 @@
                                             </af:gridCell>
                                         </af:gridRow>
                                         <af:gridRow id="gr11" marginTop="20px">
-                                            <af:gridCell id="gc11" width="17%">
+                                            <af:gridCell id="gc11" width="17%" halign="center">
                                                 <af:panelGroupLayout id="pgl23" layout="vertical" halign="center">
                                                     <h:commandLink value="" id="cl5" action="gotoValueAddedServices">
                                                         <af:image source="#{resource['images:imgValueAddedService.png']}"
@@ -460,7 +470,7 @@
                                                            styleClass="multiLineButton" action="gotoValueAddedServices"
                                                            rendered="false"/>
                                             </af:gridCell>
-                                            <af:gridCell id="gc12" width="17%">
+                                            <af:gridCell id="gc12" width="17%" halign="center">
                                                 <af:panelGroupLayout id="pgl24" layout="vertical" halign="center">
                                                     <h:commandLink value="" id="cl6" action="gotoTreatInfoPG">
                                                         <af:image id="i10" inlineStyle="width:60px;height:60px"
@@ -470,7 +480,7 @@
                                                                    inlineStyle="color:#8b0037"/>
                                                 </af:panelGroupLayout>
                                             </af:gridCell>
-                                            <af:gridCell id="gc25" width="17%">
+                                            <af:gridCell id="gc25" width="17%" halign="center">
                                                 <af:panelGroupLayout id="pgl25" layout="vertical" halign="center">
                                                     <h:commandLink value="" id="cl7" action="goToTakafulProdPG">
                                                         <af:image id="i11" inlineStyle="width:60px;height:60px"
@@ -480,7 +490,7 @@
                                                                         id="of11" inlineStyle="color:#8b0037"/>
                                                 </af:panelGroupLayout>
                                             </af:gridCell>
-                                            <af:gridCell id="gc26" width="17%">
+                                            <af:gridCell id="gc26" width="17%" halign="center">
                                                 <af:panelGroupLayout id="pgl26" layout="vertical" halign="center">
                                                     <h:commandLink value="" id="cl8" action="goToReimbursement">
                                                         <af:image id="i12" inlineStyle="width:60px;height:60px"
@@ -490,7 +500,7 @@
                                                                    inlineStyle="color:#8b0037"/>
                                                 </af:panelGroupLayout>
                                             </af:gridCell>
-                                            <af:gridCell id="gc27" width="17%">
+                                            <af:gridCell id="gc27" width="17%" halign="center">
                                                 <af:panelGroupLayout id="pgl27" layout="vertical" halign="center">
                                                     <h:commandLink value="" id="cl9" action="goToComplaint">
                                                         <af:image id="i13" inlineStyle="width:60px;height:60px"
@@ -500,7 +510,7 @@
                                                                    inlineStyle="color:#8b0037"/>
                                                 </af:panelGroupLayout>
                                             </af:gridCell>
-                                            <af:gridCell id="gc28" width="15%">
+                                            <af:gridCell id="gc28" width="15%" halign="center">
                                                 <af:panelGroupLayout id="pgl28" layout="vertical" halign="center">
                                                     <h:commandLink value="" id="cl10" action="goToContactUs">
                                                         <af:image id="i14" inlineStyle="width:60px;height:60px"
