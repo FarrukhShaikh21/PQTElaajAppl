@@ -150,7 +150,7 @@
                                                                                  rowSpan="1">
                                                                         <af:image source="#{resource['images:imgEngHealthCardTop.png']}"
                                                                                   id="i16" styleClass="AFStretchWidth"
-                                                                                  inlineStyle="height:50px"/>
+                                                                                  inlineStyle="height:45px;padding-top:4px"/>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
                                                                 <af:gridRow height="auto" id="gr17" marginTop="8px">
