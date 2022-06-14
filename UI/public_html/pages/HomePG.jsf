@@ -964,7 +964,7 @@
                     </af:panelGridLayout>
                 </f:facet>
                 <f:facet name="bottom">
-                    <af:panelGridLayout id="pgl52">
+                    <af:panelGridLayout id="pgl52" styleClass="wide">
                         <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr12">
                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc29" valign="stretch"
                                          halign="stretch">
