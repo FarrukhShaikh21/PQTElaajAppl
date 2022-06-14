@@ -6,7 +6,7 @@
     <variableIterator id="variables"/>
     <iterator Binds="VuElaajMobileUserVO1" RangeSize="25" DataControl="PQTElaajAMDataControl"
               id="VuElaajMobileUserVO1Iterator"/>
-    <iterator Binds="VuGhsElaajCoveredMemberVO1" RangeSize="2" DataControl="PQTElaajAMDataControl"
+    <iterator Binds="VuGhsElaajCoveredMemberVO1" RangeSize="5" DataControl="PQTElaajAMDataControl"
               id="VuGhsElaajCoveredMemberVO1Iterator"/>
     <iterator Binds="ClaimsDetailVO1" RangeSize="25" DataControl="PQTElaajAMDataControl" id="ClaimsDetailVO1Iterator"/>
   </executables>

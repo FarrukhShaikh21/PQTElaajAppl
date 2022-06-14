@@ -82,7 +82,7 @@
     ListVOName="CoverDescriptionLovVO1"
     ListRangeSize="-1"
     NullValueFlag="start"
-    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    NullValueId="LOV_TypeOfClaimn_LOVUIHints_NullValueId"
     MRUCount="0">
     <AttrArray Name="AttrNames">
       <Item Value="TypeOfClaimn"/>
@@ -413,10 +413,10 @@ FROM  ELAAJ_CLAIM_INTIMATE ElaajClaimIntimateEO]]></SQLQuery>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="30"/>
-        <CONTROLTYPE
-          Value="choice"/>
         <AUTOSUBMIT
           Value="true"/>
+        <CONTROLTYPE
+          Value="choice"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

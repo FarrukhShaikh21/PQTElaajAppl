@@ -248,7 +248,7 @@
     Expression="AGE"
     SQLType="NUMERIC"/>
   <AttrArray Name="KeyAttributes">
-    <Item Value="PolSysId"/>
+    <Item Value="EmpSrNo"/>
   </AttrArray>
   <ResourceBundle>
     <PropertiesBundle
