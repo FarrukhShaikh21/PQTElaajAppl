@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration" version="12.2.1.11.57" id="DataControls"
+                    Package="pqt.gh.elaaj.model">
+  <AdapterDataControl id="FileUploadSOAP" FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.adfinternal.model.adapter.webservice.WSDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="false" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true" Definition="pqt.gh.elaaj.model.FileUploadSOAP"
+                      BeanClass="pqt.gh.elaaj.model.FileUploadSOAP" xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <definition xmlns="http://xmlns.oracle.com/adfm/adapter/webservice" name="FileUploadSOAP" version="1.0"
+                  provider="oracle.adfinternal.model.adapter.webservice.provider.soap.SOAPProvider"
+                  wsdl="http://172.16.0.91:7001/DMSWebService/DMSIntegration?wsdl" ensureKeyAttribute="true"
+                  useWSDLIdentity="true" dcStructureVersion="2" UsePersistedStructure="false">
+        <service name="DMSIntegration" namespace="http://webservice.dms.netbeans.pqt/" connection="FileUploadSOAP">
+          <port name="DMSWebServicePort">
+            <operation name="UploadFile"/>
+            <operation name="DownloadFile"/>
+            <operation name="DeleteBlobFile"/>
+            <operation name="UploadFile1"/>
+            <operation name="UpdateBlobFile"/>
+          </port>
+        </service>
+      </definition>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>

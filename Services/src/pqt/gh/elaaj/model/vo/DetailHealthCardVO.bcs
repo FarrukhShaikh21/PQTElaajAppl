@@ -1,0 +1,19 @@
+//Groovy Scripts for pqt.gh.elaaj.model.vo.DetailHealthCardVO
+
+package pqt.gh.elaaj.model.vo
+
+import oracle.jbo.script.annotation.VariableExpression;
+
+@VariableExpression(path="pPolicyNo")
+def pPolicyNo_VariableScript_Variable()
+{
+adf.context.sessionScope.pPolNo
+}
+
+
+@VariableExpression(path="pEmpFolioId")
+def pEmpFolioId_VariableScript_Variable()
+{
+adf.context.sessionScope.pEmpCode
+}
+

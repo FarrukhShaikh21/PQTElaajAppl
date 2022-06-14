@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="Panel Hospital" id="d1">
+        <af:messages id="m1"/>
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
+        <af:form id="f1">
+            <af:panelStretchLayout id="psl1">
+                <f:facet name="top">
+                    <af:panelGroupLayout id="pgl1" halign="center" valign="middle" layout="vertical"
+                                         inlineStyle="background-color:#8b0037;" rendered="false">
+                        <af:separator id="s1"
+                                      inlineStyle="min-height:5px; background-color:#ba9632; margin: 0px;     border-color: transparent;"/>
+                        <af:panelGridLayout id="pgl5">
+                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5">
+                                <af:gridCell width="10%" id="gc2" halign="center" valign="middle"/>
+                                <af:gridCell width="90%" id="gc6" halign="center"
+                                             valign="middle"/>
+                            </af:gridRow>
+                        </af:panelGridLayout>
+                    </af:panelGroupLayout>
+                </f:facet>
+                <f:facet name="center">
+                    <af:panelGridLayout id="pgl6">
+                        <af:gridRow height="100%" id="gr10">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc11" halign="stretch"
+                                         valign="stretch">
+                                <af:panelGroupLayout id="pgl7" layout="scroll" styleClass="wide">
+                                    <af:panelGridLayout id="pgl4" styleClass="PQHeaderColor">
+                                        <af:gridRow id="gr6">
+                                            <af:gridCell id="gc7" valign="stretch" halign="stretch">
+                                                <af:image source="#{resource['images:imgTopElaajApp.png']}" id="i1"
+                                                          styleClass="AFStretchWidth"/>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow id="gr9" marginTop="60px">
+                                            <af:gridCell id="gc10" halign="center">
+                                                <af:image source="#{resource['images:imgPanelHospital.png']}" id="i3"
+                                                          inlineStyle="width:100px;height:100px"/>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow id="gr7" marginTop="20px">
+                                            <af:gridCell id="gc8" halign="center">
+                                                <af:panelGroupLayout id="pgl3" layout="vertical" halign="center">
+                                                    <af:outputFormatted value="Panel Hospital" id="of1"
+                                                                        inlineStyle="font-weight:bolder; color:#8b0037; font-size:30px;"/>
+                                                    <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
+                                                             inlineStyle="color:black;" action="PanelHospitalToHome"/>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" marginBottom="5px" id="gr3">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4"
+                                                         halign="stretch">
+                                                <af:panelSplitter id="ps2" orientation="vertical" splitterPosition="0">
+                                                    <f:facet name="second">
+                                                        <af:listView value="#{bindings.VuElaajPanelHospitalVO1.collectionModel}"
+                                                                     var="item"
+                                                                     emptyText="#{bindings.VuElaajPanelHospitalVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                     fetchSize="#{bindings.VuElaajPanelHospitalVO1.rangeSize}"
+                                                                     id="lv1" selection="single">
+                                                            <af:listItem id="li1">
+                                                                <af:panelGridLayout id="pgl2">
+                                                                    <af:gridRow id="gr4">
+                                                                        <af:gridCell id="gc5" width="100%"
+                                                                                     halign="stretch">
+                                                                            <af:outputFormatted value="#{item.bindings.Id.inputValue}"
+                                                                                                id="of3"
+                                                                                                shortDesc="Hospital Code"/>
+                                                                        </af:gridCell>
+                                                                    </af:gridRow>
+                                                                    <af:gridRow marginTop="5px" height="auto" id="gr1">
+                                                                        <af:gridCell marginStart="5px" width="100%"
+                                                                                     id="gc1" halign="stretch">
+                                                                            <af:outputFormatted value="#{item.bindings.Name.inputValue}"
+                                                                                                id="of2"
+                                                                                                shortDesc="Hospital Name"/>
+                                                                        </af:gridCell>
+                                                                    </af:gridRow>
+                                                                    <af:gridRow marginTop="5px" height="auto"
+                                                                                marginBottom="5px" id="gr2">
+                                                                        <af:gridCell marginStart="5px" width="100%"
+                                                                                     marginEnd="5px" id="gc3"
+                                                                                     halign="stretch">
+                                                                            <af:outputFormatted value="#{item.bindings.Address.inputValue}"
+                                                                                                id="of4"
+                                                                                                shortDesc="Hospital Address"/>
+                                                                        </af:gridCell>
+                                                                    </af:gridRow>
+                                                                </af:panelGridLayout>
+                                                            </af:listItem>
+                                                        </af:listView>
+                                                    </f:facet>
+                                                    <f:facet name="first"/>
+                                                </af:panelSplitter>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow id="gr8" height="100%" marginTop="400px">
+                                            <af:gridCell id="gc9" valign="bottom" halign="stretch" width="100%">
+                                                <af:image source="#{resource['images:imgBottomElaajApp.png']}" id="i2"
+                                                          styleClass="AFStretchWidth"/>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                    </af:panelGridLayout>
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="100%" marginBottom="5px" id="gr11">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc12" halign="stretch"
+                                         valign="stretch">
+                                <af:panelGroupLayout id="pgl8" layout="scroll" styleClass="narrow">
+                                    <af:panelGridLayout id="pgl9" styleClass="PQHeaderColorMobile">
+                                        <af:gridRow id="gr14" marginTop="20px">
+                                            <af:gridCell id="gc15" halign="center">
+                                                <af:panelGroupLayout id="pgl10" layout="vertical" halign="center">
+                                                    <af:outputFormatted value="Panel Hospital" id="of5"
+                                                                        inlineStyle="font-weight:bolder; color:#8b0037; font-size:30px;"/>
+                                                    <af:link text="Back" id="l2" icon="/icons/left-arrow-white.png"
+                                                             inlineStyle="color:black;" action="PanelHospitalToHome"/>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" marginBottom="5px" id="gr15">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc16"
+                                                         halign="stretch">
+                                                <af:panelSplitter id="ps1" orientation="vertical" splitterPosition="0">
+                                                    <f:facet name="second">
+                                                        <af:listView value="#{bindings.VuElaajPanelHospitalVO1.collectionModel}"
+                                                                     var="item"
+                                                                     emptyText="#{bindings.VuElaajPanelHospitalVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                     fetchSize="#{bindings.VuElaajPanelHospitalVO1.rangeSize}"
+                                                                     id="lv2" selection="single">
+                                                            <af:listItem id="li2">
+                                                                <af:panelGridLayout id="pgl11">
+                                                                    <af:gridRow id="gr16">
+                                                                        <af:gridCell id="gc17" width="100%"
+                                                                                     halign="stretch">
+                                                                            <af:outputFormatted value="#{item.bindings.Id.inputValue}"
+                                                                                                id="of6"
+                                                                                                shortDesc="Hospital Code"/>
+                                                                        </af:gridCell>
+                                                                    </af:gridRow>
+                                                                    <af:gridRow marginTop="5px" height="auto" id="gr17">
+                                                                        <af:gridCell marginStart="5px" width="100%"
+                                                                                     id="gc18" halign="stretch">
+                                                                            <af:outputFormatted value="#{item.bindings.Name.inputValue}"
+                                                                                                id="of7"
+                                                                                                shortDesc="Hospital Name"/>
+                                                                        </af:gridCell>
+                                                                    </af:gridRow>
+                                                                    <af:gridRow marginTop="5px" height="auto"
+                                                                                marginBottom="5px" id="gr18">
+                                                                        <af:gridCell marginStart="5px" width="100%"
+                                                                                     marginEnd="5px" id="gc19"
+                                                                                     halign="stretch">
+                                                                            <af:outputFormatted value="#{item.bindings.Address.inputValue}"
+                                                                                                id="of8"
+                                                                                                shortDesc="Hospital Address"/>
+                                                                        </af:gridCell>
+                                                                    </af:gridRow>
+                                                                </af:panelGridLayout>
+                                                            </af:listItem>
+                                                        </af:listView>
+                                                    </f:facet>
+                                                    <f:facet name="first"/>
+                                                </af:panelSplitter>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                    </af:panelGridLayout>
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
+                </f:facet>
+                <f:facet name="bottom"/>
+            </af:panelStretchLayout>
+        </af:form>
+    </af:document>
+</f:view>

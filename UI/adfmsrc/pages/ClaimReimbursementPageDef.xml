@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="ClaimReimbursementPageDef"
+                Package="pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variable Type="java.lang.String" Name="UploadFile1_Return" IsQueriable="false" IsUpdateable="0"
+                DefaultValue="${bindings.UploadFile1.result}"/>
+      <variable Type="java.lang.String" Name="UploadFile1_DocumentReference" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="UploadFile1_SchemaName" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="UploadFile1_RepoName" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="UploadFile1_PrimaryKey" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="UploadFile1_FileLocation" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="UploadFile1_FileName" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="UploadFile1_Parameters" IsQueriable="false"/>
+    </variableIterator>
+    <iterator Binds="ElaajClaimReimburstmentEOVO1" RangeSize="25" DataControl="PQTElaajAMDataControl"
+              id="ElaajClaimReimburstmentEOVO1Iterator"/>
+    <iterator Binds="ElaajClaimReimDmsDocEOVO1" RangeSize="25" DataControl="PQTElaajAMDataControl"
+              id="ElaajClaimReimDmsDocEOVO1Iterator"/>
+  </executables>
+  <bindings>
+    <methodAction id="Apply" RequiresUpdateModel="true" Action="invokeMethod" MethodName="Apply"
+                  IsViewObjectMethod="false" DataControl="PQTElaajAMDataControl"
+                  InstanceName="data.PQTElaajAMDataControl.dataProvider"/>
+    <listOfValues IterBinding="ElaajClaimReimburstmentEOVO1Iterator" StaticList="false" Uses="LOV_NameOfPatient"
+                  id="NameOfPatient"/>
+    <list IterBinding="ElaajClaimReimburstmentEOVO1Iterator" StaticList="false" Uses="LOV_TypeOfClaimn"
+          id="TypeOfClaimn" DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <listOfValues IterBinding="ElaajClaimReimburstmentEOVO1Iterator" StaticList="false" Uses="LOV_NameOfPanelHospital"
+                  id="NameOfPanelHospital"/>
+    <attributeValues IterBinding="ElaajClaimReimburstmentEOVO1Iterator" id="NameOfDoctor">
+      <AttrNames>
+        <Item Value="NameOfDoctor"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ElaajClaimReimburstmentEOVO1Iterator" id="SymptomAtPresent">
+      <AttrNames>
+        <Item Value="SymptomAtPresent"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ElaajClaimReimburstmentEOVO1Iterator" id="ClaimTotalAmount">
+      <AttrNames>
+        <Item Value="ClaimTotalAmount"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction id="UploadFile1" RequiresUpdateModel="true" Action="invokeMethod" MethodName="UploadFile1"
+                  IsViewObjectMethod="false" DataControl="FileUploadSOAP" InstanceName="data.FileUploadSOAP"
+                  ReturnName="data.FileUploadSOAP.methodResults.UploadFile1_FileUploadSOAP_UploadFile1_result">
+      <NamedData NDName="DocumentReference" NDType="java.lang.String"
+                 NDValue="${bindings.UploadFile1_DocumentReference}"/>
+      <NamedData NDName="SchemaName" NDType="java.lang.String" NDValue="${bindings.UploadFile1_SchemaName}"/>
+      <NamedData NDName="RepoName" NDType="java.lang.String" NDValue="${bindings.UploadFile1_RepoName}"/>
+      <NamedData NDName="PrimaryKey" NDType="java.lang.String" NDValue="${bindings.UploadFile1_PrimaryKey}"/>
+      <NamedData NDName="FileLocation" NDType="java.lang.String" NDValue="${bindings.UploadFile1_FileLocation}"/>
+      <NamedData NDName="FileName" NDType="java.lang.String" NDValue="${bindings.UploadFile1_FileName}"/>
+      <NamedData NDName="Parameters" NDType="java.lang.String" NDValue="${bindings.UploadFile1_Parameters}"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="DocumentReference">
+      <AttrNames>
+        <Item Value="UploadFile1_DocumentReference"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="SchemaName">
+      <AttrNames>
+        <Item Value="UploadFile1_SchemaName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="RepoName">
+      <AttrNames>
+        <Item Value="UploadFile1_RepoName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="PrimaryKey">
+      <AttrNames>
+        <Item Value="UploadFile1_PrimaryKey"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="FileLocation">
+      <AttrNames>
+        <Item Value="UploadFile1_FileLocation"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="FileName">
+      <AttrNames>
+        <Item Value="UploadFile1_FileName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="Parameters">
+      <AttrNames>
+        <Item Value="UploadFile1_Parameters"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ElaajClaimReimburstmentEOVO1Iterator" id="DmsDocumentReference">
+      <AttrNames>
+        <Item Value="DmsDocumentReference"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="ElaajClaimReimDmsDocEOVO1Iterator" id="ElaajClaimReimDmsDocEOVO1">
+      <nodeDefinition DefName="pqt.gh.elaaj.model.vo.ElaajClaimReimDmsDocEOVO" Name="ElaajClaimReimDmsDocEOVO10">
+        <AttrNames>
+          <Item Value="DocIdPk"/>
+          <Item Value="ElaajClaimReimIdFk"/>
+          <Item Value="FileLocation"/>
+          <Item Value="FileName"/>
+          <Item Value="FileType"/>
+          <Item Value="DocType"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="ElaajClaimReimDmsDocEOVO1Iterator" id="Delete" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <action IterBinding="ElaajClaimReimDmsDocEOVO1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <methodAction id="submitToBpm" RequiresUpdateModel="true" Action="invokeMethod" MethodName="submitToBpm"
+                  IsViewObjectMethod="false" DataControl="PQTElaajAMDataControl"
+                  InstanceName="data.PQTElaajAMDataControl.dataProvider"/>
+    <methodAction id="sendOPDEmail" RequiresUpdateModel="true" Action="invokeMethod" MethodName="sendOPDEmail"
+                  IsViewObjectMethod="false" DataControl="PQTElaajAMDataControl"
+                  InstanceName="data.PQTElaajAMDataControl.dataProvider"/>
+    <methodAction id="submitToBpmOPD" RequiresUpdateModel="true" Action="invokeMethod" MethodName="submitToBpmOPD"
+                  IsViewObjectMethod="false" DataControl="PQTElaajAMDataControl"
+                  InstanceName="data.PQTElaajAMDataControl.dataProvider"/>
+    <attributeValues IterBinding="ElaajClaimReimburstmentEOVO1Iterator" id="OtherHospital">
+      <AttrNames>
+        <Item Value="OtherHospital"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

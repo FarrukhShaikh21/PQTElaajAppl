@@ -1,0 +1,754 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="ClaimIntimation.jsf" id="d1">
+        <af:messages id="m1"/>
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
+        <af:form id="f1" usesUpload="true">
+            <af:panelGroupLayout id="pgl3" inlineStyle="background-color:#8b0037;" halign="center" valign="middle"
+                                 layout="vertical" rendered="false">
+                <af:separator id="s2"
+                              inlineStyle="min-height:5px; background-color:#ba9632; margin: 0px;     border-color: transparent;"/>
+            </af:panelGroupLayout>
+            <af:panelStretchLayout id="psl1">
+                <f:facet name="top">
+                    <af:group id="g1" rendered="false">
+                        <af:panelGridLayout id="pgl6" styleClass="PQHeaderColor" rendered="false">
+                            <af:gridRow marginTop="5px" height="50px" marginBottom="5px" id="gr23">
+                                <af:gridCell marginStart="5px" width="10%" id="gc23" halign="center" valign="middle">
+                                    <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
+                                             inlineStyle="color:white;" action="ClaimIntimationToHomePG"/>
+                                </af:gridCell>
+                                <af:gridCell marginStart="5px" width="90%" marginEnd="5px" id="gc24" halign="center"
+                                             valign="middle"/>
+                            </af:gridRow>
+                        </af:panelGridLayout>
+                        <af:panelGridLayout id="pgl9">
+                            <af:gridRow marginTop="15px" height="auto" id="gr7" rendered="false">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7" halign="center">
+                                    <af:outputFormatted value="Name of Treating Physician" id="of5"
+                                                        inlineStyle="font-size: 12px;color:#8b0037"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr8" rendered="false">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc8" halign="stretch">
+                                    <af:inputText value="#{bindings.NameOfDoctor.inputValue}" simple="true"
+                                                  required="#{bindings.NameOfDoctor.hints.mandatory}"
+                                                  columns="#{bindings.NameOfDoctor.hints.displayWidth}"
+                                                  maximumLength="#{bindings.NameOfDoctor.hints.precision}"
+                                                  shortDesc="#{bindings.NameOfDoctor.hints.tooltip}" id="it2"
+                                                  styleClass="PQTextContentColor" contentStyle="width:100%">
+                                        <f:validator binding="#{bindings.NameOfDoctor.validator}"/>
+                                    </af:inputText>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="15px" height="auto" id="gr9" rendered="false">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc9" halign="stretch">
+                                    <af:outputFormatted value="Symtoms at Present" id="of6"
+                                                        inlineStyle="font-size: 12px;color:#8b0037"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr10" rendered="false">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc10" halign="stretch">
+                                    <af:inputText value="#{bindings.NameOfDoctor.inputValue}" simple="true"
+                                                  required="#{bindings.NameOfDoctor.hints.mandatory}"
+                                                  columns="#{bindings.NameOfDoctor.hints.displayWidth}"
+                                                  maximumLength="#{bindings.NameOfDoctor.hints.precision}"
+                                                  shortDesc="#{bindings.NameOfDoctor.hints.tooltip}" id="it3"
+                                                  styleClass="PQTextContentColor" contentStyle="width:100%">
+                                        <f:validator binding="#{bindings.NameOfDoctor.validator}"/>
+                                    </af:inputText>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="15px" height="auto" id="gr11" rendered="false">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc11" halign="stretch">
+                                    <af:outputFormatted value="On what date Symptoms first occurred ?" id="of7"
+                                                        inlineStyle="font-size: 12px;color:#8b0037"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr12" rendered="false">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc12" halign="stretch">
+                                    <af:inputDate value="#{bindings.SymptomFirstAppearedDate.inputValue}"
+                                                  required="#{bindings.SymptomFirstAppearedDate.hints.mandatory}"
+                                                  columns="#{bindings.SymptomFirstAppearedDate.hints.displayWidth}"
+                                                  shortDesc="#{bindings.SymptomFirstAppearedDate.hints.tooltip}"
+                                                  id="id1" styleClass="PQDateTextContentColor" contentStyle="width:90%"
+                                                  simple="true">
+                                        <f:validator binding="#{bindings.SymptomFirstAppearedDate.validator}"/>
+                                        <af:convertDateTime pattern="#{bindings.SymptomFirstAppearedDate.format}"/>
+                                    </af:inputDate>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="15px" height="auto" id="gr13" rendered="false">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc13" halign="stretch">
+                                    <af:outputFormatted value="Date" id="of8"
+                                                        inlineStyle="font-size: 12px;color:#8b0037"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr14" rendered="false">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc14" halign="stretch">
+                                    <af:inputDate value="#{bindings.ExpectedDateOfAddminission.inputValue}"
+                                                  required="#{bindings.ExpectedDateOfAddminission.hints.mandatory}"
+                                                  columns="#{bindings.ExpectedDateOfAddminission.hints.displayWidth}"
+                                                  shortDesc="#{bindings.ExpectedDateOfAddminission.hints.tooltip}"
+                                                  id="id2" styleClass="PQDateTextContentColor" contentStyle="width:90%"
+                                                  simple="true">
+                                        <f:validator binding="#{bindings.ExpectedDateOfAddminission.validator}"/>
+                                        <af:convertDateTime pattern="#{bindings.ExpectedDateOfAddminission.format}"/>
+                                    </af:inputDate>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="15px" height="auto" id="gr15" rendered="false">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc15" halign="stretch">
+                                    <af:outputFormatted value="Diagnosis" id="of9"
+                                                        inlineStyle="font-size: 12px;color:#8b0037"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr16" rendered="false">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc16" halign="stretch">
+                                    <af:inputText value="#{bindings.DoctorDaignosis.inputValue}" simple="true"
+                                                  required="#{bindings.DoctorDaignosis.hints.mandatory}"
+                                                  columns="#{bindings.DoctorDaignosis.hints.displayWidth}"
+                                                  maximumLength="#{bindings.DoctorDaignosis.hints.precision}"
+                                                  shortDesc="#{bindings.DoctorDaignosis.hints.tooltip}" id="it4"
+                                                  styleClass="PQTextContentColor" contentStyle="width:100%">
+                                        <f:validator binding="#{bindings.DoctorDaignosis.validator}"/>
+                                    </af:inputText>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="15px" height="auto" id="gr17" rendered="false">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc17" halign="stretch">
+                                    <af:outputFormatted value="Detail of Procedure Taken" id="of10"
+                                                        inlineStyle="font-size: 12px;color:#8b0037"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr18" rendered="false">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc18" halign="stretch">
+                                    <af:inputText value="#{bindings.ProcedureRequired.inputValue}" simple="true"
+                                                  required="#{bindings.ProcedureRequired.hints.mandatory}"
+                                                  columns="#{bindings.ProcedureRequired.hints.displayWidth}"
+                                                  maximumLength="#{bindings.ProcedureRequired.hints.precision}"
+                                                  shortDesc="#{bindings.ProcedureRequired.hints.tooltip}" id="it5"
+                                                  styleClass="PQTextContentColor" contentStyle="width:100%">
+                                        <f:validator binding="#{bindings.ProcedureRequired.validator}"/>
+                                    </af:inputText>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="15px" height="auto" id="gr19" rendered="false">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc19" halign="stretch">
+                                    <af:outputFormatted value="Total Amount of Reimbursement" id="of11"
+                                                        inlineStyle="font-size: 12px;color:#8b0037"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" id="gr20" rendered="false">
+                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc20" halign="stretch">
+                                    <af:inputText value="#{bindings.ExpectedCost.inputValue}" simple="true"
+                                                  required="#{bindings.ExpectedCost.hints.mandatory}"
+                                                  columns="#{bindings.ExpectedCost.hints.displayWidth}"
+                                                  maximumLength="#{bindings.ExpectedCost.hints.precision}"
+                                                  shortDesc="#{bindings.ExpectedCost.hints.tooltip}" id="it6"
+                                                  styleClass="PQTextContentColor" contentStyle="width:100%">
+                                        <f:validator binding="#{bindings.ExpectedCost.validator}"/>
+                                    </af:inputText>
+                                </af:gridCell>
+                            </af:gridRow>
+                        </af:panelGridLayout>
+                    </af:group>
+                </f:facet>
+                <f:facet name="bottom"/>
+                <f:facet name="center">
+                    <af:panelGridLayout id="pgl1">
+                        <af:gridRow marginTop="5px" height="100%" id="gr26">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc27" halign="stretch"
+                                         valign="stretch">
+                                <af:panelGroupLayout id="pgl13" styleClass="wide" layout="scroll">
+                                    <af:panelGridLayout id="pgl5" styleClass="PQHeaderColor">
+                                        <af:gridRow id="gr24" height="100%">
+                                            <af:gridCell id="gc25" halign="stretch" valign="stretch">
+                                                <af:image source="#{resource['images:imgTopElaajApp.png']}" id="i1"
+                                                          styleClass="AFStretchWidth"/>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="50px" marginBottom="5px" id="gr22" height="100%">
+                                            <af:gridCell width="100%" id="gc22" halign="stretch" valign="stretch">
+                                                <af:panelGridLayout id="pgl4">
+                                                    <af:gridRow id="gr5">
+                                                        <af:gridCell id="gc5" halign="stretch" valign="stretch">
+                                                            <af:panelGroupLayout id="pgl11" layout="vertical"
+                                                                                 halign="center">
+                                                                <af:image source="#{resource['images:imgClaimIntimation.png']}"
+                                                                          id="i3"
+                                                                          inlineStyle="width:100px;height:100px"/>
+                                                            </af:panelGroupLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow id="gr3">
+                                                        <af:gridCell id="gc3" halign="stretch" valign="stretch">
+                                                            <af:panelGroupLayout id="pgl10" layout="vertical"
+                                                                                 halign="center">
+                                                                <af:outputFormatted value="Claim Intimation" id="of1"
+                                                                                    inlineStyle="font-weight:bolder; color:#8b0037; font-size:30px;"/>
+                                                                <af:link text="Back" id="l3" partialSubmit="true"
+                                                                         icon="/icons/left-arrow-white.png"
+                                                                         action="ClaimIntimationToHomePG"
+                                                                         inlineStyle="color:black; font-weight:bold;"/>
+                                                            </af:panelGroupLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow marginTop="40px" height="auto" id="gr2">
+                                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                                                                     id="gc2" halign="stretch" valign="stretch">
+                                                            <af:panelGroupLayout id="pgl2" layout="vertical"
+                                                                                 halign="center">
+                                                                <af:inputListOfValues id="nameOfPatientId"
+                                                                                      popupTitle="Select : Member Name"
+                                                                                      value="#{bindings.NameOfPatient.inputValue}"
+                                                                                      model="#{bindings.NameOfPatient.listOfValuesModel}"
+                                                                                      required="#{bindings.NameOfPatient.hints.mandatory}"
+                                                                                      columns="#{bindings.NameOfPatient.hints.displayWidth}"
+                                                                                      shortDesc="#{bindings.NameOfPatient.hints.tooltip}"
+                                                                                      placeholder="Select Covered Member"
+                                                                                      styleClass="PQAppInputLOV"
+                                                                                      contentStyle="width:500px"
+                                                                                      label="Covered Member:"
+                                                                                      labelStyle="PQAppLabelFont"
+                                                                                      simple="true">
+                                                                    <f:validator binding="#{bindings.NameOfPatient.validator}"/>
+                                                                </af:inputListOfValues>
+                                                            </af:panelGroupLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow marginTop="40px" height="auto" id="gr4">
+                                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                                                                     id="gc4" halign="stretch" valign="stretch">
+                                                            <af:panelGroupLayout id="pgl7" layout="vertical"
+                                                                                 halign="center">
+                                                                <af:selectOneChoice value="#{bindings.TypeOfClaimn.inputValue}"
+                                                                                    required="#{bindings.TypeOfClaimn.hints.mandatory}"
+                                                                                    shortDesc="#{bindings.TypeOfClaimn.hints.tooltip}"
+                                                                                    id="soc1"
+                                                                                    styleClass="PQChoiceContentColor"
+                                                                                    contentStyle="width:500px"
+                                                                                    label="Claim Type:" simple="true">
+                                                                    <f:selectItems value="#{bindings.TypeOfClaimn.items}"
+                                                                                   id="si1"/>
+                                                                    <f:validator binding="#{bindings.TypeOfClaimn.validator}"/>
+                                                                </af:selectOneChoice>
+                                                            </af:panelGroupLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow marginTop="30px" height="auto" id="gr6">
+                                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                                                                     id="gc6" halign="stretch" valign="stretch">
+                                                            <af:panelGroupLayout id="pgl8" layout="vertical"
+                                                                                 halign="center">
+                                                                <af:inputListOfValues id="nameOfPanelHospitalId"
+                                                                                      popupTitle="Select: List of Panel Hospital"
+                                                                                      value="#{bindings.NameOfPanelHospital.inputValue}"
+                                                                                      model="#{bindings.NameOfPanelHospital.listOfValuesModel}"
+                                                                                      required="#{bindings.NameOfPanelHospital.hints.mandatory}"
+                                                                                      columns="#{bindings.NameOfPanelHospital.hints.displayWidth}"
+                                                                                      shortDesc="#{bindings.NameOfPanelHospital.hints.tooltip}"
+                                                                                      styleClass="PQAppInputLOV"
+                                                                                      contentStyle="width:500px"
+                                                                                      placeholder="Name Of Panel Hospital"
+                                                                                      label="Panel Hospital:"
+                                                                                      simple="true">
+                                                                    <f:validator binding="#{bindings.NameOfPanelHospital.validator}"/>
+                                                                </af:inputListOfValues>
+                                                            </af:panelGroupLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow id="gr21" marginTop="50px">
+                                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                                                                     id="gc21" halign="center" valign="stretch">
+                                                            <af:button actionListener="#{bindings.UploadFile1.execute}"
+                                                                       text="UploadFile1"
+                                                                       disabled="#{!bindings.UploadFile1.enabled}"
+                                                                       id="b3" rendered="false"/>
+                                                            <af:outputFormatted value="Attach Document(s)" id="of12"
+                                                                                inlineStyle="font-size: 12px;color:#8b0037"
+                                                                                rendered="false"/>
+                                                            <af:inputFile label="Attach File" id="if1" autoSubmit="true"
+                                                                          valueChangeListener="#{BenefitDetailBean.uploadFileEventClaimIntimation}"
+                                                                          rendered="false"/>
+                                                            <af:button id="b1" icon="/images/camimg.png"
+                                                                       rendered="false"/>
+                                                            <af:inputText value="#{bindings.DocumentReference.inputValue}"
+                                                                          simple="true"
+                                                                          required="#{bindings.DocumentReference.hints.mandatory}"
+                                                                          columns="#{bindings.DocumentReference.hints.displayWidth}"
+                                                                          maximumLength="#{bindings.DocumentReference.hints.precision}"
+                                                                          shortDesc="#{bindings.DocumentReference.hints.tooltip}"
+                                                                          id="it7" rendered="false">
+                                                                <f:validator binding="#{bindings.DocumentReference.validator}"/>
+                                                            </af:inputText>
+                                                            <af:inputText value="#{bindings.AttachFile1.inputValue}"
+                                                                          label="#{bindings.AttachFile1.hints.label}"
+                                                                          required="#{bindings.AttachFile1.hints.mandatory}"
+                                                                          columns="#{bindings.AttachFile1.hints.displayWidth}"
+                                                                          maximumLength="#{bindings.AttachFile1.hints.precision}"
+                                                                          shortDesc="#{bindings.AttachFile1.hints.tooltip}"
+                                                                          id="it15" autoSubmit="true" rendered="false">
+                                                                <f:validator binding="#{bindings.AttachFile1.validator}"/>
+                                                            </af:inputText>
+                                                            <af:inputText value="#{bindings.DmsDocumentReference.inputValue}"
+                                                                          label="#{bindings.DmsDocumentReference.hints.label}"
+                                                                          required="#{bindings.DmsDocumentReference.hints.mandatory}"
+                                                                          columns="#{bindings.DmsDocumentReference.hints.displayWidth}"
+                                                                          maximumLength="#{bindings.DmsDocumentReference.hints.precision}"
+                                                                          shortDesc="#{bindings.DmsDocumentReference.hints.tooltip}"
+                                                                          id="it16" rendered="false">
+                                                                <f:validator binding="#{bindings.DmsDocumentReference.validator}"/>
+                                                            </af:inputText>
+                                                            <af:panelCollection id="pc1" featuresOff="detach viewMenu"
+                                                                                inlineStyle="background-color:transparent">
+                                                                <f:facet name="menus"/>
+                                                                <f:facet name="toolbar">
+                                                                    <af:toolbar id="t2">
+                                                                        <af:button actionListener="#{bindings.CreateInsert.execute}"
+                                                                                   text="Create"
+                                                                                   disabled="#{!bindings.CreateInsert.enabled}"
+                                                                                   id="b5"/>
+                                                                        <af:button text="Submit" id="b6"
+                                                                                   action="#{BenefitDetailBean.submitAction}"
+                                                                                   rendered="false"/>
+                                                                    </af:toolbar>
+                                                                </f:facet>
+                                                                <af:table value="#{bindings.ElaajClaimDmsDocEOVO1.collectionModel}"
+                                                                          var="row"
+                                                                          rows="#{bindings.ElaajClaimDmsDocEOVO1.rangeSize}"
+                                                                          emptyText="#{bindings.ElaajClaimDmsDocEOVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                          rowBandingInterval="0"
+                                                                          selectedRowKeys="#{bindings.ElaajClaimDmsDocEOVO1.collectionModel.selectedRow}"
+                                                                          selectionListener="#{bindings.ElaajClaimDmsDocEOVO1.collectionModel.makeCurrent}"
+                                                                          rowSelection="single"
+                                                                          fetchSize="#{bindings.ElaajClaimDmsDocEOVO1.rangeSize}"
+                                                                          id="t1" partialTriggers="::b5 l2"
+                                                                          inlineStyle="background-color:transparent"
+                                                                          columnStretching="column:c8"
+                                                                          displayRow="selected">
+                                                                    <af:column headerText="ID" id="c1" width="30">
+                                                                        <af:inputText value="#{row.bindings.DocIdPk.inputValue}"
+                                                                                      label="#{bindings.ElaajClaimDmsDocEOVO1.hints.DocIdPk.label}"
+                                                                                      required="#{bindings.ElaajClaimDmsDocEOVO1.hints.DocIdPk.mandatory}"
+                                                                                      columns="#{bindings.ElaajClaimDmsDocEOVO1.hints.DocIdPk.displayWidth}"
+                                                                                      maximumLength="#{bindings.ElaajClaimDmsDocEOVO1.hints.DocIdPk.precision}"
+                                                                                      shortDesc="#{bindings.ElaajClaimDmsDocEOVO1.hints.DocIdPk.tooltip}"
+                                                                                      id="it17" disabled="true">
+                                                                            <f:validator binding="#{row.bindings.DocIdPk.validator}"/>
+                                                                            <af:convertNumber groupingUsed="false"
+                                                                                              pattern="#{bindings.ElaajClaimDmsDocEOVO1.hints.DocIdPk.format}"/>
+                                                                        </af:inputText>
+                                                                    </af:column>
+                                                                    <af:column id="c8" headerText="Type" align="center"
+                                                                               width="200" displayIndex="-1">
+                                                                        <af:selectOneChoice value="#{row.bindings.DocType.inputValue}"
+                                                                                            label="#{row.bindings.DocType.label}"
+                                                                                            required="#{bindings.ElaajClaimDmsDocEOVO1.hints.DocType.mandatory}"
+                                                                                            shortDesc="#{bindings.ElaajClaimDmsDocEOVO1.hints.DocType.tooltip}"
+                                                                                            id="soc2" autoSubmit="true">
+                                                                            <f:selectItems value="#{row.bindings.DocType.items}"
+                                                                                           id="si2"/>
+                                                                            <f:validator binding="#{row.bindings.DocType.validator}"/>
+                                                                        </af:selectOneChoice>
+                                                                    </af:column>
+                                                                    <af:column headerText="#{bindings.ElaajClaimDmsDocEOVO1.hints.ElaajClaimIntimateIdFk.label}"
+                                                                               id="c2" rendered="false">
+                                                                        <af:inputText value="#{row.bindings.ElaajClaimIntimateIdFk.inputValue}"
+                                                                                      label="#{bindings.ElaajClaimDmsDocEOVO1.hints.ElaajClaimIntimateIdFk.label}"
+                                                                                      required="#{bindings.ElaajClaimDmsDocEOVO1.hints.ElaajClaimIntimateIdFk.mandatory}"
+                                                                                      columns="#{bindings.ElaajClaimDmsDocEOVO1.hints.ElaajClaimIntimateIdFk.displayWidth}"
+                                                                                      maximumLength="#{bindings.ElaajClaimDmsDocEOVO1.hints.ElaajClaimIntimateIdFk.precision}"
+                                                                                      shortDesc="#{bindings.ElaajClaimDmsDocEOVO1.hints.ElaajClaimIntimateIdFk.tooltip}"
+                                                                                      id="it18">
+                                                                            <f:validator binding="#{row.bindings.ElaajClaimIntimateIdFk.validator}"/>
+                                                                            <af:convertNumber groupingUsed="false"
+                                                                                              pattern="#{bindings.ElaajClaimDmsDocEOVO1.hints.ElaajClaimIntimateIdFk.format}"/>
+                                                                        </af:inputText>
+                                                                    </af:column>
+                                                                    <af:column headerText="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileLocation.label}"
+                                                                               id="c3" rendered="false">
+                                                                        <af:inputText value="#{row.bindings.FileLocation.inputValue}"
+                                                                                      label="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileLocation.label}"
+                                                                                      required="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileLocation.mandatory}"
+                                                                                      columns="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileLocation.displayWidth}"
+                                                                                      maximumLength="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileLocation.precision}"
+                                                                                      shortDesc="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileLocation.tooltip}"
+                                                                                      id="it19">
+                                                                            <f:validator binding="#{row.bindings.FileLocation.validator}"/>
+                                                                        </af:inputText>
+                                                                    </af:column>
+                                                                    <af:column headerText="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileName.label}"
+                                                                               id="c4" width="100" rendered="false">
+                                                                        <af:inputText value="#{row.bindings.FileName.inputValue}"
+                                                                                      label="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileName.label}"
+                                                                                      required="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileName.mandatory}"
+                                                                                      columns="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileName.displayWidth}"
+                                                                                      maximumLength="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileName.precision}"
+                                                                                      shortDesc="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileName.tooltip}"
+                                                                                      id="it20" disabled="true">
+                                                                            <f:validator binding="#{row.bindings.FileName.validator}"/>
+                                                                        </af:inputText>
+                                                                    </af:column>
+                                                                    <af:column headerText="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileType.label}"
+                                                                               id="c5" rendered="false">
+                                                                        <af:inputText value="#{row.bindings.FileType.inputValue}"
+                                                                                      label="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileType.label}"
+                                                                                      required="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileType.mandatory}"
+                                                                                      columns="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileType.displayWidth}"
+                                                                                      maximumLength="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileType.precision}"
+                                                                                      shortDesc="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileType.tooltip}"
+                                                                                      id="it21">
+                                                                            <f:validator binding="#{row.bindings.FileType.validator}"/>
+                                                                        </af:inputText>
+                                                                    </af:column>
+                                                                    <af:column id="c6" width="200">
+                                                                        <af:inputFile label="Label 1" id="if2"
+                                                                                      valueChangeListener="#{BenefitDetailBean.dmsDocUploadFileEvent}"
+                                                                                      autoSubmit="true"/>
+                                                                    </af:column>
+                                                                    <af:column id="c7" width="30" align="center">
+                                                                        <af:link actionListener="#{bindings.Delete.execute}"
+                                                                                 disabled="#{!bindings.Delete.enabled}"
+                                                                                 id="l2"
+                                                                                 icon="/images/deleteicon_enabled.gif"/>
+                                                                    </af:column>
+                                                                </af:table>
+                                                                <f:facet name="statusbar"/>
+                                                            </af:panelCollection>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow id="gr25" marginTop="50px">
+                                                        <af:gridCell id="gc26" valign="stretch" halign="stretch">
+                                                            <af:panelGroupLayout id="pgl12" layout="vertical"
+                                                                                 halign="center">
+                                                                <af:button text="Apply"
+                                                                           disabled="#{!bindings.Apply.enabled}" id="b2"
+                                                                           action="#{BenefitDetailBean.submitAction}"
+                                                                           styleClass="PQLoginButton"/>
+                                                            </af:panelGroupLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                </af:panelGridLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow id="gr1" height="100%" marginTop="300px">
+                                            <af:gridCell id="gc1" width="100%" halign="stretch" valign="stretch">
+                                                <af:image id="i2" styleClass="AFStretchWidth"
+                                                          source="#{resource['images:imgBottomElaajApp.png']}"/>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                    </af:panelGridLayout>
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="100%" marginBottom="5px" id="gr27">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc28" valign="stretch"
+                                         halign="stretch">
+                                <af:panelGroupLayout id="pgl14" styleClass="narrow" layout="scroll">
+                                    <af:panelGridLayout id="pgl15" styleClass="PQHeaderColorMobile">
+                                        <af:gridRow id="gr31" marginTop="50px">
+                                            <af:gridCell id="gc32" halign="stretch" valign="stretch">
+                                                <af:panelGroupLayout id="pgl18" layout="vertical" halign="center">
+                                                    <af:outputFormatted value="Claim Intimation" id="of2"
+                                                                        inlineStyle="font-weight:bolder; color:#8b0037; font-size:30px;"/>
+                                                    <af:link text="Back" id="l4" partialSubmit="true"
+                                                             icon="/icons/left-arrow-white.png"
+                                                             action="ClaimIntimationToHomePG"
+                                                             inlineStyle="color:black; font-weight:bold;"/>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow id="gr32" height="100px">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc33"
+                                                         halign="stretch" valign="stretch">
+                                                <af:panelGroupLayout id="pgl19" layout="vertical" halign="center">
+                                                    <af:inputListOfValues id="ilov1" popupTitle="Select : Member Name"
+                                                                          value="#{bindings.NameOfPatient.inputValue}"
+                                                                          model="#{bindings.NameOfPatient.listOfValuesModel}"
+                                                                          required="#{bindings.NameOfPatient.hints.mandatory}"
+                                                                          columns="#{bindings.NameOfPatient.hints.displayWidth}"
+                                                                          shortDesc="#{bindings.NameOfPatient.hints.tooltip}"
+                                                                          placeholder="Select Covered Member"
+                                                                          styleClass="PQAppInputLOV"
+                                                                          contentStyle="width:100%"
+                                                                          label="Covered Member:"
+                                                                          labelStyle="PQAppLabelFont" simple="true">
+                                                        <f:validator binding="#{bindings.NameOfPatient.validator}"/>
+                                                    </af:inputListOfValues>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow id="gr33" height="100px">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc34"
+                                                         halign="stretch" valign="stretch">
+                                                <af:panelGroupLayout id="pgl20" layout="vertical" halign="center">
+                                                    <af:selectOneChoice value="#{bindings.TypeOfClaimn.inputValue}"
+                                                                        required="#{bindings.TypeOfClaimn.hints.mandatory}"
+                                                                        shortDesc="#{bindings.TypeOfClaimn.hints.tooltip}"
+                                                                        id="soc3" styleClass="PQChoiceContentColor"
+                                                                        contentStyle="width:100%" label="Claim Type:"
+                                                                        simple="true">
+                                                        <f:selectItems value="#{bindings.TypeOfClaimn.items}" id="si3"/>
+                                                        <f:validator binding="#{bindings.TypeOfClaimn.validator}"/>
+                                                    </af:selectOneChoice>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow id="gr34" height="100px">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc35"
+                                                         halign="stretch" valign="stretch">
+                                                <af:panelGroupLayout id="pgl21" layout="vertical" halign="center">
+                                                    <af:inputListOfValues id="ilov2"
+                                                                          popupTitle="Select: List of Panel Hospital"
+                                                                          value="#{bindings.NameOfPanelHospital.inputValue}"
+                                                                          model="#{bindings.NameOfPanelHospital.listOfValuesModel}"
+                                                                          required="#{bindings.NameOfPanelHospital.hints.mandatory}"
+                                                                          columns="#{bindings.NameOfPanelHospital.hints.displayWidth}"
+                                                                          shortDesc="#{bindings.NameOfPanelHospital.hints.tooltip}"
+                                                                          styleClass="PQAppInputLOV"
+                                                                          contentStyle="width:90%"
+                                                                          placeholder="Name Of Panel Hospital"
+                                                                          label="Panel Hospital:" simple="true">
+                                                        <f:validator binding="#{bindings.NameOfPanelHospital.validator}"/>
+                                                    </af:inputListOfValues>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow id="gr35" height="100px">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc36"
+                                                         halign="stretch" valign="stretch">
+                                                <af:button actionListener="#{bindings.UploadFile1.execute}"
+                                                           text="UploadFile1"
+                                                           disabled="#{!bindings.UploadFile1.enabled}" id="b7"
+                                                           rendered="false"/>
+                                                <af:outputFormatted value="Attach Document(s)" id="of3"
+                                                                    inlineStyle="font-size: 12px;color:#8b0037"
+                                                                    rendered="false"/>
+                                                <af:inputFile label="Attach File" id="if3" autoSubmit="true"
+                                                              valueChangeListener="#{BenefitDetailBean.uploadFileEventClaimIntimation}"
+                                                              rendered="false"/>
+                                                <af:button id="b8" icon="/images/camimg.png" rendered="false"/>
+                                                <af:inputText value="#{bindings.DocumentReference.inputValue}"
+                                                              simple="true"
+                                                              required="#{bindings.DocumentReference.hints.mandatory}"
+                                                              columns="#{bindings.DocumentReference.hints.displayWidth}"
+                                                              maximumLength="#{bindings.DocumentReference.hints.precision}"
+                                                              shortDesc="#{bindings.DocumentReference.hints.tooltip}"
+                                                              id="it1" rendered="false">
+                                                    <f:validator binding="#{bindings.DocumentReference.validator}"/>
+                                                </af:inputText>
+                                                <af:inputText value="#{bindings.AttachFile1.inputValue}"
+                                                              label="#{bindings.AttachFile1.hints.label}"
+                                                              required="#{bindings.AttachFile1.hints.mandatory}"
+                                                              columns="#{bindings.AttachFile1.hints.displayWidth}"
+                                                              maximumLength="#{bindings.AttachFile1.hints.precision}"
+                                                              shortDesc="#{bindings.AttachFile1.hints.tooltip}"
+                                                              id="it22" autoSubmit="true" rendered="false">
+                                                    <f:validator binding="#{bindings.AttachFile1.validator}"/>
+                                                </af:inputText>
+                                                <af:inputText value="#{bindings.DmsDocumentReference.inputValue}"
+                                                              label="#{bindings.DmsDocumentReference.hints.label}"
+                                                              required="#{bindings.DmsDocumentReference.hints.mandatory}"
+                                                              columns="#{bindings.DmsDocumentReference.hints.displayWidth}"
+                                                              maximumLength="#{bindings.DmsDocumentReference.hints.precision}"
+                                                              shortDesc="#{bindings.DmsDocumentReference.hints.tooltip}"
+                                                              id="it23" rendered="false">
+                                                    <f:validator binding="#{bindings.DmsDocumentReference.validator}"/>
+                                                </af:inputText>
+                                                <af:panelCollection id="pc2" featuresOff="detach viewMenu"
+                                                                    inlineStyle="background-color:transparent">
+                                                    <f:facet name="menus"/>
+                                                    <f:facet name="toolbar">
+                                                        <af:toolbar id="t3">
+                                                            <af:button actionListener="#{bindings.CreateInsert.execute}"
+                                                                       text="Create"
+                                                                       disabled="#{!bindings.CreateInsert.enabled}"
+                                                                       id="b9"/>
+                                                            <af:button text="Submit" id="b10"
+                                                                       action="#{BenefitDetailBean.submitAction}"
+                                                                       rendered="false"/>
+                                                        </af:toolbar>
+                                                    </f:facet>
+                                                    <af:table value="#{bindings.ElaajClaimDmsDocEOVO1.collectionModel}"
+                                                              var="row"
+                                                              rows="#{bindings.ElaajClaimDmsDocEOVO1.rangeSize}"
+                                                              emptyText="#{bindings.ElaajClaimDmsDocEOVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                              rowBandingInterval="0"
+                                                              selectedRowKeys="#{bindings.ElaajClaimDmsDocEOVO1.collectionModel.selectedRow}"
+                                                              selectionListener="#{bindings.ElaajClaimDmsDocEOVO1.collectionModel.makeCurrent}"
+                                                              rowSelection="single"
+                                                              fetchSize="#{bindings.ElaajClaimDmsDocEOVO1.rangeSize}"
+                                                              id="t4" partialTriggers="::b5 l2 :::pc1:b5 :::pc1:t1:l2"
+                                                              inlineStyle="background-color:transparent"
+                                                              columnStretching="column:c8" displayRow="selected">
+                                                        <af:column headerText="ID" id="c9" width="30">
+                                                            <af:inputText value="#{row.bindings.DocIdPk.inputValue}"
+                                                                          label="#{bindings.ElaajClaimDmsDocEOVO1.hints.DocIdPk.label}"
+                                                                          required="#{bindings.ElaajClaimDmsDocEOVO1.hints.DocIdPk.mandatory}"
+                                                                          columns="#{bindings.ElaajClaimDmsDocEOVO1.hints.DocIdPk.displayWidth}"
+                                                                          maximumLength="#{bindings.ElaajClaimDmsDocEOVO1.hints.DocIdPk.precision}"
+                                                                          shortDesc="#{bindings.ElaajClaimDmsDocEOVO1.hints.DocIdPk.tooltip}"
+                                                                          id="it24" disabled="true">
+                                                                <f:validator binding="#{row.bindings.DocIdPk.validator}"/>
+                                                                <af:convertNumber groupingUsed="false"
+                                                                                  pattern="#{bindings.ElaajClaimDmsDocEOVO1.hints.DocIdPk.format}"/>
+                                                            </af:inputText>
+                                                        </af:column>
+                                                        <af:column id="c10" headerText="Type" align="center" width="200"
+                                                                   displayIndex="-1">
+                                                            <af:selectOneChoice value="#{row.bindings.DocType.inputValue}"
+                                                                                label="#{row.bindings.DocType.label}"
+                                                                                required="#{bindings.ElaajClaimDmsDocEOVO1.hints.DocType.mandatory}"
+                                                                                shortDesc="#{bindings.ElaajClaimDmsDocEOVO1.hints.DocType.tooltip}"
+                                                                                id="soc4" autoSubmit="true">
+                                                                <f:selectItems value="#{row.bindings.DocType.items}"
+                                                                               id="si4"/>
+                                                                <f:validator binding="#{row.bindings.DocType.validator}"/>
+                                                            </af:selectOneChoice>
+                                                        </af:column>
+                                                        <af:column headerText="#{bindings.ElaajClaimDmsDocEOVO1.hints.ElaajClaimIntimateIdFk.label}"
+                                                                   id="c11" rendered="false">
+                                                            <af:inputText value="#{row.bindings.ElaajClaimIntimateIdFk.inputValue}"
+                                                                          label="#{bindings.ElaajClaimDmsDocEOVO1.hints.ElaajClaimIntimateIdFk.label}"
+                                                                          required="#{bindings.ElaajClaimDmsDocEOVO1.hints.ElaajClaimIntimateIdFk.mandatory}"
+                                                                          columns="#{bindings.ElaajClaimDmsDocEOVO1.hints.ElaajClaimIntimateIdFk.displayWidth}"
+                                                                          maximumLength="#{bindings.ElaajClaimDmsDocEOVO1.hints.ElaajClaimIntimateIdFk.precision}"
+                                                                          shortDesc="#{bindings.ElaajClaimDmsDocEOVO1.hints.ElaajClaimIntimateIdFk.tooltip}"
+                                                                          id="it25">
+                                                                <f:validator binding="#{row.bindings.ElaajClaimIntimateIdFk.validator}"/>
+                                                                <af:convertNumber groupingUsed="false"
+                                                                                  pattern="#{bindings.ElaajClaimDmsDocEOVO1.hints.ElaajClaimIntimateIdFk.format}"/>
+                                                            </af:inputText>
+                                                        </af:column>
+                                                        <af:column headerText="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileLocation.label}"
+                                                                   id="c12" rendered="false">
+                                                            <af:inputText value="#{row.bindings.FileLocation.inputValue}"
+                                                                          label="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileLocation.label}"
+                                                                          required="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileLocation.mandatory}"
+                                                                          columns="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileLocation.displayWidth}"
+                                                                          maximumLength="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileLocation.precision}"
+                                                                          shortDesc="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileLocation.tooltip}"
+                                                                          id="it26">
+                                                                <f:validator binding="#{row.bindings.FileLocation.validator}"/>
+                                                            </af:inputText>
+                                                        </af:column>
+                                                        <af:column headerText="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileName.label}"
+                                                                   id="c13" width="100" rendered="false">
+                                                            <af:inputText value="#{row.bindings.FileName.inputValue}"
+                                                                          label="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileName.label}"
+                                                                          required="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileName.mandatory}"
+                                                                          columns="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileName.displayWidth}"
+                                                                          maximumLength="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileName.precision}"
+                                                                          shortDesc="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileName.tooltip}"
+                                                                          id="it27" disabled="true">
+                                                                <f:validator binding="#{row.bindings.FileName.validator}"/>
+                                                            </af:inputText>
+                                                        </af:column>
+                                                        <af:column headerText="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileType.label}"
+                                                                   id="c14" rendered="false">
+                                                            <af:inputText value="#{row.bindings.FileType.inputValue}"
+                                                                          label="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileType.label}"
+                                                                          required="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileType.mandatory}"
+                                                                          columns="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileType.displayWidth}"
+                                                                          maximumLength="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileType.precision}"
+                                                                          shortDesc="#{bindings.ElaajClaimDmsDocEOVO1.hints.FileType.tooltip}"
+                                                                          id="it28">
+                                                                <f:validator binding="#{row.bindings.FileType.validator}"/>
+                                                            </af:inputText>
+                                                        </af:column>
+                                                        <af:column id="c15" width="200">
+                                                            <af:inputFile label="Label 1" id="if4"
+                                                                          valueChangeListener="#{BenefitDetailBean.dmsDocUploadFileEvent}"
+                                                                          autoSubmit="true"/>
+                                                        </af:column>
+                                                        <af:column id="c16" width="30" align="center">
+                                                            <af:link actionListener="#{bindings.Delete.execute}"
+                                                                     disabled="#{!bindings.Delete.enabled}" id="l5"
+                                                                     icon="/images/deleteicon_enabled.gif"/>
+                                                        </af:column>
+                                                    </af:table>
+                                                    <f:facet name="statusbar"/>
+                                                </af:panelCollection>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow id="gr36" height="100px" marginTop="100px">
+                                            <af:gridCell id="gc37" valign="stretch" halign="stretch">
+                                                <af:panelGroupLayout id="pgl22" layout="vertical" halign="center">
+                                                    <af:button text="Apply" disabled="#{!bindings.Apply.enabled}"
+                                                               id="b11" action="#{BenefitDetailBean.submitAction}"
+                                                               styleClass="PQLoginButton"/>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                    </af:panelGridLayout>
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
+                </f:facet>
+                <f:facet name="start">
+                    <af:panelFormLayout id="pfl1" rendered="false">
+                        <af:inputText value="#{bindings.DocumentReference.inputValue}"
+                                      label="#{bindings.DocumentReference.hints.label}"
+                                      required="#{bindings.DocumentReference.hints.mandatory}"
+                                      columns="#{bindings.DocumentReference.hints.displayWidth}"
+                                      maximumLength="#{bindings.DocumentReference.hints.precision}"
+                                      shortDesc="#{bindings.DocumentReference.hints.tooltip}" id="it8">
+                            <f:validator binding="#{bindings.DocumentReference.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.SchemaName.inputValue}"
+                                      label="#{bindings.SchemaName.hints.label}"
+                                      required="#{bindings.SchemaName.hints.mandatory}"
+                                      columns="#{bindings.SchemaName.hints.displayWidth}"
+                                      maximumLength="#{bindings.SchemaName.hints.precision}"
+                                      shortDesc="#{bindings.SchemaName.hints.tooltip}" id="it9">
+                            <f:validator binding="#{bindings.SchemaName.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.RepoName.inputValue}" label="#{bindings.RepoName.hints.label}"
+                                      required="#{bindings.RepoName.hints.mandatory}"
+                                      columns="#{bindings.RepoName.hints.displayWidth}"
+                                      maximumLength="#{bindings.RepoName.hints.precision}"
+                                      shortDesc="#{bindings.RepoName.hints.tooltip}" id="it10">
+                            <f:validator binding="#{bindings.RepoName.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.PrimaryKey.inputValue}"
+                                      label="#{bindings.PrimaryKey.hints.label}"
+                                      required="#{bindings.PrimaryKey.hints.mandatory}"
+                                      columns="#{bindings.PrimaryKey.hints.displayWidth}"
+                                      maximumLength="#{bindings.PrimaryKey.hints.precision}"
+                                      shortDesc="#{bindings.PrimaryKey.hints.tooltip}" id="it11">
+                            <f:validator binding="#{bindings.PrimaryKey.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.FileLocation.inputValue}"
+                                      label="#{bindings.FileLocation.hints.label}"
+                                      required="#{bindings.FileLocation.hints.mandatory}"
+                                      columns="#{bindings.FileLocation.hints.displayWidth}"
+                                      maximumLength="#{bindings.FileLocation.hints.precision}"
+                                      shortDesc="#{bindings.FileLocation.hints.tooltip}" id="it12">
+                            <f:validator binding="#{bindings.FileLocation.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.FileName.inputValue}" label="#{bindings.FileName.hints.label}"
+                                      required="#{bindings.FileName.hints.mandatory}"
+                                      columns="#{bindings.FileName.hints.displayWidth}"
+                                      maximumLength="#{bindings.FileName.hints.precision}"
+                                      shortDesc="#{bindings.FileName.hints.tooltip}" id="it13">
+                            <f:validator binding="#{bindings.FileName.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Parameters.inputValue}"
+                                      label="#{bindings.Parameters.hints.label}"
+                                      required="#{bindings.Parameters.hints.mandatory}"
+                                      columns="#{bindings.Parameters.hints.displayWidth}"
+                                      maximumLength="#{bindings.Parameters.hints.precision}"
+                                      shortDesc="#{bindings.Parameters.hints.tooltip}" id="it14">
+                            <f:validator binding="#{bindings.Parameters.validator}"/>
+                        </af:inputText>
+                        <af:button actionListener="#{bindings.UploadFile1.execute}" text="UploadFile1"
+                                   disabled="#{!bindings.UploadFile1.enabled}" id="b4"/>
+                    </af:panelFormLayout>
+                </f:facet>
+            </af:panelStretchLayout>
+        </af:form>
+    </af:document>
+</f:view>

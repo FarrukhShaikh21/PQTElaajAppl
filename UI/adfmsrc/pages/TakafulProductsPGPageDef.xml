@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="TakafulProductsPGPageDef"
+                Package="pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ProductMasterVO1" RangeSize="25" DataControl="PQTElaajAMDataControl"
+              id="ProductMasterVO1Iterator"/>
+    <iterator Binds="ProductDetailVO1" RangeSize="10" DataControl="PQTElaajAMDataControl"
+              id="ProductDetailVO1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="ProductMasterVO1Iterator" id="ProductMasterVO1">
+      <nodeDefinition DefName="pqt.gh.elaaj.model.vo.ProductMasterVO" Name="ProductMasterVO10">
+        <AttrNames>
+          <Item Value="BussinessLine"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="ProductDetailVO1Iterator" id="ProductDetailVO11">
+      <nodeDefinition DefName="pqt.gh.elaaj.model.vo.ProductDetailVO" Name="ProductDetailVO110">
+        <AttrNames>
+          <Item Value="Name"/>
+          <Item Value="Url"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

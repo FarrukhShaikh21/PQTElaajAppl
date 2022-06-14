@@ -1,0 +1,695 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="ClaimDetaiPG.jsf" id="d1">
+        <af:messages id="m1"/>
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>        
+        <af:form id="f1" usesUpload="true">
+            <af:panelStretchLayout id="psl1">
+                <f:facet name="top">
+                    <af:panelGridLayout id="pgl1" styleClass="PQHeaderColor" dimensionsFrom="parent" rendered="false">
+                        <af:gridRow marginTop="5px" height="100%" marginBottom="5px" id="gr19">
+                            <af:gridCell width="10%" id="gc25" valign="middle" halign="center"/>
+                            <af:gridCell marginStart="5px" width="90%" marginEnd="5px" id="gc26" valign="middle"
+                                         halign="center">
+                                <af:outputFormatted value="Claims Detail" id="of1"
+                                                    inlineStyle="font-size:x-large; font-weight:bolder; color:white;"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
+                </f:facet>
+                
+                <f:facet name="center">
+                    <af:panelGridLayout id="pgl17">
+                        <af:gridRow marginTop="5px" height="auto" id="gr25">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc35" halign="stretch"
+                                         valign="stretch">
+                                <af:panelGroupLayout id="pgl18" layout="scroll" styleClass="wide">
+                                    <af:panelGridLayout id="pgl13" styleClass="PQHeaderColor">
+                                        <af:gridRow id="gr1" height="100px">
+                                            <af:gridCell id="gc1" halign="stretch" valign="stretch">
+                                                <af:image source="#{resource['images:imgTopElaajApp.png']}" id="i1"/>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" id="gr22">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc32"
+                                                         halign="stretch" valign="stretch">
+                                                <af:panelGridLayout id="pgl3">
+                                                    <af:gridRow id="gr4">
+                                                        <af:gridCell id="gc4" halign="center" valign="stretch">
+                                                            <af:image source="#{resource['images:imgClaimHistory.png']}"
+                                                                      id="i3" styleClass="AFStretchWidth"
+                                                                      inlineStyle="width:100px;height:100px"/>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow id="gr7">
+                                                        <af:gridCell id="gc7" halign="center">
+                                                            <af:panelGroupLayout id="pgl6" layout="vertical"
+                                                                                 halign="center">
+                                                                <af:outputText value="Claim History" id="ot3"
+                                                                               inlineStyle="font-size:30px; font-weight:bolder; color:#8b0037;"/>
+                                                                <af:link text="Back" id="l1"
+                                                                         icon="/icons/left-arrow-white.png"
+                                                                         inlineStyle="color:black;"
+                                                                         action="ClaimToHome"/>
+                                                            </af:panelGroupLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow id="gr5" marginTop="30px">
+                                                        <af:gridCell id="gc9" width="100%" halign="stretch">
+                                                            <af:panelGroupLayout id="pgl2" layout="vertical"
+                                                                                 halign="center">
+                                                                <af:outputFormatted value="#{bindings.EmpName.inputValue}"
+                                                                                    id="of6"
+                                                                                    inlineStyle="color:#8b0037;"/>
+                                                                <af:separator id="s1" inlineStyle="WIDTH:500PX"/>
+                                                            </af:panelGroupLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow id="gr6" marginTop="30px">
+                                                        <af:gridCell id="gc2" width="100%" halign="stretch">
+                                                            <af:panelGroupLayout id="pgl4" layout="vertical"
+                                                                                 halign="center">
+                                                                <af:outputFormatted value="#{bindings.EmpAge.inputValue}"
+                                                                                    id="of7"
+                                                                                    inlineStyle="color:#8b0037;"/>
+                                                                <af:separator id="s2" inlineStyle="width:500px"/>
+                                                            </af:panelGroupLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow marginTop="30px" height="auto" id="gr3">
+                                                        <af:gridCell marginStart="5px" width="100%" id="gc5"
+                                                                     halign="stretch" valign="middle">
+                                                            <af:panelGroupLayout id="pgl14" layout="vertical"
+                                                                                 halign="center">
+                                                                <af:outputFormatted value="#{bindings.EmpFolioId.inputValue}"
+                                                                                    id="of8"
+                                                                                    inlineStyle="color:#8b0037;"/>
+                                                                <af:separator id="s3" inlineStyle="width:500px"/>
+                                                            </af:panelGroupLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow id="gr8" marginBottom="30px" marginTop="30px">
+                                                        <af:gridCell id="gc10" width="100%" halign="stretch">
+                                                            <af:panelGroupLayout id="pgl15" layout="vertical"
+                                                                                 halign="center">
+                                                                <af:outputFormatted value="#{bindings.PolicyPeriod.inputValue}"
+                                                                                    id="of9"
+                                                                                    inlineStyle="color:#8b0037;"/>
+                                                            </af:panelGroupLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow id="gr17">
+                                                        <af:gridCell id="gc23" halign="stretch">
+                                                            <af:panelGridLayout id="pgl10"
+                                                                                inlineStyle="background-color:#8b0037;">
+                                                                <af:gridRow marginTop="5px" height="auto"
+                                                                            marginBottom="5px" id="gr18">
+                                                                    <af:gridCell marginStart="5px" width="100%"
+                                                                                 marginEnd="5px" id="gc24"
+                                                                                 halign="stretch" valign="stretch">
+                                                                        <af:panelGroupLayout id="pgl16"
+                                                                                             layout="vertical"
+                                                                                             halign="center">
+                                                                            <af:outputText value="Elaaj Detail" id="ot2"
+                                                                                           inlineStyle="color:white"/>
+                                                                        </af:panelGroupLayout>
+                                                                    </af:gridCell>
+                                                                </af:gridRow>
+                                                            </af:panelGridLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow marginTop="5px" height="100px" marginBottom="5px"
+                                                                id="gr11">
+                                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                                                                     id="gc13" halign="stretch" valign="stretch">
+                                                            <af:panelSplitter id="ps1" orientation="vertical"
+                                                                              splitterPosition="0"
+                                                                              styleClass="AFStretchWidth"
+                                                                              dimensionsFrom="parent">
+                                                                <f:facet name="first"/>
+                                                                <f:facet name="second">
+                                                                    <af:listView value="#{bindings.VuGhsElaajCoveredMemberVO11.collectionModel}"
+                                                                                 var="item"
+                                                                                 emptyText="#{bindings.VuGhsElaajCoveredMemberVO11.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                                 fetchSize="#{bindings.VuGhsElaajCoveredMemberVO11.rangeSize}"
+                                                                                 id="lv1" selection="single"
+                                                                                 selectionListener="#{bindings.VuGhsElaajCoveredMemberVO11.treeModel.makeCurrent}">
+                                                                        <af:listItem id="li1">
+                                                                            <af:panelGridLayout id="pgl5">
+                                                                                <af:gridRow height="auto" id="gr9">
+                                                                                    <af:gridCell marginStart="5px"
+                                                                                                 width="50%" id="gc6"
+                                                                                                 halign="stretch">
+                                                                                        <af:outputFormatted value="#{item.bindings.EmpName.inputValue}"
+                                                                                                            id="of2"
+                                                                                                            inlineStyle="color:#8b0037;"/>
+                                                                                    </af:gridCell>
+                                                                                    <af:gridCell marginStart="5px"
+                                                                                                 width="50%"
+                                                                                                 marginEnd="5px"
+                                                                                                 id="gc8"
+                                                                                                 halign="stretch">
+                                                                                        <af:outputFormatted value="#{item.bindings.EmpSrNo.inputValue}"
+                                                                                                            id="of19"
+                                                                                                            inlineStyle="color:#8b0037;"/>
+                                                                                    </af:gridCell>
+                                                                                </af:gridRow>
+                                                                                <af:gridRow height="auto" id="gr10">
+                                                                                    <af:gridCell marginStart="5px"
+                                                                                                 width="50%" id="gc11"
+                                                                                                 halign="stretch">
+                                                                                        <af:outputFormatted value="#{item.bindings.EmpDob.inputValue}"
+                                                                                                            id="of20"
+                                                                                                            inlineStyle="color:#8b0037;">
+                                                                                            <af:convertDateTime pattern="#{bindings.VuGhsElaajCoveredMemberVO11.hints.EmpDob.format}"/>
+                                                                                        </af:outputFormatted>
+                                                                                    </af:gridCell>
+                                                                                    <af:gridCell marginStart="5px"
+                                                                                                 width="50%"
+                                                                                                 marginEnd="5px"
+                                                                                                 id="gc12"
+                                                                                                 halign="stretch">
+                                                                                        <af:outputFormatted value="#{item.bindings.Relation.inputValue}"
+                                                                                                            id="of21"
+                                                                                                            inlineStyle="color:#8b0037;"/>
+                                                                                    </af:gridCell>
+                                                                                </af:gridRow>
+                                                                            </af:panelGridLayout>
+                                                                        </af:listItem>
+                                                                    </af:listView>
+                                                                </f:facet>
+                                                            </af:panelSplitter>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                </af:panelGridLayout>
+                                                <af:panelGridLayout id="pgl7">
+                                                    <af:gridRow id="gr15">
+                                                        <af:gridCell id="gc21" valign="middle" halign="stretch">
+                                                            <af:panelGridLayout id="pgl9"
+                                                                                inlineStyle="background-color:#8b0037;">
+                                                                <af:gridRow marginTop="5px" height="auto"
+                                                                            marginBottom="5px" id="gr16">
+                                                                    <af:gridCell marginStart="5px" width="100%"
+                                                                                 marginEnd="5px" id="gc22"
+                                                                                 halign="center" valign="stretch">
+                                                                        <af:outputText value="Claim Detail" id="ot1"
+                                                                                       inlineStyle="color:white;"/>
+                                                                    </af:gridCell>
+                                                                </af:gridRow>
+                                                            </af:panelGridLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow marginTop="5px" height="auto" marginBottom="5px"
+                                                                id="gr12">
+                                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                                                                     id="gc14" halign="stretch">
+                                                            <af:panelSplitter id="ps2" styleClass="AFStretchWidth"
+                                                                              dimensionsFrom="parent"
+                                                                              splitterPosition="0"
+                                                                              orientation="vertical">
+                                                                <f:facet name="second">
+                                                                    <af:panelGroupLayout id="pgl11" layout="vertical"
+                                                                                         styleClass="AFStretchWidth">
+                                                                        <af:panelGridLayout id="pgl12">
+                                                                            <af:gridRow marginTop="5px" height="auto"
+                                                                                        marginBottom="5px" id="gr21">
+                                                                                <af:gridCell marginStart="5px"
+                                                                                             width="34%" id="gc28"
+                                                                                             halign="center"
+                                                                                             valign="middle">
+                                                                                    <af:outputFormatted value="Intimation Date"
+                                                                                                        id="of15"
+                                                                                                        inlineStyle="color:green;"/>
+                                                                                </af:gridCell>
+                                                                                <af:gridCell marginStart="5px"
+                                                                                             width="33%" id="gc29"
+                                                                                             halign="center"
+                                                                                             valign="middle">
+                                                                                    <af:outputFormatted value="Rider &amp; Claim .#"
+                                                                                                        id="of16"
+                                                                                                        inlineStyle="color:green;"/>
+                                                                                </af:gridCell>
+                                                                                <af:gridCell marginStart="5px"
+                                                                                             width="33%" marginEnd="5px"
+                                                                                             id="gc30" halign="center"
+                                                                                             valign="middle">
+                                                                                    <af:outputFormatted value="Amount &amp; Status"
+                                                                                                        id="of17"
+                                                                                                        inlineStyle="color:green;"/>
+                                                                                </af:gridCell>
+                                                                            </af:gridRow>
+                                                                        </af:panelGridLayout>
+                                                                        <af:panelSplitter id="ps3" splitterPosition="0"
+                                                                                          dimensionsFrom="parent"
+                                                                                          styleClass="AFStretchWidth">
+                                                                            <f:facet name="first"/>
+                                                                            <f:facet name="second">
+                                                                                <af:listView value="#{bindings.ClaimsDetailVO11.collectionModel}"
+                                                                                             var="item"
+                                                                                             emptyText="#{bindings.ClaimsDetailVO11.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                                             fetchSize="#{bindings.ClaimsDetailVO11.rangeSize}"
+                                                                                             id="lv2"
+                                                                                             selectionListener="#{bindings.ClaimsDetailVO11.treeModel.makeCurrent}"
+                                                                                             partialTriggers="::lv1"
+                                                                                             selection="single">
+                                                                                    <af:listItem id="li2">
+                                                                                        <af:panelGridLayout id="pgl8">
+                                                                                            <af:gridRow marginTop="5px"
+                                                                                                        height="auto"
+                                                                                                        id="gr13">
+                                                                                                <af:gridCell marginStart="5px"
+                                                                                                             width="34%"
+                                                                                                             id="gc15"
+                                                                                                             halign="stretch">
+                                                                                                    <af:outputFormatted value="#{item.bindings.ClmPolNo.inputValue}"
+                                                                                                                        id="of22"
+                                                                                                                        inlineStyle="color:#8b0037;"/>
+                                                                                                </af:gridCell>
+                                                                                                <af:gridCell marginStart="5px"
+                                                                                                             width="33%"
+                                                                                                             id="gc16"
+                                                                                                             halign="stretch">
+                                                                                                    <af:outputFormatted value="#{item.bindings.CoverDesc.inputValue}"
+                                                                                                                        id="of23"
+                                                                                                                        inlineStyle="color:#8b0037;"/>
+                                                                                                </af:gridCell>
+                                                                                                <af:gridCell marginStart="5px"
+                                                                                                             width="33%"
+                                                                                                             marginEnd="5px"
+                                                                                                             id="gc17"
+                                                                                                             halign="stretch">
+                                                                                                    <af:outputFormatted value="#{item.bindings.ClaimAmount.inputValue}"
+                                                                                                                        id="of24"
+                                                                                                                        inlineStyle="color:#8b0037;">
+                                                                                                        <af:convertNumber groupingUsed="false"
+                                                                                                                          pattern="#{bindings.ClaimsDetailVO11.hints.ClaimAmount.format}"/>
+                                                                                                        <af:convertNumber type="number"
+                                                                                                                          pattern="#,###.##"/>
+                                                                                                    </af:outputFormatted>
+                                                                                                </af:gridCell>
+                                                                                            </af:gridRow>
+                                                                                            <af:gridRow marginTop="5px"
+                                                                                                        height="auto"
+                                                                                                        marginBottom="5px"
+                                                                                                        id="gr14">
+                                                                                                <af:gridCell marginStart="5px"
+                                                                                                             width="34%"
+                                                                                                             id="gc18"
+                                                                                                             halign="stretch">
+                                                                                                    <af:outputFormatted value="#{item.bindings.ClmIntDt.inputValue}"
+                                                                                                                        id="of25"
+                                                                                                                        inlineStyle="color:#8b0037;"/>
+                                                                                                </af:gridCell>
+                                                                                                <af:gridCell marginStart="5px"
+                                                                                                             width="33%"
+                                                                                                             id="gc19"
+                                                                                                             halign="stretch">
+                                                                                                    <af:outputFormatted value="#{item.bindings.ClaimNo.inputValue}"
+                                                                                                                        id="of26"
+                                                                                                                        inlineStyle="color:#8b0037;"/>
+                                                                                                </af:gridCell>
+                                                                                                <af:gridCell marginStart="5px"
+                                                                                                             width="33%"
+                                                                                                             marginEnd="5px"
+                                                                                                             id="gc20"
+                                                                                                             halign="stretch">
+                                                                                                    <af:outputFormatted value="#{item.bindings.StatusDesc.inputValue}"
+                                                                                                                        id="of27"
+                                                                                                                        inlineStyle="color:#8b0037;"/>
+                                                                                                </af:gridCell>
+                                                                                            </af:gridRow>
+                                                                                            <af:gridRow id="gr20">
+                                                                                                <af:gridCell id="gc27"
+                                                                                                             width="auto"
+                                                                                                             halign="stretch">
+                                                                                                    <af:outputFormatted value="#{item.bindings.DeductionReason.inputValue}"
+                                                                                                                        id="of14"
+                                                                                                                        inlineStyle="color:#8b0037;"/>
+                                                                                                </af:gridCell>
+                                                                                                <af:gridCell id="gc31"
+                                                                                                             halign="stretch"
+                                                                                                             width="auto">
+                                                                                                    <af:outputFormatted value="#{bindings.DeductionAmount.inputValue}"
+                                                                                                                        id="of18"
+                                                                                                                        inlineStyle="color:#8b0037;">
+                                                                                                        <af:convertNumber groupingUsed="false"
+                                                                                                                          pattern="#{bindings.DeductionAmount.format}"/>
+                                                                                                        <af:convertNumber type="number"
+                                                                                                                          pattern="#,###.##"/>
+                                                                                                    </af:outputFormatted>
+                                                                                                </af:gridCell>
+                                                                                            </af:gridRow>
+                                                                                        </af:panelGridLayout>
+                                                                                    </af:listItem>
+                                                                                </af:listView>
+                                                                            </f:facet>
+                                                                        </af:panelSplitter>
+                                                                    </af:panelGroupLayout>
+                                                                </f:facet>
+                                                            </af:panelSplitter>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                </af:panelGridLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow id="gr2">
+                                            <af:gridCell id="gc3" halign="stretch" valign="bottom">
+                                                <af:image source="#{resource['images:imgBottomElaajApp.png']}" id="i2"
+                                                          styleClass="AFStretchWidth"/>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                    </af:panelGridLayout>
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow height="auto" id="gr26">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc36" valign="stretch"
+                                         halign="stretch">
+                                <af:panelGroupLayout id="pgl19" styleClass="narrow" layout="scroll">
+                                    <af:panelGridLayout id="pgl20" styleClass="PQHeaderColorMobile">
+                                        <af:gridRow marginTop="5px" height="auto" id="gr28">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc38"
+                                                         halign="stretch" valign="stretch">
+                                                <af:panelGridLayout id="pgl21">
+                                                    <af:gridRow id="gr30" marginTop="30px">
+                                                        <af:gridCell id="gc40" halign="center">
+                                                            <af:panelGroupLayout id="pgl22" layout="vertical"
+                                                                                 halign="center">
+                                                                <af:outputText value="Claim History" id="ot4"
+                                                                               inlineStyle="font-size:30px; font-weight:bolder; color:#8b0037;"/>
+                                                                <af:link text="Back" id="l2"
+                                                                         icon="/icons/left-arrow-white.png"
+                                                                         inlineStyle="color:black;"
+                                                                         action="ClaimToHome"/>
+                                                            </af:panelGroupLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow id="gr31" marginTop="30px">
+                                                        <af:gridCell id="gc41" width="100%" halign="stretch">
+                                                            <af:panelGroupLayout id="pgl23" layout="vertical"
+                                                                                 halign="center">
+                                                                <af:outputFormatted value="#{bindings.EmpName.inputValue}"
+                                                                                    id="of3"
+                                                                                    inlineStyle="color:#8b0037;"/>
+                                                                <af:separator id="s4" styleClass="AFStretchWidth"/>
+                                                            </af:panelGroupLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow id="gr32" marginTop="30px">
+                                                        <af:gridCell id="gc42" width="100%" halign="stretch">
+                                                            <af:panelGroupLayout id="pgl24" layout="vertical"
+                                                                                 halign="center">
+                                                                <af:outputFormatted value="#{bindings.EmpAge.inputValue}"
+                                                                                    id="of4"
+                                                                                    inlineStyle="color:#8b0037;"/>
+                                                                <af:separator id="s5" styleClass="AFStretchWidth"/>
+                                                            </af:panelGroupLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow marginTop="30px" height="auto" id="gr33">
+                                                        <af:gridCell marginStart="5px" width="100%" id="gc43"
+                                                                     halign="stretch" valign="middle">
+                                                            <af:panelGroupLayout id="pgl25" layout="vertical"
+                                                                                 halign="center">
+                                                                <af:outputFormatted value="#{bindings.EmpFolioId.inputValue}"
+                                                                                    id="of5"
+                                                                                    inlineStyle="color:#8b0037;"/>
+                                                                <af:separator id="s6" styleClass="AFStretchWidth"/>
+                                                            </af:panelGroupLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow id="gr34" marginBottom="30px" marginTop="30px">
+                                                        <af:gridCell id="gc44" width="100%" halign="stretch">
+                                                            <af:panelGroupLayout id="pgl26" layout="vertical"
+                                                                                 halign="center">
+                                                                <af:outputFormatted value="#{bindings.PolicyPeriod.inputValue}"
+                                                                                    id="of10"
+                                                                                    inlineStyle="color:#8b0037;"/>
+                                                            </af:panelGroupLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow id="gr35">
+                                                        <af:gridCell id="gc45" halign="stretch">
+                                                            <af:panelGridLayout id="pgl27"
+                                                                                inlineStyle="background-color:#8b0037;">
+                                                                <af:gridRow marginTop="5px" height="auto"
+                                                                            marginBottom="5px" id="gr36">
+                                                                    <af:gridCell marginStart="5px" width="100%"
+                                                                                 marginEnd="5px" id="gc46"
+                                                                                 halign="stretch" valign="stretch">
+                                                                        <af:panelGroupLayout id="pgl28"
+                                                                                             layout="vertical"
+                                                                                             halign="center">
+                                                                            <af:outputText value="Elaaj Detail" id="ot5"
+                                                                                           inlineStyle="color:white"/>
+                                                                        </af:panelGroupLayout>
+                                                                    </af:gridCell>
+                                                                </af:gridRow>
+                                                            </af:panelGridLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow marginTop="5px" height="100px" marginBottom="5px"
+                                                                id="gr37">
+                                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                                                                     id="gc47" halign="stretch" valign="stretch">
+                                                            <af:panelSplitter id="ps4" orientation="vertical"
+                                                                              splitterPosition="0"
+                                                                              styleClass="AFStretchWidth"
+                                                                              dimensionsFrom="parent">
+                                                                <f:facet name="first"/>
+                                                                <f:facet name="second">
+                                                                    <af:listView value="#{bindings.VuGhsElaajCoveredMemberVO11.collectionModel}"
+                                                                                 var="item"
+                                                                                 emptyText="#{bindings.VuGhsElaajCoveredMemberVO11.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                                 fetchSize="#{bindings.VuGhsElaajCoveredMemberVO11.rangeSize}"
+                                                                                 id="lv3" selection="single"
+                                                                                 selectionListener="#{bindings.VuGhsElaajCoveredMemberVO11.treeModel.makeCurrent}">
+                                                                        <af:listItem id="li3">
+                                                                            <af:panelGridLayout id="pgl29">
+                                                                                <af:gridRow height="auto" id="gr38">
+                                                                                    <af:gridCell marginStart="5px"
+                                                                                                 width="50%" id="gc48"
+                                                                                                 halign="stretch">
+                                                                                        <af:outputFormatted value="#{item.bindings.EmpName.inputValue}"
+                                                                                                            id="of11"
+                                                                                                            inlineStyle="color:#8b0037;"/>
+                                                                                    </af:gridCell>
+                                                                                    <af:gridCell marginStart="5px"
+                                                                                                 width="50%"
+                                                                                                 marginEnd="5px"
+                                                                                                 id="gc49"
+                                                                                                 halign="stretch">
+                                                                                        <af:outputFormatted value="#{item.bindings.EmpSrNo.inputValue}"
+                                                                                                            id="of12"
+                                                                                                            inlineStyle="color:#8b0037;"/>
+                                                                                    </af:gridCell>
+                                                                                </af:gridRow>
+                                                                                <af:gridRow height="auto" id="gr39">
+                                                                                    <af:gridCell marginStart="5px"
+                                                                                                 width="50%" id="gc50"
+                                                                                                 halign="stretch">
+                                                                                        <af:outputFormatted value="#{item.bindings.EmpDob.inputValue}"
+                                                                                                            id="of13"
+                                                                                                            inlineStyle="color:#8b0037;">
+                                                                                            <af:convertDateTime pattern="#{bindings.VuGhsElaajCoveredMemberVO11.hints.EmpDob.format}"/>
+                                                                                        </af:outputFormatted>
+                                                                                    </af:gridCell>
+                                                                                    <af:gridCell marginStart="5px"
+                                                                                                 width="50%"
+                                                                                                 marginEnd="5px"
+                                                                                                 id="gc51"
+                                                                                                 halign="stretch">
+                                                                                        <af:outputFormatted value="#{item.bindings.Relation.inputValue}"
+                                                                                                            id="of28"
+                                                                                                            inlineStyle="color:#8b0037;"/>
+                                                                                    </af:gridCell>
+                                                                                </af:gridRow>
+                                                                            </af:panelGridLayout>
+                                                                        </af:listItem>
+                                                                    </af:listView>
+                                                                </f:facet>
+                                                            </af:panelSplitter>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                </af:panelGridLayout>
+                                                <af:panelGridLayout id="pgl30">
+                                                    <af:gridRow id="gr40" height="30px">
+                                                        <af:gridCell id="gc52" valign="middle" halign="stretch">
+                                                            <af:panelGridLayout id="pgl31"
+                                                                                inlineStyle="background-color:#8b0037;">
+                                                                <af:gridRow marginTop="5px" height="auto"
+                                                                            marginBottom="5px" id="gr41">
+                                                                    <af:gridCell marginStart="5px" width="100%"
+                                                                                 marginEnd="5px" id="gc53"
+                                                                                 halign="center" valign="stretch">
+                                                                        <af:outputText value="Claim Detail" id="ot6"
+                                                                                       inlineStyle="color:white;"/>
+                                                                    </af:gridCell>
+                                                                </af:gridRow>
+                                                            </af:panelGridLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow marginTop="5px" height="auto" marginBottom="5px"
+                                                                id="gr42">
+                                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                                                                     id="gc54" halign="stretch">
+                                                            <af:panelSplitter id="ps5" styleClass="AFStretchWidth"
+                                                                              dimensionsFrom="parent"
+                                                                              splitterPosition="0"
+                                                                              orientation="vertical">
+                                                                <f:facet name="second">
+                                                                    <af:panelGroupLayout id="pgl32" layout="vertical"
+                                                                                         styleClass="AFStretchWidth">
+                                                                        <af:panelGridLayout id="pgl33">
+                                                                            <af:gridRow marginTop="5px" height="auto"
+                                                                                        marginBottom="5px" id="gr43">
+                                                                                <af:gridCell marginStart="5px"
+                                                                                             width="34%" id="gc55"
+                                                                                             halign="center"
+                                                                                             valign="middle">
+                                                                                    <af:outputFormatted value="Intimation Date"
+                                                                                                        id="of29"
+                                                                                                        inlineStyle="color:green;"/>
+                                                                                </af:gridCell>
+                                                                                <af:gridCell marginStart="5px"
+                                                                                             width="33%" id="gc56"
+                                                                                             halign="center"
+                                                                                             valign="middle">
+                                                                                    <af:outputFormatted value="Rider &amp; Claim .#"
+                                                                                                        id="of30"
+                                                                                                        inlineStyle="color:green;"/>
+                                                                                </af:gridCell>
+                                                                                <af:gridCell marginStart="5px"
+                                                                                             width="33%" marginEnd="5px"
+                                                                                             id="gc57" halign="center"
+                                                                                             valign="middle">
+                                                                                    <af:outputFormatted value="Amount &amp; Status"
+                                                                                                        id="of31"
+                                                                                                        inlineStyle="color:green;"/>
+                                                                                </af:gridCell>
+                                                                            </af:gridRow>
+                                                                        </af:panelGridLayout>
+                                                                        <af:panelSplitter id="ps6" splitterPosition="0"
+                                                                                          dimensionsFrom="parent"
+                                                                                          styleClass="AFStretchWidth">
+                                                                            <f:facet name="first"/>
+                                                                            <f:facet name="second">
+                                                                                <af:listView value="#{bindings.ClaimsDetailVO11.collectionModel}"
+                                                                                             var="item"
+                                                                                             emptyText="#{bindings.ClaimsDetailVO11.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                                             fetchSize="#{bindings.ClaimsDetailVO11.rangeSize}"
+                                                                                             id="lv4"
+                                                                                             selectionListener="#{bindings.ClaimsDetailVO11.treeModel.makeCurrent}"
+                                                                                             partialTriggers="::lv1"
+                                                                                             selection="single">
+                                                                                    <af:listItem id="li4">
+                                                                                        <af:panelGridLayout id="pgl34">
+                                                                                            <af:gridRow marginTop="5px"
+                                                                                                        height="auto"
+                                                                                                        id="gr44">
+                                                                                                <af:gridCell marginStart="5px"
+                                                                                                             width="34%"
+                                                                                                             id="gc58"
+                                                                                                             halign="stretch">
+                                                                                                    <af:outputFormatted value="#{item.bindings.ClmPolNo.inputValue}"
+                                                                                                                        id="of32"
+                                                                                                                        inlineStyle="color:#8b0037;"/>
+                                                                                                </af:gridCell>
+                                                                                                <af:gridCell marginStart="5px"
+                                                                                                             width="33%"
+                                                                                                             id="gc59"
+                                                                                                             halign="stretch">
+                                                                                                    <af:outputFormatted value="#{item.bindings.CoverDesc.inputValue}"
+                                                                                                                        id="of33"
+                                                                                                                        inlineStyle="color:#8b0037;"/>
+                                                                                                </af:gridCell>
+                                                                                                <af:gridCell marginStart="5px"
+                                                                                                             width="33%"
+                                                                                                             marginEnd="5px"
+                                                                                                             id="gc60"
+                                                                                                             halign="stretch">
+                                                                                                    <af:outputFormatted value="#{item.bindings.ClaimAmount.inputValue}"
+                                                                                                                        id="of34"
+                                                                                                                        inlineStyle="color:#8b0037;">
+                                                                                                        <af:convertNumber groupingUsed="false"
+                                                                                                                          pattern="#{bindings.ClaimsDetailVO11.hints.ClaimAmount.format}"/>
+                                                                                                        <af:convertNumber type="number"
+                                                                                                                          pattern="#,###.##"/>
+                                                                                                    </af:outputFormatted>
+                                                                                                </af:gridCell>
+                                                                                            </af:gridRow>
+                                                                                            <af:gridRow marginTop="5px"
+                                                                                                        height="auto"
+                                                                                                        marginBottom="5px"
+                                                                                                        id="gr45">
+                                                                                                <af:gridCell marginStart="5px"
+                                                                                                             width="34%"
+                                                                                                             id="gc61"
+                                                                                                             halign="stretch">
+                                                                                                    <af:outputFormatted value="#{item.bindings.ClmIntDt.inputValue}"
+                                                                                                                        id="of35"
+                                                                                                                        inlineStyle="color:#8b0037;"/>
+                                                                                                </af:gridCell>
+                                                                                                <af:gridCell marginStart="5px"
+                                                                                                             width="33%"
+                                                                                                             id="gc62"
+                                                                                                             halign="stretch">
+                                                                                                    <af:outputFormatted value="#{item.bindings.ClaimNo.inputValue}"
+                                                                                                                        id="of36"
+                                                                                                                        inlineStyle="color:#8b0037;"/>
+                                                                                                </af:gridCell>
+                                                                                                <af:gridCell marginStart="5px"
+                                                                                                             width="33%"
+                                                                                                             marginEnd="5px"
+                                                                                                             id="gc63"
+                                                                                                             halign="stretch">
+                                                                                                    <af:outputFormatted value="#{item.bindings.StatusDesc.inputValue}"
+                                                                                                                        id="of37"
+                                                                                                                        inlineStyle="color:#8b0037;"/>
+                                                                                                </af:gridCell>
+                                                                                            </af:gridRow>
+                                                                                            <af:gridRow id="gr46">
+                                                                                                <af:gridCell id="gc64"
+                                                                                                             width="auto"
+                                                                                                             halign="stretch">
+                                                                                                    <af:outputFormatted value="#{item.bindings.DeductionReason.inputValue}"
+                                                                                                                        id="of38"
+                                                                                                                        inlineStyle="color:#8b0037;"/>
+                                                                                                </af:gridCell>
+                                                                                                <af:gridCell id="gc65"
+                                                                                                             halign="stretch"
+                                                                                                             width="auto">
+                                                                                                    <af:outputFormatted value="#{bindings.DeductionAmount.inputValue}"
+                                                                                                                        id="of39"
+                                                                                                                        inlineStyle="color:#8b0037;">
+                                                                                                        <af:convertNumber groupingUsed="false"
+                                                                                                                          pattern="#{bindings.DeductionAmount.format}"/>
+                                                                                                        <af:convertNumber type="number"
+                                                                                                                          pattern="#,###.##"/>
+                                                                                                    </af:outputFormatted>
+                                                                                                </af:gridCell>
+                                                                                            </af:gridRow>
+                                                                                        </af:panelGridLayout>
+                                                                                    </af:listItem>
+                                                                                </af:listView>
+                                                                            </f:facet>
+                                                                        </af:panelSplitter>
+                                                                    </af:panelGroupLayout>
+                                                                </f:facet>
+                                                            </af:panelSplitter>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                </af:panelGridLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                    </af:panelGridLayout>
+                                </af:panelGroupLayout>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
+                </f:facet>
+            </af:panelStretchLayout>
+        </af:form>
+    </af:document>
+</f:view>
