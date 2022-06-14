@@ -5,22 +5,37 @@
         <af:messages id="m1"/>
         <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
         <af:form id="f1" usesUpload="true">
-            <af:panelStretchLayout id="psl1">
+            <af:panelStretchLayout id="psl1" topHeight="115px">
                 <f:facet name="top">
-                    <af:panelGridLayout id="pgl1" styleClass="PQHeaderColor" rendered="false">
-                        <af:gridRow marginTop="5px" height="50px" marginBottom="5px" id="gr15">
-                            <af:gridCell width="10%" id="gc13" valign="middle" halign="center"/>
-                            <af:gridCell marginStart="5px" width="90%" marginEnd="5px" id="gc15" valign="middle"
-                                         halign="center"/>
+                    <af:panelGridLayout id="pgl17" styleClass="wide">
+                        <af:gridRow height="100px" id="gr20" marginTop="5px">
+                            <af:gridCell width="200px" id="gc21" valign="stretch" halign="start">
+                                <af:spacer width="100" height="10" id="s2"/>
+                                <af:image id="i15" source="/images/imgMainLogo.png"/>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="100%" id="gc37"/>
+                            <af:gridCell marginStart="5px" width="200px" id="gc75" valign="middle">
+                                <af:image source="/images/app_icon-01.png" id="i30"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="100px" marginBottom="5px" id="gr36">
+                            <af:gridCell width="100%" id="gc76" columnSpan="3" halign="stretch" valign="stretch">
+                                <af:image source="#{resource['images:imgLine.png']}" id="i31"
+                                          styleClass="AFStretchWidth"/>
+                            </af:gridCell>
                         </af:gridRow>
                     </af:panelGridLayout>
                 </f:facet>
                 <f:facet name="bottom">
-                    <af:panelGroupLayout id="pgl2" halign="center" valign="middle" layout="vertical"
-                                         inlineStyle="background-color:#8b0037;" rendered="false">
-                        <af:separator id="s1"
-                                      inlineStyle="min-height:5px; background-color:#ba9632; margin: 0px;     border-color: transparent;"/>
-                    </af:panelGroupLayout>
+                    <af:panelGridLayout id="pgl52" styleClass="wide">
+                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr28">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc29" valign="stretch"
+                                         halign="stretch">
+                                <af:activeImage source="#{resource['images:imgBottomElaajApp.png']}" id="ai1"
+                                                styleClass="AFStretchWidth"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
                 </f:facet>
                 <f:facet name="center">
                     <af:panelGridLayout id="pgl12">
@@ -29,12 +44,6 @@
                                          halign="stretch">
                                 <af:panelGroupLayout id="pgl13" styleClass="wide" layout="scroll">
                                     <af:panelGridLayout id="pgl3" styleClass="PQHeaderColor">
-                                        <af:gridRow id="gr2" height="80px">
-                                            <af:gridCell id="gc2" valign="stretch" halign="stretch">
-                                                <af:image source="#{resource['images:imgTopElaajApp.png']}" id="i1"
-                                                          styleClass="AFStretchWidth"/>
-                                            </af:gridCell>
-                                        </af:gridRow>
                                         <af:gridRow marginTop="50px" height="auto" marginBottom="5px" id="gr1">
                                             <af:gridCell width="100%" id="gc1" halign="stretch" valign="stretch">
                                                 <af:panelGridLayout id="pgl5">
@@ -123,13 +132,12 @@
                                                         <af:gridCell id="gc4" halign="stretch" valign="stretch">
                                                             <af:panelGroupLayout id="pgl10" layout="vertical"
                                                                                  halign="center">
+                                                                <af:outputFormatted value="Claim Reimbursement" id="of1"
+                                                                                    inlineStyle="font-weight:bolder; color:#8b0037; font-size:30px;"/>
                                                                 <af:link text="Back" id="l1"
                                                                          icon="/icons/left-arrow-white.png"
                                                                          inlineStyle="color:black;"
                                                                          action="reimbursementToHome"/>
-                                                                <af:outputFormatted value="Claim Reimbursement" id="of1"
-                                                                                    inlineStyle="font-weight:bolder; color:#8b0037; font-size:30px;"
-                                                                                    binding="#{BenefitDetailBean.rif1}"/>
                                                             </af:panelGroupLayout>
                                                         </af:gridCell>
                                                     </af:gridRow>
@@ -373,13 +381,6 @@
                                                                           id="it11" rendered="false">
                                                                 <f:validator binding="#{bindings.DmsDocumentReference.validator}"/>
                                                             </af:inputText>
-                                                        </af:gridCell>
-                                                    </af:gridRow>
-                                                    <af:gridRow id="gr20" marginTop="400px">
-                                                        <af:gridCell id="gc21" valign="bottom" halign="stretch"
-                                                                     width="100%">
-                                                            <af:image source="#{resource['images:imgBottomElaajApp.png']}"
-                                                                      id="i3" styleClass="AFStretchWidth"/>
                                                         </af:gridCell>
                                                     </af:gridRow>
                                                 </af:panelGridLayout>
@@ -792,6 +793,20 @@
                         <af:button actionListener="#{bindings.UploadFile1.execute}" text="UploadFile1"
                                    disabled="#{!bindings.UploadFile1.enabled}" id="b4"/>
                     </af:panelFormLayout>
+                </f:facet>
+                <f:facet name="end">
+                    <af:panelGroupLayout id="pgl2" halign="center" valign="middle" layout="vertical"
+                                         inlineStyle="background-color:#8b0037;" rendered="false">
+                        <af:panelGridLayout id="pgl1" styleClass="PQHeaderColor" rendered="false">
+                            <af:gridRow marginTop="5px" height="50px" marginBottom="5px" id="gr15">
+                                <af:gridCell width="10%" id="gc13" valign="middle" halign="center"/>
+                                <af:gridCell marginStart="5px" width="90%" marginEnd="5px" id="gc15" valign="middle"
+                                             halign="center"/>
+                            </af:gridRow>
+                        </af:panelGridLayout>
+                        <af:separator id="s1"
+                                      inlineStyle="min-height:5px; background-color:#ba9632; margin: 0px;     border-color: transparent;"/>
+                    </af:panelGroupLayout>
                 </f:facet>
             </af:panelStretchLayout>
         </af:form>
