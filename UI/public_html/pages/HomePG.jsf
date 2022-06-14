@@ -139,7 +139,7 @@
                                                                 </af:gridRow>
                                                             </af:panelGridLayout>
                                                         </af:gridCell>
-                                                        <af:gridCell width="500px" id="gc32" halign="stretch"
+                                                        <af:gridCell width="450px" id="gc32" halign="stretch"
                                                                      valign="stretch" marginStart="30px">
                                                             <af:panelGridLayout id="pgl29"
                                                                                 inlineStyle="border-style:inset; border-color:Black; border-top-left-radius:0px 0px; border-width:thin;">
@@ -358,7 +358,7 @@
                                                                 </af:gridRow>
                                                             </af:panelGridLayout>
                                                         </af:gridCell>
-                                                        <af:gridCell id="gc33" width="500px" halign="stretch"
+                                                        <af:gridCell id="gc33" width="450px" halign="stretch"
                                                                      valign="stretch" marginStart="10px">
                                                             <af:image source="#{resource['images:imgEngHealthCardBack.png']}"
                                                                       id="i17" styleClass="PQImageWidth"/>
