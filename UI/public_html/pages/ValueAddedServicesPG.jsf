@@ -45,7 +45,7 @@
                                                 <af:panelGroupLayout id="pgl2" layout="vertical" halign="center">
                                                     <af:outputText value="Value Added Services" id="ot1"
                                                                    inlineStyle="font-weight:bolder; color:#8b0037; font-size:40px;"/>
-                                                    <af:link text="Back" id="l2" icon="/icons/left-arrow-white.png"
+                                                    <af:link text="Back" id="l2" icon="/icons/left-arrow-blue.png"
                                                              inlineStyle="color:black;" action="VAStoHomePG"/>
                                                 </af:panelGroupLayout>
                                             </af:gridCell>

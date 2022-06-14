@@ -71,7 +71,7 @@
                                                 <af:panelGroupLayout id="pgl4" layout="vertical" halign="center">
                                                     <af:outputFormatted value="Add Complaint" id="of1"
                                                                         inlineStyle="font-weight:bolder; color:#8b0037; font-size:40px;"/>
-                                                    <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
+                                                    <af:link text="Back" id="l1" icon="/icons/left-arrow-blue.png"
                                                              inlineStyle="color:black; font-weight:bold;"
                                                              action="ComplaintToHome"/>
                                                 </af:panelGroupLayout>
@@ -145,7 +145,7 @@
                                                 <af:panelGroupLayout id="pgl14" layout="vertical" halign="center">
                                                     <af:outputFormatted value="Add Complaint" id="of2"
                                                                         inlineStyle="font-weight:bolder; color:#8b0037; font-size:40px;"/>
-                                                    <af:link text="Back" id="l2" icon="/icons/left-arrow-white.png"
+                                                    <af:link text="Back" id="l2" icon="/icons/left-arrow-blue.png"
                                                              inlineStyle="color:black; font-weight:bold;"
                                                              action="ComplaintToHome"/>
                                                 </af:panelGroupLayout>

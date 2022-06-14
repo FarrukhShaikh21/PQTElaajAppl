@@ -56,7 +56,7 @@
                                                     <af:outputText value="Takaful Product &amp; Solutions" id="ot1"
                                                                    truncateAt="0"
                                                                    inlineStyle="font-weight:bolder; color:#8b0037; font-size:30px;"/>
-                                                    <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
+                                                    <af:link text="Back" id="l1" icon="/icons/left-arrow-blue.png"
                                                              inlineStyle="color:black;" action="TakafulProdToHome"/>
                                                 </af:panelGroupLayout>
                                             </af:gridCell>
@@ -134,7 +134,7 @@
                                                     <af:outputText value="Takaful Product &amp; Solutions" id="ot2"
                                                                    truncateAt="0"
                                                                    inlineStyle="font-weight:bolder; color:#8b0037; font-size:30px;"/>
-                                                    <af:link text="Back" id="l3" icon="/icons/left-arrow-white.png"
+                                                    <af:link text="Back" id="l3" icon="/icons/left-arrow-blue.png"
                                                              inlineStyle="color:black;" action="TakafulProdToHome"/>
                                                 </af:panelGroupLayout>
                                             </af:gridCell>
