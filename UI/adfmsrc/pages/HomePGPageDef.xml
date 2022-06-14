@@ -181,5 +181,12 @@
         <Item Value="Age"/>
       </AttrNames>
     </attributeValues>
+    <tree IterBinding="DetailHealthCardVO1Iterator" id="DetailHealthCardVO1">
+      <nodeDefinition DefName="pqt.gh.elaaj.model.vo.DetailHealthCardVO" Name="DetailHealthCardVO10">
+        <AttrNames>
+          <Item Value="EmpName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>

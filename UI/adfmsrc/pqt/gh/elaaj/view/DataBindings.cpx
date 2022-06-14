@@ -21,6 +21,7 @@
     <page path="PageFlow#CreateInsert2" usageId="pqt_gh_elaaj_view_adfc_config___CreateInsert2PageDef"/>
     <page path="/pages/recordCorrectionPG.jsf" usageId="pqt_gh_elaaj_view_recordCorrectionPGPageDef"/>
     <page path="PageFlow#CreateInsert3" usageId="pqt_gh_elaaj_view_adfc_config___CreateInsert3PageDef"/>
+    <page path="/TestPage.jsf" usageId="pqt_gh_elaaj_view_TestPagePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="pqt_gh_elaaj_view_RegisterPGPageDef" path="pqt.gh.elaaj.view.pageDefs.RegisterPGPageDef"/>
@@ -48,6 +49,7 @@
     <page id="pqt_gh_elaaj_view_recordCorrectionPGPageDef" path="pages.recordCorrectionPGPageDef"/>
     <page id="pqt_gh_elaaj_view_adfc_config___CreateInsert3PageDef"
           path="pqt.gh.elaaj.view.pageDefs.adfc_config___CreateInsert3PageDef"/>
+    <page id="pqt_gh_elaaj_view_TestPagePageDef" path="pqt.gh.elaaj.view.pageDefs.TestPagePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <dc id="FileUploadSOAP" path="pqt.gh.elaaj.model.FileUploadSOAP"/>
