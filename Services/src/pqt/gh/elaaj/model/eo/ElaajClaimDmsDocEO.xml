@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ElaajClaimDmsDocEO"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="ELAAJ_CLAIM_DMS_DOC"
+  AliasName="ElaajClaimDmsDocEO"
+  BindingStyle="OracleName"
+  RowClass="pqt.gh.elaaj.model.eo.ElaajClaimDmsDocEOImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Attribute
+    Name="DocIdPk"
+    IsNotNull="true"
+    ColumnName="DOC_ID_PK"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="ELAAJ_CLAIM_DMS_DOC"
+    PrimaryKey="true">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="ElaajClaimIntimateIdFk"
+    ColumnName="ELAAJ_CLAIM_INTIMATE_ID_FK"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="ELAAJ_CLAIM_DMS_DOC"/>
+  <Attribute
+    Name="FileName"
+    Precision="200"
+    ColumnName="FILE_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ELAAJ_CLAIM_DMS_DOC">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="pqt.gh.elaaj.model.eo.ElaajClaimDmsDocEO.FileName_LABEL"/>
+        <DISPLAYWIDTH
+          Value="30"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="FileType"
+    Precision="200"
+    ColumnName="FILE_TYPE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ELAAJ_CLAIM_DMS_DOC">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="pqt.gh.elaaj.model.eo.ElaajClaimDmsDocEO.FileType_LABEL"/>
+        <DISPLAYWIDTH
+          Value="30"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="FileLocation"
+    Precision="200"
+    ColumnName="FILE_LOCATION"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ELAAJ_CLAIM_DMS_DOC">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="pqt.gh.elaaj.model.eo.ElaajClaimDmsDocEO.FileLocation_LABEL"/>
+        <DISPLAYWIDTH
+          Value="30"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="DocFile"
+    IsQueriable="false"
+    ColumnName="DOC_FILE"
+    SQLType="BLOB"
+    Type="oracle.jbo.domain.BlobDomain"
+    ColumnType="BLOB"
+    TableName="ELAAJ_CLAIM_DMS_DOC"/>
+  <Attribute
+    Name="DocType"
+    ColumnName="DOC_TYPE"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="ELAAJ_CLAIM_DMS_DOC"/>
+  <AccessorAttribute
+    Name="ElaajClaimIntimateEO"
+    Association="pqt.gh.elaaj.model.assoc.MasterDocAssoc"
+    AssociationEnd="pqt.gh.elaaj.model.assoc.MasterDocAssoc.ElaajClaimIntimateEO"
+    AssociationOtherEnd="pqt.gh.elaaj.model.assoc.MasterDocAssoc.ElaajClaimDmsDocEO"
+    Type="pqt.gh.elaaj.model.eo.ElaajClaimIntimateEOImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="SysC00341321"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C00341321"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="pqt.gh.elaaj.model.eo.ElaajClaimDmsDocEO.DocIdPk"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="fk_ElaajClaimDmsDocEO">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="ELAAJ_CLAIM_INTIMATE_ID_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_ELAAJ_CLAIM_DMS_DOC_EO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="pqt.gh.elaaj.model.eo.ElaajClaimDmsDocEO.ElaajClaimIntimateIdFk"/>
+    </AttrArray>
+  </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="pqt.gh.elaaj.model.ServicesBundle"/>
+  </ResourceBundle>
+</Entity>
