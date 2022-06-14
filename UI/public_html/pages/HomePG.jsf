@@ -59,7 +59,7 @@
                                                         <af:gridCell marginStart="5px" width="300px" id="gc31"
                                                                      halign="stretch" valign="stretch" marginEnd="5px">
                                                             <af:panelGridLayout id="pgl33"
-                                                                                inlineStyle="border-style:inset; border-color:Black; border-top-left-radius:0px 0px; border-width:thin;">
+                                                                                inlineStyle="border-style:inset; border-color:Black; border-top-left-radius:15px;  border-top-right-radius:15px;  border-bottom-right-radius:15px; border-bottom-left-radius:15px;border-width:thin;">
                                                                 <af:gridRow marginTop="10px" height="auto" id="gr29">
                                                                     <af:gridCell marginStart="5px" width="100%"
                                                                                  marginEnd="5px" id="gc69"
@@ -140,9 +140,9 @@
                                                             </af:panelGridLayout>
                                                         </af:gridCell>
                                                         <af:gridCell width="450px" id="gc32" halign="stretch"
-                                                                     valign="stretch" marginStart="30px">
+                                                                     valign="stretch" marginStart="20px">
                                                             <af:panelGridLayout id="pgl29"
-                                                                                inlineStyle="border-style:inset; border-color:Black; border-top-left-radius:0px 0px; border-width:thin;">
+                                                                                inlineStyle="border-style:inset; border-color:Black; border-top-left-radius:15px;  border-top-right-radius:15px;  border-bottom-right-radius:15px; border-bottom-left-radius:15px;border-width:thin;">
                                                                 <af:gridRow height="60px" id="gr16">
                                                                     <af:gridCell marginStart="5px" width="100%"
                                                                                  id="gc34" halign="stretch"
@@ -352,7 +352,7 @@
                                                                                              layout="horizontal">
                                                                             <af:outputText value="The Aga Khan University Hospital :- Member Is not entitled for treatmnent below Room rent Rs. 4900/- only on credit"
                                                                                            id="ot38"
-                                                                                           inlineStyle="color:#8b0037;font-size:xx-small"/>
+                                                                                           inlineStyle="color:#8b0037;font-size:8px"/>
                                                                         </af:panelGroupLayout>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
