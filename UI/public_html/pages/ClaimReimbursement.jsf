@@ -235,7 +235,7 @@
                                                                     <f:facet name="toolbar">
                                                                         <af:toolbar id="t1">
                                                                             <af:button actionListener="#{bindings.CreateInsert.execute}"
-                                                                                       text="Create"
+                                                                                       text="Createe"
                                                                                        disabled="#{!bindings.CreateInsert.enabled}"
                                                                                        id="b5"/>
                                                                         </af:toolbar>
@@ -286,7 +286,7 @@
                                                                             <af:inputFile label="Label 1" id="if2"
                                                                                           autoSubmit="true"
                                                                                           valueChangeListener="#{ClaimReimBean.dmsDocReimUploadFileEvent}"
-                                                                                          binding="#{ClaimReimBean.if1}"/>
+                                                                                          rows="1"/>
                                                                         </af:column>
                                                                         <af:column id="c7" width="30"
                                                                                    headerText="Delete" align="center">
