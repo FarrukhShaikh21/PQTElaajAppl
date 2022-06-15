@@ -733,7 +733,7 @@
                                                                                          id="lv4" selection="single"
                                                                                          selectionListener="#{bindings.VuEmployeeCoverDtlVO11.treeModel.makeCurrent}"
                                                                                          selectedRowKeys="#{bindings.VuEmployeeCoverDtlVO11.collectionModel.selectedRow}"
-                                                                                         partialTriggers="::lv1">
+                                                                                         partialTriggers="::lv3">
                                                                                 <af:listItem id="li4">
                                                                                     <af:panelGridLayout id="pgl30">
                                                                                         <af:gridRow marginTop="5px"
