@@ -128,7 +128,7 @@
                                          halign="stretch">
                                 <af:panelGroupLayout id="pgl9" styleClass="narrow" layout="scroll">
                                     <af:panelGridLayout id="pgl10" styleClass="PQHeaderColorMobile">
-                                        <af:gridRow id="gr14" marginTop="150px" height="100px">
+                                        <af:gridRow id="gr14" marginTop="10px" height="100px">
                                             <af:gridCell id="gc16" halign="center">
                                                 <af:panelGroupLayout id="pgl11" layout="vertical" halign="center">
                                                     <af:outputText value="Takaful Product &amp; Solutions" id="ot2"
@@ -139,7 +139,7 @@
                                                 </af:panelGroupLayout>
                                             </af:gridCell>
                                         </af:gridRow>
-                                        <af:gridRow marginTop="150px" id="gr15" height="100px">
+                                        <af:gridRow marginTop="50px" id="gr15" height="200px">
                                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc17"
                                                          valign="stretch" halign="stretch">
                                                 <af:listView value="#{bindings.ProductMasterVO1.collectionModel}"
@@ -164,7 +164,7 @@
                                                 </af:listView>
                                             </af:gridCell>
                                         </af:gridRow>
-                                        <af:gridRow marginTop="150px" marginBottom="5px" id="gr17" height="100px">
+                                        <af:gridRow marginTop="50px" marginBottom="5px" id="gr17" height="200px">
                                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc19"
                                                          valign="stretch" halign="stretch">
                                                 <af:listView value="#{bindings.ProductDetailVO11.collectionModel}"
