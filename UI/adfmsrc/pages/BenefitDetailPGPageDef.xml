@@ -10,6 +10,10 @@
               id="VuGhsElaajCoveredMemberVO1Iterator"/>
     <iterator Binds="VuEmployeeCoverDtlVO1" RangeSize="25" DataControl="PQTElaajAMDataControl"
               id="VuEmployeeCoverDtlVO1Iterator"/>
+    <iterator Binds="MasterHealthCardVO1" RangeSize="25" DataControl="PQTElaajAMDataControl"
+              id="MasterHealthCardVO1Iterator"/>
+    <iterator Binds="DetailHealthCardVO1" RangeSize="25" DataControl="PQTElaajAMDataControl"
+              id="DetailHealthCardVO1Iterator"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="VuElaajMobileUserVO1Iterator" id="EmpName">
@@ -85,5 +89,19 @@
         <Item Value="Dob"/>
       </AttrNames>
     </attributeValues>
+    <attributeValues IterBinding="MasterHealthCardVO1Iterator" id="CompanyName">
+      <AttrNames>
+        <Item Value="CompanyName"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="DetailHealthCardVO1Iterator" id="DetailHealthCardVO1">
+      <nodeDefinition DefName="pqt.gh.elaaj.model.vo.DetailHealthCardVO" Name="DetailHealthCardVO10">
+        <AttrNames>
+          <Item Value="EmpName"/>
+          <Item Value="Age"/>
+          <Item Value="EmpSrNo"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>
