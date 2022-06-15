@@ -197,5 +197,10 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <attributeValues IterBinding="VuElaajMobileUserVO1Iterator" id="MRole">
+      <AttrNames>
+        <Item Value="MRole"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

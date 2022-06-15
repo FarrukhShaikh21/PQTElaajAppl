@@ -537,22 +537,29 @@
                                     <af:panelBox text="PanelBox1" id="pb1" showHeader="never">
                                         <f:facet name="toolbar"/>
                                         <af:panelGridLayout id="pgl38">
+                                            <af:gridRow id="gr36">
+                                                <af:gridCell id="gc54" columnSpan="3" halign="stretch"
+                                                             valign="stretch">
+                                                    <af:link id="l6" icon="/images/exit.png"
+                                                             action="#{LoginBean.LogoutAction}" partialSubmit="true"/>
+                                                </af:gridCell>
+                                            </af:gridRow>
                                             <af:gridRow id="gr44" marginBottom="5px">
                                                 <af:gridCell id="gc89" width="100%" columnSpan="3" rowSpan="1"
                                                              halign="center">
-                                                    <af:outputText value="M. Babar Ali Siddiqui" id="ot54"
+                                                    <af:outputText value="#{bindings.EmpName.inputValue}" id="ot54"
                                                                    inlineStyle="color:#8b0037;font-size:medium"/>
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow id="gr45" marginBottom="5px">
                                                 <af:gridCell id="gc95" columnSpan="3" halign="center">
-                                                    <af:outputText value="Senior Manager - Marketing (PQT)" id="ot55"
+                                                    <af:outputText value="#{bindings.MRole.inputValue}" id="ot55"
                                                                    inlineStyle="color:#8b0037;font-size:medium"/>
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow id="gr46" marginBottom="5px">
                                                 <af:gridCell id="gc90" columnSpan="3" halign="center">
-                                                    <af:outputText value="UL-202200001230" id="ot56"
+                                                    <af:outputText value="#{bindings.PolNo.inputValue}" id="ot56"
                                                                    inlineStyle="color:#8b0037;font-size:small"/>
                                                 </af:gridCell>
                                             </af:gridRow>
