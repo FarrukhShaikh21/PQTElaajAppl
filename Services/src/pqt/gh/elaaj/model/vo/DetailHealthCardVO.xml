@@ -24,7 +24,6 @@
     Type="java.lang.String">
     <TransientExpression
       Name="VariableScript"
-      trustMode="trusted"
       CodeSourceName="DetailHealthCardVO"/>
   </Variable>
   <Variable
@@ -33,34 +32,34 @@
     Type="java.lang.String">
     <TransientExpression
       Name="VariableScript"
-      trustMode="trusted"
       CodeSourceName="DetailHealthCardVO"/>
   </Variable>
-  <SQLQuery><![CDATA[SELECT VuGhsElaajCoveredMemberVO.POL_SYS_ID,     
-       VuGhsElaajCoveredMemberVO.POL_NO,     
-       VuGhsElaajCoveredMemberVO.POL_START_DT,     
-       VuGhsElaajCoveredMemberVO.POL_END_DT,     
-       VuGhsElaajCoveredMemberVO.EMP_FOLIO_ID,     
-       VuGhsElaajCoveredMemberVO.EMP_SR_NO,     
-       VuGhsElaajCoveredMemberVO.EMP_NAME,     
-       VuGhsElaajCoveredMemberVO.EMP_DOB,     
-       VuGhsElaajCoveredMemberVO.RELATION,     
-       VuGhsElaajCoveredMemberVO.EMP_CNIC,   
-       (SELECT XX.EMP_SR_NO   
-          FROM GHS_UW_EMPLOYEES XX   
-         WHERE XX.DOCUMENT_ID_FK = VuGhsElaajCoveredMemberVO.POL_SYS_ID   
-           AND XX.EMPLOYEE_CODE = VuGhsElaajCoveredMemberVO.EMP_FOLIO_ID) SELF_EMP_SENO,   
-       (SELECT XX.EMPLOYEE_NAME   
-          FROM GHS_UW_EMPLOYEES XX   
-         WHERE XX.DOCUMENT_ID_FK = VuGhsElaajCoveredMemberVO.POL_SYS_ID   
-           AND XX.EMPLOYEE_CODE = VuGhsElaajCoveredMemberVO.EMP_FOLIO_ID) SELF_EMP_NAME,   
-           (SELECT Z1.CUSTOMER_NAME FROM GHS_UW_DOCUMENT Z,GHS_ST_GEN_CUSTOMER Z1 WHERE Z.CUSTOMER_ID_PK = Z1.CUSTOMER_ID_PK   
-           AND Z.DOCUMENT_ID_PK = VuGhsElaajCoveredMemberVO.POL_SYS_ID) COMPANY_NAME,  
-       VuGhsElaajCoveredMemberVO.AGE         
-  FROM VU_GHS_ELAAJ_COVERED_MEMBER VuGhsElaajCoveredMemberVO    
- WHERE 1=1 
-   AND VuGhsElaajCoveredMemberVO.POL_NO = :pPolicyNo    
-   AND VuGhsElaajCoveredMemberVO.EMP_FOLIO_ID = :pEmpFolioId  
+  <SQLQuery><![CDATA[SELECT VuGhsElaajCoveredMemberVO.POL_SYS_ID,        
+       VuGhsElaajCoveredMemberVO.POL_NO,        
+       VuGhsElaajCoveredMemberVO.POL_START_DT,        
+       VuGhsElaajCoveredMemberVO.POL_END_DT,        
+       VuGhsElaajCoveredMemberVO.EMP_FOLIO_ID,        
+       VuGhsElaajCoveredMemberVO.EMP_SR_NO,        
+       VuGhsElaajCoveredMemberVO.EMP_NAME,        
+       VuGhsElaajCoveredMemberVO.EMP_DOB,        
+       VuGhsElaajCoveredMemberVO.RELATION,        
+       VuGhsElaajCoveredMemberVO.EMP_CNIC,      
+       (SELECT XX.EMP_SR_NO      
+          FROM GHS_UW_EMPLOYEES XX      
+         WHERE XX.DOCUMENT_ID_FK = VuGhsElaajCoveredMemberVO.POL_SYS_ID      
+           AND XX.EMPLOYEE_CODE = VuGhsElaajCoveredMemberVO.EMP_FOLIO_ID) SELF_EMP_SENO,      
+       (SELECT XX.EMPLOYEE_NAME      
+          FROM GHS_UW_EMPLOYEES XX      
+         WHERE XX.DOCUMENT_ID_FK = VuGhsElaajCoveredMemberVO.POL_SYS_ID      
+           AND XX.EMPLOYEE_CODE = VuGhsElaajCoveredMemberVO.EMP_FOLIO_ID) SELF_EMP_NAME,      
+           (SELECT Z1.CUSTOMER_NAME FROM GHS_UW_DOCUMENT Z,GHS_ST_GEN_CUSTOMER Z1 WHERE Z.CUSTOMER_ID_PK = Z1.CUSTOMER_ID_PK      
+           AND Z.DOCUMENT_ID_PK = VuGhsElaajCoveredMemberVO.POL_SYS_ID) COMPANY_NAME,     
+       VuGhsElaajCoveredMemberVO.AGE, 
+       VuGhsElaajCoveredMemberVO.SR_NO            
+  FROM VU_GHS_ELAAJ_COVERED_MEMBER VuGhsElaajCoveredMemberVO       
+ WHERE 1=1    
+   AND VuGhsElaajCoveredMemberVO.POL_NO = :pPolicyNo       
+   AND VuGhsElaajCoveredMemberVO.EMP_FOLIO_ID = :pEmpFolioId     
    AND VuGhsElaajCoveredMemberVO.RELATION != 'SELF']]></SQLQuery>
   <ViewAttribute
     Name="PolSysId"
@@ -247,6 +246,21 @@
     AliasName="AGE"
     Expression="AGE"
     SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="SrNo"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="250"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="SR_NO"
+    Expression="SR_NO"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="250"/>
+    </DesignTime>
+  </ViewAttribute>
   <AttrArray Name="KeyAttributes">
     <Item Value="EmpSrNo"/>
   </AttrArray>

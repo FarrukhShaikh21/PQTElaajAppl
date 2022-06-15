@@ -274,7 +274,7 @@
                                                                                                      marginEnd="5px"
                                                                                                      id="gc50"
                                                                                                      halign="center">
-                                                                                            <af:outputFormatted value="#{item.bindings.EmpSrNo.inputValue}"
+                                                                                            <af:outputFormatted value="#{item.bindings.SrNo.inputValue}"
                                                                                                                 id="of15"
                                                                                                                 inlineStyle="color:black;font-size:7px"/>
                                                                                         </af:gridCell>
@@ -321,7 +321,7 @@
                                                                     </af:gridCell>
                                                                     <af:gridCell marginStart="5px" width="80%" id="gc62"
                                                                                  columnSpan="4" rowSpan="1">
-                                                                        <af:outputText value="No - Branch" id="ot35"
+                                                                        <af:outputText value="#{bindings.EmpBranch.inputValue}" id="ot35"
                                                                                        inlineStyle="color:black;font-size:xx-small"/>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
@@ -333,7 +333,7 @@
                                                                     </af:gridCell>
                                                                     <af:gridCell marginStart="5px" width="80%" id="gc64"
                                                                                  columnSpan="4" rowSpan="1">
-                                                                        <af:outputText value="4,000" id="ot36"
+                                                                        <af:outputText value="#{bindings.RoomLimit.inputValue}" id="ot36"
                                                                                        inlineStyle="color:black;font-size:xx-small"/>
                                                                     </af:gridCell>
                                                                 </af:gridRow>

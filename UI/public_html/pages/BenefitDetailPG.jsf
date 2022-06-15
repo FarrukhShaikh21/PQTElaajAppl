@@ -39,7 +39,7 @@
                 </f:facet>
                 <f:facet name="center">
                     <af:panelGridLayout id="pgl16">
-                        <af:gridRow marginTop="5px" height="100%" id="gr14">
+                        <af:gridRow marginTop="5px" id="gr14">
                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc21" halign="stretch"
                                          valign="stretch">
                                 <af:panelGroupLayout id="pgl2" layout="scroll" styleClass="wide">
@@ -323,10 +323,10 @@
                                 </af:panelGroupLayout>
                             </af:gridCell>
                         </af:gridRow>
-                        <af:gridRow height="100%" id="gr21">
+                        <af:gridRow id="gr21">
                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc30" halign="stretch"
                                          valign="stretch">
-                                <af:panelGroupLayout id="pgl17" layout="vertical" styleClass="narrow">
+                                <af:panelGroupLayout id="pgl17" layout="scroll" styleClass="narrow">
                                     <af:panelGridLayout id="pgl18" styleClass="PQHeaderColorMobile">
                                         <af:gridRow id="gr24">
                                             <af:gridCell id="gc33" halign="center">
@@ -354,8 +354,33 @@
                                                             </af:panelGroupLayout>
                                                         </af:gridCell>
                                                     </af:gridRow>
+                                                    <af:gridRow marginTop="30px" id="gr28">
+                                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                                                                     id="gc37" valign="middle" halign="stretch">
+                                                            <af:panelGroupLayout id="pgl23" layout="vertical"
+                                                                                 halign="center">
+                                                                <af:outputFormatted value="#{bindings.EmpFolioId.inputValue}"
+                                                                                    id="of17"
+                                                                                    inlineStyle="color:maroon;"/>
+                                                                <af:separator id="s7" styleClass="AFStretchWidth"/>
+                                                            </af:panelGroupLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow marginTop="30px" id="gr29">
+                                                        <af:gridCell marginStart="5px" width="100%" id="gc38"
+                                                                     valign="middle" halign="stretch">
+                                                            <af:panelGroupLayout id="pgl24" layout="vertical"
+                                                                                 halign="center">
+                                                                <af:outputFormatted value="#{bindings.PolicyPeriod.inputValue}"
+                                                                                    id="of18"
+                                                                                    inlineStyle="color:maroon;"/>
+                                                                <af:separator id="s8" styleClass="AFStretchWidth"/>
+                                                            </af:panelGroupLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
                                                     <af:gridRow id="gr22">
-                                                        <af:gridCell id="gc31" halign="stretch">
+                                                        <af:gridCell id="gc31" halign="stretch"
+                                                                     width="100%" valign="stretch">
                                                             <af:panelGridLayout id="pgl31"
                                                                                 inlineStyle="border-style:inset; border-color:Black; border-top-left-radius:0px 0px; border-width:thin;">
                                                                 <af:gridRow height="auto" id="gr23">
@@ -416,7 +441,7 @@
                                                                     </af:gridCell>
                                                                     <af:gridCell width="20%" id="gc62" columnSpan="1"
                                                                                  rowSpan="1">
-                                                                        <af:outputText value="4550-6998898-9" id="ot16"
+                                                                        <af:outputText value="#{bindings.EmpCnic.inputValue}" id="ot16"
                                                                                        inlineStyle="color:black;font-size:xx-small"/>
                                                                     </af:gridCell>
                                                                     <af:gridCell id="gc63" width="20%" halign="center">
@@ -484,7 +509,7 @@
                                                                                                      marginEnd="0px"
                                                                                                      id="gc69"
                                                                                                      halign="center">
-                                                                                            <af:outputFormatted value="#{item.bindings.EmpSrNo.inputValue}"
+                                                                                            <af:outputFormatted value="#{item.bindings.SrNo.inputValue}"
                                                                                                                 id="of37"
                                                                                                                 inlineStyle="color:black;font-size:7px"/>
                                                                                         </af:gridCell>
@@ -502,7 +527,7 @@
                                                                     </af:gridCell>
                                                                     <af:gridCell width="20%" id="gc72" columnSpan="1"
                                                                                  rowSpan="1">
-                                                                        <af:outputText value="03000032B-54" id="ot26"
+                                                                        <af:outputText value="#{bindings.EmpSrNo.inputValue}" id="ot26"
                                                                                        inlineStyle="color:black;font-size:xx-small"/>
                                                                     </af:gridCell>
                                                                     <af:gridCell id="gc73" width="60%" halign="center"
@@ -516,7 +541,7 @@
                                                                     </af:gridCell>
                                                                     <af:gridCell width="20%" id="gc77" columnSpan="1"
                                                                                  rowSpan="1">
-                                                                        <af:outputText value="AAL 103" id="ot31"
+                                                                        <af:outputText value="#{bindings.EmpFolioId1.inputValue}" id="ot31"
                                                                                        inlineStyle="color:black;font-size:xx-small"/>
                                                                     </af:gridCell>
                                                                     <af:gridCell id="gc78" width="60%" halign="stretch"
@@ -530,7 +555,7 @@
                                                                     </af:gridCell>
                                                                     <af:gridCell marginStart="5px" width="80%" id="gc82"
                                                                                  columnSpan="4" rowSpan="1">
-                                                                        <af:outputText value="No - Branch" id="ot35"
+                                                                        <af:outputText value="#{bindings.EmpBranch.inputValue}" id="ot35"
                                                                                        inlineStyle="color:black;font-size:xx-small"/>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
@@ -542,7 +567,7 @@
                                                                     </af:gridCell>
                                                                     <af:gridCell marginStart="5px" width="80%" id="gc84"
                                                                                  columnSpan="4" rowSpan="1">
-                                                                        <af:outputText value="4,000" id="ot36"
+                                                                        <af:outputText value="#{bindings.RoomLimit.inputValue}" id="ot36"
                                                                                        inlineStyle="color:black;font-size:xx-small"/>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
@@ -573,41 +598,18 @@
                                                             </af:panelGridLayout>
                                                         </af:gridCell>
                                                     </af:gridRow>
-                                                    <af:gridRow marginTop="30px" id="gr28">
-                                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
-                                                                     id="gc37" valign="middle" halign="stretch">
-                                                            <af:panelGroupLayout id="pgl23" layout="vertical"
-                                                                                 halign="center">
-                                                                <af:outputFormatted value="#{bindings.EmpFolioId.inputValue}"
-                                                                                    id="of17"
-                                                                                    inlineStyle="color:maroon;"/>
-                                                                <af:separator id="s7" styleClass="AFStretchWidth"/>
-                                                            </af:panelGroupLayout>
-                                                        </af:gridCell>
-                                                    </af:gridRow>
-                                                    <af:gridRow marginTop="30px" id="gr29">
-                                                        <af:gridCell marginStart="5px" width="100%" id="gc38"
-                                                                     valign="middle" halign="stretch">
-                                                            <af:panelGroupLayout id="pgl24" layout="vertical"
-                                                                                 halign="center">
-                                                                <af:outputFormatted value="#{bindings.PolicyPeriod.inputValue}"
-                                                                                    id="of18"
-                                                                                    inlineStyle="color:maroon;"/>
-                                                                <af:separator id="s8" styleClass="AFStretchWidth"/>
-                                                            </af:panelGroupLayout>
-                                                        </af:gridCell>
-                                                    </af:gridRow>
                                                     <af:gridRow id="gr30">
-                                                        <af:gridCell id="gc39" valign="stretch" halign="stretch"
-                                                                     inlineStyle="background-color:#ba9632">
+                                                        <af:gridCell id="gc39" halign="stretch"
+                                                                     inlineStyle="background-color:#ba9632"
+                                                                     width="auto" valign="stretch">
                                                             <af:outputText value="Employee Basic Information" id="ot5"
                                                                            inlineStyle="font-weight:bolder; color:white;"/>
                                                         </af:gridCell>
                                                     </af:gridRow>
-                                                    <af:gridRow marginTop="5px" height="110px" marginBottom="5px"
+                                                    <af:gridRow marginTop="5px" marginBottom="5px"
                                                                 id="gr31">
                                                         <af:gridCell marginStart="5px" marginEnd="5px" id="gc40"
-                                                                     halign="stretch" valign="stretch">
+                                                                     halign="stretch">
                                                             <af:panelSplitter id="ps3" orientation="vertical"
                                                                               styleClass="AFStretchWidth"
                                                                               splitterPosition="0"
@@ -827,6 +829,122 @@
                     </af:panelGridLayout>
                 </f:facet>
             </af:panelStretchLayout>
+            <af:panelFormLayout id="pfl1" rendered="false">
+                <af:inputText value="#{bindings.PolSysId.inputValue}" label="#{bindings.PolSysId.hints.label}"
+                              required="#{bindings.PolSysId.hints.mandatory}"
+                              columns="#{bindings.PolSysId.hints.displayWidth}"
+                              maximumLength="#{bindings.PolSysId.hints.precision}"
+                              shortDesc="#{bindings.PolSysId.hints.tooltip}" id="it1">
+                    <f:validator binding="#{bindings.PolSysId.validator}"/>
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.PolSysId.format}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.PolNo.inputValue}" label="#{bindings.PolNo.hints.label}"
+                              required="#{bindings.PolNo.hints.mandatory}"
+                              columns="#{bindings.PolNo.hints.displayWidth}"
+                              maximumLength="#{bindings.PolNo.hints.precision}"
+                              shortDesc="#{bindings.PolNo.hints.tooltip}" id="it2">
+                    <f:validator binding="#{bindings.PolNo.validator}"/>
+                </af:inputText>
+                <af:inputDate value="#{bindings.PolStartDt.inputValue}" label="#{bindings.PolStartDt.hints.label}"
+                              required="#{bindings.PolStartDt.hints.mandatory}"
+                              columns="#{bindings.PolStartDt.hints.displayWidth}"
+                              shortDesc="#{bindings.PolStartDt.hints.tooltip}" id="id1">
+                    <f:validator binding="#{bindings.PolStartDt.validator}"/>
+                    <af:convertDateTime pattern="#{bindings.PolStartDt.format}"/>
+                </af:inputDate>
+                <af:inputDate value="#{bindings.PolEndDt.inputValue}" label="#{bindings.PolEndDt.hints.label}"
+                              required="#{bindings.PolEndDt.hints.mandatory}"
+                              columns="#{bindings.PolEndDt.hints.displayWidth}"
+                              shortDesc="#{bindings.PolEndDt.hints.tooltip}" id="id2">
+                    <f:validator binding="#{bindings.PolEndDt.validator}"/>
+                    <af:convertDateTime pattern="#{bindings.PolEndDt.format}"/>
+                </af:inputDate>
+                <af:inputText value="#{bindings.EmpFolioId1.inputValue}" label="#{bindings.EmpFolioId1.hints.label}"
+                              required="#{bindings.EmpFolioId1.hints.mandatory}"
+                              columns="#{bindings.EmpFolioId1.hints.displayWidth}"
+                              maximumLength="#{bindings.EmpFolioId1.hints.precision}"
+                              shortDesc="#{bindings.EmpFolioId1.hints.tooltip}" id="it3">
+                    <f:validator binding="#{bindings.EmpFolioId1.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.EmpSrNo.inputValue}" label="#{bindings.EmpSrNo.hints.label}"
+                              required="#{bindings.EmpSrNo.hints.mandatory}"
+                              columns="#{bindings.EmpSrNo.hints.displayWidth}"
+                              maximumLength="#{bindings.EmpSrNo.hints.precision}"
+                              shortDesc="#{bindings.EmpSrNo.hints.tooltip}" id="it4">
+                    <f:validator binding="#{bindings.EmpSrNo.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.EmpName1.inputValue}" label="#{bindings.EmpName1.hints.label}"
+                              required="#{bindings.EmpName1.hints.mandatory}"
+                              columns="#{bindings.EmpName1.hints.displayWidth}"
+                              maximumLength="#{bindings.EmpName1.hints.precision}"
+                              shortDesc="#{bindings.EmpName1.hints.tooltip}" id="it5">
+                    <f:validator binding="#{bindings.EmpName1.validator}"/>
+                </af:inputText>
+                <af:inputDate value="#{bindings.EmpDob.inputValue}" label="#{bindings.EmpDob.hints.label}"
+                              required="#{bindings.EmpDob.hints.mandatory}"
+                              columns="#{bindings.EmpDob.hints.displayWidth}"
+                              shortDesc="#{bindings.EmpDob.hints.tooltip}" id="id3">
+                    <f:validator binding="#{bindings.EmpDob.validator}"/>
+                    <af:convertDateTime pattern="#{bindings.EmpDob.format}"/>
+                </af:inputDate>
+                <af:inputText value="#{bindings.Relation.inputValue}" label="#{bindings.Relation.hints.label}"
+                              required="#{bindings.Relation.hints.mandatory}"
+                              columns="#{bindings.Relation.hints.displayWidth}"
+                              maximumLength="#{bindings.Relation.hints.precision}"
+                              shortDesc="#{bindings.Relation.hints.tooltip}" id="it6">
+                    <f:validator binding="#{bindings.Relation.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.EmpCnic.inputValue}" label="#{bindings.EmpCnic.hints.label}"
+                              required="#{bindings.EmpCnic.hints.mandatory}"
+                              columns="#{bindings.EmpCnic.hints.displayWidth}"
+                              maximumLength="#{bindings.EmpCnic.hints.precision}"
+                              shortDesc="#{bindings.EmpCnic.hints.tooltip}" id="it7">
+                    <f:validator binding="#{bindings.EmpCnic.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.SelfEmpSeno.inputValue}" label="#{bindings.SelfEmpSeno.hints.label}"
+                              required="#{bindings.SelfEmpSeno.hints.mandatory}"
+                              columns="#{bindings.SelfEmpSeno.hints.displayWidth}"
+                              maximumLength="#{bindings.SelfEmpSeno.hints.precision}"
+                              shortDesc="#{bindings.SelfEmpSeno.hints.tooltip}" id="it8">
+                    <f:validator binding="#{bindings.SelfEmpSeno.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.SelfEmpName.inputValue}" label="#{bindings.SelfEmpName.hints.label}"
+                              required="#{bindings.SelfEmpName.hints.mandatory}"
+                              columns="#{bindings.SelfEmpName.hints.displayWidth}"
+                              maximumLength="#{bindings.SelfEmpName.hints.precision}"
+                              shortDesc="#{bindings.SelfEmpName.hints.tooltip}" id="it9">
+                    <f:validator binding="#{bindings.SelfEmpName.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.CompanyName.inputValue}" label="#{bindings.CompanyName.hints.label}"
+                              required="#{bindings.CompanyName.hints.mandatory}"
+                              columns="#{bindings.CompanyName.hints.displayWidth}"
+                              maximumLength="#{bindings.CompanyName.hints.precision}"
+                              shortDesc="#{bindings.CompanyName.hints.tooltip}" id="it10">
+                    <f:validator binding="#{bindings.CompanyName.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.Age.inputValue}" label="#{bindings.Age.hints.label}"
+                              required="#{bindings.Age.hints.mandatory}" columns="#{bindings.Age.hints.displayWidth}"
+                              maximumLength="#{bindings.Age.hints.precision}" shortDesc="#{bindings.Age.hints.tooltip}"
+                              id="it11">
+                    <f:validator binding="#{bindings.Age.validator}"/>
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.Age.format}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.RoomLimit.inputValue}" label="#{bindings.RoomLimit.hints.label}"
+                              required="#{bindings.RoomLimit.hints.mandatory}"
+                              columns="#{bindings.RoomLimit.hints.displayWidth}"
+                              maximumLength="#{bindings.RoomLimit.hints.precision}"
+                              shortDesc="#{bindings.RoomLimit.hints.tooltip}" id="it12">
+                    <f:validator binding="#{bindings.RoomLimit.validator}"/>
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.RoomLimit.format}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.EmpBranch.inputValue}" label="#{bindings.EmpBranch.hints.label}"
+                              required="#{bindings.EmpBranch.hints.mandatory}"
+                              columns="#{bindings.EmpBranch.hints.displayWidth}"
+                              maximumLength="#{bindings.EmpBranch.hints.precision}"
+                              shortDesc="#{bindings.EmpBranch.hints.tooltip}" id="it13">
+                    <f:validator binding="#{bindings.EmpBranch.validator}"/>
+                </af:inputText>
+            </af:panelFormLayout>
         </af:form>
     </af:document>
 </f:view>

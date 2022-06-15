@@ -180,7 +180,7 @@
                                                 </af:panelGroupLayout>
                                             </af:gridCell>
                                         </af:gridRow>
-                                        <af:gridRow marginTop="5px" marginBottom="300px" id="gr16">
+                                        <af:gridRow marginTop="5px" marginBottom="10px" id="gr16">
                                             <af:gridCell width="100%" id="gc17" halign="stretch" valign="stretch">
                                                 <af:panelGroupLayout id="pgl17" layout="vertical" halign="center">
                                                     <af:inputText value="#{bindings.Message.inputValue}" simple="true"
@@ -188,7 +188,7 @@
                                                                   columns="#{bindings.Message.hints.displayWidth}"
                                                                   maximumLength="#{bindings.Message.hints.precision}"
                                                                   shortDesc="#{bindings.Message.hints.tooltip}" id="it4"
-                                                                  rows="10" contentStyle="width:100%"
+                                                                  rows="5" contentStyle="width:100%"
                                                                   placeholder="Enter Message"
                                                                   styleClass="PQAppInpuBoxtText">
                                                         <f:validator binding="#{bindings.Message.validator}"/>
