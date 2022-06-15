@@ -53,7 +53,7 @@
                                         <af:gridRow marginTop="30px" height="auto" id="gr3">
                                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4"
                                                          halign="center" valign="stretch">
-                                                <af:panelCollection id="pc1">
+                                                <af:panelCollection id="pc1" featuresOff="detach viewMenu">
                                                     <f:facet name="menus"/>
                                                     <f:facet name="toolbar"/>
                                                     <f:facet name="statusbar"/>

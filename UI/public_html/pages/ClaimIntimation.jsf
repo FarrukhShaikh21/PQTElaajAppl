@@ -69,9 +69,9 @@
                                                                 <af:outputFormatted value="Claim Intimation" id="of1"
                                                                                     inlineStyle="font-weight:bolder; color:#8b0037; font-size:30px;"/>
                                                                 <af:link text="Back" id="l3" partialSubmit="true"
-                                                                         icon="/icons/left-arrow-white.png"
+                                                                         icon="/icons/left-arrow-blue.png"
                                                                          action="ClaimIntimationToHomePG"
-                                                                         inlineStyle="color:black; font-weight:bold;"/>
+                                                                         inlineStyle="color:black;font-size:15px;font-weight:bold"/>
                                                             </af:panelGroupLayout>
                                                         </af:gridCell>
                                                     </af:gridRow>

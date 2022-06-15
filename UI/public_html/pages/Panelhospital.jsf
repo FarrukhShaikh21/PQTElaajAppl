@@ -45,7 +45,7 @@
                                                     <af:outputFormatted value="Panel Hospital" id="of1"
                                                                         inlineStyle="font-weight:bolder; color:#8b0037; font-size:30px;"/>
                                                     <af:link text="Back" id="l1" icon="/icons/left-arrow-blue.png"
-                                                             inlineStyle="color:black;" action="PanelHospitalToHome"/>
+                                                             inlineStyle="color:black;font-size:15px;font-weight:bold" action="PanelHospitalToHome"/>
                                                 </af:panelGroupLayout>
                                             </af:gridCell>
                                         </af:gridRow>

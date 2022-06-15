@@ -5,7 +5,7 @@
     <c:set var="uiBundle1" value="#{adfBundle['ui.pages.HomePGBundle']}"/>
     <c:set var="uiBundle" value="#{adfBundle['pqt.gh.elaaj.view.UIBundle']}"/>
     <af:document title="HomePG.jsf" id="d1">
-    <!--<meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>-->
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
         <af:messages id="m1"/>
         <af:form id="f1" inlineStyle="color:Aqua;">
             <af:panelStretchLayout id="psl1" topHeight="115px" startWidth="50px">
@@ -13,8 +13,13 @@
                     <af:panelGridLayout id="pgl9" styleClass="wide">
                         <af:gridRow height="100px" id="gr1" marginTop="5px">
                             <af:gridCell width="200px" id="gc1" valign="stretch" halign="start">
-                                <af:spacer width="100" height="10" id="s1"/>
-                                <af:image id="i15" source="/images/imgMainLogo.png"/>
+                                <af:panelGroupLayout id="pgl54">
+                                    <af:spacer width="30" height="10" id="s6"/>
+                                    <af:link id="l1"
+                                             action="#{LoginBean.LogoutAction}" icon="/images/exit.png"/>
+                                    <af:spacer width="100" height="10" id="s1"/>
+                                    <af:image id="i15" source="/images/imgMainLogo.png"/>
+                                </af:panelGroupLayout>
                             </af:gridCell>
                             <af:gridCell marginStart="5px" width="100%" id="gc2"/>
                             <af:gridCell marginStart="5px" width="200px" id="gc75" valign="middle">

@@ -38,8 +38,8 @@
                                                 <af:panelGroupLayout id="pgl12" layout="vertical" halign="center">
                                                     <af:outputText value="Record Correction" id="ot1"
                                                                    inlineStyle="font-weight:bolder; color:#8b0037; font-size:40px;"/>
-                                                    <af:link text="Back" id="l1" icon="/icons/left-arrow-white.png"
-                                                             inlineStyle="color:black;"
+                                                    <af:link text="Back" id="l1" icon="/icons/left-arrow-blue.png"
+                                                             inlineStyle="color:black;font-size:15px;font-weight:bold"
                                                              action="recordCorrectiontoHome"/>
                                                 </af:panelGroupLayout>
                                             </af:gridCell>

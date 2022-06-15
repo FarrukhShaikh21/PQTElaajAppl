@@ -28,7 +28,7 @@
     ListVOName="VuComplainFeedbackPoplistVO1"
     ListRangeSize="-1"
     NullValueFlag="start"
-    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    NullValueId="LOV_ComplaintTo_LOVUIHints_NullValueId"
     MRUCount="0">
     <AttrArray Name="AttrNames">
       <Item Value="ComplaintTo"/>
@@ -68,7 +68,8 @@
     PrecisionRule="true"
     EntityAttrName="ComplaintDate"
     EntityUsage="ElaajComplaintDetailEO"
-    AliasName="COMPLAINT_DATE"/>
+    AliasName="COMPLAINT_DATE"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="ComplaintId"
     IsNotNull="true"

@@ -65,7 +65,7 @@
     ListVOName="ElaajRelationPoplistVO1"
     ListRangeSize="-1"
     NullValueFlag="start"
-    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    NullValueId="LOV_RelationshipWithEmployee_LOVUIHints_NullValueId"
     MRUCount="0">
     <AttrArray Name="AttrNames">
       <Item Value="RelationshipWithEmployee"/>
@@ -205,11 +205,7 @@ FROM  ELAAJ_RECORD_CORRECTION ElaajRecordCorrectionEO]]></SQLQuery>
     PrecisionRule="true"
     AliasName="IBAN_NO"
     EntityAttrName="IbanNo"
-    EntityUsage="ElaajRecordCorrectionEO">
-    <Properties>
-      <SchemaBasedProperties/>
-    </Properties>
-  </ViewAttribute>
+    EntityUsage="ElaajRecordCorrectionEO"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="pqt.gh.elaaj.model.ServicesBundle"/>

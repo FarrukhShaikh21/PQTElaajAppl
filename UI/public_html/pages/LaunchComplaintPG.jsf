@@ -72,7 +72,7 @@
                                                     <af:outputFormatted value="Add Complaint" id="of1"
                                                                         inlineStyle="font-weight:bolder; color:#8b0037; font-size:40px;"/>
                                                     <af:link text="Back" id="l1" icon="/icons/left-arrow-blue.png"
-                                                             inlineStyle="color:black; font-weight:bold;"
+                                                             inlineStyle="color:black;font-size:15px;font-weight:bold"
                                                              action="ComplaintToHome"/>
                                                 </af:panelGroupLayout>
                                             </af:gridCell>
