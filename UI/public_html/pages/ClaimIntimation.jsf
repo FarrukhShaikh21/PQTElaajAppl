@@ -10,37 +10,47 @@
                 <af:separator id="s2"
                               inlineStyle="min-height:5px; background-color:#ba9632; margin: 0px;     border-color: transparent;"/>
             </af:panelGroupLayout>
-            <af:panelStretchLayout id="psl1" topHeight="115px" endWidth="50px">
+            <af:panelStretchLayout id="psl1" topHeight="115px" endWidth="50px" startWidth="49px">
+                <f:facet name="top">
+                    <af:panelGridLayout id="pgl16" styleClass="wide">
+                        <af:gridRow height="100px" id="gr28" marginTop="5px">
+                            <af:gridCell width="200px" id="gc29" valign="stretch" halign="start">
+                                <af:spacer width="100" height="10" id="s1"/>
+                                <af:image id="i15" source="/images/imgMainLogo.png"/>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="100%" id="gc30"/>
+                            <af:gridCell marginStart="5px" width="200px" id="gc75" valign="middle">
+                                <af:image source="/images/app_icon-01.png" id="i30"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="100px" marginBottom="5px" id="gr29">
+                            <af:gridCell width="100%" id="gc76" columnSpan="3" halign="stretch" valign="stretch">
+                                <af:image source="#{resource['images:imgLine.png']}" id="i31"
+                                          styleClass="AFStretchWidth"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
+                </f:facet>
                 <f:facet name="bottom">
-                    <af:panelGridLayout id="pgl52" styleClass="wide"/>
+                    <af:panelGridLayout id="pgl52" styleClass="wide">
+                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1" valign="stretch"
+                                         halign="stretch">
+                                <af:activeImage source="#{resource['images:imgBottomElaajApp.png']}" id="ai1"
+                                                styleClass="AFStretchWidth"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
                 </f:facet>
                 <f:facet name="center">
                     <af:panelGridLayout id="pgl1">
-                        <af:gridRow marginTop="5px" id="gr26">
+                        <af:gridRow marginTop="5px" height="100%" id="gr26">
                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc27" halign="stretch"
                                          valign="stretch">
                                 <af:panelGroupLayout id="pgl13" styleClass="wide" layout="scroll">
                                     <af:panelGridLayout id="pgl5" styleClass="PQHeaderColor">
-                                        <af:gridRow height="100px" id="gr28" marginTop="5px">
-                                            <af:gridCell width="200px" id="gc29" valign="stretch" halign="start">
-                                                <af:spacer width="100" height="10" id="s1"/>
-                                                <af:image id="i15" source="/images/imgMainLogo.png"/>
-                                            </af:gridCell>
-                                            <af:gridCell marginStart="5px" width="100%" id="gc30"/>
-                                            <af:gridCell marginStart="5px" width="200px" id="gc75" valign="middle">
-                                                <af:image source="/images/app_icon-01.png" id="i30"/>
-                                            </af:gridCell>
-                                        </af:gridRow>
-                                        <af:gridRow height="10px" id="gr29">
-                                            <af:gridCell width="100%" id="gc76" columnSpan="3" halign="stretch"
-                                                         valign="stretch">
-                                                <af:image source="#{resource['images:imgLine.png']}" id="i31"
-                                                          styleClass="AFStretchWidth"/>
-                                            </af:gridCell>
-                                        </af:gridRow>
                                         <af:gridRow marginTop="50px" marginBottom="5px" id="gr22" height="100%">
-                                            <af:gridCell width="100%" id="gc22" halign="stretch" valign="stretch"
-                                                         columnSpan="3" rowSpan="1">
+                                            <af:gridCell width="100%" id="gc22" halign="stretch" valign="stretch">
                                                 <af:panelGridLayout id="pgl4">
                                                     <af:gridRow id="gr5">
                                                         <af:gridCell id="gc5" halign="stretch" valign="stretch">
@@ -56,7 +66,7 @@
                                                         <af:gridCell id="gc3" halign="stretch" valign="stretch">
                                                             <af:panelGroupLayout id="pgl10" layout="vertical"
                                                                                  halign="center">
-                                                                <af:outputFormatted value="Claim Intimation" id="of1"
+                                                                <af:outputFormatted value="Pre-Authorization" id="of1"
                                                                                     inlineStyle="font-weight:bolder; color:#8b0037; font-size:30px;"/>
                                                                 <af:link text="Back" id="l3" partialSubmit="true"
                                                                          icon="/icons/left-arrow-blue.png"
@@ -82,7 +92,7 @@
                                                                                       contentStyle="width:500px"
                                                                                       label="Covered Member:"
                                                                                       labelStyle="PQAppLabelFont"
-                                                                                      simple="true">
+                                                                                      simple="true" editMode="select">
                                                                     <f:validator binding="#{bindings.NameOfPatient.validator}"/>
                                                                 </af:inputListOfValues>
                                                             </af:panelGroupLayout>
@@ -93,16 +103,16 @@
                                                                      id="gc4" halign="stretch" valign="stretch">
                                                             <af:panelGroupLayout id="pgl7" layout="vertical"
                                                                                  halign="center">
-                                                                <af:selectOneChoice value="#{bindings.TypeOfClaimn.inputValue}"
-                                                                                    required="#{bindings.TypeOfClaimn.hints.mandatory}"
-                                                                                    shortDesc="#{bindings.TypeOfClaimn.hints.tooltip}"
-                                                                                    id="soc1"
-                                                                                    styleClass="PQChoiceContentColor"
+                                                                <af:selectOneChoice value="#{bindings.TypeOfClaimn1.inputValue}"
+                                                                                    label="#{bindings.TypeOfClaimn1.label}"
+                                                                                    required="#{bindings.TypeOfClaimn1.hints.mandatory}"
+                                                                                    shortDesc="#{bindings.TypeOfClaimn1.hints.tooltip}"
+                                                                                    id="soc1" autoSubmit="true"
                                                                                     contentStyle="width:500px"
-                                                                                    label="Claim Type:" simple="true">
-                                                                    <f:selectItems value="#{bindings.TypeOfClaimn.items}"
+                                                                                    styleClass="PQChoiceContentColor">
+                                                                    <f:selectItems value="#{bindings.TypeOfClaimn1.items}"
                                                                                    id="si1"/>
-                                                                    <f:validator binding="#{bindings.TypeOfClaimn.validator}"/>
+                                                                    <f:validator binding="#{bindings.TypeOfClaimn1.validator}"/>
                                                                 </af:selectOneChoice>
                                                             </af:panelGroupLayout>
                                                         </af:gridCell>
@@ -301,13 +311,6 @@
                                                         </af:gridCell>
                                                     </af:gridRow>
                                                 </af:panelGridLayout>
-                                            </af:gridCell>
-                                        </af:gridRow>
-                                        <af:gridRow marginTop="25px" height="auto" marginBottom="5px" id="gr1">
-                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1"
-                                                         valign="stretch" halign="stretch" columnSpan="3" rowSpan="1">
-                                                <af:activeImage source="#{resource['images:imgBottomElaajApp.png']}"
-                                                                id="ai1" styleClass="AFStretchWidth"/>
                                             </af:gridCell>
                                         </af:gridRow>
                                     </af:panelGridLayout>

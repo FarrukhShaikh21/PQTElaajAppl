@@ -41,19 +41,9 @@
         <Item Value="EmpStatus"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="MasterHealthCardVO1Iterator" id="PolSysId">
-      <AttrNames>
-        <Item Value="PolSysId"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="MasterHealthCardVO1Iterator" id="PolNo">
       <AttrNames>
         <Item Value="PolNo"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="MasterHealthCardVO1Iterator" id="PolStartDt">
-      <AttrNames>
-        <Item Value="PolStartDt"/>
       </AttrNames>
     </attributeValues>
     <attributeValues IterBinding="MasterHealthCardVO1Iterator" id="PolEndDt">
@@ -61,19 +51,9 @@
         <Item Value="PolEndDt"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="MasterHealthCardVO1Iterator" id="EmpFolioId1">
-      <AttrNames>
-        <Item Value="EmpFolioId"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="MasterHealthCardVO1Iterator" id="EmpSrNo">
       <AttrNames>
         <Item Value="EmpSrNo"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="MasterHealthCardVO1Iterator" id="EmpName1">
-      <AttrNames>
-        <Item Value="EmpName"/>
       </AttrNames>
     </attributeValues>
     <attributeValues IterBinding="MasterHealthCardVO1Iterator" id="EmpDob">
@@ -81,24 +61,9 @@
         <Item Value="EmpDob"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="MasterHealthCardVO1Iterator" id="Relation">
-      <AttrNames>
-        <Item Value="Relation"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="MasterHealthCardVO1Iterator" id="EmpCnic">
       <AttrNames>
         <Item Value="EmpCnic"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="MasterHealthCardVO1Iterator" id="SelfEmpSeno">
-      <AttrNames>
-        <Item Value="SelfEmpSeno"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="MasterHealthCardVO1Iterator" id="SelfEmpName">
-      <AttrNames>
-        <Item Value="SelfEmpName"/>
       </AttrNames>
     </attributeValues>
     <attributeValues IterBinding="MasterHealthCardVO1Iterator" id="CompanyName">
@@ -107,76 +72,6 @@
       </AttrNames>
     </attributeValues>
     <attributeValues IterBinding="MasterHealthCardVO1Iterator" id="Age">
-      <AttrNames>
-        <Item Value="Age"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="DetailHealthCardVO1Iterator" id="PolSysId1">
-      <AttrNames>
-        <Item Value="PolSysId"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="DetailHealthCardVO1Iterator" id="PolNo1">
-      <AttrNames>
-        <Item Value="PolNo"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="DetailHealthCardVO1Iterator" id="PolStartDt1">
-      <AttrNames>
-        <Item Value="PolStartDt"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="DetailHealthCardVO1Iterator" id="PolEndDt1">
-      <AttrNames>
-        <Item Value="PolEndDt"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="DetailHealthCardVO1Iterator" id="EmpFolioId2">
-      <AttrNames>
-        <Item Value="EmpFolioId"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="DetailHealthCardVO1Iterator" id="EmpSrNo1">
-      <AttrNames>
-        <Item Value="EmpSrNo"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="DetailHealthCardVO1Iterator" id="EmpName2">
-      <AttrNames>
-        <Item Value="EmpName"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="DetailHealthCardVO1Iterator" id="EmpDob1">
-      <AttrNames>
-        <Item Value="EmpDob"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="DetailHealthCardVO1Iterator" id="Relation1">
-      <AttrNames>
-        <Item Value="Relation"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="DetailHealthCardVO1Iterator" id="EmpCnic1">
-      <AttrNames>
-        <Item Value="EmpCnic"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="DetailHealthCardVO1Iterator" id="SelfEmpSeno1">
-      <AttrNames>
-        <Item Value="SelfEmpSeno"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="DetailHealthCardVO1Iterator" id="SelfEmpName1">
-      <AttrNames>
-        <Item Value="SelfEmpName"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="DetailHealthCardVO1Iterator" id="CompanyName1">
-      <AttrNames>
-        <Item Value="CompanyName"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="DetailHealthCardVO1Iterator" id="Age1">
       <AttrNames>
         <Item Value="Age"/>
       </AttrNames>
@@ -200,6 +95,16 @@
     <attributeValues IterBinding="VuElaajMobileUserVO1Iterator" id="MRole">
       <AttrNames>
         <Item Value="MRole"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterHealthCardVO1Iterator" id="RoomLimit">
+      <AttrNames>
+        <Item Value="RoomLimit"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="MasterHealthCardVO1Iterator" id="EmpBranch">
+      <AttrNames>
+        <Item Value="EmpBranch"/>
       </AttrNames>
     </attributeValues>
   </bindings>

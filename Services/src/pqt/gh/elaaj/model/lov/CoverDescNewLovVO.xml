@@ -3,7 +3,7 @@
 <!---->
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="PanelHospitalLovVO"
+  Name="CoverDescNewLovVO"
   Version="12.2.1.11.57"
   InheritPersonalization="merge"
   BindingStyle="OracleName"
@@ -15,125 +15,129 @@
   <Properties>
     <SchemaBasedProperties>
       <LABEL
-        ResId="pqt.gh.elaaj.model.lov.PanelHospitalLovVO_LABEL"/>
+        ResId="pqt.gh.elaaj.model.lov.CoverDescNewLovVO_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
   <Variable
-    Name="QVC_HOSPITAL_NAME"
+    Name="QVC_DOC_ID"
     Kind="viewcriteria"
-    Type="java.lang.String">
+    Type="oracle.jbo.domain.Number">
     <Properties>
       <SchemaBasedProperties>
-        <LABEL
-          ResId="pqt.gh.elaaj.model.lov.PanelHospitalLovVO.QVC_HOSPITAL_NAME_LABEL"/>
-        <DISPLAYWIDTH
-          Value="30"/>
+        <DISPLAYHINT
+          Value="Hide"/>
       </SchemaBasedProperties>
     </Properties>
   </Variable>
   <Variable
-    Name="QVC_CITY"
+    Name="QVC_EMP_ID"
     Kind="viewcriteria"
     Type="java.lang.String">
     <Properties>
       <SchemaBasedProperties>
-        <LABEL
-          ResId="pqt.gh.elaaj.model.lov.PanelHospitalLovVO.QVC_CITY_LABEL"/>
+        <DISPLAYHINT
+          Value="Hide"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Variable>
+  <Variable
+    Name="SELF_CNIC_NO"
+    Kind="where"
+    Type="java.lang.String">
+    <TransientExpression
+      Name="VariableScript"
+      CodeSourceName="CoverDescNewLovVO"/>
+  </Variable>
+  <SQLQuery><![CDATA[SELECT DISTINCT B.BENEFIT_ID_PK,     
+       B.BENEFIT_CODE,     
+       B.BENEFIT_DESCRIPTION,     
+       T.DOCUMENT_ID_FK,     
+       T.EMPLOYEE_ID_FK, 
+       T.EMP_SR_NO 
+  FROM GHS_UW_EMP_CONTRIBUTION T, GHS_ST_GEN_BENEFITS B     
+ WHERE 1 = 1     
+   AND T.BENEFIT_ID_FK = B.BENEFIT_ID_PK    
+   AND T.DOCUMENT_ID_FK IN (SELECT EMP.DOCUMENT_ID_FK FROM GHS_UW_EMPLOYEES EMP WHERE EMP.CNIC_NO = :SELF_CNIC_NO)    
+ ORDER BY 1]]></SQLQuery>
+  <ViewAttribute
+    Name="BenefitIdPk"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    AliasName="BENEFIT_ID_PK"
+    Expression="BENEFIT_ID_PK"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="BenefitCode"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="50"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="BENEFIT_CODE"
+    Expression="BENEFIT_CODE"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="BenefitDescription"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="250"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="BENEFIT_DESCRIPTION"
+    Expression="BENEFIT_DESCRIPTION"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="250"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="30"/>
       </SchemaBasedProperties>
     </Properties>
-  </Variable>
-  <SQLQuery><![CDATA[SELECT A.HOS_ID,A.HS_NAME,A.HS_CITY,A.HS_REM,A.REGION_CODE FROM VU_GHS_ELAAJ_HOSPITAL A]]></SQLQuery>
-  <ViewAttribute
-    Name="HosId"
-    IsUpdateable="false"
-    IsPersistent="false"
-    PrecisionRule="true"
-    Precision="255"
-    Type="java.lang.String"
-    ColumnType="VARCHAR2"
-    AliasName="HOS_ID"
-    Expression="HOS_ID"
-    SQLType="VARCHAR">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="150"/>
-    </DesignTime>
   </ViewAttribute>
   <ViewAttribute
-    Name="HsName"
+    Name="DocumentIdFk"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    AliasName="DOCUMENT_ID_FK"
+    Expression="DOCUMENT_ID_FK"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="EmployeeIdFk"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    AliasName="EMPLOYEE_ID_FK"
+    Expression="EMPLOYEE_ID_FK"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="EmpSrNo"
     IsUpdateable="false"
     IsPersistent="false"
     PrecisionRule="true"
-    Precision="500"
+    Precision="250"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    AliasName="HS_NAME"
-    Expression="HS_NAME"
+    AliasName="EMP_SR_NO"
+    Expression="EMP_SR_NO"
     SQLType="VARCHAR">
     <DesignTime>
-      <Attr Name="_DisplaySize" Value="500"/>
-    </DesignTime>
-    <Properties>
-      <SchemaBasedProperties>
-        <LABEL
-          ResId="pqt.gh.elaaj.model.lov.PanelHospitalLovVO.HsName_LABEL"/>
-        <DISPLAYWIDTH
-          Value="50"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
-  <ViewAttribute
-    Name="HsCity"
-    IsUpdateable="false"
-    IsPersistent="false"
-    PrecisionRule="true"
-    Precision="200"
-    Type="java.lang.String"
-    ColumnType="VARCHAR2"
-    AliasName="HS_CITY"
-    Expression="HS_CITY"
-    SQLType="VARCHAR">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="200"/>
+      <Attr Name="_DisplaySize" Value="250"/>
     </DesignTime>
   </ViewAttribute>
-  <ViewAttribute
-    Name="HsRem"
-    IsUpdateable="false"
-    IsPersistent="false"
-    PrecisionRule="true"
-    Precision="4000"
-    Type="java.lang.String"
-    ColumnType="VARCHAR2"
-    AliasName="HS_REM"
-    Expression="HS_REM"
-    SQLType="VARCHAR">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="4000"/>
-    </DesignTime>
-    <Properties>
-      <SchemaBasedProperties>
-        <LABEL
-          ResId="pqt.gh.elaaj.model.lov.PanelHospitalLovVO.HsRem_LABEL"/>
-        <DISPLAYWIDTH
-          Value="50"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
-  <ViewAttribute
-    Name="RegionCode"
-    IsUpdateable="false"
-    IsPersistent="false"
-    PrecisionRule="true"
-    Type="java.lang.String"
-    ColumnType="VARCHAR2"
-    AliasName="REGION_CODE"
-    Expression="REGION_CODE"
-    SQLType="VARCHAR"/>
   <ViewCriteria
-    Name="PanelHospitalLovVOCriteria"
-    ViewObjectName="pqt.gh.elaaj.model.lov.PanelHospitalLovVO"
+    Name="CoverDescNewLovVOCriteria"
+    ViewObjectName="pqt.gh.elaaj.model.lov.CoverDescNewLovVO"
     Conjunction="AND">
     <Properties Name="_Props">
       <CustomProperties>
@@ -155,26 +159,29 @@
       </CustomProperties>
     </Properties>
     <ViewCriteriaRow
-      Name="PanelHospitalLovVOCriteria_row_0"
+      Name="CoverDescNewLovVOCriteria_row_0"
       UpperColumns="1">
       <ViewCriteriaItem
-        Name="HsName"
-        ViewAttribute="HsName"
-        Operator="CONTAINS"
+        Name="DocumentIdFk"
+        ViewAttribute="DocumentIdFk"
+        Operator="="
         Conjunction="AND"
-        Value=":QVC_HOSPITAL_NAME"
+        Value=":QVC_DOC_ID"
         IsBindVarValue="true"
         Required="Optional"/>
       <ViewCriteriaItem
-        Name="HsCity"
-        ViewAttribute="HsCity"
-        Operator="CONTAINS"
+        Name="EmpSrNo"
+        ViewAttribute="EmpSrNo"
+        Operator="="
         Conjunction="AND"
-        Value=":QVC_CITY"
+        Value=":QVC_EMP_ID"
         IsBindVarValue="true"
         Required="Optional"/>
     </ViewCriteriaRow>
   </ViewCriteria>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="BenefitDescription"/>
+  </AttrArray>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="pqt.gh.elaaj.model.ServicesBundle"/>

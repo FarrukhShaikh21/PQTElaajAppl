@@ -41,6 +41,26 @@
     Name="PanelHospitalLovVO1"
     ViewObjectName="pqt.gh.elaaj.model.lov.PanelHospitalLovVO"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="CoverDescNewLovVO1"
+    ViewObjectName="pqt.gh.elaaj.model.lov.CoverDescNewLovVO"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="CoverDescNewLovVOCriteria"
+      FullName="pqt.gh.elaaj.model.lov.CoverDescNewLovVO.CoverDescNewLovVOCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="QVC_DOC_ID">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[DocumentIdFk]]></TransientExpression>
+      </PIMap>
+      <PIMap Variable="QVC_EMP_ID">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[CertificateNo]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
   <ListBinding
     Name="LOV_NameOfPatient"
     ListVOName="VuGhsElaajCoveredMemberVO1"
@@ -112,11 +132,30 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="HsName"/>
-      <Item Value="HsRem"/>
+      <Item Value="HsCity"/>
     </AttrArray>
     <DisplayCriteria
       Hint="showAndExecute"
       Name="PanelHospitalLovVOCriteria"/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_TypeOfClaimn1"
+    ListVOName="CoverDescNewLovVO1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="LOV_TypeOfClaimn1_LOVUIHints_NullValueId"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="TypeOfClaimn"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="BenefitDescription"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="BenefitDescription"/>
+    </AttrArray>
+    <DisplayCriteria/>
   </ListBinding>
   <SQLQuery><![CDATA[SELECT ElaajClaimIntimateEO.ATTACH_FILE_1,        
        ElaajClaimIntimateEO.ATTACH_FILE_2,        
@@ -340,10 +379,10 @@ FROM  ELAAJ_CLAIM_INTIMATE ElaajClaimIntimateEO]]></SQLQuery>
     LOVName="LOV_NameOfPanelHospital">
     <Properties>
       <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="input_text_lov"/>
         <AUTOSUBMIT
           Value="true"/>
+        <CONTROLTYPE
+          Value="input_text_lov"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -408,7 +447,7 @@ FROM  ELAAJ_CLAIM_INTIMATE ElaajClaimIntimateEO]]></SQLQuery>
     EntityAttrName="TypeOfClaimn"
     EntityUsage="ElaajClaimIntimateEO"
     AliasName="TYPE_OF_CLAIMN"
-    LOVName="LOV_TypeOfClaimn">
+    LOVName="LOV_TypeOfClaimn1">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH

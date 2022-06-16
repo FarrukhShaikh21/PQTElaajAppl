@@ -58,7 +58,7 @@
       <Item Value="EmpName"/>
     </AttrArray>
     <DisplayCriteria
-      Hint="showAndExecute"/>
+      Hint="hide"/>
   </ListBinding>
   <ListBinding
     Name="LOV_RelationshipWithEmployee"

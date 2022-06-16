@@ -580,7 +580,7 @@
                                                                     <af:gridCell marginStart="5px" width="80%" id="gc86"
                                                                                  columnSpan="4" rowSpan="1">
                                                                         <af:outputText value="#{bindings.PolicyEndDate.inputValue}" id="ot37"
-                                                                                       inlineStyle="color:black"/>
+                                                                                       inlineStyle="color:black;font-size:xx-small"/>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
                                                                 <af:gridRow marginTop="5px" height="auto" id="gr49">
@@ -591,7 +591,8 @@
                                                                                              layout="horizontal">
                                                                             <af:outputText value="The Aga Khan University Hospital :- Member Is not entitled for treatmnent below Room rent Rs. 4900/- only on credit"
                                                                                            id="ot38"
-                                                                                           inlineStyle="color:#8b0037;font-size:xx-small"/>
+                                                                                           inlineStyle="color:#8b0037;font-size:xx-small"
+                                                                                           rendered="false"/>
                                                                         </af:panelGroupLayout>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
@@ -800,7 +801,7 @@
                                                     </af:gridRow>
                                                     <af:gridRow id="gr38">
                                                         <af:gridCell id="gc55" halign="stretch">
-                                                            <af:outputFormatted value="The OPD Limit mentioning above on employee basis. For actual benefit detail please coordinate your HD Dept."
+                                                            <af:outputFormatted value="The OPD Limit mentioned above is on per employee basis. For actual benefits detail please coordinate with your HR department"
                                                                                 id="of35"
                                                                                 inlineStyle="color: Red; font-size: 11px;"/>
                                                         </af:gridCell>

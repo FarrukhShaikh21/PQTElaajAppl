@@ -1,0 +1,12 @@
+//Groovy Scripts for pqt.gh.elaaj.model.lov.CoverDescNewLovVO
+
+package pqt.gh.elaaj.model.lov
+
+import oracle.jbo.script.annotation.VariableExpression;
+
+@VariableExpression(path="SELF_CNIC_NO")
+def SELF_CNIC_NO_VariableScript_Variable()
+{
+adf.context.sessionScope.pCNICNo
+}
+
