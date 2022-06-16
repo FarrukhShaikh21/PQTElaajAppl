@@ -6,26 +6,6 @@
         <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
         <af:form id="f1" usesUpload="true">
             <af:panelStretchLayout id="psl1" topHeight="115px">
-                <f:facet name="top">
-                    <af:panelGridLayout id="pgl17" styleClass="wide">
-                        <af:gridRow height="100px" id="gr20" marginTop="5px">
-                            <af:gridCell width="200px" id="gc21" valign="stretch" halign="start">
-                                <af:spacer width="100" height="10" id="s2"/>
-                                <af:image id="i15" source="/images/imgMainLogo.png"/>
-                            </af:gridCell>
-                            <af:gridCell marginStart="5px" width="100%" id="gc37"/>
-                            <af:gridCell marginStart="5px" width="200px" id="gc75" valign="middle">
-                                <af:image source="/images/app_icon-01.png" id="i30"/>
-                            </af:gridCell>
-                        </af:gridRow>
-                        <af:gridRow marginTop="5px" height="100px" marginBottom="5px" id="gr36">
-                            <af:gridCell width="100%" id="gc76" columnSpan="3" halign="stretch" valign="stretch">
-                                <af:image source="#{resource['images:imgLine.png']}" id="i31"
-                                          styleClass="AFStretchWidth"/>
-                            </af:gridCell>
-                        </af:gridRow>
-                    </af:panelGridLayout>
-                </f:facet>
                 <f:facet name="bottom">
                     <af:panelGridLayout id="pgl52" styleClass="wide">
                         <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr28">
@@ -44,8 +24,26 @@
                                          halign="stretch">
                                 <af:panelGroupLayout id="pgl13" styleClass="wide" layout="scroll">
                                     <af:panelGridLayout id="pgl3" styleClass="PQHeaderColor">
+                                        <af:gridRow height="100px" id="gr20" marginTop="5px">
+                                            <af:gridCell width="200px" id="gc21" valign="stretch" halign="start">
+                                                <af:spacer width="100" height="10" id="s2"/>
+                                                <af:image id="i15" source="/images/imgMainLogo.png"/>
+                                            </af:gridCell>
+                                            <af:gridCell marginStart="5px" width="100%" id="gc37"/>
+                                            <af:gridCell marginStart="5px" width="200px" id="gc75" valign="middle">
+                                                <af:image source="/images/app_icon-01.png" id="i30"/>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow height="10px" id="gr36">
+                                            <af:gridCell width="100%" id="gc76" columnSpan="3" halign="stretch"
+                                                         valign="stretch">
+                                                <af:image source="#{resource['images:imgLine.png']}" id="i31"
+                                                          styleClass="AFStretchWidth"/>
+                                            </af:gridCell>
+                                        </af:gridRow>
                                         <af:gridRow marginTop="50px" height="auto" marginBottom="5px" id="gr1">
-                                            <af:gridCell width="100%" id="gc1" halign="stretch" valign="stretch">
+                                            <af:gridCell width="100%" id="gc1" halign="stretch" valign="stretch"
+                                                         columnSpan="3" rowSpan="1">
                                                 <af:panelGridLayout id="pgl5">
                                                     <af:gridRow id="gr13" marginTop="5px" rendered="false">
                                                         <af:gridCell id="gc11" width="100%" halign="stretch">
