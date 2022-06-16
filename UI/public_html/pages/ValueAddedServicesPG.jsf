@@ -7,41 +7,38 @@
         <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
         <af:form id="f2">
             <af:panelStretchLayout id="psl1" topHeight="115px">
-                <f:facet name="top">
-                    <af:panelGridLayout id="pgl9" styleClass="wide">
-                        <af:gridRow height="100px" id="gr13" marginTop="5px">
-                            <af:gridCell width="200px" id="gc11" valign="stretch" halign="start">
-                                <af:spacer width="100" height="10" id="s1"/>
-                                <af:image id="i15" source="/images/imgMainLogo.png"/>
-                            </af:gridCell>
-                            <af:gridCell marginStart="5px" width="100%" id="gc14"/>
-                            <af:gridCell marginStart="5px" width="200px" id="gc75" valign="middle">
-                                <af:image source="/images/app_icon-01.png" id="i30"/>
-                            </af:gridCell>
-                        </af:gridRow>
-                        <af:gridRow marginTop="5px" height="100px" marginBottom="5px" id="gr35">
-                            <af:gridCell width="100%" id="gc76" columnSpan="3" halign="stretch" valign="stretch">
-                                <af:image source="#{resource['images:imgLine.png']}" id="i31"
-                                          styleClass="AFStretchWidth"/>
-                            </af:gridCell>
-                        </af:gridRow>
-                    </af:panelGridLayout>
-                </f:facet>
                 <f:facet name="center">
                     <af:panelGridLayout id="pgl4">
-                        <af:gridRow marginTop="5px" height="100%" id="gr7">
+                        <af:gridRow marginTop="5px" id="gr7">
                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc8" valign="stretch"
                                          halign="stretch">
                                 <af:panelGroupLayout id="pgl5" styleClass="wide" layout="scroll">
                                     <af:panelGridLayout id="pgl3" styleClass="PQHeaderColor">
+                                        <af:gridRow height="100px" id="gr13" marginTop="5px">
+                                            <af:gridCell width="200px" id="gc11" valign="stretch" halign="start">
+                                                <af:spacer width="100" height="10" id="s1"/>
+                                                <af:image id="i15" source="/images/imgMainLogo.png"/>
+                                            </af:gridCell>
+                                            <af:gridCell marginStart="5px" width="100%" id="gc14"/>
+                                            <af:gridCell marginStart="5px" width="200px" id="gc75" valign="middle">
+                                                <af:image source="/images/app_icon-01.png" id="i30"/>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow height="10px" id="gr35">
+                                            <af:gridCell width="100%" id="gc76" columnSpan="3" halign="stretch"
+                                                         valign="stretch">
+                                                <af:image source="#{resource['images:imgLine.png']}" id="i31"
+                                                          styleClass="AFStretchWidth"/>
+                                            </af:gridCell>
+                                        </af:gridRow>
                                         <af:gridRow id="gr5" marginTop="30px">
-                                            <af:gridCell id="gc6" halign="center">
+                                            <af:gridCell id="gc6" halign="center" columnSpan="3" rowSpan="1">
                                                 <af:image source="#{resource['images:imgValueAddedService.png']}"
                                                           id="i2" inlineStyle="width:100px;height:100px"/>
                                             </af:gridCell>
                                         </af:gridRow>
                                         <af:gridRow id="gr6">
-                                            <af:gridCell id="gc7" halign="center">
+                                            <af:gridCell id="gc7" halign="center" columnSpan="3" rowSpan="1">
                                                 <af:panelGroupLayout id="pgl2" layout="vertical" halign="center">
                                                     <af:outputText value="Value Added Services" id="ot1"
                                                                    inlineStyle="font-weight:bolder; color:#8b0037; font-size:40px;"/>
@@ -52,7 +49,7 @@
                                         </af:gridRow>
                                         <af:gridRow marginTop="30px" height="auto" id="gr3">
                                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4"
-                                                         halign="center" valign="stretch">
+                                                         halign="center" valign="stretch" columnSpan="3" rowSpan="1">
                                                 <af:panelCollection id="pc1" featuresOff="detach viewMenu">
                                                     <f:facet name="menus"/>
                                                     <f:facet name="toolbar"/>
@@ -95,6 +92,13 @@
                                                         </af:column>
                                                     </af:table>
                                                 </af:panelCollection>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="20px" height="auto" marginBottom="5px" id="gr10">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc29"
+                                                         valign="stretch" halign="stretch" columnSpan="3" rowSpan="1">
+                                                <af:activeImage source="#{resource['images:imgBottomElaajApp.png']}"
+                                                                id="ai1" styleClass="AFStretchWidth"/>
                                             </af:gridCell>
                                         </af:gridRow>
                                     </af:panelGridLayout>
@@ -168,17 +172,6 @@
                                         </af:gridRow>
                                     </af:panelGridLayout>
                                 </af:panelGroupLayout>
-                            </af:gridCell>
-                        </af:gridRow>
-                    </af:panelGridLayout>
-                </f:facet>
-                <f:facet name="bottom">
-                    <af:panelGridLayout id="pgl52" styleClass="wide">
-                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr10">
-                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc29" valign="stretch"
-                                         halign="stretch">
-                                <af:activeImage source="#{resource['images:imgBottomElaajApp.png']}" id="ai1"
-                                                styleClass="AFStretchWidth"/>
                             </af:gridCell>
                         </af:gridRow>
                     </af:panelGridLayout>
