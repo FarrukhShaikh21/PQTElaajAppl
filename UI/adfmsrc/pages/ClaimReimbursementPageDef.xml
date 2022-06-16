@@ -126,5 +126,7 @@
         <Item Value="OtherHospital"/>
       </AttrNames>
     </attributeValues>
+    <list IterBinding="ElaajClaimReimburstmentEOVO1Iterator" StaticList="false" Uses="LOV_TypeOfClaimn1"
+          id="TypeOfClaimn1" DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>
