@@ -20,36 +20,8 @@
                     </af:panelGroupLayout>
                 </f:facet>
                 <f:facet name="end"/>
-                <f:facet name="top">
-                    <af:panelGridLayout id="pgl10" styleClass="wide">
-                        <af:gridRow height="100px" id="gr15" marginTop="5px">
-                            <af:gridCell width="200px" id="gc16" valign="stretch" halign="start">
-                                <af:spacer width="100" height="10" id="s1"/>
-                                <af:image id="i15" source="/images/imgMainLogo.png"/>
-                            </af:gridCell>
-                            <af:gridCell marginStart="5px" width="100%" id="gc17"/>
-                            <af:gridCell marginStart="5px" width="200px" id="gc75" valign="middle">
-                                <af:image source="/images/app_icon-01.png" id="i30"/>
-                            </af:gridCell>
-                        </af:gridRow>
-                        <af:gridRow marginTop="5px" height="100px" marginBottom="5px" id="gr35">
-                            <af:gridCell width="100%" id="gc76" columnSpan="3" halign="stretch" valign="stretch">
-                                <af:image source="#{resource['images:imgLine.png']}" id="i31"
-                                          styleClass="AFStretchWidth"/>
-                            </af:gridCell>
-                        </af:gridRow>
-                    </af:panelGridLayout>
-                </f:facet>
                 <f:facet name="bottom">
-                    <af:panelGridLayout id="pgl52" styleClass="wide">
-                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr12">
-                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc29" valign="stretch"
-                                         halign="stretch">
-                                <af:activeImage source="#{resource['images:imgBottomElaajApp.png']}" id="ai1"
-                                                styleClass="AFStretchWidth"/>
-                            </af:gridCell>
-                        </af:gridRow>
-                    </af:panelGridLayout>
+                    <af:panelGridLayout id="pgl52" styleClass="wide"/>
                 </f:facet>
                 <f:facet name="center">
                     <af:panelGridLayout id="pgl5">
@@ -58,14 +30,31 @@
                                          halign="stretch">
                                 <af:panelGroupLayout id="pgl6" styleClass="wide" layout="scroll">
                                     <af:panelGridLayout id="pgl4" styleClass="PQHeaderColor">
-                                        <af:gridRow id="gr13" marginTop="50px">
-                                            <af:gridCell id="gc14" halign="center">
+                                        <af:gridRow height="100px" id="gr15" marginTop="5px">
+                                            <af:gridCell width="200px" id="gc16" valign="stretch" halign="start">
+                                                <af:spacer width="100" height="10" id="s1"/>
+                                                <af:image id="i15" source="/images/imgMainLogo.png"/>
+                                            </af:gridCell>
+                                            <af:gridCell marginStart="5px" width="100%" id="gc17"/>
+                                            <af:gridCell marginStart="5px" width="200px" id="gc75" valign="middle">
+                                                <af:image source="/images/app_icon-01.png" id="i30"/>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow height="10px" id="gr35">
+                                            <af:gridCell width="100%" id="gc76" columnSpan="3" halign="stretch"
+                                                         valign="stretch">
+                                                <af:image source="#{resource['images:imgLine.png']}" id="i31"
+                                                          styleClass="AFStretchWidth"/>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow id="gr13" marginTop="30px">
+                                            <af:gridCell id="gc14" halign="center" columnSpan="3">
                                                 <af:image source="#{resource['images:imgContactUs.png']}" id="i2"
                                                           inlineStyle="width:100px;height:100px"/>
                                             </af:gridCell>
                                         </af:gridRow>
                                         <af:gridRow id="gr10" marginTop="20px">
-                                            <af:gridCell id="gc11" halign="center">
+                                            <af:gridCell id="gc11" halign="center" columnSpan="3">
                                                 <af:panelGroupLayout id="pgl3" layout="vertical" halign="center">
                                                     <af:outputFormatted value="Contact Us" id="of1"
                                                                         inlineStyle="font-weight:bolder; color:#8b0037; font-size:30px;"/>
@@ -76,14 +65,14 @@
                                         </af:gridRow>
                                         <af:gridRow marginTop="30px" height="auto" id="gr3">
                                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4"
-                                                         halign="center">
+                                                         halign="center" columnSpan="3">
                                                 <af:outputFormatted value="PAK-QATAR TAKAFUL" id="of2"
                                                                     inlineStyle="font-size:20px; font-weight:bolder;"/>
                                             </af:gridCell>
                                         </af:gridRow>
                                         <af:gridRow marginTop="30px" height="auto" id="gr4">
                                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5"
-                                                         halign="center">
+                                                         halign="center" columnSpan="3">
                                                 <af:outputFormatted value="Pre-Authorization &amp; Claim Payment Contact Details"
                                                                     id="of3"
                                                                     inlineStyle="font-size:18px; font-weight:bold;"/>
@@ -91,7 +80,7 @@
                                         </af:gridRow>
                                         <af:gridRow marginTop="30px" height="auto" id="gr5">
                                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6"
-                                                         halign="center">
+                                                         halign="center" columnSpan="3">
                                                 <af:outputFormatted value="Customer Services UAN #: 021-111-825-238  "
                                                                     id="of4"
                                                                     inlineStyle="font-size:16px; font-weight:bold;"/>
@@ -99,29 +88,36 @@
                                         </af:gridRow>
                                         <af:gridRow marginTop="30px" height="auto" marginBottom="5px" id="gr6">
                                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7"
-                                                         halign="center">
+                                                         halign="center" columnSpan="3">
                                                 <af:outputFormatted value="Islamabad: 051-2894800, Lahore: 042-3591258, Karachi: Fax No: 02134386451"
                                                                     id="of5" inlineStyle="font-size:12px;"/>
                                             </af:gridCell>
                                         </af:gridRow>
                                         <af:gridRow id="gr7" marginTop="30px">
-                                            <af:gridCell id="gc8" halign="center">
+                                            <af:gridCell id="gc8" halign="center" columnSpan="3">
                                                 <af:outputFormatted value="Please send emails to the following addresses"
                                                                     id="of6" inlineStyle="font-size:12px;"/>
                                             </af:gridCell>
                                         </af:gridRow>
                                         <af:gridRow id="gr8" marginTop="30px">
-                                            <af:gridCell id="gc9" halign="center">
+                                            <af:gridCell id="gc9" halign="center" columnSpan="3">
                                                 <af:outputFormatted value="Queries/Approvals regarding Pre-Authorization requests: approvals@pakqatar.com.pk"
                                                                     id="of7"
                                                                     inlineStyle="font-size:14px; font-weight:bold;"/>
                                             </af:gridCell>
                                         </af:gridRow>
                                         <af:gridRow id="gr9" marginTop="30px" marginBottom="30px">
-                                            <af:gridCell id="gc10" halign="center">
+                                            <af:gridCell id="gc10" halign="center" columnSpan="3">
                                                 <af:outputFormatted value="Queries regarding Claim Reimbursement: claim.pqft@pakqatar.com.pk"
                                                                     id="of8"
                                                                     inlineStyle="font-size:14px; font-weight:bold;"/>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr12">
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc29"
+                                                         valign="stretch" halign="stretch" columnSpan="3">
+                                                <af:activeImage source="#{resource['images:imgBottomElaajApp.png']}"
+                                                                id="ai1" styleClass="AFStretchWidth"/>
                                             </af:gridCell>
                                         </af:gridRow>
                                     </af:panelGridLayout>
