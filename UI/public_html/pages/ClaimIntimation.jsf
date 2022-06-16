@@ -98,8 +98,10 @@
                                                                                     required="#{bindings.TypeOfClaimn1.hints.mandatory}"
                                                                                     shortDesc="#{bindings.TypeOfClaimn1.hints.tooltip}"
                                                                                     id="soc1" autoSubmit="true"
-                                                                                    contentStyle="width:500px"
-                                                                                    styleClass="PQChoiceContentColor">
+                                                                                    contentStyle="width:300px"
+                                                                                    styleClass="PQChoiceContentColor"
+                                                                                    simple="true"
+                                                                                    partialTriggers="nameOfPatientId">
                                                                     <f:selectItems value="#{bindings.TypeOfClaimn1.items}"
                                                                                    id="si1"/>
                                                                     <f:validator binding="#{bindings.TypeOfClaimn1.validator}"/>
@@ -343,7 +345,7 @@
                                                                           shortDesc="#{bindings.NameOfPatient.hints.tooltip}"
                                                                           placeholder="Select Covered Member"
                                                                           styleClass="PQAppInputLOV"
-                                                                          contentStyle="width:100%"
+                                                                          contentStyle="width:90%"
                                                                           label="Covered Member:"
                                                                           labelStyle="PQAppLabelFont" simple="true">
                                                         <f:validator binding="#{bindings.NameOfPatient.validator}"/>
@@ -360,7 +362,7 @@
                                                                         shortDesc="#{bindings.TypeOfClaimn.hints.tooltip}"
                                                                         id="soc3" styleClass="PQChoiceContentColor"
                                                                         contentStyle="width:100%" label="Claim Type:"
-                                                                        simple="true">
+                                                                        simple="true" partialTriggers="ilov1">
                                                         <f:selectItems value="#{bindings.TypeOfClaimn.items}" id="si3"/>
                                                         <f:validator binding="#{bindings.TypeOfClaimn.validator}"/>
                                                     </af:selectOneChoice>

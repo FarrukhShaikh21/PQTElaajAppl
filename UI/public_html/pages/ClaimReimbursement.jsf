@@ -155,16 +155,18 @@
                                                                      halign="stretch">
                                                             <af:panelGroupLayout id="pgl7" layout="vertical"
                                                                                  halign="center">
-                                                                <af:selectOneChoice value="#{bindings.TypeOfClaimn1.inputValue}"
-                                                                                    required="#{bindings.TypeOfClaimn1.hints.mandatory}"
-                                                                                    shortDesc="#{bindings.TypeOfClaimn1.hints.tooltip}"
-                                                                                    id="soc1"
-                                                                                    contentStyle="width:500px"
+                                                                <af:selectOneChoice value="#{bindings.TypeOfClaimn.inputValue}"
+                                                                                    label="#{bindings.TypeOfClaimn.label}"
+                                                                                    required="#{bindings.TypeOfClaimn.hints.mandatory}"
+                                                                                    shortDesc="#{bindings.TypeOfClaimn.hints.tooltip}"
+                                                                                    id="soc3" autoSubmit="true"
                                                                                     styleClass="PQChoiceContentColor"
-                                                                                    autoSubmit="true">
-                                                                    <f:selectItems value="#{bindings.TypeOfClaimn1.items}"
-                                                                                   id="si1"/>
-                                                                    <f:validator binding="#{bindings.TypeOfClaimn1.validator}"/>
+                                                                                    contentStyle="width:500px"
+                                                                                    simple="true"
+                                                                                    partialTriggers="nameOfPatientId">
+                                                                    <f:selectItems value="#{bindings.TypeOfClaimn.items}"
+                                                                                   id="si3"/>
+                                                                    <f:validator binding="#{bindings.TypeOfClaimn.validator}"/>
                                                                 </af:selectOneChoice>
                                                             </af:panelGroupLayout>
                                                         </af:gridCell>
@@ -505,14 +507,17 @@
                                                                      halign="stretch">
                                                             <af:panelGroupLayout id="pgl20" layout="vertical"
                                                                                  halign="center">
-                                                                <af:selectOneChoice required="#{bindings.TypeOfClaimn.hints.mandatory}"
+                                                                <af:selectOneChoice value="#{bindings.TypeOfClaimn.inputValue}"
+                                                                                    label="#{bindings.TypeOfClaimn.label}"
+                                                                                    required="#{bindings.TypeOfClaimn.hints.mandatory}"
                                                                                     shortDesc="#{bindings.TypeOfClaimn.hints.tooltip}"
-                                                                                    id="soc3" contentStyle="width:350px"
-                                                                                    value="#{bindings.TypeOfClaimn.inputValue}"
+                                                                                    id="soc1" simple="true"
                                                                                     styleClass="PQChoiceContentColor"
-                                                                                    autoSubmit="true">
+                                                                                    contentStyle="width:300px"
+                                                                                    autoSubmit="true"
+                                                                                    partialTriggers="ilov2">
                                                                     <f:selectItems value="#{bindings.TypeOfClaimn.items}"
-                                                                                   id="si3"/>
+                                                                                   id="si1"/>
                                                                     <f:validator binding="#{bindings.TypeOfClaimn.validator}"/>
                                                                 </af:selectOneChoice>
                                                             </af:panelGroupLayout>

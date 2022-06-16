@@ -107,25 +107,6 @@
       Hint="showAndExecute"/>
   </ListBinding>
   <ListBinding
-    Name="LOV_TypeOfClaimn"
-    ListVOName="CoverDescriptionLovVO1"
-    ListRangeSize="-1"
-    NullValueFlag="start"
-    NullValueId="LOV_TypeOfClaimn_LOVUIHints_NullValueId"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="TypeOfClaimn"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="BenefitDescription"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="BenefitDescription"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
     Name="LOV_TypeOfClaimn1"
     ListVOName="CoverDescNewLovVO1"
     ListRangeSize="-1"

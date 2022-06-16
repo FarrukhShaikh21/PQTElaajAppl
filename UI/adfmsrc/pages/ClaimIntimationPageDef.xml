@@ -141,7 +141,7 @@
     <methodAction id="submitToBpmIPD" RequiresUpdateModel="true" Action="invokeMethod" MethodName="submitToBpmIPD"
                   IsViewObjectMethod="false" DataControl="PQTElaajAMDataControl"
                   InstanceName="data.PQTElaajAMDataControl.dataProvider"/>
-    <list IterBinding="ElaajClaimIntimateEOVO1Iterator" StaticList="false" Uses="LOV_TypeOfClaimn1" id="TypeOfClaimn1"
+    <list IterBinding="ElaajClaimIntimateEOVO1Iterator" StaticList="false" Uses="LOV_TypeOfClaimn" id="TypeOfClaimn1"
           DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>

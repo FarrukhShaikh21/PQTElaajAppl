@@ -98,25 +98,6 @@
       Hint="hide"/>
   </ListBinding>
   <ListBinding
-    Name="LOV_TypeOfClaimn"
-    ListVOName="CoverDescriptionLovVO1"
-    ListRangeSize="-1"
-    NullValueFlag="start"
-    NullValueId="LOV_TypeOfClaimn_LOVUIHints_NullValueId"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="TypeOfClaimn"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="BenefitDescription"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="BenefitDescription"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
     Name="LOV_NameOfPanelHospital"
     ListVOName="PanelHospitalLovVO1"
     ListRangeSize="-1"
@@ -139,7 +120,7 @@
       Name="PanelHospitalLovVOCriteria"/>
   </ListBinding>
   <ListBinding
-    Name="LOV_TypeOfClaimn1"
+    Name="LOV_TypeOfClaimn"
     ListVOName="CoverDescNewLovVO1"
     ListRangeSize="-1"
     NullValueFlag="start"
@@ -447,7 +428,7 @@ FROM  ELAAJ_CLAIM_INTIMATE ElaajClaimIntimateEO]]></SQLQuery>
     EntityAttrName="TypeOfClaimn"
     EntityUsage="ElaajClaimIntimateEO"
     AliasName="TYPE_OF_CLAIMN"
-    LOVName="LOV_TypeOfClaimn1">
+    LOVName="LOV_TypeOfClaimn">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH

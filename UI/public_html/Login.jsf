@@ -227,7 +227,8 @@
                                                                                  halign="center">
                                                                         <af:link text="Forgot password?" id="l3"
                                                                                  partialSubmit="true"
-                                                                                 inlineStyle=" color:#8b0037;font-weight:bold"/>
+                                                                                 inlineStyle=" color:#8b0037;font-weight:bold"
+                                                                                 action="#{LoginBean.getpassword}"/>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
                                                             </af:panelGridLayout>
@@ -241,10 +242,10 @@
                                                                 <af:outputText value="EMERGENCY HOTLINE" id="ot5"
                                                                                inlineStyle="font-weight:bolder; color:#8b0037; font-size:large"/>
                                                                 <af:spacer width="10" height="10" id="s1"/>
-                                                                <af:outputText value="0300-1234567" id="ot6"
+                                                                <af:outputText value="0301-8223385" id="ot6"
                                                                                inlineStyle="font-weight:bolder; color:#8b0037; font-size:large"/>
                                                                 <af:spacer width="10" height="10" id="s5"/>
-                                                                <af:outputText value="0300-1234567" id="ot7"
+                                                                <af:outputText value="0302-8223385" id="ot7"
                                                                                inlineStyle="font-weight:bolder; color:#8b0037; font-size:large"/>
                                                             </af:panelGroupLayout>
                                                         </af:gridCell>

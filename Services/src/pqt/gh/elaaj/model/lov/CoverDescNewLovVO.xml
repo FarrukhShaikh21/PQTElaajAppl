@@ -25,7 +25,7 @@
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYHINT
-          Value="Hide"/>
+          Value="Display"/>
       </SchemaBasedProperties>
     </Properties>
   </Variable>
@@ -34,10 +34,7 @@
     Kind="viewcriteria"
     Type="java.lang.String">
     <Properties>
-      <SchemaBasedProperties>
-        <DISPLAYHINT
-          Value="Hide"/>
-      </SchemaBasedProperties>
+      <SchemaBasedProperties/>
     </Properties>
   </Variable>
   <Variable
