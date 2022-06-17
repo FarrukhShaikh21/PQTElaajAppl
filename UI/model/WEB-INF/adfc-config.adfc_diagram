@@ -7,11 +7,11 @@
       <property
          name="activityId">RegisterPG</property>
       <property
-         name="x">190.01074</property>
+         name="x">230.01074</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>RegisterPG&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">153.79883</property>
+         name="y">106.09766</property>
       <property
          name="page">/RegisterPG.jsf</property>
       <property
@@ -32,26 +32,6 @@
       <property
          name="exceptionHandler">false</property>
    </View>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase4"
-      from="View2"
-      to="View3">
-      <property
-         name="fromOutcome">goLogin</property>
-      <property
-         name="sdm:polyPoints">R46,231.24597,149.94824,394.5,160.94824,L46</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase5"
-      from="View3"
-      to="View2">
-      <property
-         name="fromOutcome">goHome</property>
-      <property
-         name="sdm:polyPoints">L54,394.26462,167.94824,231.01074,156.94824,R54</property>
-   </ControlFlowCase>
    <View
       id="View6">
       <property
@@ -575,7 +555,7 @@
       <property
          name="fromOutcome">recordCorrectiontoHome</property>
       <property
-         name="sdm:polyPoints">R54,29.35254,167.5459,418.5,352.94824,L30</property>
+         name="sdm:polyPoints">R54,29.35254,167.5459,416.5379,359.94824,L38</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall54">
@@ -598,7 +578,7 @@
       <property
          name="fromOutcome">gotoRecordCorrection</property>
       <property
-         name="sdm:polyPoints">L38,416.97733,359.94824,157.35156,245.79883,B50</property>
+         name="sdm:polyPoints">L30,418.5,352.94824,198.35156,191.79883,R50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"

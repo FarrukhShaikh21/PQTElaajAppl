@@ -216,7 +216,7 @@
                                                                                         marginBottom="5px" id="gr21">
                                                                                 <af:gridCell marginStart="5px"
                                                                                              width="34%" id="gc28"
-                                                                                             halign="center"
+                                                                                             halign="start"
                                                                                              valign="middle">
                                                                                     <af:outputFormatted value="Intimation Date"
                                                                                                         id="of15"
@@ -224,7 +224,7 @@
                                                                                 </af:gridCell>
                                                                                 <af:gridCell marginStart="5px"
                                                                                              width="33%" id="gc29"
-                                                                                             halign="center"
+                                                                                             halign="start"
                                                                                              valign="middle">
                                                                                     <af:outputFormatted value="Rider &amp; Claim .#"
                                                                                                         id="of16"
@@ -232,7 +232,7 @@
                                                                                 </af:gridCell>
                                                                                 <af:gridCell marginStart="5px"
                                                                                              width="33%" marginEnd="5px"
-                                                                                             id="gc30" halign="center"
+                                                                                             id="gc30" halign="start"
                                                                                              valign="middle">
                                                                                     <af:outputFormatted value="Amount &amp; Status"
                                                                                                         id="of17"
@@ -261,7 +261,7 @@
                                                                                                 <af:gridCell marginStart="5px"
                                                                                                              width="34%"
                                                                                                              id="gc15"
-                                                                                                             halign="stretch">
+                                                                                                             halign="start">
                                                                                                     <af:outputFormatted value="#{item.bindings.ClmPolNo.inputValue}"
                                                                                                                         id="of22"
                                                                                                                         inlineStyle="color:#8b0037;"/>
@@ -269,7 +269,7 @@
                                                                                                 <af:gridCell marginStart="5px"
                                                                                                              width="33%"
                                                                                                              id="gc16"
-                                                                                                             halign="stretch">
+                                                                                                             halign="start">
                                                                                                     <af:outputFormatted value="#{item.bindings.CoverDesc.inputValue}"
                                                                                                                         id="of23"
                                                                                                                         inlineStyle="color:#8b0037;"/>
@@ -278,7 +278,7 @@
                                                                                                              width="33%"
                                                                                                              marginEnd="5px"
                                                                                                              id="gc17"
-                                                                                                             halign="stretch">
+                                                                                                             halign="start">
                                                                                                     <af:outputFormatted value="#{item.bindings.ClaimAmount.inputValue}"
                                                                                                                         id="of24"
                                                                                                                         inlineStyle="color:#8b0037;">
@@ -296,7 +296,7 @@
                                                                                                 <af:gridCell marginStart="5px"
                                                                                                              width="34%"
                                                                                                              id="gc18"
-                                                                                                             halign="stretch">
+                                                                                                             halign="start">
                                                                                                     <af:outputFormatted value="#{item.bindings.ClmIntDt.inputValue}"
                                                                                                                         id="of25"
                                                                                                                         inlineStyle="color:#8b0037;"/>
@@ -304,7 +304,7 @@
                                                                                                 <af:gridCell marginStart="5px"
                                                                                                              width="33%"
                                                                                                              id="gc19"
-                                                                                                             halign="stretch">
+                                                                                                             halign="start">
                                                                                                     <af:outputFormatted value="#{item.bindings.ClaimNo.inputValue}"
                                                                                                                         id="of26"
                                                                                                                         inlineStyle="color:#8b0037;"/>
@@ -313,7 +313,7 @@
                                                                                                              width="33%"
                                                                                                              marginEnd="5px"
                                                                                                              id="gc20"
-                                                                                                             halign="stretch">
+                                                                                                             halign="start">
                                                                                                     <af:outputFormatted value="#{item.bindings.StatusDesc.inputValue}"
                                                                                                                         id="of27"
                                                                                                                         inlineStyle="color:#8b0037;"/>
@@ -322,13 +322,13 @@
                                                                                             <af:gridRow id="gr20">
                                                                                                 <af:gridCell id="gc27"
                                                                                                              width="auto"
-                                                                                                             halign="stretch">
+                                                                                                             halign="start">
                                                                                                     <af:outputFormatted value="#{item.bindings.DeductionReason.inputValue}"
                                                                                                                         id="of14"
                                                                                                                         inlineStyle="color:#8b0037;"/>
                                                                                                 </af:gridCell>
                                                                                                 <af:gridCell id="gc31"
-                                                                                                             halign="stretch"
+                                                                                                             halign="start"
                                                                                                              width="auto">
                                                                                                     <af:outputFormatted value="#{bindings.DeductionAmount.inputValue}"
                                                                                                                         id="of18"
@@ -547,7 +547,7 @@
                                                                                         marginBottom="5px" id="gr43">
                                                                                 <af:gridCell marginStart="5px"
                                                                                              width="34%" id="gc55"
-                                                                                             halign="center"
+                                                                                             halign="start"
                                                                                              valign="middle">
                                                                                     <af:outputFormatted value="Intimation Date"
                                                                                                         id="of29"
@@ -555,7 +555,7 @@
                                                                                 </af:gridCell>
                                                                                 <af:gridCell marginStart="5px"
                                                                                              width="33%" id="gc56"
-                                                                                             halign="center"
+                                                                                             halign="start"
                                                                                              valign="middle">
                                                                                     <af:outputFormatted value="Rider &amp; Claim .#"
                                                                                                         id="of30"
@@ -563,7 +563,7 @@
                                                                                 </af:gridCell>
                                                                                 <af:gridCell marginStart="5px"
                                                                                              width="33%" marginEnd="5px"
-                                                                                             id="gc57" halign="center"
+                                                                                             id="gc57" halign="start"
                                                                                              valign="middle">
                                                                                     <af:outputFormatted value="Amount &amp; Status"
                                                                                                         id="of31"
@@ -582,7 +582,7 @@
                                                                                              fetchSize="#{bindings.ClaimsDetailVO11.rangeSize}"
                                                                                              id="lv4"
                                                                                              selectionListener="#{bindings.ClaimsDetailVO11.treeModel.makeCurrent}"
-                                                                                             partialTriggers="::lv1"
+                                                                                             partialTriggers="::lv3"
                                                                                              selection="single">
                                                                                     <af:listItem id="li4">
                                                                                         <af:panelGridLayout id="pgl34">
@@ -592,7 +592,7 @@
                                                                                                 <af:gridCell marginStart="5px"
                                                                                                              width="34%"
                                                                                                              id="gc58"
-                                                                                                             halign="center">
+                                                                                                             halign="start">
                                                                                                     <af:outputFormatted value="#{item.bindings.ClmPolNo.inputValue}"
                                                                                                                         id="of32"
                                                                                                                         inlineStyle="color:#8b0037;"/>
@@ -600,7 +600,7 @@
                                                                                                 <af:gridCell marginStart="5px"
                                                                                                              width="33%"
                                                                                                              id="gc59"
-                                                                                                             halign="center">
+                                                                                                             halign="start">
                                                                                                     <af:outputFormatted value="#{item.bindings.CoverDesc.inputValue}"
                                                                                                                         id="of33"
                                                                                                                         inlineStyle="color:#8b0037;"/>
@@ -609,7 +609,7 @@
                                                                                                              width="33%"
                                                                                                              marginEnd="5px"
                                                                                                              id="gc60"
-                                                                                                             halign="center">
+                                                                                                             halign="start">
                                                                                                     <af:outputFormatted value="#{item.bindings.ClaimAmount.inputValue}"
                                                                                                                         id="of34"
                                                                                                                         inlineStyle="color:#8b0037;">
@@ -627,7 +627,7 @@
                                                                                                 <af:gridCell marginStart="5px"
                                                                                                              width="34%"
                                                                                                              id="gc61"
-                                                                                                             halign="center">
+                                                                                                             halign="start">
                                                                                                     <af:outputFormatted value="#{item.bindings.ClmIntDt.inputValue}"
                                                                                                                         id="of35"
                                                                                                                         inlineStyle="color:#8b0037;"/>
@@ -635,7 +635,7 @@
                                                                                                 <af:gridCell marginStart="5px"
                                                                                                              width="33%"
                                                                                                              id="gc62"
-                                                                                                             halign="center">
+                                                                                                             halign="start">
                                                                                                     <af:outputFormatted value="#{item.bindings.ClaimNo.inputValue}"
                                                                                                                         id="of36"
                                                                                                                         inlineStyle="color:#8b0037;"/>
@@ -644,7 +644,7 @@
                                                                                                              width="33%"
                                                                                                              marginEnd="5px"
                                                                                                              id="gc63"
-                                                                                                             halign="center">
+                                                                                                             halign="start">
                                                                                                     <af:outputFormatted value="#{item.bindings.StatusDesc.inputValue}"
                                                                                                                         id="of37"
                                                                                                                         inlineStyle="color:#8b0037;"/>
@@ -653,13 +653,13 @@
                                                                                             <af:gridRow id="gr46">
                                                                                                 <af:gridCell id="gc64"
                                                                                                              width="auto"
-                                                                                                             halign="center">
+                                                                                                             halign="start">
                                                                                                     <af:outputFormatted value="#{item.bindings.DeductionReason.inputValue}"
                                                                                                                         id="of38"
                                                                                                                         inlineStyle="color:#8b0037;"/>
                                                                                                 </af:gridCell>
                                                                                                 <af:gridCell id="gc65"
-                                                                                                             halign="center"
+                                                                                                             halign="start"
                                                                                                              width="auto">
                                                                                                     <af:outputFormatted value="#{bindings.DeductionAmount.inputValue}"
                                                                                                                         id="of39"

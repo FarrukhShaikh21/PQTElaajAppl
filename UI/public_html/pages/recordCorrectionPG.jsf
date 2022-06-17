@@ -164,7 +164,7 @@
                                         <af:gridRow id="gr2" marginTop="40px">
                                             <af:gridCell id="gc3" halign="stretch" valign="stretch">
                                                 <af:panelGroupLayout id="pgl11" layout="vertical" halign="center">
-                                                    <af:button actionListener="#{bindings.Apply.execute}" text="Apply"
+                                                    <af:button actionListener="#{bindings.Apply.execute}" text="Submit"
                                                                disabled="#{!bindings.Apply.enabled}" id="b1"
                                                                styleClass="PQLoginButton"/>
                                                 </af:panelGroupLayout>
@@ -316,7 +316,7 @@
                                         <af:gridRow id="gr25" marginTop="50px" height="200px">
                                             <af:gridCell id="gc25" halign="stretch" valign="stretch">
                                                 <af:panelGroupLayout id="pgl24" layout="vertical" halign="center">
-                                                    <af:button actionListener="#{bindings.Apply.execute}" text="Apply"
+                                                    <af:button actionListener="#{bindings.Apply.execute}" text="Submit"
                                                                disabled="#{!bindings.Apply.enabled}" id="b2"
                                                                styleClass="PQLoginButton"/>
                                                 </af:panelGroupLayout>

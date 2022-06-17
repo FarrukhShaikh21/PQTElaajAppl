@@ -32,25 +32,25 @@
       </SchemaBasedProperties>
     </Properties>
   </Variable>
-  <SQLQuery><![CDATA[SELECT VuElaajMobileUserVO.POLICY_NO,           
-       VuElaajMobileUserVO.MM_ID,           
-       VuElaajMobileUserVO.EMP_FOLIO_ID,           
-       VuElaajMobileUserVO.EMP_NAME,           
-       VuElaajMobileUserVO.DOB,           
-       VuElaajMobileUserVO.CUST_FULL_NAME,           
-       VuElaajMobileUserVO.M_ROLE,           
-       VuElaajMobileUserVO.M_IMAGE,           
-       VuElaajMobileUserVO.M_MOBILE_NO,           
-       VuElaajMobileUserVO.M_EMAIL,           
-       VuElaajMobileUserVO.M_STATUS,           
-       VuElaajMobileUserVO.EMP_SR_NO,           
-       VuElaajMobileUserVO.POLICY_START_DATE,           
-       VuElaajMobileUserVO.POLICY_END_DATE,           
-       VuElaajMobileUserVO.ELAAJ_OPD,         
-       to_number(to_char(sysdate,'rrrr')) - to_numbeR(VuElaajMobileUserVO.DOB)||'Yr' EMP_AGE,      
-       'In-Force' EMP_STATUS,  
-       VuElaajMobileUserVO.POLICY_START_DATE || ' To ' || VuElaajMobileUserVO.POLICY_END_DATE POLICY_PERIOD       
-  FROM VU_ELAAJ_MOBILE_USER VuElaajMobileUserVO          
+  <SQLQuery><![CDATA[SELECT VuElaajMobileUserVO.POLICY_NO,            
+       VuElaajMobileUserVO.MM_ID,            
+       VuElaajMobileUserVO.EMP_FOLIO_ID,            
+       VuElaajMobileUserVO.EMP_NAME,            
+       VuElaajMobileUserVO.DOB,            
+       VuElaajMobileUserVO.CUST_FULL_NAME,            
+       VuElaajMobileUserVO.M_ROLE,            
+       VuElaajMobileUserVO.M_IMAGE,            
+       VuElaajMobileUserVO.M_MOBILE_NO,            
+       VuElaajMobileUserVO.M_EMAIL,            
+       VuElaajMobileUserVO.M_STATUS,            
+       VuElaajMobileUserVO.EMP_SR_NO,            
+       VuElaajMobileUserVO.POLICY_START_DATE,            
+       VuElaajMobileUserVO.POLICY_END_DATE,            
+       VuElaajMobileUserVO.ELAAJ_OPD,          
+       to_number(to_char(sysdate,'rrrr')) - to_numbeR(VuElaajMobileUserVO.DOB)||' Yrs' EMP_AGE,       
+       'In-Force' EMP_STATUS,   
+       VuElaajMobileUserVO.POLICY_START_DATE || ' To ' || VuElaajMobileUserVO.POLICY_END_DATE POLICY_PERIOD        
+  FROM VU_ELAAJ_MOBILE_USER VuElaajMobileUserVO           
   WHERE SUBSTR(VuElaajMobileUserVO.MM_ID, 1, 13) = :pCNICNo]]></SQLQuery>
   <ViewAttribute
     Name="PolicyNo"

@@ -19,6 +19,14 @@
         ResId="pqt.gh.elaaj.model.vo.VuElaajPanelHospitalVO_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
+  <Variable
+    Name="QVC_HOSPITALNAME"
+    Kind="viewcriteria"
+    Type="java.lang.String"/>
+  <Variable
+    Name="QVC_HOSPITALADDRESS"
+    Kind="viewcriteria"
+    Type="java.lang.String"/>
   <SQLQuery><![CDATA[SELECT A.ID,A.NAME,A.ADDRESS,A.STATUS,A.LAT,A.LNG FROM VU_ELAAJ_PANEL_HOSPITAL A]]></SQLQuery>
   <ViewAttribute
     Name="Id"
@@ -104,6 +112,50 @@
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
   </ViewAttribute>
+  <ViewCriteria
+    Name="VuElaajPanelHospitalVOCriteria"
+    ViewObjectName="pqt.gh.elaaj.model.vo.VuElaajPanelHospitalVO"
+    Conjunction="AND">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="VuElaajPanelHospitalVOCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="Name"
+        ViewAttribute="Name"
+        Operator="CONTAINS"
+        Conjunction="AND"
+        Value=":QVC_HOSPITALNAME"
+        IsBindVarValue="true"
+        Required="Optional"/>
+      <ViewCriteriaItem
+        Name="VuElaajPanelHospitalVOCriteria_VuElaajPanelHospitalVOCriteria_row_0_Address"
+        ViewAttribute="Address"
+        Operator="CONTAINS"
+        Conjunction="AND"
+        Value=":QVC_HOSPITALADDRESS"
+        IsBindVarValue="true"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
   <AttrArray Name="KeyAttributes">
     <Item Value="Id"/>
   </AttrArray>

@@ -405,67 +405,66 @@
                                                                 <af:gridRow marginTop="5px" height="auto" id="gr40">
                                                                     <af:gridCell marginStart="5px" width="20%"
                                                                                  id="gc57">
-                                                                        <af:outputLabel value="Participant’s Name:"
+                                                                        <af:outputLabel value="Participant’s Name :"
                                                                                         id="ol1"
-                                                                                        inlineStyle="color:#8b0037;font-size:xx-small"/>
+                                                                                        inlineStyle="color:#8b0037;font-size:8px"/>
                                                                     </af:gridCell>
                                                                     <af:gridCell marginStart="5px" width="80%" id="gc58"
                                                                                  columnSpan="4" rowSpan="1">
                                                                         <af:outputText value="#{bindings.CompanyName.inputValue}"
                                                                                        id="ot13"
-                                                                                       inlineStyle="color:black;font-size:xx-small"/>
+                                                                                       inlineStyle="color:black;font-size:8px"/>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
                                                                 <af:gridRow marginTop="5px" height="auto" id="gr41">
                                                                     <af:gridCell marginStart="5px" width="20%"
                                                                                  id="gc59">
-                                                                        <af:outputLabel value="Employee Name:" id="ol2"
+                                                                        <af:outputLabel value="Employee Name :" id="ol2"
                                                                                         inlineStyle="color:#8b0037;font-size:xx-small"/>
                                                                     </af:gridCell>
-                                                                    <af:gridCell marginStart="5px" width="80%" id="gc60"
-                                                                                 halign="stretch" columnSpan="4"
+                                                                    <af:gridCell marginStart="5px" width="80%" id="gc60" columnSpan="4"
                                                                                  rowSpan="1">
                                                                         <af:outputText value="#{bindings.EmpName.inputValue}"
                                                                                        id="ot14"
-                                                                                       inlineStyle="color:black;font-size:xx-small"/>
+                                                                                       inlineStyle="color:#8b0037;font-size:8px"/>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
                                                                 <af:gridRow marginTop="5px" height="auto" id="gr42">
                                                                     <af:gridCell marginStart="5px" width="20%"
                                                                                  id="gc61">
                                                                         <af:outputText value="CNIC No:" id="ot15"
-                                                                                       inlineStyle="color:#8b0037;font-size:xx-small"/>
+                                                                                       inlineStyle="color:#8b0037;font-size:8px"/>
                                                                     </af:gridCell>
                                                                     <af:gridCell width="20%" id="gc62" columnSpan="1"
                                                                                  rowSpan="1">
                                                                         <af:outputText value="#{bindings.EmpCnic.inputValue}" id="ot16"
-                                                                                       inlineStyle="color:black;font-size:xx-small"/>
+                                                                                       inlineStyle="color:#8b0037;font-size:8px"/>
                                                                     </af:gridCell>
                                                                     <af:gridCell id="gc63" width="20%" halign="center">
                                                                         <af:outputText value="Family Member" id="ot17"
-                                                                                       inlineStyle="color:#8b0037;font-size:xx-small"/>
+                                                                                       inlineStyle="color:#8b0037;font-size:8px"/>
                                                                     </af:gridCell>
                                                                     <af:gridCell id="gc64" width="20%" halign="center">
                                                                         <af:outputText value="Age" id="ot18"
                                                                                        truncateAt="0"
-                                                                                       inlineStyle="color:#8b0037;font-size:xx-small"/>
+                                                                                       inlineStyle="color:#8b0037;font-size:8px"/>
                                                                     </af:gridCell>
                                                                     <af:gridCell id="gc65" width="20%" halign="center">
                                                                         <af:outputText value="Cert" id="ot19"
                                                                                        truncateAt="0"
-                                                                                       inlineStyle="color:#8b0037;font-size:xx-small"/>
+                                                                                       inlineStyle="color:#8b0037;font-size:8px"/>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
                                                                 <af:gridRow marginTop="5px" height="auto" id="gr43">
                                                                     <af:gridCell marginStart="5px" width="20%"
                                                                                  id="gc66">
                                                                         <af:outputText value="DOB :" id="ot20"
-                                                                                       inlineStyle="color:#8b0037;font-size:xx-small"/>
+                                                                                       inlineStyle="color:#8b0037;font-size:8px"/>
                                                                     </af:gridCell>
                                                                     <af:gridCell width="20%" id="gc67" columnSpan="1"
                                                                                  rowSpan="1">
                                                                         <af:outputText value="#{bindings.Dob.inputValue}" id="ot21"
-                                                                                       inlineStyle="color:black;font-size:xx-small"/>
+                                                                                       inlineStyle="color:#8b0037;font-size:8px"/>
                                                                     </af:gridCell>
                                                                     <af:gridCell id="gc68" width="60%" halign="stretch"
                                                                                  valign="stretch" columnSpan="3"
@@ -520,12 +519,12 @@
                                                                     <af:gridCell marginStart="5px" width="20%"
                                                                                  id="gc71">
                                                                         <af:outputText value="Cert No:" id="ot25"
-                                                                                       inlineStyle="color:#8b0037;font-size:xx-small"/>
+                                                                                       inlineStyle="color:#8b0037;font-size:8px"/>
                                                                     </af:gridCell>
                                                                     <af:gridCell width="20%" id="gc72" columnSpan="1"
                                                                                  rowSpan="1">
                                                                         <af:outputText value="#{bindings.EmpSrNo.inputValue}" id="ot26"
-                                                                                       inlineStyle="color:black;font-size:xx-small"/>
+                                                                                       inlineStyle="color:#8b0037;font-size:8px"/>
                                                                     </af:gridCell>
                                                                     <af:gridCell id="gc73" width="60%" halign="center"
                                                                                  columnSpan="3" rowSpan="1"/>
@@ -534,12 +533,12 @@
                                                                     <af:gridCell marginStart="5px" width="20%"
                                                                                  id="gc76">
                                                                         <af:outputText value="Emp No:" id="ot30"
-                                                                                       inlineStyle="color:#8b0037;font-size:xx-small"/>
+                                                                                       inlineStyle="color:#8b0037;font-size:8px"/>
                                                                     </af:gridCell>
                                                                     <af:gridCell width="20%" id="gc77" columnSpan="1"
                                                                                  rowSpan="1">
                                                                         <af:outputText value="#{bindings.EmpFolioId1.inputValue}" id="ot31"
-                                                                                       inlineStyle="color:black;font-size:xx-small"/>
+                                                                                       inlineStyle="color:#8b0037;font-size:8px"/>
                                                                     </af:gridCell>
                                                                     <af:gridCell id="gc78" width="60%" halign="stretch"
                                                                                  columnSpan="3" rowSpan="1"/>
@@ -548,36 +547,36 @@
                                                                     <af:gridCell marginStart="5px" width="20%"
                                                                                  id="gc81">
                                                                         <af:outputLabel value="Branch:" id="ol3"
-                                                                                        inlineStyle="color:#8b0037;font-size:xx-small"/>
+                                                                                        inlineStyle="color:#8b0037;font-size:8px"/>
                                                                     </af:gridCell>
                                                                     <af:gridCell marginStart="5px" width="80%" id="gc82"
                                                                                  columnSpan="4" rowSpan="1">
                                                                         <af:outputText value="#{bindings.EmpBranch.inputValue}" id="ot35"
-                                                                                       inlineStyle="color:black;font-size:xx-small"/>
+                                                                                       inlineStyle="color:#8b0037;font-size:8px"/>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
                                                                 <af:gridRow marginTop="5px" height="auto" id="gr47">
                                                                     <af:gridCell marginStart="5px" width="20%"
                                                                                  id="gc83">
                                                                         <af:outputLabel value="Room Limit:" id="ol4"
-                                                                                        inlineStyle="color:#8b0037;font-size:xx-small"/>
+                                                                                        inlineStyle="color:#8b0037;font-size:8px"/>
                                                                     </af:gridCell>
                                                                     <af:gridCell marginStart="5px" width="80%" id="gc84"
                                                                                  columnSpan="4" rowSpan="1">
                                                                         <af:outputText value="#{bindings.RoomLimit.inputValue}" id="ot36"
-                                                                                       inlineStyle="color:black;font-size:xx-small"/>
+                                                                                       inlineStyle="color:#8b0037;font-size:8px"/>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
                                                                 <af:gridRow marginTop="5px" height="auto" id="gr48">
                                                                     <af:gridCell marginStart="5px" width="20%"
                                                                                  id="gc85">
                                                                         <af:outputLabel value="Valid up to:" id="ol5"
-                                                                                        inlineStyle="color:#8b0037;font-size:xx-small"/>
+                                                                                        inlineStyle="color:#8b0037;font-size:8px"/>
                                                                     </af:gridCell>
                                                                     <af:gridCell marginStart="5px" width="80%" id="gc86"
                                                                                  columnSpan="4" rowSpan="1">
                                                                         <af:outputText value="#{bindings.PolicyEndDate.inputValue}" id="ot37"
-                                                                                       inlineStyle="color:black;font-size:xx-small"/>
+                                                                                       inlineStyle="color:#8b0037;font-size:8px"/>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
                                                                 <af:gridRow marginTop="5px" height="auto" id="gr49">

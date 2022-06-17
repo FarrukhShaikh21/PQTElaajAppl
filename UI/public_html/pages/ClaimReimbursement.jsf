@@ -222,11 +222,10 @@
                                                                                  halign="center">
                                                                 <af:panelCollection id="pc1"
                                                                                     featuresOff="detach viewMenu">
-                                                                    <f:facet name="menus"/>
                                                                     <f:facet name="toolbar">
                                                                         <af:toolbar id="t1">
                                                                             <af:button actionListener="#{bindings.CreateInsert.execute}"
-                                                                                       text="Createe"
+                                                                                       text="Create Claim"
                                                                                        disabled="#{!bindings.CreateInsert.enabled}"
                                                                                        id="b5"/>
                                                                         </af:toolbar>
@@ -347,7 +346,7 @@
                                                                 marginBottom="15px">
                                                         <af:gridCell marginStart="5px" width="100%" id="gc16"
                                                                      halign="center">
-                                                            <af:button text="Apply"
+                                                            <af:button text="Submit"
                                                                        disabled="#{!bindings.Apply.enabled}" id="b1"
                                                                        action="#{ClaimReimBean.submitAction}"
                                                                        immediate="true" styleClass="PQLoginButton"/>
@@ -537,7 +536,7 @@
                                                                               id="it20" styleClass="PQAppInputText"
                                                                               contentStyle="width:100%"
                                                                               autoSubmit="true"
-                                                                              placeholder="Other Hospital">
+                                                                              placeholder="Hospital">
                                                                     <f:validator binding="#{bindings.OtherHospital.validator}"/>
                                                                 </af:inputText>
                                                             </af:panelGroupLayout>
@@ -578,7 +577,7 @@
                                                                     <f:facet name="toolbar">
                                                                         <af:toolbar id="t3">
                                                                             <af:button actionListener="#{bindings.CreateInsert.execute}"
-                                                                                       text="Create"
+                                                                                       text="Create Claim"
                                                                                        disabled="#{!bindings.CreateInsert.enabled}"
                                                                                        id="b6"/>
                                                                         </af:toolbar>
@@ -593,7 +592,7 @@
                                                                               rowSelection="single"
                                                                               fetchSize="#{bindings.ElaajClaimReimDmsDocEOVO1.rangeSize}"
                                                                               id="t4"
-                                                                              partialTriggers=":::pc1:b5 :::pc1:t2:l2"
+                                                                              partialTriggers=":::pc1:b5 :::pc1:t2:l2 ::b6"
                                                                               columnStretching="column:c8"
                                                                               inlineStyle="background-color:transparent"
                                                                               scrollPolicy="page" autoHeightRows="5"
@@ -699,7 +698,7 @@
                                                                 marginBottom="15px">
                                                         <af:gridCell marginStart="5px" width="100%" id="gc36"
                                                                      halign="center">
-                                                            <af:button text="Apply"
+                                                            <af:button text="Submit"
                                                                        disabled="#{!bindings.Apply.enabled}" id="b7"
                                                                        action="#{ClaimReimBean.submitAction}"
                                                                        immediate="true" styleClass="PQLoginButton"/>

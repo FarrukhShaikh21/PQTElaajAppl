@@ -173,13 +173,13 @@
                                                                 <af:gridRow height="auto" id="gr18" marginTop="8px">
                                                                     <af:gridCell marginStart="5px" width="20%"
                                                                                  id="gc41">
-                                                                        <af:outputLabel value="Participant’s Name:"
+                                                                        <af:outputLabel value="Participant Name"
                                                                                         id="ol1"
                                                                                         inlineStyle="color:#8b0037;"/>
                                                                     </af:gridCell>
                                                                     <af:gridCell marginStart="5px" width="80%" id="gc42"
                                                                                  columnSpan="4" rowSpan="1">
-                                                                        <af:outputText value="#{bindings.CompanyName.inputValue}"
+                                                                        <af:outputText value="  #{bindings.CompanyName.inputValue}"
                                                                                        id="ot13"
                                                                                        inlineStyle="color:black;font-size:xx-small"/>
                                                                     </af:gridCell>
@@ -512,7 +512,7 @@
                                                         <af:image id="i13" inlineStyle="width:60px;height:60px"
                                                                   source="#{resource['images:imgLaunchComplaint.png']}"/>
                                                     </h:commandLink>
-                                                    <af:outputText value="Launch Complaint" id="ot11"
+                                                    <af:outputText value="Feedback" id="ot11"
                                                                    inlineStyle="color:#8b0037"/>
                                                 </af:panelGroupLayout>
                                             </af:gridCell>
@@ -708,7 +708,7 @@
                                                             <af:image id="i22" inlineStyle="width:80px;height:80px"
                                                                       source="#{resource['images:imgLaunchComplaint.png']}"/>
                                                         </h:commandLink>
-                                                        <af:outputText value="Launch Complaint" id="ot46"
+                                                        <af:outputText value="Feedback" id="ot46"
                                                                        inlineStyle="color:#8b0037"/>
                                                     </af:panelGroupLayout>
                                                 </af:gridCell>

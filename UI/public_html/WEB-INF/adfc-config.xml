@@ -78,19 +78,8 @@
       <fixed-outcome>CreateInsert</fixed-outcome>
     </outcome>
   </method-call>
-  <control-flow-rule id="__1">
-    <from-activity-id>RegisterPG</from-activity-id>
-    <control-flow-case id="__2">
-      <from-outcome>goLogin</from-outcome>
-      <to-activity-id>Login</to-activity-id>
-    </control-flow-case>
-  </control-flow-rule>
   <control-flow-rule id="__3">
     <from-activity-id>Login</from-activity-id>
-    <control-flow-case id="__4">
-      <from-outcome>goHome</from-outcome>
-      <to-activity-id>RegisterPG</to-activity-id>
-    </control-flow-case>
     <control-flow-case id="__6">
       <from-outcome>Success</from-outcome>
       <to-activity-id>HomePG</to-activity-id>

@@ -100,6 +100,31 @@
                                                                                   rendered="false"/>
                                                                     </af:gridCell>
                                                                 </af:gridRow>
+                                                                <af:gridRow id="gr25">
+                                                                    <af:gridCell id="gc27" width="100%" halign="stretch"
+                                                                                 valign="stretch">
+                                                                        <af:panelGridLayout id="pgl18">
+                                                                            <af:gridRow marginTop="5px" height="auto"
+                                                                                        marginBottom="5px" id="gr26">
+                                                                                <af:gridCell marginStart="5px"
+                                                                                             width="50%" id="gc28"
+                                                                                             halign="center"
+                                                                                             valign="middle">
+                                                                                    <af:link text="Registration" id="l4"
+                                                                                             inlineStyle="color:#8b0037;font-weight:bold"/>
+                                                                                </af:gridCell>
+                                                                                <af:gridCell marginStart="5px"
+                                                                                             width="50%" marginEnd="5px"
+                                                                                             id="gc29" halign="center"
+                                                                                             valign="middle">
+                                                                                    <af:link text="Forget Password" id="l5"
+                                                                                             inlineStyle="color:#8b0037;font-weight:bold"
+                                                                                             action="#{LoginBean.getpassword}"/>
+                                                                                </af:gridCell>
+                                                                            </af:gridRow>
+                                                                        </af:panelGridLayout>
+                                                                    </af:gridCell>
+                                                                </af:gridRow>
                                                                 <af:gridRow id="gr2" marginTop="60px"
                                                                             marginBottom="10px">
                                                                     <af:gridCell id="gc3" halign="center"
@@ -118,10 +143,10 @@
                                                                                            id="ot2"
                                                                                            inlineStyle="font-weight:bolder; color:#8b0037; font-size:large"/>
                                                                             <af:spacer width="10" height="10" id="s4"/>
-                                                                            <af:outputText value="0300-1234567" id="ot3"
+                                                                            <af:outputText value="0301-8223385" id="ot3"
                                                                                            inlineStyle="font-weight:bolder; color:#8b0037; font-size:large"/>
                                                                             <af:spacer width="10" height="10" id="s3"/>
-                                                                            <af:outputText value="0300-1234567" id="ot4"
+                                                                            <af:outputText value="0302-8223385" id="ot4"
                                                                                            inlineStyle="font-weight:bolder; color:#8b0037; font-size:large"/>
                                                                         </af:panelGroupLayout>
                                                                         <af:button text="Forgot Password" id="b2"

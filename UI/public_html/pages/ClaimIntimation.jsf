@@ -179,7 +179,7 @@
                                                                 <f:facet name="toolbar">
                                                                     <af:toolbar id="t2">
                                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
-                                                                                   text="Create"
+                                                                                   text="Create Claim"
                                                                                    disabled="#{!bindings.CreateInsert.enabled}"
                                                                                    id="b5"/>
                                                                         <af:button text="Submit" id="b6"
@@ -196,7 +196,7 @@
                                                                           selectionListener="#{bindings.ElaajClaimDmsDocEOVO1.collectionModel.makeCurrent}"
                                                                           rowSelection="single"
                                                                           fetchSize="#{bindings.ElaajClaimDmsDocEOVO1.rangeSize}"
-                                                                          id="t1" partialTriggers="::b5 l2"
+                                                                          id="t1" partialTriggers="::b5 l2 :::pc2:b9"
                                                                           inlineStyle="background-color:transparent"
                                                                           columnStretching="column:c8"
                                                                           displayRow="selected">
@@ -295,7 +295,7 @@
                                                         <af:gridCell id="gc26" valign="stretch" halign="stretch">
                                                             <af:panelGroupLayout id="pgl12" layout="vertical"
                                                                                  halign="center">
-                                                                <af:button text="Apply"
+                                                                <af:button text="Submit"
                                                                            disabled="#{!bindings.Apply.enabled}" id="b2"
                                                                            action="#{BenefitDetailBean.submitAction}"
                                                                            styleClass="PQLoginButton"/>
@@ -436,7 +436,7 @@
                                                     <f:facet name="toolbar">
                                                         <af:toolbar id="t3">
                                                             <af:button actionListener="#{bindings.CreateInsert.execute}"
-                                                                       text="Create"
+                                                                       text="Create Claim"
                                                                        disabled="#{!bindings.CreateInsert.enabled}"
                                                                        id="b9"/>
                                                             <af:button text="Submit" id="b10"
@@ -453,9 +453,10 @@
                                                               selectionListener="#{bindings.ElaajClaimDmsDocEOVO1.collectionModel.makeCurrent}"
                                                               rowSelection="single"
                                                               fetchSize="#{bindings.ElaajClaimDmsDocEOVO1.rangeSize}"
-                                                              id="t4" partialTriggers="::b5 l2 :::pc1:b5 :::pc1:t1:l2"
+                                                              id="t4"
                                                               inlineStyle="background-color:transparent"
-                                                              columnStretching="column:c8" displayRow="selected">
+                                                              columnStretching="column:c8" displayRow="selected"
+                                                              partialTriggers="::b9 :::pc1:b5">
                                                         <af:column headerText="ID" id="c9" width="30">
                                                             <af:inputText value="#{row.bindings.DocIdPk.inputValue}"
                                                                           label="#{bindings.ElaajClaimDmsDocEOVO1.hints.DocIdPk.label}"
@@ -549,7 +550,7 @@
                                         <af:gridRow id="gr36" height="100px" marginTop="100px">
                                             <af:gridCell id="gc37" valign="stretch" halign="stretch">
                                                 <af:panelGroupLayout id="pgl22" layout="vertical" halign="center">
-                                                    <af:button text="Apply" disabled="#{!bindings.Apply.enabled}"
+                                                    <af:button text="Submit" disabled="#{!bindings.Apply.enabled}"
                                                                id="b11" action="#{BenefitDetailBean.submitAction}"
                                                                styleClass="PQLoginButton"/>
                                                 </af:panelGroupLayout>
