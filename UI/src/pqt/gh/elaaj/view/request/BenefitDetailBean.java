@@ -374,11 +374,15 @@ public class BenefitDetailBean {
             if (!"Failed".equalsIgnoreCase(UploadFile)) {
                 BindingContainer bindings = getBindings();
                 OperationBinding operationBinding = bindings.getOperationBinding("submitToBpmIPD");
-                DCBindingContainer dcBindings =
-                    (DCBindingContainer) BindingContext.getCurrent().getCurrentBindingsEntry();
+                //DCBindingContainer dcBindings =
+                    //(DCBindingContainer) BindingContext.getCurrent().getCurrentBindingsEntry();
                 operationBinding.execute();
-
-                //                return "goBack";
+                
+                FacesMessage Message = new FacesMessage("Transaction completed. Records applied and Saved.");
+                Message.setSeverity(FacesMessage.SEVERITY_INFO);
+                FacesContext fc = FacesContext.getCurrentInstance();
+                fc.addMessage(null, Message);
+                
                 return "ClaimIntimationToHomePG";
             }
             
