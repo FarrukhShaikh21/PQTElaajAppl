@@ -274,9 +274,10 @@
                                                                                                      marginEnd="5px"
                                                                                                      id="gc50"
                                                                                                      halign="center">
-                                                                                            <af:outputFormatted value="#{item.bindings.SrNo.inputValue}"
+                                                                                            <af:outputFormatted
                                                                                                                 id="of15"
-                                                                                                                inlineStyle="color:black;font-size:7px"/>
+                                                                                                                inlineStyle="color:black;font-size:7px"
+                                                                                                                value="#{item.bindings.SrNo.inputValue}"/>
                                                                                         </af:gridCell>
                                                                                     </af:gridRow>
                                                                                 </af:panelGridLayout>
@@ -555,7 +556,8 @@
                                             <af:gridRow id="gr45" marginBottom="5px">
                                                 <af:gridCell id="gc95" columnSpan="3" halign="center">
                                                     <af:outputText value="#{bindings.MRole.inputValue}" id="ot55"
-                                                                   inlineStyle="color:#8b0037;font-size:medium"/>
+                                                                   inlineStyle="color:#8b0037;font-size:medium"
+                                                                   rendered="false"/>
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow id="gr46" marginBottom="5px">

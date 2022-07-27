@@ -161,6 +161,22 @@
                                                 </af:panelGroupLayout>
                                             </af:gridCell>
                                         </af:gridRow>
+                                        <af:gridRow id="gr14" marginTop="20px">
+                                            <af:gridCell id="gc13" width="100%" marginStart="5px" halign="stretch">
+                                                <af:panelGroupLayout id="pgl25" halign="center" layout="vertical">
+                                                    <af:inputText value="#{bindings.Remarks.inputValue}" simple="true"
+                                                                  required="#{bindings.Remarks.hints.mandatory}"
+                                                                  columns="#{bindings.Remarks.hints.displayWidth}"
+                                                                  maximumLength="#{bindings.Remarks.hints.precision}"
+                                                                  shortDesc="#{bindings.Remarks.hints.tooltip}" id="it9"
+                                                                  rows="3" contentStyle="width:500px;"
+                                                                  styleClass="PQAppInputText" autoSubmit="true"
+                                                                  placeholder="Remarks">
+                                                        <f:validator binding="#{bindings.Remarks.validator}"/>
+                                                    </af:inputText>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
                                         <af:gridRow id="gr2" marginTop="40px">
                                             <af:gridCell id="gc3" halign="stretch" valign="stretch">
                                                 <af:panelGroupLayout id="pgl11" layout="vertical" halign="center">
@@ -309,6 +325,22 @@
                                                                   styleClass="PQAppInputText"
                                                                   contentStyle="width:100%" placeholder="IBAN No">
                                                         <f:validator binding="#{bindings.IbanNo.validator}"/>
+                                                    </af:inputText>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow id="gr16" marginTop="20px">
+                                            <af:gridCell id="gc15" width="100%" marginStart="5px" halign="stretch">
+                                                <af:panelGroupLayout id="pgl26" halign="center" layout="vertical">
+                                                    <af:inputText value="#{bindings.Remarks.inputValue}" simple="true"
+                                                                  required="#{bindings.Remarks.hints.mandatory}"
+                                                                  columns="#{bindings.Remarks.hints.displayWidth}"
+                                                                  maximumLength="#{bindings.Remarks.hints.precision}"
+                                                                  shortDesc="#{bindings.Remarks.hints.tooltip}"
+                                                                  id="it10" styleClass="PQAppInputText"
+                                                                  contentStyle="width:100%" rows="3"
+                                                                  placeholder="Remarks">
+                                                        <f:validator binding="#{bindings.Remarks.validator}"/>
                                                     </af:inputText>
                                                 </af:panelGroupLayout>
                                             </af:gridCell>

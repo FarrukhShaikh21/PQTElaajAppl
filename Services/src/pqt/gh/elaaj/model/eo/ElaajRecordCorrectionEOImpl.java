@@ -32,7 +32,8 @@ public class ElaajRecordCorrectionEOImpl extends EntityImpl {
         TypeOfCorrection,
         DetailOfCorrection,
         CnicNo,
-        IbanNo;
+        IbanNo,
+        Remarks;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -72,6 +73,7 @@ public class ElaajRecordCorrectionEOImpl extends EntityImpl {
     public static final int DETAILOFCORRECTION = AttributesEnum.DetailOfCorrection.index();
     public static final int CNICNO = AttributesEnum.CnicNo.index();
     public static final int IBANNO = AttributesEnum.IbanNo.index();
+    public static final int REMARKS = AttributesEnum.Remarks.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -318,6 +320,22 @@ public class ElaajRecordCorrectionEOImpl extends EntityImpl {
      */
     public void setIbanNo(String value) {
         setAttributeInternal(IBANNO, value);
+    }
+
+    /**
+     * Gets the attribute value for Remarks, using the alias name Remarks.
+     * @return the value of Remarks
+     */
+    public String getRemarks() {
+        return (String) getAttributeInternal(REMARKS);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Remarks.
+     * @param value value to set the Remarks
+     */
+    public void setRemarks(String value) {
+        setAttributeInternal(REMARKS, value);
     }
 
     /**

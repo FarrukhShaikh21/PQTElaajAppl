@@ -191,6 +191,18 @@
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="Remarks"
+    Precision="4000"
+    ColumnName="REMARKS"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ELAAJ_RECORD_CORRECTION">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="4000"/>
+    </DesignTime>
+  </Attribute>
   <Key
     Name="ElaajrecordcorrectioneoPrimaryKey"
     PrimaryKey="true">

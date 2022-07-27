@@ -168,7 +168,7 @@
     <from-activity-id>ClaimIntimation</from-activity-id>
     <control-flow-case id="__23">
       <from-outcome>ClaimIntimationToHomePG</from-outcome>
-      <to-activity-id>Rollback</to-activity-id>
+      <to-activity-id>HomePG</to-activity-id>
     </control-flow-case>
   </control-flow-rule>
   <control-flow-rule id="__24">

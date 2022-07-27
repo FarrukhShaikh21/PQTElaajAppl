@@ -79,21 +79,22 @@
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
-  <SQLQuery><![CDATA[SELECT ElaajRecordCorrectionEO.CELL_NUMBER,   
-       ElaajRecordCorrectionEO.CERTIFICATE_NUMBER,   
-       ElaajRecordCorrectionEO.CNIC_NO,   
-       ElaajRecordCorrectionEO.COMPANY_NAME,   
-       ElaajRecordCorrectionEO.DETAIL_OF_CORRECTION,   
-       ElaajRecordCorrectionEO.DOB,   
-       ElaajRecordCorrectionEO.EMAIL,   
-       ElaajRecordCorrectionEO.EMPLOYEE_ID,   
-       ElaajRecordCorrectionEO.GENDER,   
-       ElaajRecordCorrectionEO.NAME_OF_DEPENDAND,   
-       ElaajRecordCorrectionEO.NAME_OF_EMPLOYEE,   
-       ElaajRecordCorrectionEO.RECORD_CORRECTION_ID,   
-       ElaajRecordCorrectionEO.RELATIONSHIP_WITH_EMPLOYEE,   
-       ElaajRecordCorrectionEO.TYPE_OF_CORRECTION, 
-       ElaajRecordCorrectionEO.Iban_No  
+  <SQLQuery><![CDATA[SELECT ElaajRecordCorrectionEO.CELL_NUMBER,    
+       ElaajRecordCorrectionEO.CERTIFICATE_NUMBER,    
+       ElaajRecordCorrectionEO.CNIC_NO,    
+       ElaajRecordCorrectionEO.COMPANY_NAME,    
+       ElaajRecordCorrectionEO.DETAIL_OF_CORRECTION,    
+       ElaajRecordCorrectionEO.DOB,    
+       ElaajRecordCorrectionEO.EMAIL,    
+       ElaajRecordCorrectionEO.EMPLOYEE_ID,    
+       ElaajRecordCorrectionEO.GENDER,    
+       ElaajRecordCorrectionEO.NAME_OF_DEPENDAND,    
+       ElaajRecordCorrectionEO.NAME_OF_EMPLOYEE,    
+       ElaajRecordCorrectionEO.RECORD_CORRECTION_ID,    
+       ElaajRecordCorrectionEO.RELATIONSHIP_WITH_EMPLOYEE,    
+       ElaajRecordCorrectionEO.TYPE_OF_CORRECTION,  
+       ElaajRecordCorrectionEO.Iban_No, 
+       ElaajRecordCorrectionEO.Remarks   
 FROM  ELAAJ_RECORD_CORRECTION ElaajRecordCorrectionEO]]></SQLQuery>
   <EntityUsage
     Name="ElaajRecordCorrectionEO"
@@ -205,6 +206,12 @@ FROM  ELAAJ_RECORD_CORRECTION ElaajRecordCorrectionEO]]></SQLQuery>
     PrecisionRule="true"
     AliasName="IBAN_NO"
     EntityAttrName="IbanNo"
+    EntityUsage="ElaajRecordCorrectionEO"/>
+  <ViewAttribute
+    Name="Remarks"
+    PrecisionRule="true"
+    AliasName="REMARKS"
+    EntityAttrName="Remarks"
     EntityUsage="ElaajRecordCorrectionEO"/>
   <ResourceBundle>
     <PropertiesBundle

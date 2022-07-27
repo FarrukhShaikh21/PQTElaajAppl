@@ -55,7 +55,7 @@
       <property
          name="fromOutcome">Success</property>
       <property
-         name="sdm:polyPoints">B50,435.5,218.44824,449.0,316.44824,T33</property>
+         name="sdm:polyPoints">B50,435.5,218.44824,445.5,316.44824,T27</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -125,7 +125,7 @@
       <property
          name="fromOutcome">goClaimDetail</property>
       <property
-         name="sdm:polyPoints">T44,456.0,311.14655,595.50977,137.0459,B44</property>
+         name="sdm:polyPoints">T39,452.5,307.49097,595.50977,137.0459,B44</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -135,7 +135,7 @@
       <property
          name="fromOutcome">ClaimToHome</property>
       <property
-         name="sdm:polyPoints">B56,602.50977,139.49141,463.0,313.54794,T56</property>
+         name="sdm:polyPoints">B56,602.50977,139.57967,459.5,309.93958,T50</property>
    </ControlFlowCase>
    <View
       id="View15">
@@ -193,7 +193,7 @@
       <property
          name="fromOutcome">goClaimIntimationPG</property>
       <property
-         name="sdm:polyPoints">T67,470.0,316.44824,703.01465,133.09766,B50</property>
+         name="sdm:polyPoints">T61,466.5,312.87915,703.01465,133.09766,B50</property>
    </ControlFlowCase>
    <View
       id="View20">
@@ -218,7 +218,7 @@
       <property
          name="fromOutcome">CreateInsert</property>
       <property
-         name="sdm:polyPoints">R50,744.01465,79.09766,816.24646,75.24707,L46</property>
+         name="sdm:polyPoints">R50,744.01465,79.09766,817.17993,75.24707,L46</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall22">
@@ -237,11 +237,11 @@
       islink="true"
       id="ControlFlowCase23"
       from="View20"
-      to="MethodCall22">
+      to="View6">
       <property
          name="fromOutcome">ClaimIntimationToHomePG</property>
       <property
-         name="sdm:polyPoints">L54,818.3467,82.24707,779.5,148.79883,T50</property>
+         name="sdm:polyPoints">L54,818.3467,82.24707,473.5,316.44824,T73</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -326,7 +326,7 @@
       <property
          name="fromOutcome">gotoTreatInfoPG</property>
       <property
-         name="sdm:polyPoints">L46,415.7196,366.94824,150.7456,284.24707,R46</property>
+         name="sdm:polyPoints">L46,415.19373,366.94824,150.74762,284.24707,R46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -336,7 +336,7 @@
       <property
          name="fromOutcome">TreatInfotoHomePG</property>
       <property
-         name="sdm:polyPoints">R54,149.68066,291.24707,414.66718,373.94824,L54</property>
+         name="sdm:polyPoints">R54,149.68066,291.24707,414.1413,373.94824,L54</property>
    </ControlFlowCase>
    <View
       id="View34">
@@ -588,6 +588,6 @@
       <property
          name="fromOutcome">CreateInsert</property>
       <property
-         name="sdm:polyPoints">L50,116.35156,191.79883,30.75328,160.5459,R46</property>
+         name="sdm:polyPoints">L50,116.35156,191.79883,30.783817,160.5459,R46</property>
    </ControlFlowCase>
 </SDM>

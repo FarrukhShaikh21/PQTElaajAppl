@@ -27,7 +27,7 @@
         <LABEL
           ResId="pqt.gh.elaaj.model.lov.PanelHospitalLovVO.QVC_HOSPITAL_NAME_LABEL"/>
         <DISPLAYWIDTH
-          Value="30"/>
+          Value="10"/>
       </SchemaBasedProperties>
     </Properties>
   </Variable>
@@ -40,7 +40,7 @@
         <LABEL
           ResId="pqt.gh.elaaj.model.lov.PanelHospitalLovVO.QVC_CITY_LABEL"/>
         <DISPLAYWIDTH
-          Value="30"/>
+          Value="10"/>
       </SchemaBasedProperties>
     </Properties>
   </Variable>
@@ -79,7 +79,7 @@
         <LABEL
           ResId="pqt.gh.elaaj.model.lov.PanelHospitalLovVO.HsName_LABEL"/>
         <DISPLAYWIDTH
-          Value="50"/>
+          Value="20"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -97,6 +97,14 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="200"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="8"/>
+        <LABEL
+          ResId="pqt.gh.elaaj.model.lov.PanelHospitalLovVO.HsCity_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
   </ViewAttribute>
   <ViewAttribute
     Name="HsRem"

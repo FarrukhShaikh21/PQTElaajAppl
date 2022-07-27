@@ -163,7 +163,8 @@
                                                                                     styleClass="PQChoiceContentColor"
                                                                                     contentStyle="width:500px"
                                                                                     simple="true"
-                                                                                    partialTriggers="nameOfPatientId">
+                                                                                    partialTriggers="nameOfPatientId"
+                                                                                    disabled="#{bindings.NameOfPatient.inputValue eq null}">
                                                                     <f:selectItems value="#{bindings.TypeOfClaimn.items}"
                                                                                    id="si3"/>
                                                                     <f:validator binding="#{bindings.TypeOfClaimn.validator}"/>
@@ -212,6 +213,30 @@
                                                                                 id="of11"
                                                                                 inlineStyle="font-size: 12px;color:#8b0037"
                                                                                 rendered="false"/>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow id="gr2" height="60px">
+                                                        <af:gridCell id="gc2" halign="stretch" valign="stretch"
+                                                                     width="100%" marginStart="5px" marginEnd="5px">
+                                                            <af:panelGroupLayout id="pgl17" halign="center"
+                                                                                 layout="vertical">
+                                                                <af:spacer width="10" height="20" id="s9"/>
+                                                                <af:panelGroupLayout id="pgl24" layout="horizontal">
+                                                                    <af:outputFormatted value="Kindly have the"
+                                                                                        id="of13"
+                                                                                        inlineStyle="font-weight:bolder; color:#8b0037; font-size:12px;"/>
+                                                                    <af:spacer width="10" height="10" id="s3"/>
+                                                                    <af:link text="Claim Form" id="l5"
+                                                                             targetFrame="_blank"
+                                                                             destination="https://www.pakqatar.com.pk/family/wp-content/uploads/sites/3/2021/05/Hospitalization-Reimbursment-Claim-Form.pdf"
+                                                                             inlineStyle="font-weight:bolder; color:blue; font-size:12px;"/>
+                                                                    <af:spacer width="10" height="10" id="s4"/>
+                                                                    <af:outputFormatted value="Filled by your treating physician and submit below along with all relevant document"
+                                                                                        id="of14"
+                                                                                        inlineStyle="font-weight:bolder; color:#8b0037; font-size:12px;"/>
+                                                                </af:panelGroupLayout>
+                                                                <af:spacer width="10" height="20" id="s10"/>
+                                                            </af:panelGroupLayout>
                                                         </af:gridCell>
                                                     </af:gridRow>
                                                     <af:gridRow marginTop="50px" height="auto" id="gr9"
@@ -471,7 +496,7 @@
                                                             <af:panelGroupLayout id="pgl18" layout="vertical"
                                                                                  halign="center">
                                                                 <af:outputFormatted value="Claim Reimbursement" id="of9"
-                                                                                    inlineStyle="font-weight:bolder; color:#8b0037; font-size:30px;"
+                                                                                    inlineStyle="font-weight:bolder; color:#8b0037; font-size:20px;"
                                                                                     binding="#{BenefitDetailBean.rif1}"/>
                                                                 <af:link text="Back" id="l3"
                                                                          icon="/icons/left-arrow-blue.png"
@@ -495,7 +520,8 @@
                                                                                       contentStyle="width:90%"
                                                                                       styleClass="PQAppInputLOV"
                                                                                       autoSubmit="true" simple="true"
-                                                                                      placeholder="Select Patient From List">
+                                                                                      placeholder="Select Patient From List"
+                                                                                      editMode="select">
                                                                     <f:validator binding="#{bindings.NameOfPatient.validator}"/>
                                                                 </af:inputListOfValues>
                                                             </af:panelGroupLayout>
@@ -514,7 +540,8 @@
                                                                                     styleClass="PQChoiceContentColor"
                                                                                     contentStyle="width:300px"
                                                                                     autoSubmit="true"
-                                                                                    partialTriggers="ilov2">
+                                                                                    partialTriggers="ilov2"
+                                                                                    disabled="#{bindings.NameOfPatient.inputValue eq null}">
                                                                     <f:selectItems value="#{bindings.TypeOfClaimn.items}"
                                                                                    id="si1"/>
                                                                     <f:validator binding="#{bindings.TypeOfClaimn.validator}"/>
@@ -563,6 +590,33 @@
                                                                                 id="of10"
                                                                                 inlineStyle="font-size: 12px;color:#8b0037"
                                                                                 rendered="false"/>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow id="gr37" height="60px">
+                                                        <af:gridCell id="gc38" halign="stretch" width="100%">
+                                                            <af:panelGroupLayout id="pgl25" layout="vertical"
+                                                                                 halign="center">
+                                                                <af:spacer width="10" height="20" id="s7"/>
+                                                                <af:panelGroupLayout id="pgl26" layout="horizontal"
+                                                                                     halign="center">
+                                                                    <af:outputFormatted value="Kindly have the"
+                                                                                        id="of15"
+                                                                                        inlineStyle="font-weight:bolder; color:#8b0037; font-size:8px;"/>
+                                                                    <af:spacer width="10" height="10" id="s5"/>
+                                                                    <af:link text="Claim Form" id="l6"
+                                                                             inlineStyle="font-weight:bolder; color:blue; font-size:8px;"
+                                                                             targetFrame="_blank"
+                                                                             destination="https://www.pakqatar.com.pk/family/wp-content/uploads/sites/3/2021/05/Hospitalization-Reimbursment-Claim-Form.pdf"/>
+                                                                    <af:spacer width="10" height="10" id="s6"/>
+                                                                    <af:outputFormatted value="Filled by your treating physician ."
+                                                                                        id="of16"
+                                                                                        inlineStyle="font-weight:bolder; color:#8b0037; font-size:8px;"/>
+                                                                </af:panelGroupLayout>
+                                                                <af:outputFormatted value="and submit below along with all relevant document"
+                                                                                    id="of17"
+                                                                                    inlineStyle="font-weight:bolder; color:#8b0037; font-size:8px;"/>
+                                                                <af:spacer width="10" height="20" id="s8"/>
+                                                            </af:panelGroupLayout>
                                                         </af:gridCell>
                                                     </af:gridRow>
                                                     <af:gridRow marginTop="30px" height="60px" id="gr34"
@@ -646,7 +700,7 @@
                                                                                           columns="#{bindings.ElaajClaimReimDmsDocEOVO1.hints.ElaajClaimReimIdFk.displayWidth}"
                                                                                           maximumLength="#{bindings.ElaajClaimReimDmsDocEOVO1.hints.ElaajClaimReimIdFk.precision}"
                                                                                           shortDesc="#{bindings.ElaajClaimReimDmsDocEOVO1.hints.ElaajClaimReimIdFk.tooltip}"
-                                                                                          id="it23">
+                                                                                          id="it23" autoSubmit="true">
                                                                                 <f:validator binding="#{row.bindings.ElaajClaimReimIdFk.validator}"/>
                                                                                 <af:convertNumber groupingUsed="false"
                                                                                                   pattern="#{bindings.ElaajClaimReimDmsDocEOVO1.hints.ElaajClaimReimIdFk.format}"/>
@@ -660,7 +714,7 @@
                                                                                           columns="#{bindings.ElaajClaimReimDmsDocEOVO1.hints.FileLocation.displayWidth}"
                                                                                           maximumLength="#{bindings.ElaajClaimReimDmsDocEOVO1.hints.FileLocation.precision}"
                                                                                           shortDesc="#{bindings.ElaajClaimReimDmsDocEOVO1.hints.FileLocation.tooltip}"
-                                                                                          id="it24">
+                                                                                          id="it24" autoSubmit="true">
                                                                                 <f:validator binding="#{row.bindings.FileLocation.validator}"/>
                                                                             </af:inputText>
                                                                         </af:column>
@@ -672,7 +726,7 @@
                                                                                           columns="#{bindings.ElaajClaimReimDmsDocEOVO1.hints.FileName.displayWidth}"
                                                                                           maximumLength="#{bindings.ElaajClaimReimDmsDocEOVO1.hints.FileName.precision}"
                                                                                           shortDesc="#{bindings.ElaajClaimReimDmsDocEOVO1.hints.FileName.tooltip}"
-                                                                                          id="it25">
+                                                                                          id="it25" autoSubmit="true">
                                                                                 <f:validator binding="#{row.bindings.FileName.validator}"/>
                                                                             </af:inputText>
                                                                         </af:column>
@@ -684,7 +738,7 @@
                                                                                           columns="#{bindings.ElaajClaimReimDmsDocEOVO1.hints.FileType.displayWidth}"
                                                                                           maximumLength="#{bindings.ElaajClaimReimDmsDocEOVO1.hints.FileType.precision}"
                                                                                           shortDesc="#{bindings.ElaajClaimReimDmsDocEOVO1.hints.FileType.tooltip}"
-                                                                                          id="it26">
+                                                                                          id="it26" autoSubmit="true">
                                                                                 <f:validator binding="#{row.bindings.FileType.validator}"/>
                                                                             </af:inputText>
                                                                         </af:column>

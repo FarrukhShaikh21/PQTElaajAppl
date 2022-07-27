@@ -40,5 +40,10 @@
         <Item Value="IbanNo"/>
       </AttrNames>
     </attributeValues>
+    <attributeValues IterBinding="ElaajRecordCorrectionEOVO1Iterator" id="Remarks">
+      <AttrNames>
+        <Item Value="Remarks"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

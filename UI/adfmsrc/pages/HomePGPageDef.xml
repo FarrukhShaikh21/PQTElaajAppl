@@ -80,6 +80,8 @@
       <nodeDefinition DefName="pqt.gh.elaaj.model.vo.DetailHealthCardVO" Name="DetailHealthCardVO10">
         <AttrNames>
           <Item Value="EmpName"/>
+          <Item Value="SrNo"/>
+          <Item Value="Age"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -89,6 +91,7 @@
           <Item Value="EmpName"/>
           <Item Value="Age"/>
           <Item Value="EmpSrNo"/>
+          <Item Value="SrNo"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

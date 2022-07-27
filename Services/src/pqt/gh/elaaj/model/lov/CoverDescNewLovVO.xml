@@ -32,11 +32,7 @@
   <Variable
     Name="QVC_EMP_ID"
     Kind="viewcriteria"
-    Type="java.lang.String">
-    <Properties>
-      <SchemaBasedProperties/>
-    </Properties>
-  </Variable>
+    Type="java.lang.String"/>
   <Variable
     Name="SELF_CNIC_NO"
     Kind="where"
@@ -45,16 +41,23 @@
       Name="VariableScript"
       CodeSourceName="CoverDescNewLovVO"/>
   </Variable>
-  <SQLQuery><![CDATA[SELECT DISTINCT B.BENEFIT_ID_PK,     
-       B.BENEFIT_CODE,     
-       B.BENEFIT_DESCRIPTION,     
-       T.DOCUMENT_ID_FK,     
-       T.EMPLOYEE_ID_FK, 
-       T.EMP_SR_NO 
-  FROM GHS_UW_EMP_CONTRIBUTION T, GHS_ST_GEN_BENEFITS B     
- WHERE 1 = 1     
-   AND T.BENEFIT_ID_FK = B.BENEFIT_ID_PK    
-   AND T.DOCUMENT_ID_FK IN (SELECT EMP.DOCUMENT_ID_FK FROM GHS_UW_EMPLOYEES EMP WHERE EMP.CNIC_NO = :SELF_CNIC_NO)    
+  <SQLQuery><![CDATA[SELECT DISTINCT B.BENEFIT_ID_PK,        
+       B.BENEFIT_CODE,        
+       B.BENEFIT_DESCRIPTION,        
+       T.DOCUMENT_ID_FK,        
+       T.EMPLOYEE_ID_FK,    
+       T.EMP_SR_NO    
+  FROM GHS_UW_EMP_CONTRIBUTION T, GHS_ST_GEN_BENEFITS B        
+ WHERE 1 = 1        
+   AND T.BENEFIT_ID_FK = B.BENEFIT_ID_PK       
+   AND T.EMPLOYEE_ID_FK IN (SELECT B1.EMPLOYEE_ID_PK 
+  FROM GHS_UW_DOCUMENT A, GHS_UW_EMPLOYEES B, GHS_UW_EMPLOYEES B1, V_LAST_DOC_ID C 
+ WHERE 1 = 1 
+   AND A.DOCUMENT_ID_PK = B.DOCUMENT_ID_FK 
+   AND A.DOCUMENT_ID_PK = C.DOCUMENT_ID_PK 
+   AND B.DOCUMENT_ID_FK = B1.DOCUMENT_ID_FK 
+   AND B.FOLIO_ID = B1.FOLIO_REF_ID 
+   AND B.CNIC_NO = :SELF_CNIC_NO)       
  ORDER BY 1]]></SQLQuery>
   <ViewAttribute
     Name="BenefitIdPk"

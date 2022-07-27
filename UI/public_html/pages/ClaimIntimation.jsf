@@ -101,7 +101,8 @@
                                                                                     contentStyle="width:300px"
                                                                                     styleClass="PQChoiceContentColor"
                                                                                     simple="true"
-                                                                                    partialTriggers="nameOfPatientId">
+                                                                                    partialTriggers="nameOfPatientId"
+                                                                                    disabled="#{bindings.NameOfPatient.inputValue eq null}">
                                                                     <f:selectItems value="#{bindings.TypeOfClaimn1.items}"
                                                                                    id="si1"/>
                                                                     <f:validator binding="#{bindings.TypeOfClaimn1.validator}"/>
@@ -125,9 +126,48 @@
                                                                                       contentStyle="width:500px"
                                                                                       placeholder="Name Of Panel Hospital"
                                                                                       label="Panel Hospital:"
-                                                                                      simple="true">
+                                                                                      simple="true"
+                                                                                      disabled="#{bindings.TypeOfClaimn.inputValue eq null}"
+                                                                                      editMode="select">
                                                                     <f:validator binding="#{bindings.NameOfPanelHospital.validator}"/>
                                                                 </af:inputListOfValues>
+                                                            </af:panelGroupLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow id="gr24">
+                                                        <af:gridCell id="gc25" halign="stretch" valign="stretch"
+                                                                     width="100%" marginStart="5px" marginEnd="5px">
+                                                            <af:panelGroupLayout id="pgl16" layout="vertical"
+                                                                                 halign="center">
+                                                                <af:spacer width="10" height="20" id="s3"/>
+                                                                <af:spacer width="10" height="20" id="s4"/>
+                                                                <af:panelGroupLayout id="pgl27" layout="horizontal">
+                                                                    <af:outputFormatted value="Kindly have the "
+                                                                                        id="of15"
+                                                                                        inlineStyle="font-weight:bolder; color:#8b0037; font-size:12px;"/>
+                                                                    <af:spacer width="10" height="10" id="s13"/>
+                                                                    <af:link text="Pre-Authorization Form " id="l8"
+                                                                             inlineStyle="font-weight:bolder; color:blue; font-size:12px;"
+                                                                             destination="https://www.pakqatar.com.pk/family/wp-content/uploads/sites/3/2020/09/Pre-Authorization-Form.pdf"
+                                                                             targetFrame="_blank"/>
+                                                                    <af:spacer width="10" height="10" id="s14"/>
+                                                                    <af:outputText value=" Filed by your treating physician and submit below."
+                                                                                   id="ot1"
+                                                                                   inlineStyle="font-weight:bolder; color:#8b0037; font-size:12px;"/>
+                                                                </af:panelGroupLayout>
+                                                            </af:panelGroupLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
+                                                    <af:gridRow id="gr30" rendered="false">
+                                                        <af:gridCell id="gc31" halign="stretch" valign="stretch"
+                                                                     width="100%" marginStart="5px" marginEnd="5px">
+                                                            <af:panelGroupLayout id="pgl17" layout="vertical"
+                                                                                 halign="center">
+                                                                <af:link text="Pre-Authorization Form" id="l6"
+                                                                         inlineStyle="font-weight:bolder; color:blue; font-size:15px;"
+                                                                         targetFrame="_blank"
+                                                                         destination="https://www.pakqatar.com.pk/family/wp-content/uploads/sites/3/2020/09/Pre-Authorization-Form.pdf"/>
+                                                                <af:spacer width="10" height="10" id="s7"/>
                                                             </af:panelGroupLayout>
                                                         </af:gridCell>
                                                     </af:gridRow>
@@ -302,6 +342,18 @@
                                                             </af:panelGroupLayout>
                                                         </af:gridCell>
                                                     </af:gridRow>
+                                                    <af:gridRow id="gr40">
+                                                        <af:gridCell id="gc41" halign="stretch" valign="stretch"
+                                                                     width="100%" marginStart="5px" marginEnd="5px">
+                                                            <af:panelGroupLayout id="pgl26" layout="vertical"
+                                                                                 halign="center">
+                                                                <af:spacer width="10" height="10" id="s11"/>
+                                                                <af:outputFormatted value="For elective/planned admission, please allow up to two working days for processing" id="of14"
+                                                                                    inlineStyle="font-weight:bolder; color:#8b0037; font-size:12px;"/>
+                                                                <af:spacer width="10" height="10" id="s12"/>
+                                                            </af:panelGroupLayout>
+                                                        </af:gridCell>
+                                                    </af:gridRow>
                                                 </af:panelGridLayout>
                                             </af:gridCell>
                                         </af:gridRow>
@@ -347,7 +399,8 @@
                                                                           styleClass="PQAppInputLOV"
                                                                           contentStyle="width:90%"
                                                                           label="Covered Member:"
-                                                                          labelStyle="PQAppLabelFont" simple="true">
+                                                                          labelStyle="PQAppLabelFont" simple="true"
+                                                                          autoSubmit="true" editMode="select">
                                                         <f:validator binding="#{bindings.NameOfPatient.validator}"/>
                                                     </af:inputListOfValues>
                                                 </af:panelGroupLayout>
@@ -362,7 +415,9 @@
                                                                         shortDesc="#{bindings.TypeOfClaimn.hints.tooltip}"
                                                                         id="soc3" styleClass="PQChoiceContentColor"
                                                                         contentStyle="width:100%" label="Claim Type:"
-                                                                        simple="true" partialTriggers="ilov1">
+                                                                        simple="true" partialTriggers="ilov1"
+                                                                        autoSubmit="true"
+                                                                        disabled="#{bindings.NameOfPatient.inputValue eq null}">
                                                         <f:selectItems value="#{bindings.TypeOfClaimn.items}" id="si3"/>
                                                         <f:validator binding="#{bindings.TypeOfClaimn.validator}"/>
                                                     </af:selectOneChoice>
@@ -383,9 +438,44 @@
                                                                           styleClass="PQAppInputLOV"
                                                                           contentStyle="width:90%"
                                                                           placeholder="Name Of Panel Hospital"
-                                                                          label="Panel Hospital:" simple="true">
+                                                                          label="Panel Hospital:" simple="true"
+                                                                          disabled="#{bindings.TypeOfClaimn.inputValue eq null}"
+                                                                          editMode="select">
                                                         <f:validator binding="#{bindings.NameOfPanelHospital.validator}"/>
                                                     </af:inputListOfValues>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow id="gr37">
+                                            <af:gridCell id="gc38" halign="stretch" valign="stretch" width="100%"
+                                                         marginStart="5px" marginEnd="5px">
+                                                <af:panelGroupLayout id="pgl23" halign="center" layout="vertical">
+                                                    <af:spacer width="10" height="20" id="s5"/>
+                                                    <af:panelGroupLayout id="pgl28" layout="horizontal">
+                                                        <af:outputFormatted value="Kindly have the"
+                                                                            id="of4"
+                                                                            inlineStyle="font-weight:bolder; color:#8b0037; font-size:12px;"/>
+                                                        <af:spacer width="10" height="10" id="s15"/>
+                                                        <af:link text="Pre-Authorization Form" id="l9"
+                                                                 destination="https://www.pakqatar.com.pk/family/wp-content/uploads/sites/3/2020/09/Pre-Authorization-Form.pdf"
+                                                                 targetFrame="_blank"
+                                                                 inlineStyle="font-weight:bolder; color:blue; font-size:12px;"/>
+                                                        <af:spacer width="10" height="10" id="s16"/>
+                                                        <af:outputFormatted value="Filed by your treating physician and submit below." id="of16"
+                                                                            inlineStyle="font-weight:bolder; color:#8b0037; font-size:12px;"/>
+                                                    </af:panelGroupLayout>
+                                                    <af:spacer width="10" height="20" id="s6"/>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow id="gr38" rendered="false">
+                                            <af:gridCell id="gc39" valign="stretch" halign="stretch" width="100%"
+                                                         marginStart="5px" marginEnd="5px">
+                                                <af:panelGroupLayout id="pgl24" layout="vertical" halign="center">
+                                                    <af:link text="Pre-Authorization Form" id="l7" targetFrame="_blank"
+                                                             destination="https://www.pakqatar.com.pk/family/wp-content/uploads/sites/3/2020/09/Pre-Authorization-Form.pdf"
+                                                             inlineStyle="font-weight:bolder; color:blue; font-size:12px;"/>
+                                                    <af:spacer width="10" height="10" id="s8"/>
                                                 </af:panelGroupLayout>
                                             </af:gridCell>
                                         </af:gridRow>
@@ -553,6 +643,17 @@
                                                     <af:button text="Submit" disabled="#{!bindings.Apply.enabled}"
                                                                id="b11" action="#{BenefitDetailBean.submitAction}"
                                                                styleClass="PQLoginButton"/>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                        <af:gridRow id="gr39">
+                                            <af:gridCell id="gc40" halign="stretch" valign="stretch" width="100%"
+                                                         marginStart="5px" marginEnd="5px">
+                                                <af:panelGroupLayout id="pgl25" halign="center" layout="vertical">
+                                                    <af:spacer width="10" height="10" id="s9"/>
+                                                    <af:outputFormatted value="For elective/planned admission, please allow up to two working days for processing" id="of13"
+                                                                        inlineStyle="font-weight:bolder; color:#8b0037; font-size:12px;"/>
+                                                    <af:spacer width="10" height="10" id="s10"/>
                                                 </af:panelGroupLayout>
                                             </af:gridCell>
                                         </af:gridRow>

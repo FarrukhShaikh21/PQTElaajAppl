@@ -76,7 +76,7 @@
         <LABEL
           ResId="pqt.gh.elaaj.model.vo.ValueAddedServicesVO.Valueserviceurl_LABEL"/>
         <DISPLAYWIDTH
-          Value="100"/>
+          Value="1000"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

@@ -473,7 +473,8 @@
                                                                                      var="item"
                                                                                      emptyText="#{bindings.DetailHealthCardVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
                                                                                      fetchSize="#{bindings.DetailHealthCardVO1.rangeSize}"
-                                                                                     id="lv5" inlineStyle="border:none">
+                                                                                     id="lv5" inlineStyle="border:none"
+                                                                                     rendered="false">
                                                                             <af:listItem id="li5"
                                                                                          inlineStyle="border:none">
                                                                                 <af:panelGridLayout id="pgl34">
@@ -505,8 +506,53 @@
                                                                                                      marginEnd="0px"
                                                                                                      id="gc69"
                                                                                                      halign="center">
-                                                                                            <af:outputFormatted value="#{item.bindings.SrNo.inputValue}"
+                                                                                            <af:outputFormatted
                                                                                                                 id="of37"
+                                                                                                                inlineStyle="color:black;font-size:7px"
+                                                                                                                value="#{item.bindings.SrNo.inputValue}"/>
+                                                                                        </af:gridCell>
+                                                                                    </af:gridRow>
+                                                                                </af:panelGridLayout>
+                                                                            </af:listItem>
+                                                                        </af:listView>
+                                                                        <af:listView value="#{bindings.DetailHealthCardVO11.collectionModel}"
+                                                                                     var="item"
+                                                                                     emptyText="#{bindings.DetailHealthCardVO11.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                                     fetchSize="#{bindings.DetailHealthCardVO11.rangeSize}"
+                                                                                     id="lv6" inlineStyle="border:none">
+                                                                            <af:listItem id="li6"
+                                                                                         inlineStyle="border:none">
+                                                                                <af:panelGridLayout id="pgl22">
+                                                                                    <af:gridRow marginTop="0px"
+                                                                                                height="auto"
+                                                                                                marginBottom="0px"
+                                                                                                id="gr20">
+                                                                                        <af:gridCell marginStart="0px"
+                                                                                                     width="34%"
+                                                                                                     id="gc70"
+                                                                                                     halign="center">
+                                                                                            <af:outputFormatted value="#{item.bindings.EmpName.inputValue}"
+                                                                                                                id="of38"
+                                                                                                                inlineStyle="color:black;font-size:7px"/>
+                                                                                        </af:gridCell>
+                                                                                        <af:gridCell marginStart="0px"
+                                                                                                     width="33%"
+                                                                                                     id="gc74"
+                                                                                                     halign="center">
+                                                                                            <af:outputFormatted value="#{item.bindings.Age.inputValue}"
+                                                                                                                id="of39"
+                                                                                                                inlineStyle="color:black;font-size:7px">
+                                                                                                <af:convertNumber groupingUsed="false"
+                                                                                                                  pattern="#{bindings.DetailHealthCardVO11.hints.Age.format}"/>
+                                                                                            </af:outputFormatted>
+                                                                                        </af:gridCell>
+                                                                                        <af:gridCell marginStart="0px"
+                                                                                                     width="33%"
+                                                                                                     marginEnd="0px"
+                                                                                                     id="gc75"
+                                                                                                     halign="center">
+                                                                                            <af:outputFormatted value="#{item.bindings.SrNo.inputValue}"
+                                                                                                                id="of40"
                                                                                                                 inlineStyle="color:black;font-size:7px"/>
                                                                                         </af:gridCell>
                                                                                     </af:gridRow>
